@@ -2,6 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
+  <div>
     <div id="hero" className="h-[100vh] w-[100vw] overflow-hidden">
       <div className="relative h-full w-full">
         <Image
@@ -12,10 +13,20 @@ export default function Home() {
           layout="fill"
           objectFit="cover"
         />
-        <h1 className="absolute top-1/2 left-1/2 z-10 w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 text-center text-4xl font-bold text-black">
-          COICH
-        </h1>
+        <div id="heroText" className="absolute top-1/2 left-1/2 z-10 w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 text-center font-bold">
+        
+          <h1 className="mt-20 text-7xl text-(--color-text)">COICH</h1>
+          <h3 className="text-2xl text-(--color-text-secondary)">Outdoor Clothing</h3>
+          <h4 className="text-xl text-(--color-text-secondary)">Handmade on the isle of Skye</h4>
+        </div>
       </div>
     </div>
+
+    <main>
+      <section>
+
+      </section>
+    </main>
+  </div>
   );
 }

@@ -24,7 +24,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
-const products = [
+const categories = [
   { name: 'Waterproof Jackets', description: 'See selection of waterproof Jackets', href: '#', icon: ChartPieIcon },
   { name: 'Windproof Jackets', description: 'See selection of windproof jackets', href: '#', icon: CursorArrowRaysIcon },
   { name: 'Trousers', description: 'See selection of trousers', href: '#', icon: FingerPrintIcon },
@@ -36,8 +36,8 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 w-full z-60 bg-(--color-background) text-(--color-text)">
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+    <header className="fixed top-0 left-0 w-full z-60 bg-(--color-background) opacity-90 text-(--color-text)">
+      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Cioch Clothing</span>
@@ -49,6 +49,9 @@ export default function Example() {
               width="32"
             />
           </Link>
+        </div>
+        <div className='flex lg:flex-1 justify-center'>
+            <h2>CIOCH</h2>
         </div>
         <div className="flex lg:hidden">
           <button
@@ -71,20 +74,20 @@ export default function Example() {
               className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-(--color-background) ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
               <div className="p-4">
-                {products.map((item) => (
+                {categories.map((category) => (
                   <div
-                    key={item.name}
+                    key={category.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:backdrop-brightness-150"
                   >
                     <div className="flex size-11 flex-none items-center justify-center rounded-lg backdrop-brightness-150 group-hover:backdrop-brightness-150">
-                      <item.icon aria-hidden="true" className="size-6  group-hover:text-(--color-text)" />
+                      <category.icon aria-hidden="true" className="size-6  group-hover:text-(--color-text)" />
                     </div>
                     <div className="flex-auto">
-                      <Link href={item.href} className="block font-semibold ">
-                        {item.name}
+                      <Link href={category.href} className="block font-semibold ">
+                        {category.name}
                         <span className="absolute inset-0" />
                       </Link>
-                      <p className="mt-1 ">{item.description}</p>
+                      <p className="mt-1 ">{category.description}</p>
                     </div>
                   </div>
                 ))}
@@ -135,14 +138,14 @@ export default function Example() {
                     <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
-                    {[...products].map((item) => (
+                    {[...categories].map((category) => (
                       <DisclosureButton
-                        key={item.name}
+                        key={category.name}
                         as="a"
-                        href={item.href}
+                        href={category.href}
                         className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold  hover:backdrop-brightness-150"
                       >
-                        {item.name}
+                        {category.name}
                       </DisclosureButton>
                     ))}
                   </DisclosurePanel>
