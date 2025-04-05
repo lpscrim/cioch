@@ -36,7 +36,7 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 w-full z-60 bg-(--color-background) opacity-90 text-(--color-text)">
+    <header className="fixed top-0 left-0 w-full z-60 bg-(--color-background) opacity-95 text-(--color-text)">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="#" className="-m-1.5 p-1.5">
