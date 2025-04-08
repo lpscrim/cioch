@@ -51,7 +51,7 @@ export default function Example() {
           </Link>
         </div>
         <div className='flex lg:flex-1 justify-center'>
-            <h2>CIOCH</h2>
+            <h2></h2>
         </div>
         <div className="flex lg:hidden">
           <button
