@@ -16,19 +16,15 @@ import {
 } from '@headlessui/react'
 import {
   Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const categories = [
-  { name: 'Waterproof Jackets', description: 'See selection of waterproof Jackets', href: '#', icon: ChartPieIcon },
-  { name: 'Windproof Jackets', description: 'See selection of windproof jackets', href: '#', icon: CursorArrowRaysIcon },
-  { name: 'Trousers', description: 'See selection of trousers', href: '#', icon: FingerPrintIcon },
-  { name: 'Kids', description: 'See selection of kids clothing', href: '#', icon: SquaresPlusIcon },
+  { name: 'Waterproof Jackets', description: 'See selection of waterproof Jackets', href: '#'},
+  { name: 'Windproof Jackets', description: 'See selection of windproof jackets', href: '#'},
+  { name: 'Trousers', description: 'See selection of trousers', href: '#'},
+  { name: 'Kids', description: 'See selection of kids clothing', href: '#'},
 ]
 
 
@@ -38,21 +34,20 @@ export default function Example() {
   return (
     <header className="fixed top-0 left-0 w-full z-60 bg-(--color-background) opacity-95 text-(--color-text)">
       <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
-        <div className="flex lg:flex-1">
+        <div className="flex lg:flex-1 items-center">
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Cioch Clothing</span>
             <Image
               alt=""
-              src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
+              src="/main.jpg"
+              className="h-8 w-auto mr-3"
               height="32"
               width="32"
             />
           </Link>
+          <h2 className='mr-3'>Outdoor Clothing</h2>
         </div>
-        <div className='flex lg:flex-1 justify-center'>
-            <h2></h2>
-        </div>
+        
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -71,7 +66,7 @@ export default function Example() {
             </PopoverButton>
             <PopoverPanel
               transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-(--color-background) ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-xl bg-(--color-background) ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
               <div className="p-4">
                 {categories.map((category) => (
@@ -79,15 +74,11 @@ export default function Example() {
                     key={category.name}
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:backdrop-brightness-150"
                   >
-                    <div className="flex size-11 flex-none items-center justify-center rounded-lg backdrop-brightness-150 group-hover:backdrop-brightness-150">
-                      <category.icon aria-hidden="true" className="size-6  group-hover:text-(--color-text)" />
-                    </div>
                     <div className="flex-auto">
-                      <Link href={category.href} className="block font-semibold ">
+                      <Link href={category.href} aria-label={category.description} className="block font-semibold ">
                         {category.name}
                         <span className="absolute inset-0" />
                       </Link>
-                      <p className="mt-1 ">{category.description}</p>
                     </div>
                   </div>
                 ))}
@@ -98,8 +89,9 @@ export default function Example() {
           <Link href="#" className="text-sm/6 font-semibold ">
             About
           </Link>
+          
           <Link href="#" className="text-sm/6 font-semibold ">
-            Marketplace
+            Order
           </Link>
           <Link href="#" className="text-sm/6 font-semibold ">
             Contact
@@ -154,13 +146,13 @@ export default function Example() {
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:backdrop-brightness-150"
                 >
-                  Features
+                  About
                 </Link>
                 <Link
                   href="#"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:backdrop-brightness-150"
                 >
-                  Marketplace
+                  Order
                 </Link>
                 <Link
                   href="#"
