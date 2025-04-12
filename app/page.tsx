@@ -14,8 +14,8 @@ export default function Home() {
           objectFit="cover"
         />
         <div id="heroText" className="absolute top-1/2 left-1/2 z-10 w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 text-center font-bold">
-          <h1 className="mt-20 text-7xl text-(--color-text) fade-in tracking-wide">Cioch</h1>
-          <h3 className="text-2xl text-(--color-text-secondary) fade-in-slow">Outdoor Clothing</h3>
+          <h1 className="mt-20 text-7xl text-(--color-accent) fade-in tracking-wide">Cioch</h1>
+          <h3 className="text-2xl text-(--color-text) fade-in-slow">Outdoor Clothing</h3>
           <h4 className="text-xl text-(--color-text-secondary) fade-in-slower">Handmade on the isle of Skye</h4>
         </div>
       </div>
