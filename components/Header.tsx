@@ -32,8 +32,8 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 w-full z-60 bg-(--color-background) opacity-95 text-(--color-text)">
-      <nav aria-label="Global" className="mx-auto flex max-w-[100rem] items-center justify-between px-6 py-4 lg:px-8">
+    <header className="fixed top-0 left-0 w-full z-60 bg-(--color-background)/0 text-(--color-text)">
+      <nav aria-label="Global" className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-8 lg:px-8">
         <div className="flex lg:flex-1 items-center">
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Cioch Clothing</span>
@@ -45,7 +45,7 @@ export default function Example() {
               width="32"
             />
           </Link>
-          <h2 className='mr-3 text-base/6 font-semibold text-(--color-primary)'>Outdoor Clothing</h2>
+          <h2 className='mr-3 text-lg/6 font-semibold text-(--color-text)'>Outdoor Clothing</h2>
         </div>
         
         <div className="flex lg:hidden">
@@ -66,7 +66,7 @@ export default function Example() {
             </PopoverButton>
             <PopoverPanel
               transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-xl bg-(--color-background) ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-xl bg-(--color-background)/80 ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
               <div className="p-4">
                 {categories.map((category) => (
@@ -100,7 +100,7 @@ export default function Example() {
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-70" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-70 w-full overflow-y-auto bg-(--color-background) text-(--color-text) px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
+        <DialogPanel className="fixed inset-y-0 right-0 z-70 w-full overflow-y-auto bg-(--color-background)/90 text-(--color-text) px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Cioch CLothing</span>
