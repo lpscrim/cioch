@@ -31,11 +31,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #161615;
-    --foreground: #ededed;
-    --color-text: #fcf7f7;
+    --foreground: #f0e8dc;
+    --color-text: #ffffff;
     --color-text-secondary: #dddddd;
     --color-primary: #f3d13a;
-    --color-secondary: #bb2828;
+    --color-secondary: #c24242;
     --color-tertiary: #000000;
     --color-accent: #f3d13a;
     --color-button: #0070f3;

@@ -1,4 +1,5 @@
 import Hero from "../components/Hero";
+import Intro from "../components/Intro";
 
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
     <Hero />
     <main>
       <section>
-        
+        <Intro />
       </section>
     </main>
   </div>

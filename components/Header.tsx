@@ -32,7 +32,7 @@ export default function Example() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 left-0 w-full z-60 bg-(--color-background)/0 text-(--color-text)">
+    <header className="absolute top-0 left-0 w-full z-60 bg-(--color-background)/0 text-(--color-text) brightness-150">
       <nav aria-label="Global" className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-8 lg:px-8">
         <div className="flex lg:flex-1 items-center">
           <Link href="#" className="-m-1.5 p-1.5">
@@ -45,7 +45,7 @@ export default function Example() {
               width="32"
             />
           </Link>
-          <h2 className='mr-3 text-lg/6 font-semibold text-(--color-text)'>Outdoor Clothing</h2>
+          <h2 className='mr-3 text-xl/6 font-semibold text-(--color-text)'>Outdoor Clothing</h2>
         </div>
         
         <div className="flex lg:hidden">
@@ -60,8 +60,8 @@ export default function Example() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-base/6 font-semibold">
-              Product
+            <PopoverButton className="flex items-center gap-x-1 text-lg/6 font-semibold">
+              Products
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none " />
             </PopoverButton>
             <PopoverPanel
@@ -86,14 +86,14 @@ export default function Example() {
             </PopoverPanel>
           </Popover>
 
-          <Link href="#" className="text-base/6 font-semibold">
+          <Link href="#" className="text-lg/6 font-semibold">
             About
           </Link>
           
-          <Link href="#" className="text-base/6 font-semibold ">
+          <Link href="#" className="text-lg/6 font-semibold ">
             Order
           </Link>
-          <Link href="#" className="text-base/6 font-semibold ">
+          <Link href="#" className="text-lg/6 font-semibold ">
             Contact
           </Link>
         </PopoverGroup>
@@ -126,7 +126,7 @@ export default function Example() {
               <div className="space-y-2 py-6">
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton className="group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold  hover:backdrop-brightness-150">
-                    Product
+                    Products
                     <ChevronDownIcon aria-hidden="true" className="size-5 flex-none group-data-open:rotate-180" />
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
