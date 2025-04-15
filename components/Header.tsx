@@ -33,7 +33,7 @@ export default function Example() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-60 bg-(--color-background) opacity-95 text-(--color-text)">
-      <nav aria-label="Global" className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <nav aria-label="Global" className="mx-auto flex max-w-[100rem] items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1 items-center">
           <Link href="#" className="-m-1.5 p-1.5">
             <span className="sr-only">Cioch Clothing</span>
@@ -45,7 +45,7 @@ export default function Example() {
               width="32"
             />
           </Link>
-          <h2 className='mr-3'>Outdoor Clothing</h2>
+          <h2 className='mr-3 text-base/6 font-semibold text-(--color-primary)'>Outdoor Clothing</h2>
         </div>
         
         <div className="flex lg:hidden">
@@ -60,7 +60,7 @@ export default function Example() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-sm/6 font-semibold ">
+            <PopoverButton className="flex items-center gap-x-1 text-base/6 font-semibold">
               Product
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none " />
             </PopoverButton>
@@ -86,21 +86,21 @@ export default function Example() {
             </PopoverPanel>
           </Popover>
 
-          <Link href="#" className="text-sm/6 font-semibold ">
+          <Link href="#" className="text-base/6 font-semibold">
             About
           </Link>
           
-          <Link href="#" className="text-sm/6 font-semibold ">
+          <Link href="#" className="text-base/6 font-semibold ">
             Order
           </Link>
-          <Link href="#" className="text-sm/6 font-semibold ">
+          <Link href="#" className="text-base/6 font-semibold ">
             Contact
           </Link>
         </PopoverGroup>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-70" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-70 w-full overflow-y-auto bg-(--color-background) text-(--color-text) px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+        <DialogPanel className="fixed inset-y-0 right-0 z-70 w-full overflow-y-auto bg-(--color-background) text-(--color-text) px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="#" className="-m-1.5 p-1.5">
               <span className="sr-only">Cioch CLothing</span>

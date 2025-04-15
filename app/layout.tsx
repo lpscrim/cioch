@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Sans_Gothic } from "next/font/google";
+import { Geist, Geist_Mono, Karla, Noto_Sans_Gothic, Oswald, Roboto } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 
@@ -21,6 +21,24 @@ const notoSans = Noto_Sans_Gothic({
   weight: ["400"],
 });
 
+const oswald = Oswald({
+  variable: "--font-oswald",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const roboto = Roboto({
+  variable: "--font-roboto",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const karla = Karla({
+  variable: "--font-karla",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Cioch Outdoor Clothing",
   description: "Handmade outdoor clothing for the Scottish Highlands",
@@ -34,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSans.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${notoSans.variable} ${oswald.variable} ${roboto.variable} ${karla.variable} antialiased`}
       >
         <Header />
         {children}
