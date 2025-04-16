@@ -31,11 +31,11 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #161615;
-    --foreground: #f0e8dc;
+    --foreground: #e7e3db;
     --color-text: #ffffff;
-    --color-text-secondary: #dddddd;
+    --color-text-secondary: #181818;
     --color-primary: #f3d13a;
-    --color-secondary: #c24242;
+    --color-secondary: #b93737;
     --color-tertiary: #000000;
     --color-accent: #f3d13a;
     --color-button: #0070f3;
@@ -86,4 +86,12 @@ header {
 
 #scrollButton {
   font-family: var(--font-oswald);
+}
+
+#intro h2 {
+  font-family: var(--font-roboto);
+}
+
+#intro {
+  font-family: var(--font-karla);
 }

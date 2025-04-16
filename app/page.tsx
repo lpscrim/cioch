@@ -7,9 +7,7 @@ export default function Home() {
   <div>
     <Hero />
     <main>
-      <section>
         <Intro />
-      </section>
     </main>
   </div>
   );
