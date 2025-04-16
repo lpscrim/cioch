@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Karla, Noto_Sans_Gothic, Oswald, Roboto } from "next/font/google";
+import { Geist, Geist_Mono, Karla, Noto_Sans_Gothic, Oswald, Roboto, Anek_Devanagari } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 
@@ -39,6 +39,12 @@ const karla = Karla({
   weight: ["400", "500", "600", "700"],
 });
 
+const anekDevanagari = Anek_Devanagari({
+  variable: "--font-anek-devanagari",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 export const metadata: Metadata = {
   title: "Cioch Outdoor Clothing",
   description: "Handmade outdoor clothing for the Scottish Highlands",
@@ -52,7 +58,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${notoSans.variable} ${oswald.variable} ${roboto.variable} ${karla.variable} antialiased  overflow-x-hidden`}
+        className={`${anekDevanagari.variable} ${geistSans.variable} ${geistMono.variable} ${notoSans.variable} ${oswald.variable} ${roboto.variable} ${karla.variable} antialiased  overflow-x-hidden`}
       >
         <Header />
         {children}

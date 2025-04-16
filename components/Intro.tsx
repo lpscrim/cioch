@@ -6,7 +6,7 @@ export default function Intro() {
       id="intro"
       className="w-full min-h-[90vh] h-full bg-(--color-foreground) border"
     >
-      <div className="flex flex-col max-w-[90rem] px-6 sm:px-8 mx-auto py-30">
+      <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto py-30">
         <h2 className="text-3xl font-bold text-(--color-text-secondary) sm:text-4xl text-center">
           Welcome to <span className="text-(--color-secondary)">Cioch Outdoor Clothing</span>
         </h2>
