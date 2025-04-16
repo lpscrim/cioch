@@ -95,3 +95,12 @@ header {
 #intro {
   font-family: var(--font-anek-devanagari);
 }
+
+#perfectFit h2 {
+  font-family: var(--font-roboto);
+}
+
+#perfectFit {
+  font-family: var(--font-anek-devanagari);
+}
+
