@@ -4,8 +4,15 @@ export default function perfectFit() {
   return (
     <section
       id="perfectFit"
-      className="w-full min-h-[90vh] h-full bg-(--color-tertiary) border"
+      className="relative w-full min-h-[90vh] h-full bg-(--color-tertiary) border z-0"
     >
+      <Image
+        src="/contour.png"
+        alt="background"
+        className="absolute top-0 left-0 h-full w-full object-cover opacity-5 -z-10"
+        width={800}
+        height={533}
+      />
       <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto pt-30 pb-20">
         <div className="flex flex-col lg:flex-row mx-auto">
           <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-center">
