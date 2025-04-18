@@ -51,7 +51,7 @@ export default function Recommendations() {
                 <Image
                   alt={feature.imageAlt}
                   src={feature.imageSrc}
-                  className="aspect-1/1.2 w-full h-full max-w-[300px] rounded-lg object-cover mx-auto"
+                  className="aspect-1/1 w-full h-full max-w-[300px] rounded-lg object-cover mx-auto"
                   width={500}
                   height={500}
                 />
