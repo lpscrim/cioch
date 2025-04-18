@@ -104,3 +104,9 @@ header {
   font-family: var(--font-anek-devanagari);
 }
 
+#recommendations h2 {
+  font-family: var(--font-roboto);
+}
+#recommendations {
+  font-family: var(--font-anek-devanagari);
+}
