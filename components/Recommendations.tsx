@@ -12,7 +12,7 @@ const features = [
   {
     name: "Cairngorm Mountain Rescue Team",
     description:
-      '“The material used on the Cioch kit is second to none! Immediately after trying the trousers of our supplied team kit, I ordered a pair of salopettes for skiing use. They are superb!”  “The Cioch equipment has shown itself to be warm, comfortable and well able to withstand the rigours of winter nights in the Cairngorms.”',
+      '“The material used on the Cioch kit is second to none! Immediately after trying the trousers of our supplied team kit, I ordered a pair of salopettes for skiing use. They are superb!” \n “The Cioch equipment has shown itself to be warm, comfortable and well able to withstand the rigours of winter nights in the Cairngorms.”',
     imageSrc: "/cmt.jpeg",
     imageAlt:
       "Cairngorms mountain rescure team, wearing Cioch jackets, in the mountains.",
@@ -51,7 +51,7 @@ export default function Recommendations() {
                 <Image
                   alt={feature.imageAlt}
                   src={feature.imageSrc}
-                  className="aspect-1/1 w-full h-full max-w-[300px] rounded-lg object-cover mx-auto"
+                  className="aspect-1/1 w-full h-full max-w-[250px] rounded-lg object-cover mx-auto"
                   width={500}
                   height={500}
                 />
@@ -64,10 +64,10 @@ export default function Recommendations() {
                   "flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8"
                 )}
               >
-                <h3 className="text-xl font-medium text-(--color-secondary)">
+                <h3 className="text-xl font-medium text-(--color-secondary) pb-2">
                   {feature.name}
                 </h3>
-                <p className="mt-2 text-lg text-(--color-text-secondary)">
+                <p className="mt-2 text-lg text-(--color-text-secondary) whitespace-pre-line">
                   {feature.description}
                 </p>
               </div>

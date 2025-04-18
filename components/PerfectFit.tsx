@@ -19,6 +19,7 @@ export default function perfectFit() {
             <h2 className="text-3xl font-bold text-(--color-primary) sm:text-4xl text-center">
               Perfect Fit™
             </h2>
+            
             <p className="text-lg text-(--color-text) sm:text-xl mb-10 text-justify pt-15">
               We have realised that many people cannot buy properly fitting
               outdoor gear in the high-street, and in our view, they are wasting
