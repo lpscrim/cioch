@@ -45,6 +45,14 @@
 
 /* Animation styles */
 
+.card:hover {
+  animation: enlarge 1s ease-out;
+}
+
+.pause:hover {
+  animation-play-state: paused;
+}
+
 .side-to-side {
   animation: side-to-side 30s infinite ease-in-out;
 }
@@ -57,6 +65,18 @@
 }
 .fade-in-slower {
   animation: fade-in 6s ease-in-out;
+}
+
+@keyframes enlarge {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+
+
 }
 
 @keyframes side-to-side {

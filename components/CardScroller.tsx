@@ -5,14 +5,14 @@ export default function CardScroller() {
         <section className="py-15">
             <div className="mx-auto w-full px-6">
                 <div className="flex justify-center overflow-x-hidden space-x-4 py-10">
-                    <div className="flex flex-nowrap space-x-8 side-to-side whitespace-nowrap">
-                        <div className="min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 1</div>
-                        <div className="min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 2</div>
-                        <div className="min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 3</div>
-                        <div className="min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 4</div>
-                        <div className="min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 5</div>
-                        <div className="min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 6</div>
-                        <div className="min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 7</div>
+                    <div className="flex flex-nowrap space-x-8 side-to-side whitespace-nowrap pause">
+                        <div className="card min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 1</div>
+                        <div className="card min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 2</div>
+                        <div className="card min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 3</div>
+                        <div className="card min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 4</div>
+                        <div className="card min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 5</div>
+                        <div className="card min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 6</div>
+                        <div className="card min-w-[300px] lg:min-w-[500px] bg-white rounded-lg shadow-md px-15 py-30 lg:py-50">Card 7</div>
                     </div>
                 </div>
             </div>
