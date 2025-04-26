@@ -43,6 +43,12 @@
   }
 }
 
+/* Animation styles */
+
+.side-to-side {
+  animation: side-to-side 20s infinite ease-in-out;
+}
+
 .fade-in {
   animation: fade-in 3s ease-in-out;
 }
@@ -53,6 +59,19 @@
   animation: fade-in 6s ease-in-out;
 }
 
+@keyframes side-to-side {
+  0% {
+    transform: translateX(-100px);
+  }
+
+  50% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(-100px);
+  }
+}
 
 @keyframes fade-in {
   from {
