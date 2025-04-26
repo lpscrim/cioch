@@ -1,53 +1,53 @@
 import Card from "./Card";
 
 
-const cards = [
+const jackets = [
     {
-        title: "Card 1",
-        description: "Description for Card 1",
+        title: "jacket 1",
+        description: "Description for jacket 1",
         imageSrc: "/jacket1.jpg",
-        imageAlt: "Image for Card 1",
+        imageAlt: "Image for jacket 1",
         color: "white",
     },
     {
-        title: "Card 2",
-        description: "Description for Card 2",
+        title: "jacket 2",
+        description: "Description for jacket 2",
         imageSrc: "/jacket2.jpg",
-        imageAlt: "Image for Card 2",
+        imageAlt: "Image for jacket 2",
         color: "amber-100",
     },
     {
-        title: "Card 3",
-        description: "Description for Card 3",
+        title: "jacket 3",
+        description: "Description for jacket 3",
         imageSrc: "/jacket3.jpg",
-        imageAlt: "Image for Card 3",
+        imageAlt: "Image for jacket 3",
         color: "amber-200",
     },
-    {   title: "Card 4",
-        description: "Description for Card 4",
+    {   title: "jacket 4",
+        description: "Description for jacket 4",
         imageSrc: "/jacket4.jpg",
-        imageAlt: "Image for Card 4",
+        imageAlt: "Image for jacket 4",
         color: "amber-300",
     },
     {
-        title: "Card 5",
-        description: "Description for Card 5",
+        title: "jacket 5",
+        description: "Description for jacket 5",
         imageSrc: "/jacket5.jpg",
-        imageAlt: "Image for Card 5",
+        imageAlt: "Image for jacket 5",
         color: "amber-400",
     },
     {
-        title: "Card 6",
-        description: "Description for Card 6",
+        title: "jacket 6",
+        description: "Description for jacket 6",
         imageSrc: "/jacket1.jpg",
-        imageAlt: "Image for Card 6",
+        imageAlt: "Image for jacket 6",
         color: "amber-500",
     },
     {
-        title: "Card 7",
-        description: "Description for Card 7",
+        title: "jacket 7",
+        description: "Description for jacket 7",
         imageSrc: "/jacket1.jpg",
-        imageAlt: "Image for Card 7",
+        imageAlt: "Image for jacket 7",
         color: "white",
     }
 ]
@@ -56,15 +56,15 @@ export default function CardScroller() {
         <section className="py-10">
             <div className="mx-auto w-full px-6">
                 <div className="flex justify-center overflow-x-hidden space-x-4 py-10">
-                    <div className="flex flex-nowrap space-x-8 whitespace-nowrap slide">
-                        {cards.map((card, index) => (
+                    <div className="flex flex-nowrap space-x-10 whitespace-nowrap slide">
+                        {jackets.map((jacket, index) => (
                             <div key={index}>
                                 <Card
-                                    title={card.title}
-                                    description={card.description}
-                                    imageSrc={card.imageSrc}
-                                    imageAlt={card.imageAlt}
-                                    color={card.color}
+                                    title={jacket.title}
+                                    description={jacket.description}
+                                    imageSrc={jacket.imageSrc}
+                                    imageAlt={jacket.imageAlt}
+                                    color={jacket.color}
                                 />
                             </div>
                         ))}
