@@ -46,7 +46,7 @@
 /* Animation styles */
 
 .side-to-side {
-  animation: side-to-side 20s infinite ease-in-out;
+  animation: side-to-side 30s infinite ease-in-out;
 }
 
 .fade-in {
@@ -61,15 +61,15 @@
 
 @keyframes side-to-side {
   0% {
-    transform: translateX(-100px);
+    transform: translateX(-250px);
   }
 
   50% {
-    transform: translateX(100px);
+    transform: translateX(250px);
   }
 
   100% {
-    transform: translateX(-100px);
+    transform: translateX(-250px);
   }
 }
 
