@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const features = [
+const recommendations = [
   {
     name: "George Yeomans- Skye Mountain Guide",
     description:
@@ -34,22 +34,22 @@ export default function Recommendations() {
           </h2>
         </div>
         <div className="mt-30 space-y-30">
-          {features.map((feature, featureIdx) => (
+          {recommendations.map((recommendation, recommendationIdx) => (
             <div
-              key={feature.name}
-              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-md px-12 lg:px-8 py-12 lg:py-4 bg-(--color-foreground)  bg-[url(/mocha-grunge.png)]"
+              key={recommendation.name}
+              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-md px-12 lg:px-8 py-12 lg:py-6 bg-(--color-foreground)  bg-[url(/mocha-grunge.png)]"
             >
               <div
                 className={classNames(
-                  featureIdx % 2 === 0
+                  recommendationIdx % 2 === 0
                     ? "lg:col-start-1"
                     : "lg:col-start-8 xl:col-start-9",
                   "mt-6 lg:col-span-5 lg:row-start-1 lg:mt-0 xl:col-span-4"
                 )}
               >
                 <Image
-                  alt={feature.imageAlt}
-                  src={feature.imageSrc}
+                  alt={recommendation.imageAlt}
+                  src={recommendation.imageSrc}
                   className="aspect-1/1 w-full h-full max-w-[400] lg:max-w-[280px] rounded-sm object-cover mx-auto"
                   width={500}
                   height={500}
@@ -57,17 +57,17 @@ export default function Recommendations() {
               </div>
               <div
                 className={classNames(
-                  featureIdx % 2 === 0
+                  recommendationIdx % 2 === 0
                     ? "lg:col-start-6 xl:col-start-5"
                     : "lg:col-start-1",
                   "flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8"
                 )}
               >
                 <h3 className="text-xl font-medium text-(--color-secondary) pb-2">
-                  {feature.name}
+                  {recommendation.name}
                 </h3>
                 <p className="my-4 text-lg text-(--color-text-secondary) whitespace-pre-line">
-                  {feature.description}
+                  {recommendation.description}
                 </p>
               </div>
             </div>
