@@ -46,20 +46,21 @@
 /* Animation styles */
 
 .card {
-  transform: scale(1); /* Default size */
-  transition: transform 1s ease-in-out; /* Smooth transition for both hover and release */
+  transform: scale(1); 
+  transition: transform 0.5s ease-in-out; 
 }
 
 .card:hover {
-  transform: scale(1.05); /* Enlarges the element on hover */
+  transform: scale(1.05); 
 }
 
-.pause:hover {
-  animation-play-state: paused;
+.slide {
+  animation: side-to-side 40s infinite ease-in-out; 
+  transition: animation-play-state 1s ease-in-out;
 }
 
-.side-to-side {
-  animation: side-to-side 40s infinite ease-in-out;
+.slide:hover {
+  animation-play-state: paused; 
 }
 
 .fade-in {
