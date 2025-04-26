@@ -4,7 +4,7 @@ export default function Intro() {
   return (
     <section
       id="intro"
-      className="w-full min-h-[90vh] h-full bg-(--color-foreground) border"
+      className="w-full min-h-[90vh] h-full bg-(--color-foreground) bg-[url(/mocha-grunge.png)]]"
     >
       <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto py-35">
         <h2 className="text-4xl font-bold text-(--color-text-secondary) sm:text-5xl text-center">
