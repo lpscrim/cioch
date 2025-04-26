@@ -16,8 +16,8 @@ export default function Hero() {
         />
         <div>
             <div id="heroText" className="absolute top-1/2 left-1/2 z-10 w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 text-center font-bold">
-            <h1 id="heroName" className={`mt-20 mb-2 text-7xl md:text-8xl text-(--color-accent) fade-in tracking-wide`}>Cíoch</h1>
-            <h3 className="text-2xl text-(--color-text) mb-2 fade-in-slow">Outdoor Clothing</h3>
+            <h1 id="heroName" className={`mt-20 mb-2 text-7xl md:text-8xl text-(--color-accent) fade-in tracking-wide `}>Cíoch</h1>
+            <h3 className="text-2xl text-(--color-text) mb-2 fade-in-slow ">Outdoor Clothing</h3>
             <h4 className="text-xl text-(--color-text) brightness-80 fade-in-slower">Handmade on the isle of Skye</h4>
             </div>
             <button id="scrollButton" className="group invisible md:visible absolute flex flex-row p-5 left-12 bottom-12 lg:left-30 z-10 text-center text-(--color-text) text-sm xl:text-base font-[500]">

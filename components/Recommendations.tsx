@@ -12,7 +12,7 @@ const features = [
   {
     name: "Cairngorm Mountain Rescue Team",
     description:
-      '“The material used on the Cioch kit is second to none! Immediately after trying the trousers of our supplied team kit, I ordered a pair of salopettes for skiing use. They are superb!” \n “The Cioch equipment has shown itself to be warm, comfortable and well able to withstand the rigours of winter nights in the Cairngorms.”',
+      '“The material used on the Cioch kit is second to none! Immediately after trying the trousers of our supplied team kit, I ordered a pair of salopettes for skiing use. They are superb!” \n\n “The Cioch equipment has shown itself to be warm, comfortable and well able to withstand the rigours of winter nights in the Cairngorms.”',
     imageSrc: "/cmt.jpeg",
     imageAlt:
       "Cairngorms mountain rescure team, wearing Cioch jackets, in the mountains.",
@@ -26,19 +26,18 @@ function classNames(...classes: string[]) {
 
 export default function Recommendations() {
   return (
-    <section id="recommendations" className="bg-(--color-text)">
-      <div className="mx-auto max-w-2xl px-4 py-15 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-8">
+    <section id="recommendations" className="pb-30">
+      <div className="mx-auto max-w-[38rem] px-4 pt-30 pb-20 sm:px-6 lg:max-w-7xl lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-(--color-secondary) sm:text-3xl">
+          <h2 className="text-4xl font-bold tracking-tight text-(--color-secondary) sm:text-5xl">
             Recommendations
           </h2>
         </div>
-
-        <div className="mt-16 space-y-16">
+        <div className="mt-30 space-y-30">
           {features.map((feature, featureIdx) => (
             <div
               key={feature.name}
-              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-lg p-8 bg-(--color-foreground)"
+              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-md px-12 lg:px-8 py-12 lg:py-4 bg-(--color-foreground)"
             >
               <div
                 className={classNames(
@@ -51,7 +50,7 @@ export default function Recommendations() {
                 <Image
                   alt={feature.imageAlt}
                   src={feature.imageSrc}
-                  className="aspect-1/1 w-full h-full max-w-[250px] rounded-lg object-cover mx-auto"
+                  className="aspect-1/1 w-full h-full max-w-[400] lg:max-w-[280px] rounded-sm object-cover mx-auto"
                   width={500}
                   height={500}
                 />
@@ -67,7 +66,7 @@ export default function Recommendations() {
                 <h3 className="text-xl font-medium text-(--color-secondary) pb-2">
                   {feature.name}
                 </h3>
-                <p className="mt-2 text-lg text-(--color-text-secondary) whitespace-pre-line">
+                <p className="my-4 text-lg text-(--color-text-secondary) whitespace-pre-line">
                   {feature.description}
                 </p>
               </div>

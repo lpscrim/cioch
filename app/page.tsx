@@ -10,8 +10,12 @@ export default function Home() {
     <Hero />
     <main>
         <Intro />
-        <PerfectFit />
-        <Recommendations />
+        <div className="bg-[url(/skye1.svg)]  bg-fixed bg-cover bg-no-repeat w-full">
+          <div className="wf-full h-full backdrop-blur-[2px] backdrop-brightness-90">
+            <Recommendations />
+          </div>
+        </div>
+        <PerfectFit />       
     </main>
   </div>
   );

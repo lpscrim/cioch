@@ -4,7 +4,7 @@ export default function perfectFit() {
   return (
     <section
       id="perfectFit"
-      className="relative w-full min-h-[90vh] h-full bg-(--color-tertiary) border z-0"
+      className="relative w-full min-h-[90vh] h-full bg-(--color-tertiary) z-0"
     >
       <Image
         src="/contour.png"
@@ -16,11 +16,11 @@ export default function perfectFit() {
       <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto pt-30 pb-20">
         <div className="flex flex-col lg:flex-row mx-auto">
           <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-center">
-            <h2 className="text-3xl font-bold text-(--color-primary) sm:text-4xl text-center">
+            <h2 className="text-4xl font-bold text-(--color-primary) sm:text-5xl text-center">
               Perfect Fit™
             </h2>
             
-            <p className="text-lg text-(--color-text) sm:text-xl mb-10 text-justify pt-15">
+            <p className="text-lg text-(--color-text) sm:text-xl mb-10 text-justify pt-30">
               We have realised that many people cannot buy properly fitting
               outdoor gear in the high-street, and in our view, they are wasting
               their money on clothing that cannot deliver it’s potential

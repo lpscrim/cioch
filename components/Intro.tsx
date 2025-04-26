@@ -6,11 +6,11 @@ export default function Intro() {
       id="intro"
       className="w-full min-h-[90vh] h-full bg-(--color-foreground) border"
     >
-      <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto py-30">
-        <h2 className="text-3xl font-bold text-(--color-text-secondary) sm:text-4xl text-center">
-          Welcome to <span className="text-(--color-secondary)">Cioch Outdoor Clothing</span>
+      <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto py-35">
+        <h2 className="text-4xl font-bold text-(--color-text-secondary) sm:text-5xl text-center">
+          Welcome to <span className="text-(--color-secondary) text-5xl sm:text-6xl">Cíoch </span><span className="text-(--color-text-secondary)">Outdoor Clothing</span>
         </h2>
-        <div className="flex flex-col lg:flex-row mx-auto pt-20">
+        <div className="flex flex-col lg:flex-row mx-auto pt-30">
           <div className="w-full lg:w-1/2 mb-10 sm:mb-15 lg:mb-0 mx-auto flex flex-col items-center justify-center ">
             <Image
               src="/neilhelen.jpg"
@@ -20,7 +20,7 @@ export default function Intro() {
               height={450}
             />
           </div>
-          <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-center">
+          <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-center px-4">
             <p className="text-lg text-(--color-text-secondary) sm:text-xl mb-10 text-justify">
               Neil and Helen Urquhart have been designing and manufacturing
               outdoor clothing for individual customers since 1988. From
@@ -48,7 +48,7 @@ export default function Intro() {
             </div>
           </div>
         </div>
-        <div className="block xl:hidden max-w-[80rem] mx-auto">
+        <div className="block xl:hidden max-w-[80rem] mx-auto px-4">
           <h2 className="text-xl font-bold text-(--color-secondary) sm:text-2xl text-center mt-10 mb-10 ">
             Please note
           </h2>
