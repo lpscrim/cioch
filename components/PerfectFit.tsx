@@ -9,7 +9,7 @@ export default function perfectFit() {
       <Image
         src="/contour.png"
         alt="background"
-        className="absolute top-0 left-0 h-full w-full object-cover opacity-5 -z-10"
+        className="absolute top-0 left-0 h-full w-full object-fill opacity-5 -z-10"
         width={800}
         height={533}
       />

@@ -37,7 +37,7 @@ export default function Recommendations() {
           {features.map((feature, featureIdx) => (
             <div
               key={feature.name}
-              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-md px-12 lg:px-8 py-12 lg:py-4 bg-(--color-foreground)"
+              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-md px-12 lg:px-8 py-12 lg:py-4 bg-(--color-foreground)  bg-[url(/mocha-grunge.png)]"
             >
               <div
                 className={classNames(
