@@ -1,15 +1,23 @@
+'use client';
+
+import Link from 'next/link';
+import { 
+    Popover,
+    PopoverButton,
+    PopoverGroup,
+    PopoverPanel,
+} from '@headlessui/react';
+import { ChevronUpIcon } from '@heroicons/react/20/solid'
+
 import Image from "next/image";
 
-const navigation = {
-  main: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Accessibility", href: "#" },
-    { name: "Partners", href: "#" },
-  ],
-};
+const categories = [
+    { name: 'Kids', description: 'See selection of kids clothing', href: '#'},
+    { name: 'Trousers', description: 'See selection of trousers', href: '#'},
+    { name: 'Windproof Jackets', description: 'See selection of windproof jackets', href: '#'},
+    { name: 'Waterproof Jackets', description: 'See selection of waterproof Jackets', href: '#'},
+    ]
+
 
 export default function Example() {
   return (
@@ -34,15 +42,51 @@ export default function Example() {
             aria-label="Footer"
             className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
           >
-            {navigation.main.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="text-text hover:text-secondary text-lg"
-              >
-                {item.name}
-              </a>
-            ))}
+        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+          <Popover className="relative">
+            <PopoverButton className="flex items-center gap-x-1 text-lg/6 font-semibold text-text hover:text-secondary">
+              Products
+              <ChevronUpIcon aria-hidden="true" className="size-5 flex-none " />
+            </PopoverButton>
+            <PopoverPanel
+              transition
+              className="absolute bottom-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-md bg-(--color-background)/95 ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+            >
+              <div className="p-4">
+                {categories.map((category) => (
+                  <div
+                    key={category.name}
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:backdrop-brightness-150"
+                  >
+                    <div className="flex-auto">
+                      <Link href={category.href} aria-label={category.description} className="block font-semibold text-text hover:text-secondary">
+                        {category.name}
+                        <span className="absolute inset-0" />
+                      </Link>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </PopoverPanel>
+          </Popover>
+
+          <Link href="#" className="text-lg/6 font-semibold text-text hover:text-secondary">
+            About
+          </Link>
+          
+          <Link href="#" className="text-lg/6 font-semibold text-text hover:text-secondary">
+            Order
+          </Link>
+
+          <Link href="#" className="text-lg/6 font-semibold text-text hover:text-secondary">
+            Gallery
+          </Link>
+
+          <Link href="#" className="text-lg/6 font-semibold text-text hover:text-secondary">
+            Contact
+          </Link>
+        </PopoverGroup>
+             
           </nav>
 
           <div className="mt-16 border-t border-text-secondary pt-8">
