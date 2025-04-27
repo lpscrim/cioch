@@ -31,12 +31,12 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #161615;
-    --foreground: #fffdfa;
+    --foreground: #cccccc;
     --color-text: #ffffff;
     --color-text-secondary: #181818;
     --color-primary: #f3d13a;
     --color-secondary: #b93737;
-    --color-tertiary: #3b3b3b;
+    --color-tertiary: #3d3d3d;
     --color-accent: #f3d13a;
     --color-button: #0070f3;
     --color-border: #eaeaea;

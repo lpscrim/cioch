@@ -26,13 +26,13 @@ function classNames(...classes: string[]) {
 
 export default function Recommendations() {
   return (
-    <section id="recommendations" className="pb-30">
-      <div className="mx-auto max-w-[38rem] px-4 pt-30 pb-20 sm:px-6 lg:max-w-7xl lg:px-8">
-        <div className="mx-auto max-w-3xl text-center">
+    <section id="recommendations" className="pb-20 ">
+      <div className="mx-auto max-w-[38rem] px-4 pt-20 pb-20 sm:px-6 lg:max-w-7xl lg:px-8  ">
+        {/* <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-4xl font-bold tracking-tight text-(--color-secondary) sm:text-5xl">
             Recommendations
           </h2>
-        </div>
+        </div> */}
         <div className="mt-30 space-y-30">
           {recommendations.map((recommendation, recommendationIdx) => (
             <div
