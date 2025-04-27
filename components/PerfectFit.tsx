@@ -7,11 +7,18 @@ export default function perfectFit() {
       className="relative w-full min-h-[90vh] h-full bg-tertiary z-0"
     >
       <Image
+        src="/contourP.png"
+        alt="background"
+        className="flex lg:hidden absolute top-0 left-0 h-full w-full object-cover opacity-5 -z-10"
+        width={1000}
+        height={2000}
+      />
+      <Image
         src="/contour.png"
         alt="background"
-        className="absolute top-0 left-0 h-full w-full object-contain opacity-5 -z-10"
-        width={800}
-        height={533}
+        className="hidden lg:flex absolute top-0 left-0 h-full w-full object-cover opacity-5 -z-10"
+        width={2000}
+        height={1000}
       />
       <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto pt-30 pb-20">
         <div className="flex flex-col lg:flex-row mx-auto">

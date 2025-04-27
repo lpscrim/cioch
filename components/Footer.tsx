@@ -19,7 +19,7 @@ export default function Example() {
           <p className="mt-2 text-4xl font-semibold tracking-tight text-balance text-text-secondary sm:text-5xl">
             Give us a message or put your order in today!
           </p>
-          <div className="mt-8 flex justify-center">
+          <div className="mt-12 flex justify-center">
             <a id="button"
               href="#"
               className="rounded-md bg-secondary px-3.5 py-2.5 text-base font-bold text-primary shadow-xs hover:brightness-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
@@ -29,7 +29,7 @@ export default function Example() {
           </div>
         </div>
 
-        <div className=" mx-auto max-w-7xl overflow-hidden px-6 pt-70 lg:px-8">
+        <div className=" mx-auto max-w-7xl overflow-hidden px-6 pt-64 lg:px-8">
           <nav
             aria-label="Footer"
             className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
