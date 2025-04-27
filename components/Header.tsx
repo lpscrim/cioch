@@ -66,7 +66,7 @@ export default function Example() {
             </PopoverButton>
             <PopoverPanel
               transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-xl bg-(--color-background)/85 ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-md bg-(--color-background)/95 ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
               <div className="p-4">
                 {categories.map((category) => (
@@ -93,6 +93,11 @@ export default function Example() {
           <Link href="#" className="text-lg/6 font-semibold ">
             Order
           </Link>
+
+          <Link href="#" className="text-lg/6 font-semibold ">
+            Gallery
+          </Link>
+
           <Link href="#" className="text-lg/6 font-semibold ">
             Contact
           </Link>
@@ -100,9 +105,9 @@ export default function Example() {
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
         <div className="fixed inset-0 z-70" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-70 w-full overflow-y-auto bg-(--color-background)/95 text-(--color-text) px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
+        <DialogPanel className="fixed inset-y-0 right-0 z-70 w-full overflow-y-auto bg-(--color-background) text-(--color-text) px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            <Link href="#" className="-m-1.5 p-1.5">
+            <Link href="#" className=" p-1.5">
               <span className="sr-only">Cioch CLothing</span>
               <Image
                 alt=""
@@ -118,7 +123,7 @@ export default function Example() {
               className="-m-2.5 rounded-md p-2.5 "
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon aria-hidden="true" className="size-6 cursor-pointer" />
+              <XMarkIcon aria-hidden="true" className="size-6 mr-3 cursor-pointer" />
             </button>
           </div>
           <div className="mt-6 flow-root">
@@ -135,7 +140,7 @@ export default function Example() {
                         key={category.name}
                         as="a"
                         href={category.href}
-                        className="block rounded-lg py-2 pr-3 pl-6 text-sm/7 font-semibold  hover:backdrop-brightness-150"
+                        className="block rounded-lg py-2 pr-3 pl-8 text-sm/7 font-semibold  hover:backdrop-brightness-150"
                       >
                         {category.name}
                       </DisclosureButton>
@@ -153,6 +158,12 @@ export default function Example() {
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:backdrop-brightness-150"
                 >
                   Order
+                </Link>
+                <Link
+                  href="#"
+                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:backdrop-brightness-150"
+                >
+                  Gallery
                 </Link>
                 <Link
                   href="#"
