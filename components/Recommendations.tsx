@@ -29,7 +29,7 @@ export default function Recommendations() {
     <section id="recommendations" className="pb-20">
       <div className="mx-auto max-w-[38rem] px-4 pt-30 pb-20 sm:px-6 lg:max-w-7xl lg:px-8  ">
          <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-(--color-secondary) sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-secondary sm:text-5xl">
             Recommendations
           </h2>
         </div> 
@@ -37,7 +37,7 @@ export default function Recommendations() {
           {recommendations.map((recommendation, recommendationIdx) => (
             <div
               key={recommendation.name}
-              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-md px-12 lg:px-8 py-12 lg:py-6 bg-(--color-foreground)/85  bg-[url(/mocha-grunge.png)]"
+              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-md px-12 lg:px-8 py-12 lg:py-6 bg-(--color-foreground)/95  bg-[url(/mocha-grunge.png)]"
             >
               <div
                 className={classNames(
@@ -63,10 +63,10 @@ export default function Recommendations() {
                   "flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8"
                 )}
               >
-                <h3 className="text-xl font-medium text-(--color-secondary) pb-2">
+                <h3 className="mx-auto text-center text-xl font-medium text-(--color-secondary) pb-2">
                   {recommendation.name}
                 </h3>
-                <p className="my-4 text-lg text-(--color-text-secondary) whitespace-pre-line">
+                <p className="px-6 my-4 text-lg text-(--color-text-secondary) whitespace-pre-line">
                   {recommendation.description}
                 </p>
               </div>

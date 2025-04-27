@@ -36,7 +36,7 @@
     --color-text-secondary: #181818;
     --color-primary: #f3d13a;
     --color-secondary: #b93737;
-    --color-tertiary: #3d3d3d;
+    --color-tertiary: #464545;
     --color-accent: #f3d13a;
     --color-button: #0070f3;
     --color-border: #eaeaea;
@@ -129,6 +129,10 @@ header {
 
 #intro {
   font-family: var(--font-anek-devanagari);
+}
+
+#intro #cioch {
+  font-family: var(--font-noto-sans);
 }
 
 #perfectFit h2 {

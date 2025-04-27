@@ -15,21 +15,21 @@ export default function perfectFit() {
       />
       <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto pt-30 pb-20">
         <div className="flex flex-col lg:flex-row mx-auto">
-          <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-center">
-            <h2 className="text-4xl font-bold text-(--color-primary) sm:text-5xl text-center">
+          <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-center px-6">
+            <h2 className="text-4xl font-bold text-primary sm:text-5xl text-center">
               Perfect Fit™
             </h2>
             
-            <p className="text-lg text-(--color-text) sm:text-xl mb-10 text-justify pt-30">
+            <p className="text-lg text-text sm:text-xl mb-10 text-justify pt-30">
               We have realised that many people cannot buy properly fitting
               outdoor gear in the high-street, and in our view, they are wasting
               their money on clothing that cannot deliver it’s potential
               performance.
             </p>
-            <h2 className="text-xl font-bold text-(--color-primary) sm:text-2xl text-center mt-10 mb-10 ">
+            <h2 className="text-xl font-bold text-primary sm:text-2xl text-center mt-10 mb-10 ">
               You can be sure that in buying Perfect Fit™:
             </h2>
-            <p className="text-lg text-(--color-text) sm:text-xl text-justify mb-10 ">
+            <p className="text-lg text-text sm:text-xl text-justify mb-10 ">
               Each garment is individually made to your measurements Your
               garment’s performance and comfort (i.e. water-resistance,
               breathability, ventilation and durability) will be maximised. We
