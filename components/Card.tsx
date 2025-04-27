@@ -15,8 +15,8 @@ export default function Card({
 }) {
   return (
     <div className={`cursor-pointer group card relative w-[200px] lg:w-[350px] bg-${color} rounded-lg shadow-md px-2 lg:px-15 py-30 lg:py-50`}>
-      <h2 className="invisible group-hover:visible mx-auto text-center">{title}</h2>
-      <p className="invisible group-hover:visible">{description}</p>
+      <h2 className="invisible group-hover:visible mx-auto text-center text-2xl">{title}</h2>
+      <p className="invisible text-center mx-auto group-hover:visible">{description}</p>
       <Image 
         src={imageSrc} 
         alt={imageAlt} 
