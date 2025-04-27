@@ -145,3 +145,15 @@ header {
 #recommendations {
   font-family: var(--font-anek-devanagari);
 }
+
+footer {
+  font-family: var(--font-roboto);
+}
+
+footer nav {
+  font-family: var(--font-karla);
+}
+
+footer #button {
+  font-family: var(--font-noto-sans);
+}
