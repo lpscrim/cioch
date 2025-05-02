@@ -36,27 +36,26 @@ const jackets = [
         imageAlt: "Image for jacket 5",
         color: "amber-400",
     },
-    {
-        title: "jacket 6",
-        description: "Description for jacket 6",
-        imageSrc: "/jacket1.jpg",
-        imageAlt: "Image for jacket 6",
-        color: "amber-500",
-    },
-    {
-        title: "jacket 7",
-        description: "Description for jacket 7",
-        imageSrc: "/jacket1.jpg",
-        imageAlt: "Image for jacket 7",
-        color: "white",
-    }
 ]
 export default function CardScroller() {
     return (
         <section className="py-10">
             <div className="mx-auto w-full px-6">
-                <div className="flex justify-center overflow-x-hidden space-x-4 py-10">
-                    <div className="flex flex-nowrap space-x-10 whitespace-nowrap slide">
+                <div className="relative flex justify-center overflow-x-hidden space-x-4 py-10">
+                    <div className="flex flex-nowrap space-x-10 whitespace-nowrap animate-marquee">
+                        {jackets.map((jacket, index) => (
+                            <div key={index}>
+                                <Card
+                                    title={jacket.title}
+                                    description={jacket.description}
+                                    imageSrc={jacket.imageSrc}
+                                    imageAlt={jacket.imageAlt}
+                                    color={jacket.color}
+                                />
+                            </div>
+                        ))}
+                    </div>
+                    <div className="absolute px-8 flex flex-nowrap space-x-10 whitespace-nowrap animate-marquee2">
                         {jackets.map((jacket, index) => (
                             <div key={index}>
                                 <Card

@@ -12,7 +12,7 @@ export default function Home() {
     <Hero />
     <main>
         <Intro />
-        <div className="bg-[url(/quirang1.jpg)] bg-fixed bg-cover bg-no-repeat w-full ">
+        <div className="bg-[url(/pin.jpg)] bg-fixed bg-cover bg-no-repeat w-full ">
           <div className="w-full h-full backdrop-blur-[0px] backdrop-brightness-75">
             <CardScroller />  
           </div>

@@ -27,21 +27,21 @@ export default function perfectFit() {
               Perfect Fit™
             </h2>
             
-            <p className="text-lg text-text sm:text-xl mb-10 text-justify pt-30">
+            <p className="text-xl text-text sm:text-2xl mb-10 text-justify pt-20">
               We have realised that many people cannot buy properly fitting
               outdoor gear in the high-street, and in our view, they are wasting
               their money on clothing that cannot deliver it’s potential
               performance.
             </p>
-            <h2 className="text-xl font-bold text-primary sm:text-2xl text-center mt-10 mb-10 ">
+            <h2 className="text-2xl font-bold text-primary sm:text-3xl text-center mt-10 mb-10 ">
               You can be sure that in buying Perfect Fit™:
             </h2>
-            <p className="text-lg text-text sm:text-xl text-justify mb-10 ">
+            <p className="text-xl text-text sm:text-2xl text-justify mb-10 ">
               Each garment is individually made to your measurements Your
               garment’s performance and comfort (i.e. water-resistance,
-              breathability, ventilation and durability) will be maximised. We
+              breathability, ventilation and durability) will be maximised.<br/> We
               try to eliminate tight areas, which may cause chaffing and leakage
-              Areas of excess fabric which add wear and weight are also removed
+              Areas of excess fabric which add wear and weight are also removed.<br />
               Every item is made in Struan on the Isle of Skye Cioch staff are
               here to advise and help our customers before and after sales.
             </p>

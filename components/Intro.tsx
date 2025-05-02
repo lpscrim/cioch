@@ -15,16 +15,14 @@ export default function Intro() {
             <Image
               src="/neilhelen.jpg"
               alt="Cioch Outdoor Clothing"
-              className="w-3/4 max-w-[500px] h-auto rounded-lg"
+              className="w-full max-w-[600px] h-auto rounded-lg"
               width={360}
               height={450}
             />
           </div>
           <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-start px-6">
-            <h2 className="hidden lg:block text-2xl font-bold text-(--color-secondary) sm:text-3xl text-center  mb-10 ">
-                About us
-            </h2>
-            <p className="text-lg text-text-secondary sm:text-xl mb-10 text-justify">
+
+            <p className="pt-5 ext-xl text-text-secondary sm:text-2xl mb-10 text-justify">
               Neil and Helen Urquhart have been designing and manufacturing
               outdoor clothing for individual customers since 1988. From
               personal use, feedback from customers, professional mountaineers,
@@ -35,10 +33,10 @@ export default function Intro() {
               <strong>01470 572707</strong>.
             </p>
             <div className="hidden xl:block">
-              <h2 className="text-xl font-bold text-secondary sm:text-2xl text-center mt-10 mb-5 ">
+              <h2 className="text-2xl font-bold text-secondary sm:text-3xl text-center mt-10 mb-5 ">
                 Please note
               </h2>
-              <p className="text-lg text-text-secondary sm:text-xl text-justify mb-10 ">
+              <p className="text-xl text-text-secondary sm:text-2xl text-justify mb-10 ">
                 All changes to garments or materials shown on this website
                 represent our continual effort to improve our products, using
                 newly available fabrics and feedback from our customers,
@@ -52,10 +50,10 @@ export default function Intro() {
           </div>
         </div>
         <div className="block xl:hidden max-w-[80rem] mx-auto px-6">
-          <h2 className="text-xl font-bold text-secondary sm:text-2xl text-center mt-10 mb-10 ">
+          <h2 className="text-2xl font-bold text-secondary sm:text-3xl text-center mt-10 mb-10 ">
             Please note
           </h2>
-          <p className="text-lg text-text-secondary sm:text-xl text-justify mb-10 ">
+          <p className="text-xl text-text-secondary sm:text-2xl text-justify mb-10 ">
             All changes to garments or materials shown on this website represent
             our continual effort to improve our products, using newly available
             fabrics and feedback from our customers, including professional

@@ -21,8 +21,8 @@ const categories = [
 
 export default function Example() {
   return (
-    <footer className="relative w-full min-h-[100vh] h-full z-0">
-      <div className="mx-auto max-w-7xl px-6  lg:px-8 ">
+    <footer className="relative w-full min-h-[95vh] sm:min-h-[100vh] h-full z-0">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8 ">
         <div className="mx-auto max-w-2xl text-center py-16 sm:py-24 lg:py-32">
           <p className="mt-2 text-4xl font-semibold tracking-tight text-balance text-text-secondary sm:text-5xl">
             Give us a message or put your order in today!
@@ -40,11 +40,11 @@ export default function Example() {
         <div className=" mx-auto max-w-7xl overflow-hidden px-6 pt-64 lg:px-8">
           <nav
             aria-label="Footer"
-            className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
+            className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 sm:text-sm/6"
           >
-        <PopoverGroup className="hidden lg:flex lg:gap-x-12">
+        <PopoverGroup className="flex gap-x-6 lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lg/6 font-semibold text-text hover:text-secondary">
+            <PopoverButton className="flex items-center gap-x-1 sm:text-lg/6 font-semibold text-text hover:text-secondary">
               Products
               <ChevronUpIcon aria-hidden="true" className="size-5 flex-none " />
             </PopoverButton>
@@ -56,7 +56,7 @@ export default function Example() {
                 {categories.map((category) => (
                   <div
                     key={category.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:backdrop-brightness-150"
+                    className="group relative flex items-center gap-x-6 rounded-lg p-4 sm:text-sm/6 hover:backdrop-brightness-150"
                   >
                     <div className="flex-auto">
                       <Link href={category.href} aria-label={category.description} className="block font-semibold text-text hover:text-secondary">
@@ -70,19 +70,19 @@ export default function Example() {
             </PopoverPanel>
           </Popover>
 
-          <Link href="#" className="text-lg/6 font-semibold text-text hover:text-secondary">
+          <Link href="#" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
             About
           </Link>
           
-          <Link href="#" className="text-lg/6 font-semibold text-text hover:text-secondary">
+          <Link href="#" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
             Order
           </Link>
 
-          <Link href="#" className="text-lg/6 font-semibold text-text hover:text-secondary">
+          <Link href="#" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
             Gallery
           </Link>
 
-          <Link href="#" className="text-lg/6 font-semibold text-text hover:text-secondary">
+          <Link href="#" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
             Contact
           </Link>
         </PopoverGroup>
