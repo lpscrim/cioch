@@ -11,7 +11,7 @@ export default function Intro() {
           Welcome to <span id="cioch" className="text-secondary text-4xl sm:text-5xl font-[800]">Cíoch </span><span className="text-text-secondary">Outdoor Clothing</span>
         </h2>
         <div className="flex flex-col lg:flex-row mx-auto pt-30">
-          <div className="w-full lg:w-1/2 mb-10 sm:mb-15 lg:mb-0 mx-auto flex flex-col items-center justify-center ">
+          <div className="w-full lg:w-1/2 mb-10 sm:mb-15 lg:mb-0 mx-auto flex flex-col items-center justify-center px-5">
             <Image
               src="/neilhelen.jpg"
               alt="Cioch Outdoor Clothing"
