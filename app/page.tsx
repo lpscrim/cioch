@@ -9,7 +9,10 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
   <div>
-    <Hero />
+    <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-transparent z-2 bg-fixed"></div>
+    <div className="relative bg-[url(/storr.jpg)] bg-center bg-cover bg-no-repeat w-full  bg-fixed">
+      <Hero />
+    </div>
     <main>
         <Intro />
         <div className="bg-[url(/pin.jpg)] bg-fixed bg-cover bg-no-repeat w-full ">

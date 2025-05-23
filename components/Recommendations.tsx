@@ -37,8 +37,12 @@ export default function Recommendations() {
           {recommendations.map((recommendation, recommendationIdx) => (
             <div
               key={recommendation.name}
-              className="flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-lg px-12 lg:px-8 py-12 lg:py-6 bg-(--color-foreground)/95  bg-[url(/mocha-grunge.png)]"
-            >
+              className={classNames(
+                recommendationIdx % 2 === 0
+                  ? "slide-fade-left"
+                  : "slide-fade-right","flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-lg px-12 lg:px-8 py-12 lg:py-6 bg-(--color-foreground)/95  bg-[url(/mocha-grunge.png)]"
+              )}
+                  >
               <div
                 className={classNames(
                   recommendationIdx % 2 === 0

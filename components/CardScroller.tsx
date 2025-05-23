@@ -41,7 +41,7 @@ export default function CardScroller() {
     return (
         <section className="py-10">
             <div className="mx-auto w-full px-6">
-                <div className="relative flex justify-center overflow-x-hidden space-x-4 py-10">
+                <div className="relative flex justify-center overflow-x-hidden space-x-20 py-10">
                     <div className="flex flex-nowrap space-x-10 whitespace-nowrap animate-marquee">
                         {jackets.map((jacket, index) => (
                             <div key={index}>
@@ -55,7 +55,7 @@ export default function CardScroller() {
                             </div>
                         ))}
                     </div>
-                    <div className="absolute px-8 flex flex-nowrap space-x-10 whitespace-nowrap animate-marquee2">
+                    <div className="absolute flex flex-nowrap space-x-10 whitespace-nowrap animate-marquee2">
                         {jackets.map((jacket, index) => (
                             <div key={index}>
                                 <Card
