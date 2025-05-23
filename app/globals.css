@@ -43,6 +43,10 @@
   }
 }
 
+::-webkit-scrollbar { 
+  display: none; 
+  }
+
 /* Animation styles */
 
 .card {
@@ -212,3 +216,4 @@ footer nav {
 footer #button {
   font-family: var(--font-noto-sans);
 }
+
