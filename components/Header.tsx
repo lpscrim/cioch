@@ -61,7 +61,7 @@ export default function Example() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 text-lg/6 font-semibold">
+            <PopoverButton className="flex items-center gap-x-1 text-lg/6 font-semibold cursor-pointer">
               Products
               <ChevronDownIcon aria-hidden="true" className="size-5 flex-none " />
             </PopoverButton>
