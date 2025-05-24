@@ -43,7 +43,8 @@ export default function Example() {
               className="h-8 w-auto mr-3"
               height="32"
               width="32"
-            />
+              quality={100}
+                          />
           </Link>
           <h2 className='mr-3 text-xl/6 font-semibold text-(--color-text)'>Outdoor Clothing</h2>
         </div>
@@ -115,6 +116,7 @@ export default function Example() {
                 className="h-8 w-auto"
                 height="32"
                 width="32"
+                quality={100}
               />
             </Link>
             <button
