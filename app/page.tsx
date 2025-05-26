@@ -4,6 +4,7 @@ import Intro from "../components/Intro";
 import PerfectFit from "../components/PerfectFit";
 import CardScroller from "../components/CardScroller";
 import Footer from "../components/Footer";
+import Promo from "../components/Promo";
 
 
 export default function Home() {
@@ -15,12 +16,16 @@ export default function Home() {
     </div>
     <main>
         <Intro />
-        <div className="bg-[url(/quirang1.jpg)] bg-cover bg-no-repeat w-full ">
+        <Promo />
+        
+        {/* <div className="bg-[url(/quirang1.jpg)] bg-cover bg-no-repeat w-full ">
           <div className="w-full h-full backdrop-blur-[0px] backdrop-brightness-75">
             <CardScroller />  
           </div>
-        </div>
+        </div> */}
+
         <PerfectFit /> 
+  
         <div className="bg-[url(/lagan.jpg)] bg-fixed bg-cover bg-no-repeat w-full">
           <div className="w-full h-full backdrop-blur-[0px] backdrop-brightness-75">
             <Recommendations />
