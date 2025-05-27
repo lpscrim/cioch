@@ -27,7 +27,7 @@ const collections = [
 
 export default function Promo() {
   return (
-    <div className="relative bg-foreground pb-5">
+    <div className="relative bg-foreground pb-5 xl:min-h-[100vh]">
       {/* Background image and overlap */}
       <div
         aria-hidden="true"
@@ -40,6 +40,7 @@ export default function Promo() {
               src="/quirang2.jpg"
               width={500}
               height={500}
+              quality={100}
               className="size-full object-cover"
             />
           </div>
@@ -61,12 +62,13 @@ export default function Promo() {
                 src="/quirang2.jpg"
                 width={500}
                 height={500}
+                quality={100}
                 className="size-full object-cover"
               />
             </div>
             <div className="absolute inset-0 bg-background opacity-45" />
           </div>
-          <div className="h-48 w-full bg-foreground" />
+          <div className="h-15 w-full bg-foreground" />
         </div>
         <div className="relative py-32">
           <h2 className="text-4xl font-bold tracking-tight text-text sm:text-5xl xl:text-6xl">
