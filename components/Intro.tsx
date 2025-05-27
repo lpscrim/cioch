@@ -6,7 +6,7 @@ export default function Intro() {
       id="intro"
       className="w-full min-h-[90vh] h-full bg-foreground bg-[url(/mocha-grunge.png)]"
     >
-      <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto py-25 lg:py-35">
+      <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto py-25">
         <h2 className="text-4xl font-bold text-text-secondary sm:text-5xl  xl:text-6xl text-center lg:mb-10">
           Welcome to <span id="cioch" className="text-secondary text-4xl sm:text-5xl  xl:text-6xl font-[800]">Cíoch </span><span className="text-text-secondary">Outdoor Clothing</span>
         </h2>
