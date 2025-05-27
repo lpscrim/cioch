@@ -13,9 +13,8 @@ import Image from "next/image";
 
 const categories = [
     { name: 'Kids', description: 'See selection of kids clothing', href: '#'},
-    { name: 'Trousers', description: 'See selection of trousers', href: '#'},
-    { name: 'Windproof Jackets', description: 'See selection of windproof jackets', href: '#'},
-    { name: 'Waterproof Jackets', description: 'See selection of waterproof Jackets', href: '#'},
+    { name: 'Windproof', description: 'See selection of windproof clothing', href: '#'},
+    { name: 'Waterproof', description: 'See selection of waterproof clothing', href: '#'},
     ]
 
 

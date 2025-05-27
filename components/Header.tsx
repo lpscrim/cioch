@@ -21,9 +21,8 @@ import {
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 
 const categories = [
-  { name: 'Waterproof Jackets', description: 'See selection of waterproof Jackets', href: '#'},
-  { name: 'Windproof Jackets', description: 'See selection of windproof jackets', href: '#'},
-  { name: 'Trousers', description: 'See selection of trousers', href: '#'},
+  { name: 'Waterproof', description: 'See selection of waterproof clothing', href: '#'},
+  { name: 'Windproof', description: 'See selection of windproof clothing', href: '#'},
   { name: 'Kids', description: 'See selection of kids clothing', href: '#'},
 ]
 
