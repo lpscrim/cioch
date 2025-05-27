@@ -27,7 +27,7 @@ const collections = [
 
 export default function Promo() {
   return (
-    <div className="relative bg-foreground pb-5 xl:min-h-[100vh]">
+    <div className="relative bg-foreground pb-5 xl:min-h-[105vh]">
       {/* Background image and overlap */}
       <div
         aria-hidden="true"
@@ -46,7 +46,7 @@ export default function Promo() {
           </div>
           <div className="absolute inset-0 bg-background opacity-50" />
         </div>
-        <div className="h-32 w-full bg-foreground md:h-40 lg:h-48" />
+        <div className="h-32 w-full bg-foreground md:h-40 lg:h-40" />
       </div>
 
       <div className="relative mx-auto max-w-3xl px-4 pb-96 text-center sm:px-6 sm:pb-0 lg:px-8">
