@@ -69,15 +69,15 @@ export default function Promo() {
           <div className="h-48 w-full bg-foreground" />
         </div>
         <div className="relative py-32">
-          <h1 className="text-4xl font-bold tracking-tight text-text sm:text-5xl md:text-6xl">
+          <h2 className="text-4xl font-bold tracking-tight text-text sm:text-5xl xl:text-6xl">
             Explore Our Collection
-          </h1>
-          <div className="mt-4 sm:mt-6">
-            <a
+          </h2>
+          <div className="mt-12">
+          <a id="shopButton"
               href="#"
-              className="inline-block rounded-md border border-transparent bg-secondary px-8 py-3 font-medium text-text hover:brightness-105"
+              className="rounded-md bg-secondary px-4 py-3 text-lg font-bold text-primary shadow-xs hover:brightness-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
-              Full Collection
+              Shop All
             </a>
           </div>
         </div>

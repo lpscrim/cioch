@@ -23,7 +23,7 @@ export default function perfectFit() {
       <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto pt-30 pb-20">
         <div className="flex flex-col lg:flex-row mx-auto">
           <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-center px-6">
-            <h2 className="text-4xl font-bold text-primary sm:text-5xl text-center">
+            <h2 className="text-4xl font-bold text-primary sm:text-5xl  xl:text-6xl text-center">
               Perfect Fit™
             </h2>
             

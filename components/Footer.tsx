@@ -29,7 +29,7 @@ export default function Example() {
           <div className="mt-12 flex justify-center">
             <a id="button"
               href="#"
-              className="rounded-md bg-secondary px-3.5 py-2.5 text-base font-bold text-primary shadow-xs hover:brightness-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+              className="rounded-md bg-secondary px-4 py-3 text-base font-bold text-primary shadow-xs hover:brightness-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Contact us
             </a>

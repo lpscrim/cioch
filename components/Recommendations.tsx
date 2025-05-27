@@ -29,7 +29,7 @@ export default function Recommendations() {
     <section id="recommendations" className="pb-20">
       <div className="mx-auto max-w-[38rem] px-6 pt-30 pb-20 sm:px-12 lg:max-w-7xl lg:px-8  ">
          <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-text sm:text-5xl">
+          <h2 className="text-4xl font-bold tracking-tight text-text sm:text-5xl  xl:text-6xl">
             Recommendations
           </h2>
         </div> 
@@ -67,7 +67,7 @@ export default function Recommendations() {
                   "flex-auto lg:col-span-7 lg:row-start-1 xl:col-span-8"
                 )}
               >
-                <h3 className="mx-auto text-center text-2xl font-medium text-(--color-secondary) pb-2">
+                <h3 className="mx-auto text-center text-2xl md:text-3xl font-medium text-(--color-secondary) pb-2">
                   {recommendation.name}
                 </h3>
                 <p className="px-6 my-4 text-xl text-(--color-text-secondary) whitespace-pre-line">
