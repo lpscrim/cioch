@@ -5,21 +5,21 @@ const collections = [
     name: "Waterproof",
     href: "#",
     imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-collection-01.jpg",
+      "/jacket1.jpg",
     imageAlt: "Image of a person wearing a waterproof jacket.",
   },
   {
     name: "Windproof",
     href: "#",
     imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-collection-02.jpg",
+      "/jacket5.jpg",
     imageAlt: "Image of a person wearing a windproof jacket.",
   },
   {
     name: "Kids",
     href: "#",
     imageSrc:
-      "https://tailwindcss.com/plus-assets/img/ecommerce-images/home-page-04-collection-03.jpg",
+      "/jacket3.jpg",
     imageAlt:
       "Image of a child wearing outdoor clothing.",
   },
@@ -27,13 +27,13 @@ const collections = [
 
 export default function Promo() {
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-foreground pb-5">
       {/* Background image and overlap */}
       <div
         aria-hidden="true"
         className="absolute inset-0 hidden sm:flex sm:flex-col"
       >
-        <div className="relative w-full flex-1 bg-gray-800">
+        <div className="relative w-full flex-1 bg-background">
           <div className="absolute inset-0 overflow-hidden">
             <Image
               alt=""
@@ -43,9 +43,9 @@ export default function Promo() {
               className="size-full object-cover"
             />
           </div>
-          <div className="absolute inset-0 bg-gray-900 opacity-50" />
+          <div className="absolute inset-0 bg-background opacity-50" />
         </div>
-        <div className="h-32 w-full bg-white md:h-40 lg:h-48" />
+        <div className="h-32 w-full bg-foreground md:h-40 lg:h-48" />
       </div>
 
       <div className="relative mx-auto max-w-3xl px-4 pb-96 text-center sm:px-6 sm:pb-0 lg:px-8">
@@ -54,7 +54,7 @@ export default function Promo() {
           aria-hidden="true"
           className="absolute inset-0 flex flex-col sm:hidden"
         >
-          <div className="relative w-full flex-1 bg-gray-800">
+          <div className="relative w-full flex-1 bg-background">
             <div className="absolute inset-0 overflow-hidden">
               <Image
                 alt=""
@@ -64,9 +64,9 @@ export default function Promo() {
                 className="size-full object-cover"
               />
             </div>
-            <div className="absolute inset-0 bg-gray-900 opacity-50" />
+            <div className="absolute inset-0 bg-background opacity-45" />
           </div>
-          <div className="h-48 w-full bg-white" />
+          <div className="h-48 w-full bg-foreground" />
         </div>
         <div className="relative py-32">
           <h1 className="text-4xl font-bold tracking-tight text-text sm:text-5xl md:text-6xl">
