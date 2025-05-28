@@ -12,14 +12,14 @@ const collections = [
     name: "Windproof",
     href: "#",
     imageSrc:
-      "/jacket5.jpg",
+      "/jacket3.jpg",
     imageAlt: "Image of a person wearing a windproof jacket.",
   },
   {
     name: "Kids",
     href: "#",
     imageSrc:
-      "/jacket3.jpg",
+      "/jacket4.jpg",
     imageAlt:
       "Image of a child wearing outdoor clothing.",
   },
@@ -28,7 +28,6 @@ const collections = [
 export default function Promo() {
   return (
     <div className="relative bg-foreground pb-5 xl:min-h-[105vh]">
-      {/* Background image and overlap */}
       <div
         aria-hidden="true"
         className="absolute inset-0 hidden sm:flex sm:flex-col"
@@ -38,7 +37,7 @@ export default function Promo() {
             <Image
               alt=""
               src="/quirang2.jpg"
-              width={500}
+              width={1000}
               height={500}
               quality={100}
               className="size-full object-cover"
@@ -46,11 +45,10 @@ export default function Promo() {
           </div>
           <div className="absolute inset-0 bg-background opacity-50" />
         </div>
-        <div className="h-32 w-full bg-foreground md:h-40 lg:h-40" />
+        <div className="h-32 w-full bg-foreground md:h-40 lg:h-45" />
       </div>
 
       <div className="relative mx-auto max-w-3xl px-4 pb-96 text-center sm:px-6 sm:pb-0 lg:px-8">
-        {/* Background image and overlap */}
         <div
           aria-hidden="true"
           className="absolute inset-0 flex flex-col sm:hidden"

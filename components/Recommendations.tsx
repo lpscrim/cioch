@@ -27,9 +27,9 @@ function classNames(...classes: string[]) {
 export default function Recommendations() {
   return (
     <section id="recommendations" className="pb-20">
-      <div className="mx-auto max-w-[38rem] px-6 pt-30 pb-20 sm:px-12 lg:max-w-7xl lg:px-8  ">
+      <div className="mx-auto max-w-[48rem] px-6 pt-30 pb-20 sm:px-12 lg:max-w-7xl lg:px-8 ">
          <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-text sm:text-5xl  xl:text-6xl">
+          <h2 className="text-4xl font-bold tracking-tight text-text sm:text-5xl xl:text-6xl">
             Recommendations
           </h2>
         </div> 
@@ -40,7 +40,7 @@ export default function Recommendations() {
               className={classNames(
                 recommendationIdx % 2 === 0
                   ? "slide-fade-left"
-                  : "slide-fade-right","flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-lg px-12 lg:px-8 py-12 lg:py-6 bg-(--color-foreground)/95  bg-[url(/mocha-grunge.png)]"
+                  : "slide-fade-right","flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-lg px-12 lg:px-8 py-12 lg:py-6 bg-(--color-foreground)/90  bg-[url(/mocha-grunge.png)]"
               )}
                   >
               <div
