@@ -42,7 +42,7 @@ export default function AboutNav() {
       <div className="hidden sm:block">
         <nav
           aria-label="Tabs"
-          className="isolate flex divide-x divide-gray-200 rounded-lg shadow-sm"
+          className="isolate flex divide-x divide-text-secondary rounded-lg shadow-sm"
         >
           {tabs.map((tab, tabIdx) => (
             <a
