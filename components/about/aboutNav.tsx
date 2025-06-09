@@ -22,7 +22,7 @@ export default function AboutNav() {
         <select
           defaultValue={tabs.find((tab) => tab.current)?.name ?? tabs[0].name}
           aria-label="Select a tab"
-          className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-text py-2 pr-8 pl-3 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/10 focus:outline-2 focus:-outline-offset-2 focus:outline-secondary"
+          className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-foreground/50 py-2 pr-8 pl-3 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary focus:outline-2 focus:-outline-offset-2 focus:outline-secondary"
           onChange={(e) => {
             const selectedTab = tabs.find((tab) => tab.name === e.target.value);
             if (selectedTab) {
