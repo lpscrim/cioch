@@ -1,9 +1,9 @@
-import Recommendations from "../components/Recommendations";
-import Hero from "../components/Hero";
-import Intro from "../components/Intro";
-import PerfectFit from "../components/PerfectFit";
-import Footer from "../components/FooterHome";
-import Promo from "../components/Promo";
+import Recommendations from "../components/home/Recommendations";
+import Hero from "../components/home/Hero";
+import Intro from "../components/home/Intro";
+import PerfectFit from "../components/home/PerfectFit";
+import Footer from "../components/home/FooterHome";
+import Promo from "../components/home/Promo";
 
 
 export default function Home() {

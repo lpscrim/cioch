@@ -1,6 +1,4 @@
-'use client';
-
-import Footer from './Footer';
+import Footer from '../Footer';
 
 export default function FooterHome() {
   return (
