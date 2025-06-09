@@ -42,7 +42,7 @@ export default function AboutNav() {
       <div className="hidden sm:block">
         <nav
           aria-label="Tabs"
-          className="isolate flex divide-x divide-text-secondary rounded-lg shadow-sm"
+          className="isolate flex divide-x divide-text rounded-lg shadow-sm"
         >
           {tabs.map((tab, tabIdx) => (
             <a
@@ -52,10 +52,10 @@ export default function AboutNav() {
               className={classNames(
                 tab.current
                   ? "text-text-secondary"
-                  : "text-text-secondary/80 hover:bg-gray-50",
+                  : "text-text-secondary/80 hover:backdrop-brightness-110",
                 tabIdx === 0 ? "rounded-l-lg" : "",
                 tabIdx === tabs.length - 1 ? "rounded-r-lg" : "",
-                "group relative min-w-0 flex-1 overflow-hidden bg-text/50 px-4 py-4 text-center text-sm font-medium hover:bg-gray-50 focus:z-10"
+                "group relative min-w-0 flex-1 overflow-hidden bg-text/50 px-4 py-4 text-center text-sm font-medium hover:backdrop-brightness-110 focus:z-10"
               )}
             >
               <span>{tab.name}</span>
