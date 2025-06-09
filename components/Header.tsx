@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState} from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import {
@@ -27,11 +27,12 @@ const categories = [
 ]
 
 
-export default function Example() {
+export default function Header() {
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <header className="absolute top-0 left-0 w-full z-60 bg-(--color-background)/0 text-(--color-text) brightness-150">
+    <header className="absolute top-0 left-0 w-[100lvw] z-60 bg-(--color-background)/0 text-(--color-text) brightness-150">
       <nav aria-label="Global" className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-8 lg:px-8">
         <div className="flex lg:flex-1 items-center">
           <Link href="#" className="-m-1.5 p-1.5">
@@ -43,7 +44,7 @@ export default function Example() {
               height="32"
               width="32"
               quality={100}
-                          />
+            />
           </Link>
           <h2 className='mr-3 text-xl/6 font-semibold text-(--color-text)'>Outdoor Clothing</h2>
         </div>

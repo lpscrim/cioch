@@ -53,7 +53,7 @@ export default function AboutNav() {
               <span
                 aria-hidden="true"
                 className={classNames(
-                  tab.current ? 'bg-indigo-500' : 'bg-transparent',
+                  tab.current ? 'bg-accent' : 'bg-transparent',
                   'absolute inset-x-0 bottom-0 h-0.5',
                 )}
               />
