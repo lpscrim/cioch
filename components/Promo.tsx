@@ -27,7 +27,9 @@ const collections = [
 
 export default function Promo() {
   return (
-    <div className="relative bg-foreground pb-5 xl:min-h-[105vh]">
+    <section
+       id="promo"
+       className="relative bg-foreground pb-5 xl:min-h-[105vh]">
       <div
         aria-hidden="true"
         className="absolute inset-0 hidden sm:flex sm:flex-col"
@@ -69,21 +71,21 @@ export default function Promo() {
           <div className="h-15 w-full bg-foreground" />
         </div>
         <div className="relative py-32">
-          <h2 className="text-4xl font-bold tracking-tight text-text sm:text-5xl xl:text-6xl">
+          <h2 className="text-4xl font-bold tracking-tight text-text sm:text-5xl">
             Explore Our Collection
           </h2>
           <div className="mt-12">
-          <a id="shopButton"
+          {/*<a id="shopButton"
               href="#"
               className="rounded-md bg-secondary px-4 py-3 text-lg font-bold text-primary shadow-xs hover:brightness-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Shop All
-            </a>
+            </a>*/}
           </div>
         </div>
       </div>
 
-      <section
+      <div
         aria-labelledby="collection-heading"
         className="relative -mt-96 sm:mt-0"
       >
@@ -127,7 +129,7 @@ export default function Promo() {
             </div>
           ))}
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }

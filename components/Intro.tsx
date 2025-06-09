@@ -7,8 +7,8 @@ export default function Intro() {
       className="w-full min-h-[90vh] h-full bg-foreground bg-[url(/mocha-grunge.png)]"
     >
       <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto py-25">
-        <h2 className="text-4xl font-bold text-text-secondary sm:text-5xl  xl:text-6xl text-center lg:mb-10">
-          Welcome to <span id="cioch" className="text-secondary text-4xl sm:text-5xl  xl:text-6xl font-[800]">Cíoch </span><span className="text-text-secondary">Outdoor Clothing</span>
+        <h2 className="text-4xl font-bold text-text-secondary sm:text-5xl text-center lg:mb-10">
+          Welcome to <span id="cioch" className="text-secondary text-4xl sm:text-5xl font-[800]">Cíoch </span><span className="text-text-secondary">Outdoor Clothing</span>
         </h2>
         <div className="flex flex-col lg:flex-row mx-auto pt-20">
           <div className="w-full lg:w-1/2 mb-10 sm:mb-15 lg:mb-0 mx-auto flex flex-col items-center justify-start px-5">

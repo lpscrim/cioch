@@ -23,7 +23,7 @@ export default function perfectFit() {
       <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto py-25">
         <div className="flex flex-col lg:flex-row mx-auto">
           <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-center px-6">
-            <h2 className="text-4xl font-bold text-primary sm:text-5xl  xl:text-6xl text-center">
+            <h2 className="text-4xl sm:text-5xl font-bold text-primary  text-center">
               Perfect Fit™
             </h2>
             
@@ -56,7 +56,7 @@ export default function perfectFit() {
             />
           </div>
         </div>
-        <h2 className="text-xl font-bold text-(--color-text) sm:text-2xl text-center mt-10 lg:mt-30  mb-10 mx-auto">
+        <h2 className="text-xl font-bold text-(--color-text) sm:text-2xl text-center mt-10 lg:mt-15  mb-10 mx-auto">
           <span className="text-(--color-primary)">Perfect Fit™</span> garments
           can be made in any combination of available colours from our swatch
         </h2>
