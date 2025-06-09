@@ -2,8 +2,7 @@ import Recommendations from "../components/Recommendations";
 import Hero from "../components/Hero";
 import Intro from "../components/Intro";
 import PerfectFit from "../components/PerfectFit";
-import CardScroller from "../components/CardScroller";
-import Footer from "../components/Footer";
+import Footer from "../components/FooterHome";
 import Promo from "../components/Promo";
 
 
@@ -17,15 +16,7 @@ export default function Home() {
     <main>
         <Intro />
         <Promo />
-        
-        {/* <div className="bg-[url(/quirang1.jpg)] bg-cover bg-no-repeat w-full ">
-          <div className="w-full h-full backdrop-blur-[0px] backdrop-brightness-75">
-            <CardScroller />  
-          </div>
-        </div> */}
-
         <PerfectFit /> 
-  
         <div className="bg-[url(/lagan.jpg)] bg-fixed bg-cover bg-no-repeat w-full">
           <div className="w-full h-full backdrop-blur-[0px] backdrop-brightness-75">
             <Recommendations />
