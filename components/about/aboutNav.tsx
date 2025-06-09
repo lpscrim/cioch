@@ -3,12 +3,12 @@
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 
 const tabs = [
-  { name: "Nikwax", href: "#nikwax", current: true },
-  { name: "Atercare", href: "#aftercare", current: false },
-  { name: "Our Shop", href: "#shop", current: false },
-  { name: "Materials", href: "#materials", current: false },
-  { name: "Peg sizes", href: "#sizes", current: false },
-  { name: "Links", href: "#links", current: false },
+  { name: "Nikwax", href: "nikwax", current: true },
+  { name: "Atercare", href: "aftercare", current: false },
+  { name: "Our Shop", href: "shop", current: false },
+  { name: "Materials", href: "materials", current: false },
+  { name: "Peg sizes", href: "sizes", current: false },
+  { name: "Links", href: "links", current: false },
 ];
 
 function classNames(...classes: (string | false | null | undefined)[]): string {

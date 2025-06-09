@@ -53,7 +53,7 @@ export default function Footer() {
             </PopoverPanel>
           </Popover>
 
-          <Link href="#" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
+          <Link href="/about/nikwax" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
             About
           </Link>
           

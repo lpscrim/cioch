@@ -1,4 +1,4 @@
-export default function AboutNikwax() {
+export default function Nikwax() {
   return (
     <div className="px-6">
       <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center my-10">

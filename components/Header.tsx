@@ -87,7 +87,7 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
 
-          <Link href="#" className="text-lg/6 font-semibold">
+          <Link href="/about/nikwax" className="text-lg/6 font-semibold">
             About
           </Link>
           
@@ -150,7 +150,7 @@ export default function Header() {
                   </DisclosurePanel>
                 </Disclosure>
                 <Link
-                  href="#"
+                  href="/about/nikwax"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:backdrop-brightness-150"
                 >
                   About
