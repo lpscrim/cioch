@@ -6,7 +6,7 @@ export default function Nikwax() {
       </h2>
       <p className="mt-6 text-lg sm:text-xl leading-8 text-text-secondary">
         Cioch Outdoor Clothing are proud to use ‘Nikwax Analogy’ waterproof
-        system developed by Paramo. Rather than create a waterproof barrier
+        system developed by Paramo in our waterproofs. Rather than create a waterproof barrier
         which limits breathability, this system is about water management,
         providing the most comfortable waterproof clothing around. <br/><br/>  Although
         water can be pushed under pressure through the outer layer (say, by
