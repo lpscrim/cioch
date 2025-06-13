@@ -56,8 +56,8 @@ export default function perfectFit() {
             />
           </div>
         </div>
-        <h2 className="text-xl font-bold text-(--color-text) sm:text-2xl text-center mt-10 lg:mt-15  mb-10 mx-auto">
-          <span className="text-(--color-primary)">Perfect Fit™</span> garments
+        <h2 className="text-xl font-bold text-text sm:text-2xl text-center mt-10 lg:mt-15 mb-10 mx-auto">
+          <span className="text-primary">Perfect Fit™</span> garments
           can be made in any combination of available colours from our swatch
         </h2>
       </div>
