@@ -10,7 +10,7 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
       <div className="min-h-[80vh] pb-15 mt-25 flex flex-col max-w-[90rem] px-6 pt-2 sm:pt-5 sm:px-12 mx-auto bg-foreground/80 rounded-md overflow-y-auto">
         <AboutNav />
         {children}
-        <h2 className="text-xl font-semibold text-text-secondary sm:text-2xl text-center mt-15 lg:mt-15  mb-10 mx-auto">
+        <h2 className="text-xl font-semibold text-text-secondary sm:text-2xl text-center mt-17 lg:mt-15  mb-10 mx-auto">
           <span className="text-primary">Perfect Fit™</span> garments
           can be made in any combination of available colours from our swatch
         </h2>
