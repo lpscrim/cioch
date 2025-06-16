@@ -215,9 +215,70 @@ footer #button {
 }
 
 
+/* Scrollbar styles */
+
 @media (max-width: 1024px) {
   ::-webkit-scrollbar { 
     display: none; 
     }
   
+}
+
+/*Table styles*/
+
+table th,
+table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-background);
+  text-align: left;
+}
+table th {
+  color: var(--color-text-secondary);
+  background: var(--color-foreground);
+}
+
+table .even-row {
+  color: var(--color-text-secondary);
+  background: var(--color-foreground);
+}
+
+/* Responsive styles */
+@media (max-width: 700px) {
+  table thead,
+  table tbody,
+  table th,
+  table td,
+  table tr {
+    display: block;
+    width: 100%;
+  }
+
+  table thead tr {
+    display: none;
+  }
+
+  table tr {
+    margin-bottom: 1.5rem;
+    background: var(--color-background);
+  }
+
+  table td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    padding-top: 1.2rem;
+    min-height: 2.5rem;
+    box-sizing: border-box;
+    white-space: pre-line;
+  }
+
+  table td:before {
+    position: absolute;
+    top: 1.2rem;
+    left: 1rem;
+    width: 45%;
+    padding-right: 1rem;
+    font-weight: bold;
+    content: attr(data-label);
+  }
 }
