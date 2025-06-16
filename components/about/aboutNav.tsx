@@ -50,7 +50,7 @@ export default function AboutNav() {
       <div className="hidden sm:block">
         <nav
           aria-label="Tabs"
-          className="isolate flex divide-x divide-text rounded-lg shadow-sm"
+          className="isolate flex divide-x divide-text/50 rounded-lg shadow-sm"
         >
           {tabs.map((tab, tabIdx) => {
             const isActive = pathname === tab.href;
@@ -72,7 +72,7 @@ export default function AboutNav() {
                 <span
                   aria-hidden="true"
                   className={classNames(
-                    isActive ? "bg-text" : "bg-text-secondary/50",
+                    isActive ? "bg-text/50" : "bg-text-secondary/50",
                     "absolute inset-x-0 bottom-0 h-0.5"
                   )}
                 />

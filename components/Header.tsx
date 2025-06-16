@@ -111,7 +111,7 @@ export default function Header() {
           <Link
             href="/about/nikwax"
             className={`text-lg/6 font-semibold ${
-              pathname?.startsWith("/about") ? "text-accent" : ""
+              pathname?.startsWith("/about") ? "text-text-secondary" : ""
             }`}
           >
             About

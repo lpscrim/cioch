@@ -8,7 +8,7 @@ export default function Hero() {
             <h3 className="text-2xl text-(--color-text) mb-2 fade-in-slow ">Outdoor Clothing</h3>
             <h4 className="text-xl text-(--color-text) brightness-80 fade-in-slower">Handmade on the isle of Skye</h4>
             </div>
-            <button id="scrollButton" className="invisible md:visible absolute flex flex-row p-5 left-12 bottom-12 lg:left-30 z-10 text-center text-(--color-text) text-sm xl:text-base font-[500]">
+            <button id="scrollButton" className="invisible md:visible absolute flex flex-row p-5 left-12 bottom-12 lg:left-35 z-10 text-center text-(--color-text) text-sm xl:text-base font-[500]">
                 <p className="tracking-widest">SCROLL</p>
                 <div className="ml-2 animate-bounce"><p className="rotate-90">➔</p></div>
             </button>

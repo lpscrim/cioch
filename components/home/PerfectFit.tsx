@@ -47,13 +47,22 @@ export default function perfectFit() {
             </p>
           </div>
           <div className="w-full lg:w-1/2 mb-10 sm:mb-15 lg:mb-0 mx-auto flex flex-col items-center justify-center ">
-            <Image
-              src="/production.jpg"
-              alt="Cioch Outdoor Clothing"
-              className="w-3/4 max-w-[500px] h-auto rounded-lg"
-              width={360}
-              height={450}
-            />
+            <div className="relative w-3/4 max-w-[500px]">  
+              <Image
+                src="/production.jpg"
+                alt="Cioch Outdoor Clothing"
+                className="w-full h-auto rounded-lg"
+                width={360}
+                height={450}
+              />
+              <Image
+                src="/perfectfitsm.gif"
+                alt="Cioch Outdoor Clothing"
+                className="absolute right-0 bottom-0 w-1/4 max-w-[150px] h-auto rounded-lg"
+                width={450}
+                height={300}
+              />
+            </div>
           </div>
         </div>
         <h2 className="text-xl font-bold text-text sm:text-2xl text-center mt-10 lg:mt-15 mb-10 mx-auto">
