@@ -68,7 +68,7 @@ export default function Materials() {
 
   return (
     <div className="px-6">
-      <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center my-10">
+      <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center mt-10 mb-15">
         Materials
       </h2>
       <table className="min-w-full border-collapse border border-text-secondary bg-background text-text">

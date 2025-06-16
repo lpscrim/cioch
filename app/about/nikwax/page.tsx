@@ -1,7 +1,7 @@
 export default function Nikwax() {
   return (
     <div className="px-6">
-      <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center my-10">
+      <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center mt-10 mb-15">
         Nikwax Analogy
       </h2>
       <p className="mt-6 text-lg sm:text-xl leading-8 text-text-secondary">

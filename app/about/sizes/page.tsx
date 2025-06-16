@@ -31,7 +31,7 @@ const childrenRows = [
 
 export default function Sizes() {
   return (
-    <div className="text-text-secondary px-6 py-8 max-w-full">
+    <div className="text-text-secondary px-6 max-w-full">
       <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center my-10">
          Off the Peg Sizes</h2>
       <p className="mb-6 text-2xl">Our ‘off the peg’ garments are made to fit the following sizes:</p>
