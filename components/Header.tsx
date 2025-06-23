@@ -156,9 +156,9 @@ export default function Header() {
             <Link href="#" className=" p-1.5">
               <span className="sr-only">Cioch CLothing</span>
               <Image
-                alt=""
+                alt="Cioch logo"
                 src="/main.jpg"
-                className="h-8 w-auto"
+                className="h-8 w-auto -ml-2"
                 height="32"
                 width="32"
                 quality={100}
@@ -172,7 +172,7 @@ export default function Header() {
               <span className="sr-only">Close menu</span>
               <XMarkIcon
                 aria-hidden="true"
-                className="size-6 mr-3 cursor-pointer"
+                className="size-6 mt-1 cursor-pointer"
               />
             </button>
           </div>

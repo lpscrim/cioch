@@ -17,7 +17,7 @@ export default function Shop() {
           <br />
         </p>
       </div>
-      <div className="w-full lg:w-1/2 mt-15 mb-10 sm:mb-15 lg:mb-0 mx-auto flex flex-col items-center justify-center ">
+      <div className="w-full lg:w-1/2 mt-15 mb-10 sm:mb-5 lg:mb-0 mx-auto flex flex-col items-center justify-center ">
         <Image
           src="/shop.jpg"
           alt="Cioch Shop and Factory"
