@@ -22,14 +22,14 @@ const categories = [
   {
     name: "Waterproof",
     description: "See selection of waterproof clothing",
-    href: "#",
+    href: "/shop/waterproof",
   },
   {
     name: "Windproof",
     description: "See selection of windproof clothing",
-    href: "#",
+    href: "/shop/windproof",
   },
-  { name: "Kids", description: "See selection of kids clothing", href: "#" },
+  { name: "Kids", description: "See selection of kids clothing", href: "/shop/kids" },
 ];
 
 export default function Header() {
@@ -74,7 +74,7 @@ export default function Header() {
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             <PopoverButton className={`flex items-center gap-x-1 text-lg/6 font-semibold cursor-pointer ${
-                    pathname?.startsWith("/shop") ? "text-accent" : ""
+                    pathname?.startsWith("/shop") ? "text-text-secondary" : ""
                   }`}>
               Shop
               <ChevronDownIcon
