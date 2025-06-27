@@ -44,7 +44,7 @@ export default function ShopNav() {
         />
       </div>
       {/* Desktop */}
-      <div className="hidden sm:block pb-2">
+      <div className="hidden sm:block pb-2 max-w-7xl mx-auto">
         <nav
           aria-label="Tabs"
           className="isolate flex divide-x divide-text/50 rounded-lg shadow-sm"
