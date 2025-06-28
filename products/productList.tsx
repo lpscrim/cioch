@@ -7,7 +7,7 @@ export const waterproofs = [
     imageAlt: "Waterproof jacket in blue.",
     description: "A high-quality waterproof jacket for all weather conditions.",
     options: "Available in sizes S, M, L, XL",
-    price: "$120.00",
+    price: "£120.00",
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ export const waterproofs = [
     imageAlt: "Waterproof pants in black.",
     description: "Durable waterproof pants for outdoor adventures.",
     options: "Available in sizes S, M, L, XL",
-    price: "$90.00",
+    price: "£90.00",
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ export const waterproofs = [
     imageAlt: "Waterproof boots in brown.",
     description: "Comfortable waterproof boots for hiking and trekking.",
     options: "Available in sizes 7, 8, 9, 10, 11",
-    price: "$150.00",
+    price: "£150.00",
   },
   {
     id: 4,
@@ -37,7 +37,7 @@ export const waterproofs = [
     imageAlt: "Waterproof gloves in black.",
     description: "Warm waterproof gloves for cold weather.",
     options: "Available in sizes S, M, L",
-    price: "$40.00",
+    price: "£40.00",
   },
   {
     id: 5,
@@ -47,7 +47,7 @@ export const waterproofs = [
     imageAlt: "Waterproof hat in grey.",
     description: "Stylish waterproof hat for rainy days.",
     options: "One size fits all",
-    price: "$30.00",
+    price: "£30.00",
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ export const waterproofs = [
     imageAlt: "Waterproof backpack in green.",
     description: "Spacious waterproof backpack for travel.",
     options: "Available in various colors",
-    price: "$80.00",
+    price: "£80.00",
   },
 ];
 
@@ -70,7 +70,7 @@ export const windproofs = [
     imageAlt: "windproof jacket in blue.",
     description: "A high-quality windproof jacket for all weather conditions.",
     options: "Available in sizes S, M, L, XL",
-    price: "$120.00",
+    price: "£120.00",
   },
   {
     id: 2,
@@ -80,6 +80,6 @@ export const windproofs = [
     imageAlt: "windproof pants in black.",
     description: "Durable windproof pants for outdoor adventures.",
     options: "Available in sizes S, M, L, XL",
-    price: "$90.00",
+    price: "£90.00",
   },
 ];
