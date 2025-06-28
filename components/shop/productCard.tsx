@@ -3,23 +3,23 @@ export default function ProductCard({
   product: {
     id,
     name,
-    href,
     imageSrc,
     imageAlt,
     description,
     options,
     price,
+    slug,
   },
 }: {
   product: {
     id: number;
     name: string;
-    href: string;
     imageSrc: string;
     imageAlt: string;
     description: string;
     options: string;
     price: string;
+    slug: string;
   };
 }) {
   return (
@@ -36,7 +36,7 @@ export default function ProductCard({
               />
               <div className="flex flex-1 flex-col space-y-2 p-4">
                 <h3 className="text-sm font-medium text-text-secondary">
-                  <a href={href}>
+                  <a href={`/shop/product/${slug}`} className="absolute inset-0">
                     <span aria-hidden="true" className="absolute inset-0" />
                     {name}
                   </a>
