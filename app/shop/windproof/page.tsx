@@ -1,27 +1,6 @@
 import ProductCard from "@/components/shop/productCard";
-
-const products = [
-  {
-    id: 1,
-    name: "Windproof Jacket 1",
-    href: "#",
-    imageSrc: "/jacket1.jpg",
-    imageAlt: "windproof jacket in blue.",
-    description: "A high-quality windproof jacket for all weather conditions.",
-    options: "Available in sizes S, M, L, XL",
-    price: "$120.00",
-  },
-  {
-    id: 2,
-    name: "Windproof jacket 2",
-    href: "#",
-    imageSrc: "/jacket2.jpg",
-    imageAlt: "windproof pants in black.",
-    description: "Durable windproof pants for outdoor adventures.",
-    options: "Available in sizes S, M, L, XL",
-    price: "$90.00",
-  },
-];
+import { windproofs } from "@/products/productList";
+const products = windproofs
 
 export default function Windproof() {
   return (

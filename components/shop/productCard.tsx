@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 export default function ProductCard({
   product: {
     id,
@@ -27,6 +28,8 @@ export default function ProductCard({
               key={id}
               className="group relative flex flex-col overflow-hidden rounded-lg border border-text bg-text"
             >
+                                <Link href={`/shop/product/${slug}`} >
+
               <Image
                 alt={imageAlt}
                 src={imageSrc}
@@ -36,10 +39,7 @@ export default function ProductCard({
               />
               <div className="flex flex-1 flex-col space-y-2 p-4">
                 <h3 className="text-sm font-medium text-text-secondary">
-                  <a href={`/shop/product/${slug}`} className="absolute inset-0">
-                    <span aria-hidden="true" className="absolute inset-0" />
-                    {name}
-                  </a>
+                  {name}
                 </h3>
                 <p className="text-sm text-text-secondary">{description}</p>
                 <div className="flex flex-1 flex-col justify-end">
@@ -47,6 +47,7 @@ export default function ProductCard({
                   <p className="text-base font-medium text-text-secondary">{price}</p>
                 </div>
               </div>
+              </Link>
             </div>
   );
 }
