@@ -4,7 +4,7 @@ export default function ProductCard({
   product: { id, name, imageSrc, imageAlt, description, options, price },
 }: {
   product: {
-    id: number;
+    id: string;
     name: string;
     imageSrc: string;
     imageAlt: string;

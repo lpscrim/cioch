@@ -1,6 +1,6 @@
 export const products = [
   {
-    id: 1,
+    id: 'jacket1',
     name: "Waterproof Jacket 1",
     imageSrc: "/jacket1.jpg",
     imageAlt: "Waterproof jacket in blue.",
@@ -10,7 +10,7 @@ export const products = [
     category: "Waterproof",
   },
   {
-    id: 2,
+    id: 'jacket2',
     name: "Waterproof jacket 2",
     imageSrc: "/jacket2.jpg",
     imageAlt: "Waterproof pants in black.",
@@ -20,7 +20,7 @@ export const products = [
     category: "Waterproof",
   },
   {
-    id: 3,
+    id: 'jacket3',
     name: "Waterproof jacket3",
     imageSrc: "/jacket3.jpg",
     imageAlt: "Waterproof boots in brown.",
@@ -30,7 +30,7 @@ export const products = [
     category: "Waterproof",
   },
   {
-    id: 4,
+    id: 'jacket4',
     name: "Waterproof jacket 4",
     imageSrc: "/jacket4.jpg",
     imageAlt: "Waterproof gloves in black.",
@@ -40,7 +40,7 @@ export const products = [
     category: "Waterproof",
   },
   {
-    id: 5,
+    id: 'jacket5',
     name: "Waterproof jacket 5",
     imageSrc: "/jacket5.jpg",
     imageAlt: "Waterproof hat in grey.",
@@ -50,7 +50,7 @@ export const products = [
     category: "Waterproof",
   },
   {
-    id: 6,
+    id: 'jacket6',
     name: "Waterproof jacket 6",
     imageSrc: "/jacket1.jpg",
     imageAlt: "Waterproof backpack in green.",
@@ -60,7 +60,7 @@ export const products = [
     category: "Waterproof",
   },
   {
-    id: 11,
+    id: 'jacket11',
     name: "Windproof Jacket 1",
     imageSrc: "/jacket1.jpg",
     imageAlt: "windproof jacket in blue.",
@@ -70,7 +70,7 @@ export const products = [
     category: "Windproof",
   },
   {
-    id: 12,
+    id: 'jacket12',
     name: "Windproof jacket 2",
     imageSrc: "/jacket2.jpg",
     imageAlt: "windproof pants in black.",
