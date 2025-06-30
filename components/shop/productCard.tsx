@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 export default function ProductCard({
-  product: { id, name, imageSrc, imageAlt, description, options, price },
+  product: { id, name, imageSrc, imageAlt, description, options, price, category },
 }: {
   product: {
     id: string;
@@ -11,6 +11,7 @@ export default function ProductCard({
     description: string;
     options: string;
     price: string;
+    category: string;
   };
 }) {
   return (
@@ -18,7 +19,7 @@ export default function ProductCard({
       key={id}
       className="group relative flex flex-col overflow-hidden rounded-lg border border-text bg-text"
     >
-      <Link href={`/shop/product/${id}`}>
+      <Link href={`/shop/${category}/${id}`}>
         <Image
           alt={imageAlt}
           src={imageSrc}

@@ -7,7 +7,7 @@ export const products = [
     description: "A high-quality waterproof jacket for all weather conditions.",
     options: "Available in sizes S, M, L, XL",
     price: "£120.00",
-    category: "Waterproof",
+    category: "waterproof",
   },
   {
     id: 'jacket2',
@@ -17,7 +17,7 @@ export const products = [
     description: "Durable waterproof pants for outdoor adventures.",
     options: "Available in sizes S, M, L, XL",
     price: "£90.00",
-    category: "Waterproof",
+    category: "waterproof",
   },
   {
     id: 'jacket3',
@@ -27,7 +27,7 @@ export const products = [
     description: "Comfortable waterproof boots for hiking and trekking.",
     options: "Available in sizes 7, 8, 9, 10, 11",
     price: "£150.00",
-    category: "Waterproof",
+    category: "waterproof",
   },
   {
     id: 'jacket4',
@@ -37,7 +37,7 @@ export const products = [
     description: "Warm waterproof gloves for cold weather.",
     options: "Available in sizes S, M, L",
     price: "£40.00",
-    category: "Waterproof",
+    category: "waterproof",
   },
   {
     id: 'jacket5',
@@ -47,7 +47,7 @@ export const products = [
     description: "Stylish waterproof hat for rainy days.",
     options: "One size fits all",
     price: "£30.00",
-    category: "Waterproof",
+    category: "waterproof",
   },
   {
     id: 'jacket6',
@@ -57,7 +57,7 @@ export const products = [
     description: "Spacious waterproof backpack for travel.",
     options: "Available in various colors",
     price: "£80.00",
-    category: "Waterproof",
+    category: "waterproof",
   },
   {
     id: 'jacket11',
@@ -67,7 +67,7 @@ export const products = [
     description: "A high-quality windproof jacket for all weather conditions.",
     options: "Available in sizes S, M, L, XL",
     price: "£120.00",
-    category: "Windproof",
+    category: "windproof",
   },
   {
     id: 'jacket12',
@@ -77,6 +77,6 @@ export const products = [
     description: "Durable windproof pants for outdoor adventures.",
     options: "Available in sizes S, M, L, XL",
     price: "£90.00",
-    category: "Windproof",
+    category: "windproof",
   },
 ];
