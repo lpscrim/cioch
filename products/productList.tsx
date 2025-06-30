@@ -2,7 +2,6 @@ export const waterproofs = [
   {
     id: 1,
     name: "Waterproof Jacket 1",
-    slug: "waterproof-jacket-1",
     imageSrc: "/jacket1.jpg",
     imageAlt: "Waterproof jacket in blue.",
     description: "A high-quality waterproof jacket for all weather conditions.",
@@ -12,7 +11,6 @@ export const waterproofs = [
   {
     id: 2,
     name: "Waterproof jacket 2",
-    slug: "waterproof-jacket-2",
     imageSrc: "/jacket2.jpg",
     imageAlt: "Waterproof pants in black.",
     description: "Durable waterproof pants for outdoor adventures.",
@@ -22,7 +20,6 @@ export const waterproofs = [
   {
     id: 3,
     name: "Waterproof jacket3",
-    slug: "waterproof-jacket-3",
     imageSrc: "/jacket3.jpg",
     imageAlt: "Waterproof boots in brown.",
     description: "Comfortable waterproof boots for hiking and trekking.",
@@ -32,7 +29,6 @@ export const waterproofs = [
   {
     id: 4,
     name: "Waterproof jacket 4",
-    slug: "waterproof-jacket-4",
     imageSrc: "/jacket4.jpg",
     imageAlt: "Waterproof gloves in black.",
     description: "Warm waterproof gloves for cold weather.",
@@ -42,7 +38,6 @@ export const waterproofs = [
   {
     id: 5,
     name: "Waterproof jacket 5",
-    slug: "waterproof-jacket-5",
     imageSrc: "/jacket5.jpg",
     imageAlt: "Waterproof hat in grey.",
     description: "Stylish waterproof hat for rainy days.",
@@ -52,7 +47,6 @@ export const waterproofs = [
   {
     id: 6,
     name: "Waterproof jacket 6",
-    slug: "waterproof-jacket-6",
     imageSrc: "/jacket1.jpg",
     imageAlt: "Waterproof backpack in green.",
     description: "Spacious waterproof backpack for travel.",
@@ -63,9 +57,8 @@ export const waterproofs = [
 
 export const windproofs = [
   {
-    id: 1,
+    id: 11,
     name: "Windproof Jacket 1",
-    slug: "windproof-jacket-1",
     imageSrc: "/jacket1.jpg",
     imageAlt: "windproof jacket in blue.",
     description: "A high-quality windproof jacket for all weather conditions.",
@@ -73,9 +66,8 @@ export const windproofs = [
     price: "£120.00",
   },
   {
-    id: 2,
+    id: 12,
     name: "Windproof jacket 2",
-    slug: "windproof-jacket-2",
     imageSrc: "/jacket2.jpg",
     imageAlt: "windproof pants in black.",
     description: "Durable windproof pants for outdoor adventures.",
