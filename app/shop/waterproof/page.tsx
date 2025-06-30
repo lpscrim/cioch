@@ -1,8 +1,8 @@
 import ProductCard from "@/components/shop/productCard";
 import Link from "next/link";
-import { waterproofs } from "@/products/productList";
+import { products } from "@/products/productList";
 
-const products = waterproofs;
+
 
 export default function Waterproof() {
   return (

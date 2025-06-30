@@ -1,6 +1,6 @@
 import ProductCard from "@/components/shop/productCard";
-import { windproofs } from "@/products/productList";
-const products = windproofs
+import { products } from "@/products/productList";
+
 
 export default function Windproof() {
   return (
