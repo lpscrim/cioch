@@ -19,6 +19,11 @@ export default function ShopNav() {
   const pathname = usePathname();
   const router = useRouter();
 
+  const isTabActive = (href: string) =>
+    pathname === href || pathname.startsWith(href + "/");
+
+
+
   return (
     <div>
       {/* Mobile */}
@@ -50,7 +55,7 @@ export default function ShopNav() {
           className="isolate flex divide-x divide-text/50 rounded-lg shadow-sm"
         >
           {tabs.map((tab, tabIdx) => {
-            const isActive = pathname === tab.href;
+             const isActive = isTabActive(tab.href);
             return (
               <Link
                 key={tab.name}
