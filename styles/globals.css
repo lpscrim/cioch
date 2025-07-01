@@ -243,7 +243,7 @@ table .even-row {
 }
 
 /* Responsive styles */
-@media (max-width: 700px) {
+@media (max-width: 950px) {
   table thead,
   table tbody,
   table th,
