@@ -3,36 +3,31 @@
 import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { usePathname, useRouter } from "next/navigation";
+import { products } from "@/products/productList";
 
 
-const tabs = [
-  { name: "Waterproofs", href: "/shop/waterproof" },
-  { name: "Windproof", href: "/shop/windproof" },
-  { name: "Kids", href: "/shop/kids" },
-];
+const tabs = products.map(product => ({
+  name: product.name,
+  href: `/shop/${product.category}/${product.id}`,
+}));
 
 function classNames(...classes: (string | false | null | undefined)[]): string {
   return classes.filter(Boolean).join(" ");
 }
 
-export default function ShopNav() {
+export default function ProductNav() {
   const pathname = usePathname();
   const router = useRouter();
 
   const isTabActive = (href: string) =>
     pathname === href || pathname.startsWith(href + "/");
 
-  const isProductActive = (href: string) => {
-  const regex = new RegExp(`^${href}/[^/]+$`);
-  return regex.test(pathname);
-};
+
 
   return (
     <div>
       {/* Mobile */}
-      <div className={classNames(
-        isProductActive ? "hidden" : "",
-        "grid grid-cols-1 sm:hidden pb-1")}>
+      <div className="grid grid-cols-1 sm:hidden pb-1">
         <select
           value={tabs.find(tab => pathname === tab.href)?.name ?? tabs[0].name}
           aria-label="Select a tab"
@@ -54,7 +49,7 @@ export default function ShopNav() {
         />
       </div>
       {/* Desktop */}
-      <div className="hidden sm:block pb-2 max-w-7xl mx-auto">
+      <div className="hidden sm:block pb-2 mx-auto">
         <nav
           aria-label="Tabs"
           className="isolate flex divide-x divide-text/50 rounded-lg shadow-sm"
