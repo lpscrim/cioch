@@ -16,6 +16,7 @@ import {
 } from "@headlessui/react";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
 import ProductNav from "./productNav";
+import Link from "next/link";
 
 function classNames(...classes: (string | undefined | null | false)[]) {
   return classes.filter(Boolean).join(" ");
@@ -30,7 +31,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     <div>
       <div className="bg-text mx-auto md:max-w-2xl lg:max-w-7xl rounded-md">
         <ProductNav />
-        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-12">
+
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 pb-12 pt-6 lg:max-w-7xl lg:px-12">
+        <Link className="inline-block mb-8 text-secondary font-semibold" href={`/shop/${product.category}`}>See all {product.category}s</Link>
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
             {/* Image gallery */}
             <TabGroup className="flex flex-col-reverse">
