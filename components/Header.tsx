@@ -17,19 +17,26 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import { products } from "@/products/productList";
 
 const categories = [
   {
-    name: "Waterproof",
+    name: "Waterproofs",
     description: "See selection of waterproof clothing",
     href: "/shop/waterproof",
+    products: products.filter((product) => product.category === "waterproof"),
   },
   {
     name: "Windproof",
     description: "See selection of windproof clothing",
     href: "/shop/windproof",
+    products: products.filter((product) => product.category === "windproof"),
   },
-  { name: "Kids", description: "See selection of kids clothing", href: "/shop/kids" },
+  {
+    name: "Kids",
+    description: "See selection of kids clothing",
+    href: "/shop/kids",
+  },
 ];
 
 export default function Header() {
@@ -73,9 +80,11 @@ export default function Header() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className={`flex items-center gap-x-1 text-lg/6 font-semibold cursor-pointer ${
-                    pathname?.startsWith("/shop") ? "text-text-secondary" : ""
-                  }`}>
+            <PopoverButton
+              className={`flex items-center gap-x-1 text-lg/6 font-semibold cursor-pointer ${
+                pathname?.startsWith("/shop") ? "text-text-secondary" : ""
+              }`}
+            >
               Shop
               <ChevronDownIcon
                 aria-hidden="true"
@@ -84,23 +93,34 @@ export default function Header() {
             </PopoverButton>
             <PopoverPanel
               transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-md bg-(--color-background)/95 ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-md bg-background/97 ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
               <div className="p-4">
                 {categories.map((category) => (
                   <div
                     key={category.name}
-                    className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm/6 hover:backdrop-brightness-150"
+                    className=" relative flex items-center gap-x-6 rounded-lg p-2 text-base/6 "
                   >
                     <div className="flex-auto">
                       <Link
                         href={category.href}
                         aria-label={category.description}
-                        className="block font-semibold "
+                        className="block font-semibold hover:backdrop-brightness-150 p-1 pb-2"
                       >
                         {category.name}
                         <span className="absolute inset-0" />
                       </Link>
+                      {category.products?.map((product) => ( 
+                        <div className="" key={product.id}>
+                          <Link
+                            href={`/shop/${product.category}/${product.id}`}
+                            aria-label={product.description}
+                            className="pl-5 block font-light hover:backdrop-brightness-150 pt-1 text-text/70"
+                          >
+                            {product.name}
+                          </Link>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 ))}
@@ -180,9 +200,11 @@ export default function Header() {
             <div className="-my-6 divide-y divide-gray-500/10">
               <div className="space-y-2 py-6">
                 <Disclosure as="div" className="-mx-3">
-                  <DisclosureButton className={`group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold  hover:backdrop-brightness-150 ${
-                    pathname?.startsWith("/shop") ? "text-accent" : ""
-                  }`}>
+                  <DisclosureButton
+                    className={`group flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold  hover:backdrop-brightness-150 ${
+                      pathname?.startsWith("/shop") ? "text-accent" : ""
+                    }`}
+                  >
                     Shop
                     <ChevronDownIcon
                       aria-hidden="true"
