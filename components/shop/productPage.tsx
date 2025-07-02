@@ -51,7 +51,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                           src={image.src}
                           width={"500"}
                           height={"500"}
-                          className="size-full object-cover"
+                          className="size-full object-cover aspect-square"
                         />
                       </span>
                       <span
@@ -70,8 +70,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       alt={image.alt}
                       src={image.src}
                       width={"500"}
-                      height={"500"}
-                      className="aspect-square w-full object-cover sm:rounded-lg"
+                      height={"700"}
+                      className="w-full object-cover sm:rounded-lg"
                     />
                   </TabPanel>
                 ))}

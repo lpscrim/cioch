@@ -23,8 +23,8 @@ export default function ProductCard({
           alt={images[0]?.alt || "Product image"}
           src={images[0]?.src || "/placeholder.jpg"}
           width={500}
-          height={500}
-          className="aspect-3/4 w-full bg-text object-cover group-hover:opacity-75 sm:aspect-auto sm:h-96"
+          height={700}
+          className="p-5 w-full bg-text object-cover group-hover:opacity-75 sm:aspect-auto sm:h-96"
         />
         <div className="flex flex-1 flex-col space-y-2 p-4">
           <h3 className="text-sm font-medium text-text-secondary">{name}</h3>

@@ -67,11 +67,11 @@ export default function ShopNav() {
                 aria-current={isActive ? "page" : undefined}
                 className={classNames(
                   isActive
-                    ? "bg-text "
-                    : "bg-text/70 hover:backdrop-brightness-110",
+                    ? "bg-accent"
+                    : "bg-accent/70 hover:backdrop-brightness-130",
                   tabIdx === 0 ? "rounded-l-lg" : "",
                   tabIdx === tabs.length - 1 ? "rounded-r-lg" : "",
-                  "group relative text-text-secondary min-w-0 flex-1 overflow-hidden bg-foreground/90 px-4 py-4 text-center text-sm font-medium hover:backdrop-brightness-110 focus:z-10"
+                  "group relative text-text-secondary min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-sm font-medium hover:backdrop-brightness-110 focus:z-10"
                 )}
               >
               <span>{tab.name}</span>
