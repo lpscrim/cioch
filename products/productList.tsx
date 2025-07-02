@@ -331,7 +331,7 @@ export const products = [
   },
   {
     id: "jacket11",
-    name: "Windproof Jacket 1",
+    name: "Windproof Jacket 11",
     images: [
       {
         id: 1,

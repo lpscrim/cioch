@@ -1,9 +1,12 @@
+"use client";
+import React from "react";
 import ProductPage from "@/components/shop/productPage";
 
-export default function WindproofProductPage({
+export default function WaterproofProductPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  return <ProductPage params={params} />;
+  const { id } = React.use(params);
+  return <ProductPage params={{ id }} />;
 }

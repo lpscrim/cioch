@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Karla, Noto_Sans_Gothic, Oswald, Roboto, Anek_Devanagari } from "next/font/google";
 import "../styles/globals.css";
 import Header from "@/components/Header";
-import { Providers } from "./providers";
 
 
 
@@ -62,7 +61,7 @@ export default function RootLayout({
         className={`${anekDevanagari.variable} ${geistSans.variable} ${geistMono.variable} ${notoSans.variable} ${oswald.variable} ${roboto.variable} ${karla.variable} antialiased  overflow-x-hidden`}
       >
         <Header />
-        <Providers>{children}</Providers>
+        {children}
       </body>
     </html>
   );

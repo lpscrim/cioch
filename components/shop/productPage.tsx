@@ -1,3 +1,5 @@
+
+import { useState } from "react";
 import { notFound } from "next/navigation";
 import { products } from "@/products/productList";
 import Image from "next/image";
@@ -20,12 +22,12 @@ function classNames(...classes: (string | undefined | null | false)[]) {
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const product = products.find((p) => p.id === params.id);
-
+  const [selectedColor, setSelectedColor] = useState(product?.colors[0]);
   if (!product) return notFound();
 
   return (
     <div>
-      <div className="bg-white mx-auto md:max-w-2xl px-4 py-8 lg:max-w-7xl lg:px-8">
+      <div className="bg-text mx-auto md:max-w-2xl px-4 py-8 lg:max-w-7xl lg:px-8">
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
             {/* Image gallery */}
@@ -36,7 +38,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   {product.images.map((image) => (
                     <Tab
                       key={image.id}
-                      className="group relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-white text-sm font-medium text-gray-900 uppercase hover:bg-gray-50 focus:ring-3 focus:ring-indigo-500/50 focus:ring-offset-4 focus:outline-hidden"
+                      className="group relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-text text-sm font-medium text-text-secondary uppercase hover:bg-text/70 focus:ring-3 focus:ring-accent/50 focus:ring-offset-4 focus:outline-hidden"
                     >
                       <span className="sr-only">{image.name}</span>
                       <span className="absolute inset-0 overflow-hidden rounded-md">
@@ -50,7 +52,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       </span>
                       <span
                         aria-hidden="true"
-                        className="pointer-events-none absolute inset-0 rounded-md ring-2 ring-transparent ring-offset-2 group-data-selected:ring-indigo-500"
+                        className="pointer-events-none absolute inset-0 rounded-md ring-2 ring-transparent ring-offset-2 group-data-selected:ring-accent/50"
                       />
                     </Tab>
                   ))}
@@ -74,13 +76,13 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
             {/* Product info */}
             <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-              <h1 className="text-3xl font-bold tracking-tight text-gray-900">
+              <h1 className="text-3xl font-bold tracking-tight text-text-secondary">
                 {product.name}
               </h1>
 
               <div className="mt-3">
                 <h2 className="sr-only">Product information</h2>
-                <p className="text-3xl tracking-tight text-gray-900">
+                <p className="text-3xl tracking-tight text-text-secondary">
                   {product.price}
                 </p>
               </div>
@@ -90,25 +92,26 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
                 <div
                   dangerouslySetInnerHTML={{ __html: product.description }}
-                  className="space-y-6 text-base text-gray-700"
+                  className="space-y-6 text-base text-text-secondary"
                 />
               </div>
 
               <form className="mt-6">
                 {/* Colors */}
                 <div>
-                  <h3 className="text-sm font-medium text-gray-600">Color</h3>
-
+                  <h3 className="text-sm font-medium text-text-secondary/80">
+                    Color
+                  </h3>
                   <fieldset aria-label="Choose a color" className="mt-2">
                     <div className="flex items-center gap-x-3">
-                      {product.colors.map((color) => (
+                      {product.colors.map((color, idx) => (
                         <div
                           key={color.id}
-                          className="flex rounded-full outline -outline-offset-1 outline-black/10"
+                          className="flex rounded-full outline -outline-offset-1 outline-text-secondary/10"
                         >
                           <input
                             defaultValue={color.id}
-                            defaultChecked={color === product.colors[0]}
+                            defaultChecked={idx === 0}
                             name="color"
                             type="radio"
                             aria-label={color.name}
@@ -116,13 +119,17 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                               color.classes,
                               "size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
                             )}
+                            onChange={() => setSelectedColor(color)}
                           />
                         </div>
                       ))}
+                      {/* Show selected color name */}
+                      <span className="ml-4 px-3 py-1 rounded bg-foreground text-text-secondary border border-text-secondary/20 min-w-[80px] text-center">
+                        {selectedColor?.name || product.colors[0].name}
+                      </span>
                     </div>
                   </fieldset>
                 </div>
-
               </form>
 
               <section aria-labelledby="details-heading" className="mt-12">
@@ -135,7 +142,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     <Disclosure key={detail.name} as="div">
                       <h3>
                         <DisclosureButton className="group relative flex w-full items-center justify-between py-6 text-left">
-                          <span className="text-sm font-medium text-gray-900 group-data-open:text-indigo-600">
+                          <span className="text-sm font-medium text-text-secondary group-data-open:text-indigo-600">
                             {detail.name}
                           </span>
                           <span className="ml-6 flex items-center">
@@ -145,7 +152,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                             />
                             <MinusIcon
                               aria-hidden="true"
-                              className="hidden size-6 text-indigo-400 group-hover:text-indigo-500 group-data-open:block"
+                              className="hidden size-6 text-indigo-400 group-hover:text-accent/50 group-data-open:block"
                             />
                           </span>
                         </DisclosureButton>
@@ -153,7 +160,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       <DisclosurePanel className="pb-6">
                         <ul
                           role="list"
-                          className="list-disc space-y-1 pl-5 text-sm/6 text-gray-700 marker:text-gray-300"
+                          className="list-disc space-y-1 pl-5 text-sm/6 text-text-secondary marker:text-gray-300"
                         >
                           {detail.items.map((item) => (
                             <li key={item} className="pl-2">
