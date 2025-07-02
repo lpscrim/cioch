@@ -27,8 +27,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
   return (
     <div>
-      <div className="bg-text mx-auto md:max-w-2xl px-4 py-8 lg:max-w-7xl lg:px-8">
-        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+      <div className="bg-text mx-auto md:max-w-2xl px-4 py-8 lg:max-w-7xl lg:px-8 rounded-md">
+        
+        <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
             {/* Image gallery */}
             <TabGroup className="flex flex-col-reverse">
@@ -124,7 +125,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         </div>
                       ))}
                       {/* Show selected color name */}
-                      <span className="ml-4 px-3 py-1 rounded bg-foreground text-text-secondary border border-text-secondary/20 min-w-[80px] text-center">
+                      <span className="ml-4 px-3 py-1  text-text-secondary  min-w-[80px] text-center">
                         {selectedColor?.name || product.colors[0].name}
                       </span>
                     </div>
