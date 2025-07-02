@@ -24,7 +24,7 @@ export default function ProductCard({
           src={images[0]?.src || "/placeholder.jpg"}
           width={500}
           height={700}
-          className="p-5 w-full bg-text object-cover group-hover:opacity-75 sm:aspect-auto sm:h-96"
+          className="px-5 mx-auto w-[90%] bg-text object-cover group-hover:opacity-75 sm:aspect-[3/2] sm:h-96"
         />
         <div className="flex flex-1 flex-col space-y-2 p-4">
           <h3 className="text-sm font-medium text-text-secondary">{name}</h3>
@@ -34,6 +34,7 @@ export default function ProductCard({
           </div>
         </div>
       </Link>
+      
     </div>
   );
 }

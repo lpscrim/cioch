@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { notFound } from "next/navigation";
 import { products } from "@/products/productList";
@@ -32,7 +31,12 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       <ProductNav />
       <div className="bg-text rounded-md ">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 pb-12 pt-6 lg:max-w-7xl lg:px-12">
-          <Link className="inline-block mb-2 text-secondary font-semibold hover:underline" href={`/shop/${product.category}`}>See all {product.category}s</Link>
+          <Link
+            className="inline-block mb-2 text-secondary font-semibold hover:underline"
+            href={`/shop/${product.category}`}
+          >
+            See all {product.category}s
+          </Link>
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 pt-2">
             {/* Image gallery */}
             <TabGroup className="flex flex-col-reverse">
@@ -71,7 +75,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       src={image.src}
                       width={"500"}
                       height={"700"}
-                      className="w-full object-cover sm:rounded-lg p-2"
+                      className="w-full object-cover sm:rounded-lg sm:pr-4"
                     />
                   </TabPanel>
                 ))}
@@ -79,10 +83,17 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             </TabGroup>
 
             {/* Product info */}
-            <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-              <h1 className="text-3xl font-bold tracking-tight  text-secondary">
+            <div className="relative mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
+              <h1 className="text-4xl font-bold tracking-tight text-secondary">
                 {product.name}
               </h1>
+              <Image
+                src="/perfectfitsm.gif"
+                alt="Cioch Outdoor Clothing"
+                className="absolute right-0 top-0 w-1/4 max-w-[100px] h-auto rounded-lg"
+                width={450}
+                height={300}
+              />
 
               <div className="mt-3">
                 <h2 className="sr-only">Product information</h2>
@@ -176,11 +187,23 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     </Disclosure>
                   ))}
                 </div>
+                
               </section>
+              
             </div>
           </div>
-        </div>
+          
+        </div>    
+          <Link
+            href="/#perfectFit"
+          >
+            <h2 className="text-xl bg-accent font-semibold text-text-secondary sm:text-2xl text-center py-2">
+              <span className="text-secondary hover:text-text-secondary">Perfect Fit™</span> garments
+              can be made in any combination of available colours from our swatch
+            </h2>
+          </Link>        
       </div>
+      
     </div>
   );
 }

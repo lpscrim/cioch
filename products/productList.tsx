@@ -250,7 +250,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/jacket5.jpg",
+        src: "/jacket3.jpg",
         alt: "Main view of Sligachan jacket in green.",
       },
     ],

@@ -13,14 +13,7 @@ export default function AboutLayout({ children }: { children: React.ReactNode })
       <div className="min-h-[80vh] mb-5 pb-15 mt-25 flex flex-col w-[100vw] px-6 pt-2 sm:px-12 mx-auto bg-foreground/80 rounded-md overflow-y-auto">
         <ShopNav />
         {children}
-        <Link
-          href="/#perfectFit"
-        >
-          <h2 className="text-xl font-semibold text-text-secondary sm:text-2xl text-center mt-20 mx-auto">
-            <span className="text-accent hover:text-secondary">Perfect Fit™</span> garments
-            can be made in any combination of available colours from our swatch
-          </h2>
-        </Link>
+        
       </div>
     </section>
   );
