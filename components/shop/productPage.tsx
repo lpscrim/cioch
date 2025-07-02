@@ -28,12 +28,13 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   if (!product) return notFound();
 
   return (
-    <div>
-      <div className="bg-text mx-auto md:max-w-2xl lg:max-w-7xl rounded-md">
-        <ProductNav />
+    <div className="mx-auto md:max-w-2xl lg:max-w-7xl">
+      <ProductNav />
+      <div className="bg-text rounded-md">
+      
 
         <div className="mx-auto max-w-2xl px-4 sm:px-6 pb-12 pt-6 lg:max-w-7xl lg:px-12">
-        <Link className="inline-block mb-8 text-secondary font-semibold" href={`/shop/${product.category}`}>See all {product.category}s</Link>
+        <Link className="inline-block mb-8 text-secondary font-semibold hover:underline" href={`/shop/${product.category}`}>See all {product.category}s</Link>
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
             {/* Image gallery */}
             <TabGroup className="flex flex-col-reverse">

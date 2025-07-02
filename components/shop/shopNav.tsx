@@ -29,7 +29,7 @@ export default function ShopNav() {
 
   return (
     <div className={classNames(
-        isProductActive ? "hidden" : "")}>
+        tabs.some(tab => isProductActive(tab.href)) ? "hidden" : "")}>
       {/* Mobile */}
       <div className="grid grid-cols-1 sm:hidden pb-1">
         <select
