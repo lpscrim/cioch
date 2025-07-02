@@ -240,22 +240,22 @@ export const products = [
         ],
       },
     ],
-    price: "£270.50 - £355.00",
+    price: "£270.50 - £355",
     category: "waterproof",
   },
   {
-    id: "jacket5",
-    name: "Waterproof jacket 5",
+    id: "sligachan",
+    name: "Sligachan",
     images: [
       {
         id: 1,
         name: "Main view",
         src: "/jacket5.jpg",
-        alt: "Main view of Jacket 5.",
+        alt: "Main view of Sligachan jacket in green.",
       },
     ],
-    brief: "Durable outdoor item for outdoor adventures.",
-    description: "lorem ipsum dolor sit amet, consecutor adsping, lorumist construm sad ot humastun. Stylish waterproof hat for rainy days.",
+    brief: "Our tradtional style waterproof jacket",
+    description: "Cut longer, in a traditional style, this suits those who prefer less demanding walks. A large map pocket and two hand-warmer pockets, full protection from the hood and double flaps over the front zip.",
     colors: [
       {
         id: "washed-black",
@@ -273,44 +273,48 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
-        details: [
+       details: [
       {
-        name: "Features",
+        name: "Prices",
         items: [
-          "Multiple strap configurations",
-          "Spacious interior with top zip",
-          "Leather handle and tabs",
-          "Interior dividers",
-          "Stainless strap loops",
-          "Double stitched construction",
-          "Water-resistant",
+          "Off the peg - £342.50",
+          "Perfect fit - £365.00",
+          "Special deivery (£300 compensation) - £10.00",
+          "All prices are inclusive of VAT",
+        ],
+
+      },    
+      {
+        name: "Specifications (Standard Large)",
+        items: [
+         "Average weight - 780g.",
+         "Back Length - 87cm.",
         ],
       },
       {
-        name: "Materials",
+        name: "Fabrics",
         items: [
-          "Windproof fabric",
-          "Nikwax waterproof fabric",
-          "Breathable lining",
+          "Paramo Windproof fabrics",
+          "'Parameta' directional pump liner",
         ],
       },
     ],
-    price: "£30.00",
+    price: "£342.50 - £365",
     category: "waterproof",
   },
   {
-    id: "jacket6",
-    name: "Waterproof jacket 6",
+    id: "trousers",
+    name: "Trousers",
     images: [
       {
         id: 1,
         name: "Main view",
         src: "/jacket1.jpg",
-        alt: "Main view of Jacket 6.",
+        alt: "Main view of Trousers.",
       },
     ],
-    brief: "Durable outdoor item for outdoor adventures.",
-    description: "lorem ipsum dolor sit amet, consecutor adsping, lorumist construm sad ot humastun. Spacious waterproof backpack for travel.",
+    brief: "Tailored waterproof trousers",
+    description: "Tailored to fit next to the skin or over light trousers, they can be worn all day, they are so comfortable. Waterproof fly, two zipped pockets and 3/4 length side zips for ventilation. Gusset in crutch and articulated knees for extra freedom of movement. Also a choice of extras such as reinforced areas on knees, seat and ankles (climbers and scramblers), powder gaiters (skiers) and braces.",
     colors: [
       {
         id: "washed-black",
@@ -330,42 +334,49 @@ export const products = [
     ],
         details: [
       {
-        name: "Features",
+        name: "Prices",
         items: [
-          "Multiple strap configurations",
-          "Spacious interior with top zip",
-          "Leather handle and tabs",
-          "Interior dividers",
-          "Stainless strap loops",
-          "Double stitched construction",
-          "Water-resistant",
+          "Off the peg - £267.50",
+          "Perfect fit - £290.00",
+          "Off the peg (+ patches) - £315.00",
+          "Perfect fit (+ patches) - £342.50",
+          "Sewn in braces/ Internal gaiters - £10.00",
+          "Special deivery (£300 compensation) - £10.00",
+          "All prices are inclusive of VAT",
+        ],
+
+      },    
+      {
+        name: "Specifications (Standard Large)",
+        items: [
+         "Average weight - 590g.",
         ],
       },
       {
-        name: "Materials",
+        name: "Fabrics",
         items: [
-          "Windproof fabric",
-          "Nikwax waterproof fabric",
-          "Breathable lining",
+          "Paramo Windproof fabrics",
+          "optional Cordura hard-wearing patches",
+          "'Parameta' directional pump liner",
         ],
       },
     ],
-    price: "£80.00",
+    price: "£267.50 - £342.50",
     category: "waterproof",
   },
   {
-    id: "jacket11",
-    name: "Windproof Jacket 11",
+    id: "salopettes",
+    name: "Salopettes",
     images: [
       {
         id: 1,
         name: "Main view",
         src: "/jacket1.jpg",
-        alt: "Main view of Jacket 11.",
+        alt: "Main view of Salopettes.",
       },
     ],
-    brief: "Durable outdoor item for outdoor adventures.",
-    description: "lorem ipsum dolor sit amet, consecutor adsping, lorumist construm sad ot humastun. A high-quality windproof jacket for all weather conditions.",
+    brief: "Tailored Salopettes",
+    description: "Made to order only. </br></br> Winter protection for climbing or ski-ing. Options include reinforced knee, seat and ankles, full length side zips for a drop seat, zip under crutch for ladies and internal powder gaiters.",
     colors: [
       {
         id: "washed-black",
@@ -385,42 +396,97 @@ export const products = [
     ],
         details: [
       {
-        name: "Features",
+        name: "Prices",
         items: [
-          "Multiple strap configurations",
-          "Spacious interior with top zip",
-          "Leather handle and tabs",
-          "Interior dividers",
-          "Stainless strap loops",
-          "Double stitched construction",
-          "Water-resistant",
+          "Perfect fit - £412.50",
+          "Perfect fit (+ patches) - £450.00",
+          "Internal gaiters - £10.00",
+          "Special deivery (£300 compensation) - £10.00",
+          "All prices are inclusive of VAT",
+        ],
+
+      },    
+      {
+        name: "Specifications (Standard Large)",
+        items: [
+         "Average weight - 870g.",
         ],
       },
       {
-        name: "Materials",
+        name: "Fabrics",
         items: [
-          "Windproof fabric",
-          "Nikwax waterproof fabric",
-          "Breathable lining",
+          "Paramo Windproof fabrics",
+          "optional Cordura hard-wearing patches",
+          "'Parameta' directional pump liner",
         ],
       },
     ],
-    price: "£120.00",
+    price: "£412.50 - £465",
+    category: "waterproof",
+  },
+  {
+    id: "fleece",
+    name: "Fleece",
+    images: [
+      {
+        id: 1,
+        name: "Main view",
+        src: "/jacket1.jpg",
+        alt: "Main view of Fleece reversible.",
+      },
+    ],
+    brief: "Reversible windproof fleece.",
+    description: "A versatile windproof jacket with two pockets either side, a drawcord hem and lycra bound cuffs.",
+    colors: [
+      {
+        id: "washed-black",
+        name: "Washed Black",
+        classes: "bg-gray-700 checked:outline-gray-700",
+      },
+      {
+        id: "white",
+        name: "White",
+        classes: "bg-white checked:outline-gray-400",
+      },
+      {
+        id: "washed-gray",
+        name: "Washed Gray",
+        classes: "bg-gray-500 checked:outline-gray-500",
+      },
+    ],
+        details: [
+       {
+        name: "Prices",
+        items: [
+          "Perfect fit - £255.00",
+          "Special deivery (£300 compensation) - £10.00",
+          "All prices are inclusive of VAT",
+        ],
+      },    
+      {
+        name: "Fabrics",
+        items: [
+          "Single sided velour (Please check availability)",
+          "Paramo Windproof shell",
+        ],
+      },
+    ],
+    price: "£255",
     category: "windproof",
   },
   {
-    id: "jacket12",
-    name: "Windproof jacket 12",
+    id: "windshirt",
+    name: "Windshirt",
     images: [
       {
         id: 1,
         name: "Main view",
         src: "/jacket2.jpg",
-        alt: "Main view of Jacket 12.",
+        alt: "Main view of windshirt in yellow.",
       },
     ],
-    brief: "Durable outdoor item for outdoor adventures.",
-    description: "lorem ipsum dolor sit amet, consecutor adsping, lorumist construm sad ot humastun. Durable windproof pants for outdoor adventures.",
+    brief: "A lightweight micro-fibre shell pullover.",
+    description: "Made to order only </br></br> A lightweight micro-fibre shell pullover, which is cut long for cyclists, but ideal for a range of activities from running to climbing. Perfect for keeping off the chill whilst walking up to the crags on a cold winters morning. Folds into its chest pocket with a loop for hanging on a belt. Also available with full length front zip and handwarmer pockets. Reflective piping if required.",
     colors: [
       {
         id: "washed-black",
@@ -438,29 +504,26 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
-    details: [
-      {
-        name: "Features",
+   details: [
+       {
+        name: "Prices",
         items: [
-          "Multiple strap configurations",
-          "Spacious interior with top zip",
-          "Leather handle and tabs",
-          "Interior dividers",
-          "Stainless strap loops",
-          "Double stitched construction",
-          "Water-resistant",
+          "Off the peg - £110.00",
+          "Perfect fit - £123.00",
+          "Off the peg  (+ Full length front zip) - £117.50",
+          "Perfect fit (+ Full length front zip) - £130.00",
+          "Postage - £6.00",
+          "All prices are inclusive of VAT",
         ],
-      },
+      },    
       {
-        name: "Materials",
+        name: "Fabrics",
         items: [
-          "Windproof fabric",
-          "Nikwax waterproof fabric",
-          "Breathable lining",
+          "Paramo Windproof shell",
         ],
       },
     ],
-    price: "£90.00",
+    price: "£110 - £130",
     category: "windproof",
   },
 ];

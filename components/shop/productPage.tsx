@@ -32,7 +32,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       <ProductNav />
       <div className="bg-text rounded-md ">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 pb-12 pt-6 lg:max-w-7xl lg:px-12">
-          <Link className="inline-block mb-8 text-secondary font-semibold hover:underline" href={`/shop/${product.category}`}>See all {product.category}s</Link>
+          <Link className="inline-block mb-2 text-secondary font-semibold hover:underline" href={`/shop/${product.category}`}>See all {product.category}s</Link>
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 pt-2">
             {/* Image gallery */}
             <TabGroup className="flex flex-col-reverse">
@@ -42,7 +42,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   {product.images.map((image) => (
                     <Tab
                       key={image.id}
-                      className="group relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-text text-sm font-medium text-text-secondary uppercase hover:bg-text/70 focus:ring-3 focus:ring-accent/50 focus:ring-offset-4 focus:outline-hidden"
+                      className="group relative flex h-24 cursor-pointer items-center justify-center rounded-md bg-text text-sm font-medium text-text-secondary uppercase hover:bg-text/70 focus:ring-3 focus:ring-secondary/50 focus:ring-offset-4 focus:outline-hidden"
                     >
                       <span className="sr-only">{image.name}</span>
                       <span className="absolute inset-0 overflow-hidden rounded-md">
@@ -56,7 +56,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       </span>
                       <span
                         aria-hidden="true"
-                        className="pointer-events-none absolute inset-0 rounded-md ring-2 ring-transparent ring-offset-2 group-data-selected:ring-accent/50"
+                        className="pointer-events-none absolute inset-0 rounded-md ring-2 ring-transparent ring-offset-2 group-data-selected:ring-secondary/50"
                       />
                     </Tab>
                   ))}
@@ -71,7 +71,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       src={image.src}
                       width={"500"}
                       height={"700"}
-                      className="w-full object-cover sm:rounded-lg"
+                      className="w-full object-cover sm:rounded-lg p-2"
                     />
                   </TabPanel>
                 ))}
@@ -80,7 +80,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
             {/* Product info */}
             <div className="mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-              <h1 className="text-3xl font-bold tracking-tight text-text-secondary">
+              <h1 className="text-3xl font-bold tracking-tight  text-secondary">
                 {product.name}
               </h1>
 
@@ -141,22 +141,22 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   Additional details
                 </h2>
 
-                <div className="divide-y divide-gray-200 border-t border-gray-200">
+                <div className="divide-y divide-text border-t border-text">
                   {product.details.map((detail) => (
                     <Disclosure key={detail.name} as="div">
                       <h3>
                         <DisclosureButton className="group relative flex w-full items-center justify-between py-6 text-left">
-                          <span className="text-sm font-medium text-text-secondary group-data-open:text-indigo-600">
+                          <span className="text-sm font-medium text-text-secondary group-data-open:text-secondary">
                             {detail.name}
                           </span>
                           <span className="ml-6 flex items-center">
                             <PlusIcon
                               aria-hidden="true"
-                              className="block size-6 text-gray-400 group-hover:text-gray-500 group-data-open:hidden"
+                              className="block size-6 text-text-secondary group-hover:text-text-secondary group-data-open:hidden"
                             />
                             <MinusIcon
                               aria-hidden="true"
-                              className="hidden size-6 text-indigo-400 group-hover:text-accent/50 group-data-open:block"
+                              className="hidden size-6 text-secondary group-hover:text-accent/50 group-data-open:block"
                             />
                           </span>
                         </DisclosureButton>
@@ -164,7 +164,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       <DisclosurePanel className="pb-6">
                         <ul
                           role="list"
-                          className="list-disc space-y-1 pl-5 text-sm/6 text-text-secondary marker:text-gray-300"
+                          className="list-disc space-y-1 pl-5 text-sm/6 text-text-secondary marker:text-text"
                         >
                           {detail.items.map((item) => (
                             <li key={item} className="pl-2">
