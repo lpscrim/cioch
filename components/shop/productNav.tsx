@@ -63,8 +63,8 @@ export default function ProductNav() {
                 aria-current={isActive ? "page" : undefined}
                 className={classNames(
                   isActive
-                    ? "text-text-secondary bg-text/80"
-                    : "text-text-secondary/80 hover:backdrop-brightness-110 bg-text/50",
+                    ? "text-text-secondary bg-text"
+                    : "text-text-secondary/80 hover:backdrop-brightness-110 bg-text/70",
                   tabIdx === 0 ? "rounded-l-lg" : "",
                   tabIdx === tabs.length - 1 ? "rounded-r-lg" : "",
                   "group relative min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-sm font-medium hover:backdrop-brightness-110 focus:z-10"

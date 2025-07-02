@@ -28,9 +28,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   if (!product) return notFound();
 
   return (
-    <div className="mx-auto md:max-w-2xl lg:max-w-7xl">
+    <div className="mx-auto md:max-w-2xl lg:max-w-7xl z-999">
       <ProductNav />
-      <div className="bg-text rounded-md">
+      <div className="bg-text rounded-md ">
       
 
         <div className="mx-auto max-w-2xl px-4 sm:px-6 pb-12 pt-6 lg:max-w-7xl lg:px-12">

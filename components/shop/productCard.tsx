@@ -9,13 +9,14 @@ export default function ProductCard({
     images: { src: string; alt?: string }[];
     description: string;
     price: string;
+    brief: string;
     category: string;
   };
 }) {
   return (
     <div
       key={id}
-      className="group relative flex flex-col overflow-hidden rounded-lg border border-text bg-text"
+      className="group relative flex flex-col overflow-hidden rounded-lg border border-text bg-text z-999"
     >
       <Link href={`/shop/${category}/${id}`}>
         <Image

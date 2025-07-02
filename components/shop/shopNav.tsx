@@ -53,7 +53,7 @@ export default function ShopNav() {
         />
       </div>
       {/* Desktop */}
-      <div className="hidden sm:block pb-2 max-w-7xl mx-auto">
+      <div className="hidden sm:block pb-2 max-w-7xl mx-auto z-999">
         <nav
           aria-label="Tabs"
           className="isolate flex divide-x divide-text/50 rounded-lg shadow-sm"
@@ -67,11 +67,11 @@ export default function ShopNav() {
                 aria-current={isActive ? "page" : undefined}
                 className={classNames(
                   isActive
-                    ? "text-text-secondary"
-                    : "text-text-secondary/80 hover:backdrop-brightness-110",
+                    ? "bg-text "
+                    : "bg-text/70 hover:backdrop-brightness-110",
                   tabIdx === 0 ? "rounded-l-lg" : "",
                   tabIdx === tabs.length - 1 ? "rounded-r-lg" : "",
-                  "group relative min-w-0 flex-1 overflow-hidden bg-foreground/90 px-4 py-4 text-center text-sm font-medium hover:backdrop-brightness-110 focus:z-10"
+                  "group relative text-text-secondary min-w-0 flex-1 overflow-hidden bg-foreground/90 px-4 py-4 text-center text-sm font-medium hover:backdrop-brightness-110 focus:z-10"
                 )}
               >
               <span>{tab.name}</span>
