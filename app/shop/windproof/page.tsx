@@ -7,7 +7,7 @@ export default function Windproof() {
     <div className="rounded-md">
       <div className="mx-auto md:max-w-2xl px-4 py-8 lg:max-w-7xl lg:px-8">
         <div className="relative py-15 text-center bg-[url('/pic.jpg')] bg-cover bg-center bg-no-repeat rounded-lg min-h-[27vh]">
-          <div className="absolute inset-0 bg-black/55 rounded-lg"></div>
+          <div className="absolute inset-0 bg-black/45 rounded-lg"></div>
           <div className="relative z-10">
             <h1 className="text-4xl font-bold tracking-tight text-text">
               Windproof Clothing

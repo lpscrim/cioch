@@ -63,21 +63,15 @@ export default function ProductNav() {
                 aria-current={isActive ? "page" : undefined}
                 className={classNames(
                   isActive
-                    ? "text-text-secondary"
+                    ? "text-text-secondary bg-text/70"
                     : "text-text-secondary/80 hover:backdrop-brightness-110",
                   tabIdx === 0 ? "rounded-l-lg" : "",
                   tabIdx === tabs.length - 1 ? "rounded-r-lg" : "",
-                  "group relative min-w-0 flex-1 overflow-hidden bg-foreground/90 px-4 py-4 text-center text-sm font-medium hover:backdrop-brightness-110 focus:z-10"
+                  "group relative min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-sm font-medium hover:backdrop-brightness-110 focus:z-10"
                 )}
               >
               <span>{tab.name}</span>
-                <span
-                  aria-hidden="true"
-                  className={classNames(
-                    isActive ? "bg-text/50" : "bg-text-secondary/50",
-                    "absolute inset-x-0 bottom-0 h-0.5"
-                  )}
-                />
+                
               </Link>
             );
           })}

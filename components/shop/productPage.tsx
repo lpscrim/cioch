@@ -28,7 +28,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
   return (
     <div>
-      <div className="bg-text mx-auto md:max-w-2xl  lg:max-w-7xl rounded-md">
+      <div className="bg-text mx-auto md:max-w-2xl lg:max-w-7xl rounded-md">
         <ProductNav />
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-20 lg:max-w-7xl lg:px-12">
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8">
