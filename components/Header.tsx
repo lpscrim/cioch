@@ -99,7 +99,7 @@ export default function Header() {
                 {categories.map((category) => (
                   <div
                     key={category.name}
-                    className=" relative flex items-center gap-x-6 rounded-lg p-2 text-base/6 "
+                    className="relative flex items-center gap-x-6 rounded-lg p-2 text-base/6 "
                   >
                     <div className="flex-auto">
                       <Link
@@ -111,11 +111,11 @@ export default function Header() {
                         <span className="absolute inset-0" />
                       </Link>
                       {category.products?.map((product) => ( 
-                        <div className="" key={product.id}>
+                        <div key={product.id}>
                           <Link
                             href={`/shop/${product.category}/${product.id}`}
                             aria-label={product.description}
-                            className="pl-5 block font-light hover:backdrop-brightness-150 pt-1 text-text/70"
+                            className=" pl-5 block font-light hover:backdrop-brightness-150 pt-1 text-text/70"
                           >
                             {product.name}
                           </Link>

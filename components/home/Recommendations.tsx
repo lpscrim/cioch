@@ -12,7 +12,7 @@ const recommendations = [
   {
     name: "Cairngorm Mountain Rescue Team",
     description:
-      '“The material used on the Cioch kit is second to none! Immediately after trying the trousers of our supplied team kit, I ordered a pair of salopettes for skiing use. They are superb!” \n\n “The Cioch equipment has shown itself to be warm, comfortable and well able to withstand the rigours of winter nights in the Cairngorms.”',
+      "“The material used on the Cioch kit is second to none! Immediately after trying the trousers of our supplied team kit, I ordered a pair of salopettes for skiing use. They are superb!” \n\n “The Cioch equipment has shown itself to be warm, comfortable and well able to withstand the rigours of winter nights in the Cairngorms.”",
     imageSrc: "/cmt.jpeg",
     imageAlt:
       "Cairngorms mountain rescure team, wearing Cioch jackets, in the mountains.",
@@ -28,21 +28,22 @@ export default function Recommendations() {
   return (
     <section id="recommendations" className="pb-20">
       <div className="mx-auto max-w-[48rem] px-6 pt-30 pb-20 sm:px-12 lg:max-w-7xl lg:px-8 ">
-         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-4xl font-bold tracking-tight text-text-secondary sm:text-5xl">
+        <div className="mx-auto text-center">
+          <h2 className="text-4xl font-bold tracking-tight text-secondary sm:text-5xl bg-foreground/80 bg-[url(/mocha-grunge.png)] rounded-lg py-6">
             Recommendations
           </h2>
-        </div> 
-        <div className="mt-30 space-y-30">
+        </div>
+        <div className="mt-30 space-y-20">
           {recommendations.map((recommendation, recommendationIdx) => (
             <div
               key={recommendation.name}
               className={classNames(
                 recommendationIdx % 2 === 0
                   ? "slide-fade-left"
-                  : "slide-fade-right","flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-lg px-12 lg:px-8 py-12 lg:py-6 bg-(--color-foreground)/90  bg-[url(/mocha-grunge.png)]"
+                  : "slide-fade-right",
+                "flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-lg px-12 lg:px-8 py-12 lg:py-6 bg-(--color-foreground)/90  bg-[url(/mocha-grunge.png)]"
               )}
-                  >
+            >
               <div
                 className={classNames(
                   recommendationIdx % 2 === 0
