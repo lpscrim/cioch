@@ -29,7 +29,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   return (
     <div className="mx-auto md:max-w-2xl lg:max-w-7xl z-999">
       <ProductNav />
-      <div className="bg-text rounded-md ">
+      <div className="bg-text rounded-md overflow-hidden shadow-lg">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 pb-12 pt-6 lg:max-w-7xl lg:px-12">
           <Link
             className="inline-block mb-2 text-secondary font-semibold hover:underline"
@@ -84,7 +84,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
 
             {/* Product info */}
             <div className="relative mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
-              <h1 className="text-4xl font-bold tracking-tight text-secondary">
+              <h1 className="text-3xl font-bold tracking-tight text-secondary">
                 {product.name}
               </h1>
               <Image
@@ -94,13 +94,6 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 width={450}
                 height={300}
               />
-
-              <div className="mt-3">
-                <h2 className="sr-only">Product information</h2>
-                {/*<p className="text-3xl tracking-tight text-text-secondary">
-                  {product.price}
-                </p>*/}
-              </div>
 
               <div className="mt-6">
                 <h3 className="sr-only">Description</h3>
@@ -157,7 +150,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     <Disclosure key={detail.name} as="div">
                       <h3>
                         <DisclosureButton className="group relative flex w-full items-center justify-between py-6 text-left">
-                          <span className="text-sm font-medium text-text-secondary group-data-open:text-secondary">
+                          <span className="text-base sm:text-lg font-semibold text-secondary">
                             {detail.name}
                           </span>
                           <span className="ml-6 flex items-center">
@@ -167,7 +160,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                             />
                             <MinusIcon
                               aria-hidden="true"
-                              className="hidden size-6 text-secondary group-hover:text-accent/50 group-data-open:block"
+                              className="hidden size-6 text-secondary group-hover:text-secondary group-data-open:block"
                             />
                           </span>
                         </DisclosureButton>
@@ -175,7 +168,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       <DisclosurePanel className="pb-6">
                         <ul
                           role="list"
-                          className="list-disc space-y-1 pl-5 text-sm/6 text-text-secondary marker:text-text"
+                          className="list-disc space-y-1 pl-5 text-sm/6 sm:text-base/6 text-text-secondary marker:text-text"
                         >
                           {detail.items.map((item) => (
                             <li key={item} className="pl-2">
@@ -197,7 +190,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           <Link
             href="/#perfectFit"
           >
-            <h2 className="text-xl bg-accent font-semibold text-text-secondary sm:text-2xl text-center py-2">
+            <h2 className="text-xl bg-accent font-semibold text-text-secondary sm:text-2xl text-center mt-6 py-4 px-2">
               <span className="text-secondary hover:text-text-secondary">Perfect Fit™</span> garments
               can be made in any combination of available colours from our swatch
             </h2>

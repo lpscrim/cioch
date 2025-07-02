@@ -309,7 +309,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/jacket1.jpg",
+        src: "/trousers.jpg",
         alt: "Main view of Trousers.",
       },
     ],
@@ -371,7 +371,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/jacket1.jpg",
+        src: "/salopettes.jpg",
         alt: "Main view of Salopettes.",
       },
     ],
@@ -404,7 +404,6 @@ export const products = [
           "Special deivery (£300 compensation) - £10.00",
           "All prices are inclusive of VAT",
         ],
-
       },    
       {
         name: "Specifications (Standard Large)",
@@ -431,7 +430,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/jacket1.jpg",
+        src: "/fleece.jpg",
         alt: "Main view of Fleece reversible.",
       },
     ],
@@ -481,7 +480,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/jacket2.jpg",
+        src: "/windshirt.jpg",
         alt: "Main view of windshirt in yellow.",
       },
     ],
