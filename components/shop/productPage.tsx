@@ -31,14 +31,15 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       <ProductNav />
       <div className="bg-text rounded-md overflow-hidden shadow-lg">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 pb-12 pt-6 lg:max-w-7xl lg:px-12">
-            <Link
+          <Link
             className={classNames(
               product.category === "kids" ? "invisible" : "",
-              "inline-block mb-2 text-secondary font-semibold hover:underline")}
+              "inline-block mb-2 text-secondary font-semibold hover:underline"
+            )}
             href={`/shop/${product.category}`}
           >
-           See all {product.category}s
-          </Link> 
+            See all {product.category}s
+          </Link>
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 pt-2">
             {/* Image gallery */}
             <TabGroup className="flex flex-col-reverse">
@@ -113,7 +114,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     Color
                   </h3>
                   <fieldset aria-label="Choose a color" className="mt-2">
-                    <div className="flex items-center gap-x-3">
+                    <div className="flex items-center gap-x-2">
                       {product.colors.map((color, idx) => (
                         <div
                           key={color.id}
@@ -127,71 +128,67 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                             aria-label={color.name}
                             className={classNames(
                               color.classes,
-                              "size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
+                              "size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-text-secondary/70 checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
                             )}
                             onChange={() => setSelectedColor(color)}
                           />
                         </div>
                       ))}
-                      {/* Show selected color name */}
                     </div>
                     <div className="flex mx-auto justify-left">
-                      <span className={classNames(selectedColor?.classes, "block mt-2 px-3 py-1 text-text text-center rounded-md")}>
+                      <span
+                        className={classNames(
+                          selectedColor?.classes,
+                          "block mt-3 mb-1  px-3 py-1.5 text-center rounded-md"
+                        )}
+                      >
                         {selectedColor?.name || product.colors[0].name}
                       </span>
                     </div>
                   </fieldset>
                   {product.cordura && (
-                     <fieldset aria-label="Choose a color" className="mt-2">
-                    <div className="flex items-center gap-x-3">
-                        <div
-                          className="flex rounded-full outline -outline-offset-1 outline-text-secondary/10"
-                        >
+                    <fieldset aria-label="Choose a color" className="mt-2">
+                      <div className="flex items-center gap-x-3">
+                        <div className="flex rounded-full outline -outline-offset-1 outline-text-secondary/10">
                           <input
-                            defaultValue={'black'}
+                            defaultValue={"black"}
                             defaultChecked={true}
                             name="color"
                             type="radio"
-                            aria-label={'black'}
-                            className={classNames(
-                              "bg-black checked:bg-black text-text-secondary/70",
-                              "size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
-                            )}
+                            aria-label={"black"}
+                            className="bg-black checked:bg-black text-text-secondary/70 size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
                           />
                         </div>
-                      
-                    </div>
-                    <div className="flex mx-auto justify-left">
-                            <span className="bg-black block mt-2 px-3 py-1  text-text  min-w-[80px] text-center rounded-md">
-                        Cordura: Black
-                      </span>
-                    </div>
-                  </fieldset>
-                    )}
-                    {product?.fleece && (
-                     <fieldset aria-label="Choose a color" className="mt-2">
-                    <div className="flex items-center gap-x-3">
-                        <div
-                          className="flex rounded-full outline -outline-offset-1 outline-text-secondary/10"
-                        >
+                      </div>
+                      <div className="flex mx-auto justify-left">
+                        <span className="bg-black block mt-2 px-3 py-1.5  text-text  min-w-[80px] text-center rounded-md">
+                          Cordura: Black
+                        </span>
+                      </div>
+                    </fieldset>
+                  )}
+                  {product?.fleece && (
+                    <fieldset aria-label="Choose a color" className="mt-2">
+                      <div className="flex items-center gap-x-3">
+                        <div className="flex rounded-full outline -outline-offset-1 outline-text-secondary/10">
                           <input
-                            defaultValue={'green'}
+                            defaultValue={"green"}
                             defaultChecked={true}
                             name="color"
                             type="radio"
-                            aria-label={'green'}
-                            className={classNames(
-                              "bg-emerald-700 checked:bg-emerald-700 text-text-secondary/70",
-                              "size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
-                            )}
+                            aria-label={"green"}
+                            className=
+                              "bg-emerald-700 checked:bg-emerald-700 text-text-secondary/70 size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3" 
                           />
                         </div>
-                      <span className=" px-3 py-1  text-text-secondary  min-w-[80px] text-center">
-                        Single Sided Velour: Green
-                      </span>
-                    </div>
-                  </fieldset>
-                    )}
+                      </div>
+                      <div className="flex mx-auto justify-left">
+                        <span className="bg-emerald-700 block mt-2 px-3 py-1.5  text-text  min-w-[80px] text-center rounded-md">
+                          Single Sided Velour: Green
+                        </span>
+                      </div>
+                    </fieldset>
+                  )}
                 </div>
               </form>
 
@@ -235,23 +232,20 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     </Disclosure>
                   ))}
                 </div>
-                
               </section>
-              
             </div>
           </div>
-          
-        </div>    
-          <Link
-            href="/#perfectFit"
-          >
-            <h2 className="text-xl bg-accent font-semibold text-text-secondary sm:text-2xl text-center mt-6 py-4 px-2">
-              <span className="text-secondary hover:text-text-secondary">Perfect Fit™</span> garments
-              can be made in any combination of available colours from our swatch
-            </h2>
-          </Link>        
+        </div>
+        <Link href="/#perfectFit">
+          <h2 className="text-xl bg-accent font-semibold text-text-secondary sm:text-2xl text-center mt-6 py-4 px-2">
+            <span className="text-secondary hover:text-text-secondary">
+              Perfect Fit™
+            </span>{" "}
+            garments can be made in any combination of available colours from
+            our swatch
+          </h2>
+        </Link>
       </div>
-      
     </div>
   );
 }
