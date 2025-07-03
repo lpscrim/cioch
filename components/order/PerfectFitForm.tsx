@@ -7,7 +7,7 @@ export default function PerfectFitForm() {
     <form
       action="https://formspree.io/xgenyyzk"
       method="POST"
-      className="max-w-4xl mx-auto space-y-12 bg-white rounded-xl shadow-lg p-8"
+      className="max-w-4xl mx-auto space-y-12 bg-text rounded-xl shadow-lg p-8 "
     >
       <div className="border-b border-gray-200 pb-12">
         <h1 className="text-2xl font-bold text-gray-800">Perfect Fit Order Form</h1>
