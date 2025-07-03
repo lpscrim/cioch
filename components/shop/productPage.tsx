@@ -196,8 +196,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 </h2>
 
                 <div className="divide-y divide-text border-t border-text">
-                  {product.details.map((detail) => (
-                    <Disclosure key={detail.name} as="div">
+                  {product.details.map((detail, idx) => (
+                    <Disclosure key={idx} as="div">
                       <h3>
                         <DisclosureButton className="group relative flex w-full items-center justify-between py-6 text-left">
                           <span className="text-base sm:text-lg font-semibold text-secondary">
@@ -220,8 +220,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                           role="list"
                           className="list-disc space-y-1 pl-5 text-sm/6 sm:text-base/6 text-text-secondary marker:text-text"
                         >
-                          {detail.items.map((item) => (
-                            <li key={item} className="pl-2">
+                          {detail.items.map((item, idx) => (
+                            <li key={idx} className="pl-2">
                               {item}
                             </li>
                           ))}
