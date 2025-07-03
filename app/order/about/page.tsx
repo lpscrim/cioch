@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function OrderPage() {
   return (
     <div className="z-200">
-      <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg p-8 text-gray-800">
+      <div className="max-w-4xl mx-auto bg-text rounded-xl shadow-lg p-8 text-text-secondary">
       <h1 className="text-2xl font-bold mb-4">Guide to Ordering</h1>
       <div className="flex flex-col sm:flex-row gap-6 mb-4">
         <Image
@@ -12,7 +12,7 @@ export default function OrderPage() {
           alt="How to take measurements"
           width={312}
           height={218}
-          className="rounded-md border border-gray-200 self-start"
+          className="rounded-md border border-textself-start"
         />
         <p className="text-base">
           Please complete the order form as fully as possible, ensuring that you give a contact phone number or e-mail address.
@@ -43,12 +43,12 @@ export default function OrderPage() {
 
       <h2 className="text-xl font-semibold mt-8 mb-2">Measuring Guide</h2>
       <div className="overflow-x-auto">
-        <table className="min-w-full border border-gray-200 text-sm mb-4">
+        <table className="min-w-full border border-texttext-sm mb-4">
           <thead>
-            <tr className="bg-gray-100">
-              <th className="px-3 py-2 border-b border-gray-200 text-left">Letter</th>
-              <th className="px-3 py-2 border-b border-gray-200 text-left">Measurement</th>
-              <th className="px-3 py-2 border-b border-gray-200 text-left">How to Measure</th>
+            <tr className="bg-text">
+              <th className="px-3 py-2 border-b border-texttext-left">Letter</th>
+              <th className="px-3 py-2 border-b border-texttext-left">Measurement</th>
+              <th className="px-3 py-2 border-b border-texttext-left">How to Measure</th>
             </tr>
           </thead>
           <tbody>
@@ -65,9 +65,9 @@ export default function OrderPage() {
               ["J", "Collar", "Measure around your neck."],
             ].map(([letter, name, desc]) => (
               <tr key={letter}>
-                <td className="px-3 py-2 border-b border-gray-100 font-semibold">{letter}</td>
-                <td className="px-3 py-2 border-b border-gray-100">{name}</td>
-                <td className="px-3 py-2 border-b border-gray-100">{desc}</td>
+                <td className="px-3 py-2 border-b border-text font-semibold">{letter}</td>
+                <td className="px-3 py-2 border-b border-text">{name}</td>
+                <td className="px-3 py-2 border-b border-text">{desc}</td>
               </tr>
             ))}
           </tbody>
