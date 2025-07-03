@@ -12,10 +12,22 @@ import { ChevronUpIcon } from '@heroicons/react/20/solid'
 import Image from "next/image";
 
 const categories = [
-    { name: 'Kids', description: 'See selection of kids clothing', href: '#'},
-    { name: 'Windproof', description: 'See selection of windproof clothing', href: '#'},
-    { name: 'Waterproof', description: 'See selection of waterproof clothing', href: '#'},
-    ]
+  {
+    name: "Waterproofs",
+    description: "See selection of waterproof clothing",
+    href: "/shop/waterproof",
+  },
+  {
+    name: "Windproof",
+    description: "See selection of windproof clothing",
+    href: "/shop/windproof",
+  },
+  {
+    name: "Kids",
+    description: "See selection of kids clothing",
+    href: "/shop/kids/kids",
+  },
+];
 
 
 export default function Footer() {
@@ -46,6 +58,7 @@ export default function Footer() {
                         {category.name}
                         <span className="absolute inset-0" />
                       </Link>
+                      
                     </div>
                   </div>
                 ))}
@@ -81,8 +94,8 @@ export default function Footer() {
                 src="/main.jpg"
                 alt="Cioch Outdoor Clothing"
                 className="w-3/4 max-w-[100px] h-auto rounded-lg"
-                width={50}
-                height={50}
+                width={300}
+                height={300}
               />
             </div>
           </div>

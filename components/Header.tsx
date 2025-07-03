@@ -44,7 +44,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 w-[100lvw] z-9900 bg-background/0 text-text brightness-150">
+    <header className="absolute top-0 left-0 w-[100lvw] z-9900 bg-background/0 text-text brightness-120">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-6 lg:px-8"
@@ -55,9 +55,9 @@ export default function Header() {
             <Image
               alt=""
               src="/main.jpg"
-              className="h-8 w-auto mr-3"
-              height="32"
-              width="32"
+              className="h-8 w-auto mr-3 rounded-sm"
+              height="300"
+              width="300"
               quality={100}
             />
           </Link>
@@ -80,6 +80,8 @@ export default function Header() {
         </div>
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
+            {({ close }) => (
+            <>
             <PopoverButton
               className={`flex items-center gap-x-1 text-lg/6 font-semibold cursor-pointer ${
                 pathname?.startsWith("/shop") ? "text-text-secondary" : ""
@@ -106,6 +108,7 @@ export default function Header() {
                         href={category.href}
                         aria-label={category.description}
                         className="block font-semibold hover:backdrop-brightness-150 p-1 pb-2"
+                        onClick={() => close()}
                       >
                         {category.name}
                         <span className="absolute inset-0" />
@@ -116,6 +119,7 @@ export default function Header() {
                             href={`/shop/${product.category}/${product.id}`}
                             aria-label={product.description}
                             className=" pl-5 block font-light hover:backdrop-brightness-150 pt-1 text-text/70"
+                            onClick={() => close()}
                           >
                             {product.name}
                           </Link>
@@ -126,6 +130,8 @@ export default function Header() {
                 ))}
               </div>
             </PopoverPanel>
+            </>
+            )}
           </Popover>
 
           <Link
@@ -178,9 +184,9 @@ export default function Header() {
               <Image
                 alt="Cioch logo"
                 src="/main.jpg"
-                className="h-8 w-auto -ml-2"
-                height="32"
-                width="32"
+                className="h-8 w-auto -ml-2 rounded-sm"
+                height="300"
+                width="300"
                 quality={100}
               />
             </Link>
