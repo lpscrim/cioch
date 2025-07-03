@@ -134,7 +134,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         </div>
                       ))}
                       {/* Show selected color name */}
-                      <span className="ml-4 px-3 py-1  text-text-secondary  min-w-[80px] text-center">
+                    </div>
+                    <div className="flex mx-auto justify-left">
+                      <span className={classNames(selectedColor?.classes, "block mt-2 px-3 py-1 text-text text-center rounded-md")}>
                         {selectedColor?.name || product.colors[0].name}
                       </span>
                     </div>
@@ -157,7 +159,10 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                             )}
                           />
                         </div>
-                      <span className=" px-3 py-1  text-text-secondary  min-w-[80px] text-center">
+                      
+                    </div>
+                    <div className="flex mx-auto justify-left">
+                            <span className="bg-black block mt-2 px-3 py-1  text-text  min-w-[80px] text-center rounded-md">
                         Cordura: Black
                       </span>
                     </div>
