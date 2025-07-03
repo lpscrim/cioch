@@ -161,7 +161,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         </div>
                       </div>
                       <div className="flex mx-auto justify-left">
-                        <span className="bg-black block mt-2 px-3 py-1.5  text-text  min-w-[80px] text-center rounded-md">
+                        <span className="bg-black block mt-3 px-3 py-1.5  text-text  min-w-[80px] text-center rounded-md">
                           Cordura: Black
                         </span>
                       </div>
@@ -183,7 +183,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                         </div>
                       </div>
                       <div className="flex mx-auto justify-left">
-                        <span className="bg-emerald-700 block mt-2 px-3 py-1.5  text-text  min-w-[80px] text-center rounded-md">
+                        <span className="bg-emerald-700 block mt-3 px-3 py-1.5  text-text  min-w-[80px] text-center rounded-md">
                           Single Sided Velour: Green
                         </span>
                       </div>

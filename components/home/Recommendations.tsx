@@ -41,7 +41,7 @@ export default function Recommendations() {
                 recommendationIdx % 2 === 0
                   ? "slide-fade-left"
                   : "slide-fade-right",
-                "flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-lg px-12 lg:px-8 py-12 lg:py-6 bg-(--color-foreground)/90  bg-[url(/mocha-grunge.png)]"
+                "flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-lg px-12 lg:px-8 py-12 lg:py-6 bg-foreground/90  bg-[url(/mocha-grunge.png)]"
               )}
             >
               <div

@@ -62,7 +62,7 @@ export default function Header() {
             />
           </Link>
           <Link href="/" className="-m-1.5 p-1.5">
-            <h2 className="mr-3 text-xl/6 font-semibold text-(--color-text)">
+            <h2 className="mr-3 text-xl/6 font-semibold text-text">
               Outdoor Clothing
             </h2>
           </Link>
@@ -171,7 +171,7 @@ export default function Header() {
         className="lg:hidden"
       >
         <div className="fixed inset-0 z-200" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-9999 w-full overflow-y-auto bg-(--color-background) text-(--color-text) px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
+        <DialogPanel className="fixed inset-y-0 right-0 z-9999 w-full overflow-y-auto bg-background text-text px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className=" p-1.5">
               <span className="sr-only">Cioch CLothing</span>
