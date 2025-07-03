@@ -250,7 +250,7 @@ export default function Header() {
                   About
                 </Link>
                 <Link
-                  href="#"
+                  href="/order/about"
                   className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:backdrop-brightness-150 ${
                     pathname === "/order" ? "text-accent" : ""
                   }`}

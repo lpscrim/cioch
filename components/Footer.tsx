@@ -70,16 +70,12 @@ export default function Footer() {
             About
           </Link>
           
-          <Link href="#" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
+          <Link href="/order/about" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
             Order
           </Link>
 
           <Link href="#" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
             Gallery
-          </Link>
-
-          <Link href="#" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
-            Contact
           </Link>
         </PopoverGroup>
              
