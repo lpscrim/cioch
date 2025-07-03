@@ -11,7 +11,8 @@ export const products = [
       },
     ],
     brief: "Our famous winter mountaineering jacket.",
-    description: "Our winter mountaineering jacket is lighter than its predecessor. There is excellent freedom of movement in the shoulders and curved sleeves, a close fitting body and the fully adjustable hood rolls into a snug collar. Two large chest pockets and two small handwarmer pockets. Hard-wearing 'Cordura' on shoulders and sleeves. The lighter weight version has no hard wearing patches and a slimmer more athletic cut.",
+    description:
+      "Our winter mountaineering jacket is lighter than its predecessor. There is excellent freedom of movement in the shoulders and curved sleeves, a close fitting body and the fully adjustable hood rolls into a snug collar. Two large chest pockets and two small handwarmer pockets. Hard-wearing 'Cordura' on shoulders and sleeves. The lighter weight version has no hard wearing patches and a slimmer more athletic cut.",
     colors: [
       {
         id: "washed-black",
@@ -29,25 +30,24 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
-        details: [
+    details: [
       {
         name: "Prices",
         items: [
           "Off the peg - £400.00",
           "Perfect fit - £437.50",
+          "",
           "Off the peg (lightweight version) - £385.00",
           "Perfect fit (lightweight version) - £417.50",
+          "",
           "Special deivery (£300 compensation) - £10.00",
+          "",
           "All prices are inclusive of VAT",
         ],
-
-      },    
+      },
       {
         name: "Specifications (Standard Large)",
-        items: [
-         "Average weight - 900g.",
-         "Back Length - 75cm.",
-        ],
+        items: ["Average weight - 900g.", "Back Length - 75cm."],
       },
       {
         name: "Fabrics",
@@ -73,7 +73,8 @@ export const products = [
       },
     ],
     brief: "Our most popular all round jacket",
-    description: "Our most popular jacket is an excellent all round garment. Available in Ladies and Gents sizes. Double storm flaps, waist and hem drawcords to control ventilation, a well shaped hood with visor protection and large map pocket-all the features that you would expect on a good hill-walking jacket.",
+    description:
+      "Our most popular jacket is an excellent all round garment. Available in Ladies and Gents sizes. Double storm flaps, waist and hem drawcords to control ventilation, a well shaped hood with visor protection and large map pocket-all the features that you would expect on a good hill-walking jacket.",
     colors: [
       {
         id: "washed-black",
@@ -91,23 +92,22 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
-        details: [
+    details: [
       {
         name: "Prices",
         items: [
           "Off the peg - £355.00",
+          "",
           "Perfect fit - £380.00",
+          "",
           "Special deivery (£300 compensation) - £10.00",
+          "",
           "All prices are inclusive of VAT",
         ],
-
-      },    
+      },
       {
         name: "Specifications (Standard Large)",
-        items: [
-         "Average weight - 910g.",
-         "Back Length - 81cm.",
-        ],
+        items: ["Average weight - 910g.", "Back Length - 81cm."],
       },
       {
         name: "Fabrics",
@@ -132,7 +132,8 @@ export const products = [
       },
     ],
     brief: "Our pullover style jacket",
-    description: "A pullover waterproof with optional reinforced shoulders and sleeves. Waist and hem drawcords, a kangaroo chest pocket and a hand-warmer tunnel pocket. Choose either the simple fold-away hood for ski-ing or the fully adjustable roll-away hood for winter climbing.",
+    description:
+      "A pullover waterproof with optional reinforced shoulders and sleeves. Waist and hem drawcords, a kangaroo chest pocket and a hand-warmer tunnel pocket. Choose either the simple fold-away hood for ski-ing or the fully adjustable roll-away hood for winter climbing.",
     colors: [
       {
         id: "washed-black",
@@ -150,25 +151,24 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
-         details: [
+    details: [
       {
         name: "Prices",
         items: [
           "Off the peg - £365.00",
           "Perfect fit - £385.00",
+          "",
           "Off the peg (+ reinforced panels) - £405.00",
           "Perfect fit (+ reinforced panels) - £440.00",
+          "",
           "Special deivery (£300 compensation) - £10.00",
+          "",
           "All prices are inclusive of VAT",
         ],
-
-      },    
+      },
       {
         name: "Specifications (Standard Large)",
-        items: [
-         "Average weight - 910g.",
-         "Back Length - 72cm.",
-        ],
+        items: ["Average weight - 910g.", "Back Length - 72cm."],
       },
       {
         name: "Fabrics",
@@ -194,7 +194,8 @@ export const products = [
       },
     ],
     brief: "Our lightweight summer waterproof jacket",
-    description: "Our lightest waterproof, the Glamaig has been designed for summer hillwalking and backpacking. The outer shell is made entirely from Paramo Windproof microfibre, so the Glamaig is also incredibly breathable. The sleeves are only lined to the elbows, allowing them to roll up easily for increased ventilation (fully lined sleeves are optional). The front zip is protected by an internal flap, the hood rolls up into a collar and the jacket includes a map pocket and two handwarmer pockets. Weighing in at around 500g, the whole jacket will roll up to the size of a pineapple, but is tougher and more durable than most other 'lightweights' on the market",
+    description:
+      "Our lightest waterproof, the Glamaig has been designed for summer hillwalking and backpacking. The outer shell is made entirely from Paramo Windproof microfibre, so the Glamaig is also incredibly breathable. The sleeves are only lined to the elbows, allowing them to roll up easily for increased ventilation (fully lined sleeves are optional). The front zip is protected by an internal flap, the hood rolls up into a collar and the jacket includes a map pocket and two handwarmer pockets. Weighing in at around 500g, the whole jacket will roll up to the size of a pineapple, but is tougher and more durable than most other 'lightweights' on the market",
     colors: [
       {
         id: "washed-black",
@@ -212,25 +213,24 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
-        details: [
+    details: [
       {
         name: "Prices",
         items: [
           "Off the peg - £270.50",
           "Perfect fit - £295.00",
+          "",
           "Off the peg (+ optional side zips) - £325.00",
           "Perfect fit (+ optional side zips) - £355.00",
+          "",
           "Special deivery (£300 compensation) - £10.00",
+          "",
           "All prices are inclusive of VAT",
         ],
-
-      },    
+      },
       {
         name: "Specifications (Standard Large)",
-        items: [
-         "Average weight - 510g.",
-         "Back Length - 77cm.",
-        ],
+        items: ["Average weight - 510g.", "Back Length - 77cm."],
       },
       {
         name: "Fabrics",
@@ -255,7 +255,8 @@ export const products = [
       },
     ],
     brief: "Our tradtional style waterproof jacket",
-    description: "Cut longer, in a traditional style, this suits those who prefer less demanding walks. A large map pocket and two hand-warmer pockets, full protection from the hood and double flaps over the front zip.",
+    description:
+      "Cut longer, in a traditional style, this suits those who prefer less demanding walks. A large map pocket and two hand-warmer pockets, full protection from the hood and double flaps over the front zip.",
     colors: [
       {
         id: "washed-black",
@@ -273,23 +274,22 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
-       details: [
+    details: [
       {
         name: "Prices",
         items: [
           "Off the peg - £342.50",
+          "",
           "Perfect fit - £365.00",
+          "",
           "Special deivery (£300 compensation) - £10.00",
+          "",
           "All prices are inclusive of VAT",
         ],
-
-      },    
+      },
       {
         name: "Specifications (Standard Large)",
-        items: [
-         "Average weight - 780g.",
-         "Back Length - 87cm.",
-        ],
+        items: ["Average weight - 780g.", "Back Length - 87cm."],
       },
       {
         name: "Fabrics",
@@ -314,7 +314,8 @@ export const products = [
       },
     ],
     brief: "Tailored waterproof trousers",
-    description: "Tailored to fit next to the skin or over light trousers, they can be worn all day, they are so comfortable. Waterproof fly, two zipped pockets and 3/4 length side zips for ventilation. Gusset in crutch and articulated knees for extra freedom of movement. Also a choice of extras such as reinforced areas on knees, seat and ankles (climbers and scramblers), powder gaiters (skiers) and braces.",
+    description:
+      "Tailored to fit next to the skin or over light trousers, they can be worn all day, they are so comfortable. Waterproof fly, two zipped pockets and 3/4 length side zips for ventilation. Gusset in crutch and articulated knees for extra freedom of movement. Also a choice of extras such as reinforced areas on knees, seat and ankles (climbers and scramblers), powder gaiters (skiers) and braces.",
     colors: [
       {
         id: "washed-black",
@@ -332,25 +333,26 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
-        details: [
+    details: [
       {
         name: "Prices",
         items: [
           "Off the peg - £267.50",
           "Perfect fit - £290.00",
+          "",
           "Off the peg (+ patches) - £315.00",
           "Perfect fit (+ patches) - £342.50",
+          "",
           "Sewn in braces/ Internal gaiters - £10.00",
+          "",
           "Special deivery (£300 compensation) - £10.00",
+          "",
           "All prices are inclusive of VAT",
         ],
-
-      },    
+      },
       {
         name: "Specifications (Standard Large)",
-        items: [
-         "Average weight - 590g.",
-        ],
+        items: ["Average weight - 590g."],
       },
       {
         name: "Fabrics",
@@ -376,7 +378,8 @@ export const products = [
       },
     ],
     brief: "Tailored Salopettes",
-    description: "Made to order only. </br></br> Winter protection for climbing or ski-ing. Options include reinforced knee, seat and ankles, full length side zips for a drop seat, zip under crutch for ladies and internal powder gaiters.",
+    description:
+      "Made to order only. </br></br> Winter protection for climbing or ski-ing. Options include reinforced knee, seat and ankles, full length side zips for a drop seat, zip under crutch for ladies and internal powder gaiters.",
     colors: [
       {
         id: "washed-black",
@@ -394,22 +397,24 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
-        details: [
+    details: [
       {
         name: "Prices",
         items: [
           "Perfect fit - £412.50",
+          "",
           "Perfect fit (+ patches) - £450.00",
+          "",
           "Internal gaiters - £10.00",
+          "",
           "Special deivery (£300 compensation) - £10.00",
+          "",
           "All prices are inclusive of VAT",
         ],
-      },    
+      },
       {
         name: "Specifications (Standard Large)",
-        items: [
-         "Average weight - 870g.",
-        ],
+        items: ["Average weight - 870g."],
       },
       {
         name: "Fabrics",
@@ -435,7 +440,8 @@ export const products = [
       },
     ],
     brief: "Reversible windproof fleece.",
-    description: "A versatile windproof jacket with two pockets either side, a drawcord hem and lycra bound cuffs.",
+    description:
+      "A versatile windproof jacket with two pockets either side, a drawcord hem and lycra bound cuffs.",
     colors: [
       {
         id: "washed-black",
@@ -453,15 +459,17 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
-        details: [
-       {
+    details: [
+      {
         name: "Prices",
         items: [
           "Perfect fit - £255.00",
+          "",
           "Special deivery (£300 compensation) - £10.00",
+          "",
           "All prices are inclusive of VAT",
         ],
-      },    
+      },
       {
         name: "Fabrics",
         items: [
@@ -485,7 +493,8 @@ export const products = [
       },
     ],
     brief: "A lightweight micro-fibre shell pullover.",
-    description: "Made to order only </br></br> A lightweight micro-fibre shell pullover, which is cut long for cyclists, but ideal for a range of activities from running to climbing. Perfect for keeping off the chill whilst walking up to the crags on a cold winters morning. Folds into its chest pocket with a loop for hanging on a belt. Also available with full length front zip and handwarmer pockets. Reflective piping if required.",
+    description:
+      "Made to order only </br></br> A lightweight micro-fibre shell pullover, which is cut long for cyclists, but ideal for a range of activities from running to climbing. Perfect for keeping off the chill whilst walking up to the crags on a cold winters morning. Folds into its chest pocket with a loop for hanging on a belt. Also available with full length front zip and handwarmer pockets. Reflective piping if required.",
     colors: [
       {
         id: "washed-black",
@@ -503,23 +512,24 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
-   details: [
-       {
+    details: [
+      {
         name: "Prices",
         items: [
           "Off the peg - £110.00",
           "Perfect fit - £123.00",
+          "",
           "Off the peg  (+ Full length front zip) - £117.50",
           "Perfect fit (+ Full length front zip) - £130.00",
+          "",
           "Postage - £6.00",
+          "",
           "All prices are inclusive of VAT",
         ],
-      },    
+      },
       {
         name: "Fabrics",
-        items: [
-          "Paramo Windproof shell",
-        ],
+        items: ["Paramo Windproof shell"],
       },
     ],
     price: "£110 - £130",
@@ -532,12 +542,13 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/windshirt.jpg",
-        alt: "Main view of windshirt in yellow.",
+        src: "/kidswater.jpg",
+        alt: "Main view of a child wearing a red jacket.",
       },
     ],
-    brief: "A lightweight micro-fibre shell pullover.",
-    description: "Made to order only </br></br> A lightweight micro-fibre shell pullover, which is cut long for cyclists, but ideal for a range of activities from running to climbing. Perfect for keeping off the chill whilst walking up to the crags on a cold winters morning. Folds into its chest pocket with a loop for hanging on a belt. Also available with full length front zip and handwarmer pockets. Reflective piping if required.",
+    brief: "The best Children's waterproofs available.",
+    description:
+      "We think that these are the best children’s waterproofs around. Not cheap, but made with exactly the same fabrics as the adults’ gear - they will keep your child warm and dry in the worst weather! Ours have passed down four children over ten years and still going strong. And they are machine washable too!. <br/><br/> Optional reinforced shoulders and sleeves extra - please enquire before ordering.",
     colors: [
       {
         id: "washed-black",
@@ -555,23 +566,47 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
-   details: [
-       {
+    details: [
+      {
+        name: "Sizes",
+        items: [
+          "0-12 months: All-in-ones from birth.",
+          "12-24 months: Jacket and Trouser suits.",
+          "3-12 Years: Fully featured Jacket and trousers.",
+        ],
+      },
+      {
         name: "Prices",
         items: [
-          "Off the peg - £110.00",
-          "Perfect fit - £123.00",
-          "Off the peg  (+ Full length front zip) - £117.50",
-          "Perfect fit (+ Full length front zip) - £130.00",
-          "Postage - £6.00",
+          "Off the peg:",
+          "",
+          "All-in-One (>12 Months): £95.00",
+          "",
+          "Jacket (no pockets, 3-4 Years): £110.00",
+          "Trousers (3-4 Years): £52.50",
+          "",
+          "Jacket (5-6 Years): £180.00",
+          "Trousers (5-6 Years): £57.50",
+          "",
+          "Jacket (7-8 Years): £190.00",
+          "Trousers (7-8 Years): £95.00",
+          "",
+          "Jacket (9-10 Years): £200.00",
+          "Trousers (9-10 Years): £107.50",
+          "",
+          "Jacket (11-12 Years): £205.00",
+          "Trousers (11-12 Years): £107.50",
+          "",
+           "Perfect fit - *** Upon request ***",
+           "",
+          "Postage - £5.00(UK)",
+          "",
           "All prices are inclusive of VAT",
         ],
-      },    
+      },
       {
         name: "Fabrics",
-        items: [
-          "Paramo Windproof shell",
-        ],
+        items: ["Paramo Windproof Microfibre shell", "Parameta pump liner."],
       },
     ],
     price: "£110 - £130",
