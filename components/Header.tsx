@@ -144,7 +144,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="/order"
+            href="/order/about"
             className={`text-lg/6 font-semibold ${
               pathname === "/order" ? "text-accent" : ""
             }`}
@@ -161,14 +161,14 @@ export default function Header() {
             Gallery
           </Link>
 
-          <Link
+         {/* <Link
             href="#"
             className={`text-lg/6 font-semibold ${
               pathname === "/contact" ? "text-accent" : ""
             }`}
           >
             Contact
-          </Link>
+          </Link>*/}
         </PopoverGroup>
       </nav>
       <Dialog
@@ -265,14 +265,14 @@ export default function Header() {
                 >
                   Gallery
                 </Link>
-                <Link
+                {/*<Link
                   href="#"
                   className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:backdrop-brightness-150 ${
                     pathname === "/contact" ? "text-accent" : ""
                   }`}
                 >
                   Contact
-                </Link>
+                </Link>*/}
               </div>
             </div>
           </div>
