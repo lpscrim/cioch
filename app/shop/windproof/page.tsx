@@ -19,7 +19,7 @@ export default function Windproof() {
         </div>
 
         <h2 className="sr-only">Products</h2>
-        <div className="grid grid-cols-1 gap-y-6 py-8 lg:grid-cols-2 sm:gap-x-6 xl:px-12 lg:px-0 sm:px-8 px-0 justify-items-center">
+        <div className="grid grid-cols-1 gap-y-6 py-8 md:grid-cols-2 sm:gap-x-6 xl:px-12 lg:px-0 sm:px-8 px-0 justify-items-center">
           {products.filter((product) => product.category === "windproof")
             .map((product) => (
             <ProductCard product={product} key={product.id} />

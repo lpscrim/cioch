@@ -7,7 +7,7 @@ import { products } from "@/products/productList";
 export default function Waterproof() {
   return (
     <div className="rounded-md z-999">
-      <div className="mx-auto md:max-w-2xl py-2 lg:max-w-7xl">
+      <div className="mx-auto py-2 lg:max-w-7xl">
         <div className="relative py-15 text-center bg-[url('/pic.jpg')] bg-cover bg-center bg-no-repeat rounded-lg min-h-[27vh]">
           <div className="absolute inset-0 bg-black/45 rounded-lg"></div>
             <div className="relative z-10">  

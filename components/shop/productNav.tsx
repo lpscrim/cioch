@@ -27,11 +27,11 @@ export default function ProductNav() {
   return (
     <div>
       {/* Mobile */}
-      <div className="grid grid-cols-1 sm:hidden pb-1">
+      <div className="grid grid-cols-1 md:hidden pb-1">
         <select
           value={tabs.find(tab => pathname === tab.href)?.name ?? tabs[0].name}
           aria-label="Select a tab"
-          className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-foreground/50 py-2 pr-8 pl-3 text-base text-text-secondary outline-1 -outline-offset-1 outline-text focus:outline-2 focus:-outline-offset-2 focus:outline-secondary"
+          className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-accent py-2 pr-8 pl-3 text-lg font-semibold text-text-secondary outline-1 -outline-offset-1 outline-text focus:outline-2 focus:-outline-offset-2 focus:outline-secondary"
           onChange={e => {
             const selectedTab = tabs.find(tab => tab.name === e.target.value);
             if (selectedTab) {
@@ -49,7 +49,7 @@ export default function ProductNav() {
         />
       </div>
       {/* Desktop */}
-      <div className="hidden sm:block pb-2 mx-auto">
+      <div className="hidden md:block pb-2 mx-auto">
         <nav
           aria-label="Tabs"
           className="isolate flex divide-x divide-text/50 rounded-lg shadow-sm"
@@ -63,11 +63,11 @@ export default function ProductNav() {
                 aria-current={isActive ? "page" : undefined}
                 className={classNames(
                   isActive
-                    ? "text-text-secondary bg-primary"
-                    : "text-text-secondary/80 hover:backdrop-brightness-110 bg-primary/80",
+                    ? " bg-primary"
+                    : " hover:backdrop-brightness-110 bg-primary/75",
                   tabIdx === 0 ? "rounded-l-lg" : "",
                   tabIdx === tabs.length - 1 ? "rounded-r-lg" : "",
-                  "group relative min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-base font-medium hover:backdrop-brightness-110 focus:z-10"
+                  "group relative min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-text-secondary text-sm lg:text-base font-semibold hover:backdrop-brightness-110 focus:z-10"
                 )}
               >
               <span>{tab.name}</span>
