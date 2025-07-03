@@ -30,6 +30,7 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
+    cordura: true,
     details: [
       {
         name: "Prices",
@@ -92,6 +93,7 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
+    cordura: false,
     details: [
       {
         name: "Prices",
@@ -151,6 +153,7 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
+    cordura: true,
     details: [
       {
         name: "Prices",
@@ -213,6 +216,7 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
+    cordura: false,
     details: [
       {
         name: "Prices",
@@ -274,6 +278,7 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
+    cordura: false,
     details: [
       {
         name: "Prices",
@@ -333,6 +338,7 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
+    cordura: true,
     details: [
       {
         name: "Prices",
@@ -397,6 +403,7 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
+    cordura: true,
     details: [
       {
         name: "Prices",
@@ -459,6 +466,8 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
+    cordura: false,
+    fleece: true,
     details: [
       {
         name: "Prices",
@@ -512,6 +521,7 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
+    cordura: false,
     details: [
       {
         name: "Prices",
@@ -566,6 +576,7 @@ export const products = [
         classes: "bg-gray-500 checked:outline-gray-500",
       },
     ],
+    cordura: false,
     details: [
       {
         name: "Sizes",

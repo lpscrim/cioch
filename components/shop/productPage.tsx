@@ -109,7 +109,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
               <form className="mt-6">
                 {/* Colors */}
                 <div>
-                  <h3 className="text-sm font-medium text-text-secondary/80">
+                  <h3 className="text-lg font-medium text-secondary pb-2">
                     Color
                   </h3>
                   <fieldset aria-label="Choose a color" className="mt-2">
@@ -139,6 +139,54 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       </span>
                     </div>
                   </fieldset>
+                  {product.cordura && (
+                     <fieldset aria-label="Choose a color" className="mt-2">
+                    <div className="flex items-center gap-x-3">
+                        <div
+                          className="flex rounded-full outline -outline-offset-1 outline-text-secondary/10"
+                        >
+                          <input
+                            defaultValue={'black'}
+                            defaultChecked={true}
+                            name="color"
+                            type="radio"
+                            aria-label={'black'}
+                            className={classNames(
+                              "bg-black checked:bg-black text-text-secondary/70",
+                              "size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
+                            )}
+                          />
+                        </div>
+                      <span className=" px-3 py-1  text-text-secondary  min-w-[80px] text-center">
+                        Cordura: Black
+                      </span>
+                    </div>
+                  </fieldset>
+                    )}
+                    {product?.fleece && (
+                     <fieldset aria-label="Choose a color" className="mt-2">
+                    <div className="flex items-center gap-x-3">
+                        <div
+                          className="flex rounded-full outline -outline-offset-1 outline-text-secondary/10"
+                        >
+                          <input
+                            defaultValue={'green'}
+                            defaultChecked={true}
+                            name="color"
+                            type="radio"
+                            aria-label={'green'}
+                            className={classNames(
+                              "bg-emerald-700 checked:bg-emerald-700 text-text-secondary/70",
+                              "size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
+                            )}
+                          />
+                        </div>
+                      <span className=" px-3 py-1  text-text-secondary  min-w-[80px] text-center">
+                        Single Sided Velour: Green
+                      </span>
+                    </div>
+                  </fieldset>
+                    )}
                 </div>
               </form>
 
