@@ -5,7 +5,7 @@ import { products } from "@/products/productList";
 export default function Windproof() {
   return (
     <div className="rounded-md">
-      <div className="mx-auto md:max-w-2xl py-2 lg:max-w-7xl">
+      <div className="mx-auto py-2 lg:max-w-7xl">
         <div className="relative py-15 text-center bg-[url('/pic.jpg')] bg-cover bg-center bg-no-repeat rounded-lg min-h-[27vh]">
           <div className="absolute inset-0 bg-black/45 rounded-lg"></div>
           <div className="relative z-10">
@@ -19,7 +19,7 @@ export default function Windproof() {
         </div>
 
         <h2 className="sr-only">Products</h2>
-        <div className="grid grid-cols-1 gap-y-4 py-8 lg:grid-cols-2 sm:gap-x-6 sm:gap-y-10  lg:gap-x-8 xl:px-12 lg:px-0 sm:px-8 px-0">
+        <div className="grid grid-cols-1 gap-y-6 py-8 lg:grid-cols-2 sm:gap-x-6 xl:px-12 lg:px-0 sm:px-8 px-0 justify-items-center">
           {products.filter((product) => product.category === "windproof")
             .map((product) => (
             <ProductCard product={product} key={product.id} />

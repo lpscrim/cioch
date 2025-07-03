@@ -16,7 +16,7 @@ export default function ProductCard({
   return (
     <div
       key={id}
-      className="group pt-4 relative flex flex-col overflow-hidden rounded-lg border border-text bg-text z-999"
+      className="group pt-4 relative flex flex-col overflow-hidden rounded-lg border border-text bg-text z-999 max-w-[450px] w-full"
     >
       <Link href={`/shop/${category}/${id}`}>
         <Image

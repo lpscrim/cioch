@@ -44,10 +44,10 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 w-[100lvw] z-9999 bg-(--color-background)/0 text-(--color-text) brightness-150">
+    <header className="absolute top-0 left-0 w-[100lvw] z-9900 bg-background/0 text-text brightness-150">
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-8 lg:px-8"
+        className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-6 lg:px-8"
       >
         <div className="flex lg:flex-1 items-center">
           <Link href="/" className="-m-1.5 p-1.5">
@@ -170,8 +170,8 @@ export default function Header() {
         onClose={setMobileMenuOpen}
         className="lg:hidden"
       >
-        <div className="fixed inset-0 z-70" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-70 w-full overflow-y-auto bg-(--color-background) text-(--color-text) px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-0 z-200" />
+        <DialogPanel className="fixed inset-y-0 right-0 z-9999 w-full overflow-y-auto bg-(--color-background) text-(--color-text) px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className=" p-1.5">
               <span className="sr-only">Cioch CLothing</span>
@@ -197,7 +197,7 @@ export default function Header() {
             </button>
           </div>
           <div className="mt-6 flow-root">
-            <div className="-my-6 divide-y divide-gray-500/10">
+            <div className="-my-6 divide-y divide-text-secondary/10">
               <div className="space-y-2 py-6">
                 <Disclosure as="div" className="-mx-3">
                   <DisclosureButton
