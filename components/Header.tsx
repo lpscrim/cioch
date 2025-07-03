@@ -144,7 +144,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="#"
+            href="/order"
             className={`text-lg/6 font-semibold ${
               pathname === "/order" ? "text-accent" : ""
             }`}
