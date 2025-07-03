@@ -7,8 +7,8 @@ import { products } from "@/products/productList";
 export default function Waterproof() {
   return (
     <div className="rounded-md z-999">
-      <div className="mx-auto py-2 lg:max-w-7xl">
-        <div className="relative py-15 text-center bg-[url('/pic.jpg')] bg-cover bg-center bg-no-repeat rounded-lg min-h-[27vh]">
+      <div className="mx-auto lg:max-w-7xl">
+        <div className="relative py-10 text-center bg-[url('/pic.jpg')] bg-cover bg-center bg-no-repeat rounded-lg min-h-[22vh]">
           <div className="absolute inset-0 bg-black/45 rounded-lg"></div>
             <div className="relative z-10">  
               <h1 className="text-4xl font-bold tracking-tight text-text">
@@ -22,7 +22,7 @@ export default function Waterproof() {
 
         <h2 className="sr-only">Products</h2>
 
-        <div className="grid grid-cols-1 gap-y-4 py-8 md:grid-cols-2 sm:gap-x-6 sm:gap-y-10 xl:grid-cols-3 lg:gap-x-8 sm:px-8 px-0 md:px-0 justify-items-center">
+        <div className="grid grid-cols-1 gap-y-4 py-4 md:grid-cols-2 sm:gap-x-6 sm:gap-y-10 xl:grid-cols-3 lg:gap-x-8 sm:px-8 px-0 md:px-0 justify-items-center">
           {products.filter((product) => product.category === "waterproof")
             .map((product) => (
             <ProductCard product={product} key={product.id} />
