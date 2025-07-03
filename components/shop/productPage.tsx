@@ -107,7 +107,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 />
               </div>
 
-              <form className="mt-6">
+              <form className="mt-6 group">
                 {/* Colors */}
                 <div>
                   <h3 className="text-lg font-medium text-secondary pb-2">
@@ -187,12 +187,15 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                           Single Sided Velour: Green
                         </span>
                       </div>
+                      
                     </fieldset>
                   )}
+                  
                 </div>
+                <p className="mt-6 text-text-secondary/70 font-medium group-[onclick]:bg-yellow-300">Other colours may be available, please ask when ordering</p>
               </form>
 
-              <section aria-labelledby="details-heading" className="mt-12">
+              <section aria-labelledby="details-heading" className="mt-8">
                 <h2 id="details-heading" className="sr-only">
                   Additional details
                 </h2>
