@@ -27,7 +27,7 @@ export default function ProductNav() {
   return (
     <div>
       {/* Mobile */}
-      <div className="grid grid-cols-1 md:hidden pb-1">
+      <div className="grid grid-cols-1 lg:hidden pb-1">
         <select
           value={tabs.find(tab => pathname === tab.href)?.name ?? tabs[0].name}
           aria-label="Select a tab"
@@ -49,7 +49,7 @@ export default function ProductNav() {
         />
       </div>
       {/* Desktop */}
-      <div className="hidden md:block pb-2 mx-auto">
+      <div className="hidden lg:block pb-2 mx-auto">
         <nav
           aria-label="Tabs"
           className="isolate flex divide-x divide-text/50 rounded-lg shadow-sm"
