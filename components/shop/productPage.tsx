@@ -31,12 +31,14 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       <ProductNav />
       <div className="bg-text rounded-md overflow-hidden shadow-lg">
         <div className="mx-auto max-w-2xl px-4 sm:px-6 pb-12 pt-6 lg:max-w-7xl lg:px-12">
-          <Link
-            className="inline-block mb-2 text-secondary font-semibold hover:underline"
+            <Link
+            className={classNames(
+              product.category === "kids" ? "hidden"  : 
+              "inline-block mb-2 text-secondary font-semibold hover:underline")}
             href={`/shop/${product.category}`}
           >
-            See all {product.category}s
-          </Link>
+           See all {product.category}s
+          </Link> 
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 pt-2">
             {/* Image gallery */}
             <TabGroup className="flex flex-col-reverse">

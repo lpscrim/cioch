@@ -525,4 +525,56 @@ export const products = [
     price: "£110 - £130",
     category: "windproof",
   },
+  {
+    id: "kids",
+    name: "Kids",
+    images: [
+      {
+        id: 1,
+        name: "Main view",
+        src: "/windshirt.jpg",
+        alt: "Main view of windshirt in yellow.",
+      },
+    ],
+    brief: "A lightweight micro-fibre shell pullover.",
+    description: "Made to order only </br></br> A lightweight micro-fibre shell pullover, which is cut long for cyclists, but ideal for a range of activities from running to climbing. Perfect for keeping off the chill whilst walking up to the crags on a cold winters morning. Folds into its chest pocket with a loop for hanging on a belt. Also available with full length front zip and handwarmer pockets. Reflective piping if required.",
+    colors: [
+      {
+        id: "washed-black",
+        name: "Washed Black",
+        classes: "bg-gray-700 checked:outline-gray-700",
+      },
+      {
+        id: "white",
+        name: "White",
+        classes: "bg-white checked:outline-gray-400",
+      },
+      {
+        id: "washed-gray",
+        name: "Washed Gray",
+        classes: "bg-gray-500 checked:outline-gray-500",
+      },
+    ],
+   details: [
+       {
+        name: "Prices",
+        items: [
+          "Off the peg - £110.00",
+          "Perfect fit - £123.00",
+          "Off the peg  (+ Full length front zip) - £117.50",
+          "Perfect fit (+ Full length front zip) - £130.00",
+          "Postage - £6.00",
+          "All prices are inclusive of VAT",
+        ],
+      },    
+      {
+        name: "Fabrics",
+        items: [
+          "Paramo Windproof shell",
+        ],
+      },
+    ],
+    price: "£110 - £130",
+    category: "kids",
+  },
 ];

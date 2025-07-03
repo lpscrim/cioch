@@ -14,8 +14,8 @@ const collections = [
     name: "Windproof",
     href: "#",
     imageSrc:
-      "/jacket3.jpg",
-    imageAlt: "Image of a person wearing a windproof jacket.",
+      "/fleece.jpg",
+    imageAlt: "Image of fleece.",
   },
   {
     name: "Kids",

@@ -1,9 +1,5 @@
-export default function Kids() {
+import { redirect } from "next/navigation";
 
-
-  return (
-    <div className="px-6">
-
-    </div>
-  );
+export default function Page() {
+  redirect("/shop/kids/kids");
 }
