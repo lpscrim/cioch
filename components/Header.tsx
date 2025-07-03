@@ -213,14 +213,25 @@ export default function Header() {
                   </DisclosureButton>
                   <DisclosurePanel className="mt-2 space-y-2">
                     {[...categories].map((category) => (
+                      <div key={category.name}>
                       <DisclosureButton
-                        key={category.name}
                         as="a"
                         href={category.href}
-                        className="block rounded-lg py-2 pr-3 pl-8 text-sm/7 font-semibold  hover:backdrop-brightness-150"
+                        className="block rounded-lg py-2 pr-3 pl-5 text-sm/7 font-semibold  hover:backdrop-brightness-150"
                       >
                         {category.name}
                       </DisclosureButton>
+                        {category.products?.map((product) => ( 
+                          <Link
+                            key={product.id}
+                            href={`/shop/${product.category}/${product.id}`}
+                            aria-label={product.description}
+                            className="  block font-light hover:backdrop-brightness-150 pl-10 text-text/70"
+                          >
+                            {product.name}
+                          </Link>
+                      ))}
+                      </div>
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
