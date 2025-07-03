@@ -62,7 +62,7 @@ export default function Header() {
             />
           </Link>
           <Link href="/" className="-m-1.5 p-1.5">
-            <h2 className="mr-3 text-xl/6 font-semibold text-text">
+            <h2 className="mr-3 text-xl/6 font-semibold text-text ">
               Outdoor Clothing
             </h2>
           </Link>

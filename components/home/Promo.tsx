@@ -5,21 +5,21 @@ import Image from "next/image";
 const collections = [
   {
     name: "Waterproof",
-    href: "#",
+    href: "/shop/waterproof",
     imageSrc:
       "/jacket1.jpg",
     imageAlt: "Image of a person wearing a waterproof jacket.",
   },
   {
     name: "Windproof",
-    href: "#",
+    href: "/shop/windproof",
     imageSrc:
       "/fleece.jpg",
     imageAlt: "Image of fleece.",
   },
   {
     name: "Kids",
-    href: "#",
+    href: "/shop/kids/kids",
     imageSrc:
       "/jacket4.jpg",
     imageAlt:
@@ -123,7 +123,7 @@ export default function Promo() {
                   <h3 className="mt-1 font-semibold text-text">
                     <a href={collection.href}>
                       <span className="absolute inset-0" />
-                      {collection.name}
+                      {collection.name} clothing
                     </a>
                   </h3>
                 </div>
