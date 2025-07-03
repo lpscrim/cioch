@@ -6,8 +6,8 @@ import { usePathname, useRouter } from "next/navigation";
 
 const tabs = [
   { name: "About", href: "/order/about" },
-  { name: "Perfect Fit", href: "/order/perfectfit" },
   { name: "Off the Peg", href: "/order/offthepeg" },
+  { name: "Perfect Fit", href: "/order/perfectfit" },
 ];
 
 function classNames(...classes: (string | false | null | undefined)[]): string {
