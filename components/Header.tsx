@@ -232,7 +232,7 @@ export default function Header() {
                             key={product.id}
                             href={`/shop/${product.category}/${product.id}`}
                             aria-label={product.description}
-                            className="  block font-light hover:backdrop-brightness-150 pl-10 text-text/70"
+                            className="block font-light hover:backdrop-brightness-150 pl-10 text-text/70"
                           >
                             {product.name}
                           </Link>
