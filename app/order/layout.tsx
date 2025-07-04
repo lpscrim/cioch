@@ -1,14 +1,14 @@
 import FooterAlt from "@/components/FooterAlt";
 import OrderNav from "@/components/order/OrderNav";
 
-export default function ShopLayout({
+export default function OrderLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
     <section
-      id="about"
+      id="order"
       className="flex items-start w-[100vw] min-h-[105vh] bg-foreground  bg-cover bg-no-repeat bg-fixed relative"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-transparent bg-fixed pointer-events-none z-0"></div>
