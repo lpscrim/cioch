@@ -5,7 +5,7 @@ export default function OrderPage() {
   return (
     <div className="z-200">
       <div className="max-w-4xl mx-auto bg-text rounded-xl shadow-lg p-8 text-text-secondary">
-      <h1 className="text-2xl font-bold mb-4">Guide to Ordering</h1>
+      <h1 className="text-2xl font-bold mb-4 text-secondary">Guide to Ordering</h1>
       <div className="flex flex-col sm:flex-row gap-6 mb-4">
         <Image
           src="/outlinepeople.gif"
@@ -14,7 +14,7 @@ export default function OrderPage() {
           height={218}
           className="rounded-md border border-text self-center"
         />
-        <p className="text-base">
+        <p className="text-base mt-2">
           Please complete the order form as fully as possible, ensuring that you give a contact phone number or e-mail address.
           <br />
           <br />
