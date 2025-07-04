@@ -224,6 +224,7 @@ export default function Header() {
                         as="a"
                         href={category.href}
                         className="block rounded-lg py-2 pr-3 pl-5 text-sm/7 font-semibold  hover:backdrop-brightness-150"
+                        onClick={() => setMobileMenuOpen(false)}
                       >
                         {category.name}
                       </DisclosureButton>
@@ -233,6 +234,7 @@ export default function Header() {
                             href={`/shop/${product.category}/${product.id}`}
                             aria-label={product.description}
                             className="block font-light hover:backdrop-brightness-150 pl-10 text-text/70"
+                            onClick={() => setMobileMenuOpen(false)}
                           >
                             {product.name}
                           </Link>
@@ -246,6 +248,7 @@ export default function Header() {
                   className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:backdrop-brightness-150 ${
                     pathname?.startsWith("/about") ? "text-accent" : ""
                   }`}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   About
                 </Link>
@@ -254,6 +257,7 @@ export default function Header() {
                   className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:backdrop-brightness-150 ${
                     pathname === "/order" ? "text-accent" : ""
                   }`}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Order
                 </Link>
@@ -262,6 +266,7 @@ export default function Header() {
                   className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:backdrop-brightness-150 ${
                     pathname === "/gallery" ? "text-accent" : ""
                   }`}
+                  onClick={() => setMobileMenuOpen(false)}
                 >
                   Gallery
                 </Link>
