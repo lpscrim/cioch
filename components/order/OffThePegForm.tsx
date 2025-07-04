@@ -21,8 +21,8 @@ export default function OffThePegForm() {
       className="max-w-4xl mx-auto space-y-12 bg-text rounded-xl shadow-lg p-8"
     >
       <div className="border-b border-text pb-12">
-        <h1 className="text-2xl font-bold text-text-secondary">Off the Peg Order Form</h1>
-        <p className="mt-2 text-base text-text-secondary/80">
+        <h1 className="text-2xl font-bold text-secondary">Off the Peg Order Form</h1>
+        <p className="mt-4 text-base text-text-secondary/80">
           To place an order please fill out the form below, or contact us by phone on{' '}
           <a href="tel:01470572707" className="text-secondary underline hover:text-accent">01470 572707</a>.
         </p>
