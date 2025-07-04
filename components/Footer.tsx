@@ -38,13 +38,13 @@ export default function Footer() {
       >
         <PopoverGroup className="flex gap-x-6 lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 sm:text-lg/6 font-semibold text-text hover:text-secondary">
+            <PopoverButton className="flex items-center gap-x-1 sm:text-lg/6 font-semibold text-text hover:text-secondary ransition-all">
               Shop
               <ChevronUpIcon aria-hidden="true" className="size-5 flex-none " />
             </PopoverButton>
             <PopoverPanel
               transition
-              className="absolute bottom-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-md bg-(--color-background)/95 ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+              className="absolute bottom-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-md bg-background/95 ring-1 shadow-lg ring-text-secondary/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
               <div className="p-4">
                 {categories.map((category) => (
@@ -56,7 +56,7 @@ export default function Footer() {
                       <Link
                         href={category.href}
                         aria-label={category.description}
-                        className="block font-semibold text-text hover:text-secondary"
+                        className="block font-semibold text-text hover:text-secondary transition-colors"
                       >
                         {category.name}
                         <span className="absolute inset-0" />
@@ -70,21 +70,21 @@ export default function Footer() {
 
           <Link
             href="/about/nikwax"
-            className="sm:text-lg/6 font-semibold text-text hover:text-secondary"
+            className="sm:text-lg/6 font-semibold text-text hover:text-secondary transition-colors"
           >
             About
           </Link>
 
           <Link
             href="/order/about"
-            className="sm:text-lg/6 font-semibold text-text hover:text-secondary"
+            className="sm:text-lg/6 font-semibold text-text hover:text-secondary transition-colors"
           >
             Order
           </Link>
 
           <Link
             href="#"
-            className="sm:text-lg/6 font-semibold text-text hover:text-secondary"
+            className="sm:text-lg/6 font-semibold text-text hover:text-secondary transition-colors"
           >
             Gallery
           </Link>
@@ -100,7 +100,7 @@ export default function Footer() {
             <Image
               src="/main.jpg"
               alt="Cioch Outdoor Clothing"
-              className=" max-w-[100px] h-auto rounded-sm hover:brightness-120"
+              className=" max-w-[100px] h-auto rounded-sm hover:brightness-120 transition-all"
               width={300}
               height={300}
             />

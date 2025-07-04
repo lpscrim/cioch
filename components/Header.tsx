@@ -44,25 +44,25 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="absolute top-0 left-0 w-[100lvw] z-9900 bg-background/0 text-text brightness-120">
+    <header className="absolute  top-0 left-0 w-[100lvw] z-9900 bg-background/0 text-text brightness-120">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-6 lg:px-8"
       >
-        <div className="flex lg:flex-1 items-center group">
-          <Link href="/" className="-m-1.5 p-1.5">
+        <div className="flex lg:flex-1 items-center ">
+          <Link href="/" className="-m-1.5 p-1.5 ">
             <span className="sr-only">Cioch Clothing</span>
             <Image
               alt=""
               src="/main.jpg"
-              className="h-8 w-auto mr-3 rounded-sm"
+              className="h-8 w-auto mr-3 rounded-sm "
               height="300"
               width="300"
               quality={100}
             />
           </Link>
           <Link href="/" className="-m-1.5 p-1.5">
-            <h2 className="mr-3 text-xl/6 font-semibold text-text group-hover:text-secondary">
+            <h2 className="mr-3 text-xl/6 font-semibold text-text hover:text-secondary transition-colors ">
               Outdoor Clothing
             </h2>
           </Link>
@@ -83,7 +83,7 @@ export default function Header() {
             {({ close }) => (
             <>
             <PopoverButton
-              className={`flex items-center gap-x-1 text-lg/6 font-semibold cursor-pointer  hover:text-secondary ${
+              className={`flex items-center gap-x-1 text-lg/6 transition-colors font-semibold cursor-pointer  hover:text-secondary ${
                 pathname?.startsWith("/shop") ? "text-accent" : "text-text"
               }`}
             >
@@ -136,7 +136,7 @@ export default function Header() {
 
           <Link
             href="/about/nikwax"
-            className={`text-lg/6 font-semibold hover:text-secondary ${
+            className={`text-lg/6 font-semibold hover:text-secondary transition-colors ${
               pathname?.startsWith("/about") ? "text-accent" : ""
             }`}
           >
@@ -145,7 +145,7 @@ export default function Header() {
 
           <Link
             href="/order/about"
-            className={`text-lg/6 font-semibold hover:text-secondary ${
+            className={`text-lg/6 font-semibold hover:text-secondary transition-colors ${
               pathname?.startsWith("/order") ? "text-accent" : ""
             }`}
           >
@@ -154,7 +154,7 @@ export default function Header() {
 
           <Link
             href="#"
-            className={`text-lg/6 font-semibold hover:text-secondary ${
+            className={`text-lg/6 font-semibold hover:text-secondary transition-colors${
               pathname === "/gallery" ? "text-accent" : ""
             }`}
           >

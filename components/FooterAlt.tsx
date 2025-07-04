@@ -13,7 +13,7 @@ export default function FooterAlt() {
             <Image
               src="/main.jpg"
               alt="Cioch Outdoor Clothing"
-              className=" max-w-[100px] h-auto rounded-sm hover:brightness-120"
+              className=" max-w-[100px] h-auto rounded-sm hover:brightness-120 transition-all"
               width={300}
               height={300}
             />
