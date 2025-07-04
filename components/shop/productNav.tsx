@@ -64,10 +64,10 @@ export default function ProductNav() {
                 className={classNames(
                   isActive
                     ? " bg-primary"
-                    : " hover:backdrop-brightness-110 bg-primary/75",
+                    : " hover:backdrop-brightness-110 transition-all bg-primary/75",
                   tabIdx === 0 ? "rounded-l-lg" : "",
                   tabIdx === tabs.length - 1 ? "rounded-r-lg" : "",
-                  "group relative min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-text-secondary text-sm lg:text-base font-semibold hover:backdrop-brightness-110 focus:z-10"
+                  "group relative min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-text-secondary text-sm lg:text-base font-semibold hover:backdrop-brightness-110 transition-all focus:z-10"
                 )}
               >
               <span>{tab.name}</span>

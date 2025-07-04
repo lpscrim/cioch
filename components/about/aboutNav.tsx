@@ -62,10 +62,10 @@ export default function AboutNav() {
                 className={classNames(
                   isActive
                     ? "bg-accent"
-                    : "bg-accent/70 hover:backdrop-brightness-110",
+                    : "bg-accent/70 hover:backdrop-brightness-110 transition-all",
                   tabIdx === 0 ? "rounded-l-lg" : "",
                   tabIdx === tabs.length - 1 ? "rounded-r-lg" : "",
-                  "group relative min-w-0 flex-1 overflow-hidden  text-text-secondary px-4 py-4 text-center text-sm font-medium hover:backdrop-brightness-110 focus:z-10"
+                  "group relative min-w-0 flex-1 overflow-hidden  text-text-secondary px-4 py-4 text-center text-sm font-medium hover:backdrop-brightness-110 transition-all focus:z-10"
                 )}
               >
               <span>{tab.name}</span>
