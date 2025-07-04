@@ -264,6 +264,15 @@ table .even-row {
     background: var(--color-background);
   }
 
+  #order tr {
+    background: var(--color-foreground);
+  }
+
+  #order td {
+    padding-left: 5%;
+
+  }
+
   table td {
     border: none;
     position: relative;
