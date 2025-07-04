@@ -49,7 +49,7 @@ export default function Header() {
         aria-label="Global"
         className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-6 lg:px-8"
       >
-        <div className="flex lg:flex-1 items-center">
+        <div className="flex lg:flex-1 items-center group">
           <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Cioch Clothing</span>
             <Image
@@ -62,12 +62,11 @@ export default function Header() {
             />
           </Link>
           <Link href="/" className="-m-1.5 p-1.5">
-            <h2 className="mr-3 text-xl/6 font-semibold text-text ">
+            <h2 className="mr-3 text-xl/6 font-semibold text-text group-hover:text-secondary">
               Outdoor Clothing
             </h2>
           </Link>
         </div>
-
         <div className="flex lg:hidden">
           <button
             type="button"
@@ -78,13 +77,14 @@ export default function Header() {
             <Bars3Icon aria-hidden="true" className="size-6 cursor-pointer" />
           </button>
         </div>
+        {/* Desktop */}
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             {({ close }) => (
             <>
             <PopoverButton
-              className={`flex items-center gap-x-1 text-lg/6 font-semibold cursor-pointer ${
-                pathname?.startsWith("/shop") ? "text-text-secondary" : ""
+              className={`flex items-center gap-x-1 text-lg/6 font-semibold cursor-pointer  hover:text-secondary ${
+                pathname?.startsWith("/shop") ? "text-accent" : "text-text"
               }`}
             >
               Shop
@@ -136,8 +136,8 @@ export default function Header() {
 
           <Link
             href="/about/nikwax"
-            className={`text-lg/6 font-semibold ${
-              pathname?.startsWith("/about") ? "text-text-secondary" : ""
+            className={`text-lg/6 font-semibold hover:text-secondary ${
+              pathname?.startsWith("/about") ? "text-accent" : ""
             }`}
           >
             About
@@ -145,8 +145,8 @@ export default function Header() {
 
           <Link
             href="/order/about"
-            className={`text-lg/6 font-semibold ${
-              pathname === "/order" ? "text-accent" : ""
+            className={`text-lg/6 font-semibold hover:text-secondary ${
+              pathname?.startsWith("/order") ? "text-accent" : ""
             }`}
           >
             Order
@@ -154,7 +154,7 @@ export default function Header() {
 
           <Link
             href="#"
-            className={`text-lg/6 font-semibold ${
+            className={`text-lg/6 font-semibold hover:text-secondary ${
               pathname === "/gallery" ? "text-accent" : ""
             }`}
           >
@@ -171,6 +171,7 @@ export default function Header() {
           </Link>*/}
         </PopoverGroup>
       </nav>
+      {/* Mobile */}
       <Dialog
         open={mobileMenuOpen}
         onClose={setMobileMenuOpen}

@@ -1,13 +1,13 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { 
-    Popover,
-    PopoverButton,
-    PopoverGroup,
-    PopoverPanel,
-} from '@headlessui/react';
-import { ChevronUpIcon } from '@heroicons/react/20/solid'
+import Link from "next/link";
+import {
+  Popover,
+  PopoverButton,
+  PopoverGroup,
+  PopoverPanel,
+} from "@headlessui/react";
+import { ChevronUpIcon } from "@heroicons/react/20/solid";
 
 import Image from "next/image";
 
@@ -29,14 +29,13 @@ const categories = [
   },
 ];
 
-
 export default function Footer() {
   return (
-        <footer className=" mx-auto max-w-7xl overflow-hidden px-6 pt-64 lg:px-8">
-          <nav
-            aria-label="Footer"
-            className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 sm:text-sm/6"
-          >
+    <footer className=" mx-auto max-w-7xl overflow-hidden px-6 pt-64 lg:px-8">
+      <nav
+        aria-label="Footer"
+        className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 sm:text-sm/6"
+      >
         <PopoverGroup className="flex gap-x-6 lg:gap-x-12">
           <Popover className="relative">
             <PopoverButton className="flex items-center gap-x-1 sm:text-lg/6 font-semibold text-text hover:text-secondary">
@@ -54,11 +53,14 @@ export default function Footer() {
                     className="group relative flex items-center gap-x-6 rounded-lg p-4 sm:text-sm/6 hover:backdrop-brightness-150"
                   >
                     <div className="flex-auto">
-                      <Link href={category.href} aria-label={category.description} className="block font-semibold text-text hover:text-secondary">
+                      <Link
+                        href={category.href}
+                        aria-label={category.description}
+                        className="block font-semibold text-text hover:text-secondary"
+                      >
                         {category.name}
                         <span className="absolute inset-0" />
                       </Link>
-                      
                     </div>
                   </div>
                 ))}
@@ -66,35 +68,45 @@ export default function Footer() {
             </PopoverPanel>
           </Popover>
 
-          <Link href="/about/nikwax" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
+          <Link
+            href="/about/nikwax"
+            className="sm:text-lg/6 font-semibold text-text hover:text-secondary"
+          >
             About
           </Link>
-          
-          <Link href="/order/about" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
+
+          <Link
+            href="/order/about"
+            className="sm:text-lg/6 font-semibold text-text hover:text-secondary"
+          >
             Order
           </Link>
 
-          <Link href="#" className="sm:text-lg/6 font-semibold text-text hover:text-secondary">
+          <Link
+            href="#"
+            className="sm:text-lg/6 font-semibold text-text hover:text-secondary"
+          >
             Gallery
           </Link>
         </PopoverGroup>
-             
-          </nav>
+      </nav>
 
-          <div className="mt-16 border-t border-text-secondary pt-8">
-            <p className="text-center text-sm leading-6 text-text">
-              &copy; 2003 Cioch Outdoor Clothing, All rights reserved.
-            </p>
-            <div className="mt-6 flex justify-center gap-x-12">
-              <Image
-                src="/main.jpg"
-                alt="Cioch Outdoor Clothing"
-                className="w-3/4 max-w-[100px] h-auto rounded-lg"
-                width={300}
-                height={300}
-              />
-            </div>
-          </div>
-        </footer>
+      <div className="mt-16 border-t border-text-secondary pt-8">
+        <p className="text-center text-sm leading-6 text-text">
+          &copy; 2003 Cioch Outdoor Clothing, All rights reserved.
+        </p>
+        <div className="mt-6 flex justify-center gap-x-12">
+          <Link href="/">
+            <Image
+              src="/main.jpg"
+              alt="Cioch Outdoor Clothing"
+              className=" max-w-[100px] h-auto rounded-sm hover:brightness-120"
+              width={300}
+              height={300}
+            />
+          </Link>
+        </div>
+      </div>
+    </footer>
   );
 }
