@@ -50,6 +50,8 @@ const images: { src: StaticImageData; alt: string }[] = [
 
   return (
     <div className="min-h-screen flex flex-col">
+         <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center my-2">
+         </h2>
       {selectedImage && (
         <ImageViewer
           selectedImage={selectedImage}
@@ -63,7 +65,7 @@ const images: { src: StaticImageData; alt: string }[] = [
             key={index}
             {...image}
             alt="Scenic images of Skye"
-            className="border-4 border-solid border-blue-900  w-40 cursor-pointer hover:border-blue-500"
+            className="border-4 border-solid border-secondary  w-40 cursor-pointer hover:border-accent transition-colors rounded-md"
             onClick={() => handleOnClicked(image.src, index)}
           />
         ))}

@@ -153,7 +153,7 @@ export default function Header() {
           </Link>
 
           <Link
-            href="#"
+            href="/gallery"
             className={`text-lg/6 font-semibold hover:text-secondary transition-colors${
               pathname === "/gallery" ? "text-accent" : ""
             }`}
@@ -263,7 +263,7 @@ export default function Header() {
                   Order
                 </Link>
                 <Link
-                  href="#"
+                  href="/gallery"
                   className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:backdrop-brightness-150 ${
                     pathname === "/gallery" ? "text-accent" : ""
                   }`}

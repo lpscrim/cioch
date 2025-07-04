@@ -83,7 +83,7 @@ export default function Footer() {
           </Link>
 
           <Link
-            href="#"
+            href="/gallery"
             className="sm:text-lg/6 font-semibold text-text hover:text-secondary transition-colors"
           >
             Gallery

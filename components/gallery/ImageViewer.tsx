@@ -14,16 +14,12 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
   onPrev,
 }) => {
   return (
-    <div className="flex justify-center">
-      <div className="relative">
+    <div className="flex justify-center items-center min-h-[80vh]">
+      <div className="relative flex items-center ">
         <Image
           src={selectedImage}
           alt={'Image of Isle of Skye'}
-          style={{
-            width: 1018,
-            maxWidth: "100%",
-          }}
-          className="py-2"
+          className="py-2 rounded-md"
         />
 
         <button
