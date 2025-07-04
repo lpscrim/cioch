@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function Shop() {
   return (
-    <div className="px-6 flex flex-col border-4 mx-auto">
+    <div className="px-6 flex flex-col mx-auto">
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-start">
           <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center my-10">
@@ -29,6 +29,15 @@ export default function Shop() {
         </div>
       </div>
       <div className="flex flex-col lg:flex-row">
+                <div className="w-full lg:w-1/2 mt-15 mb-10 sm:mb-5 lg:mb-0 mx-auto flex flex-col items-center justify-center ">
+          <Image
+            src="/map.gif"
+            alt="Directions on map of Skye"
+            className="w-4/5 max-w-[400px] h-auto rounded-lg"
+            width={360}
+            height={450}
+          />
+        </div>
         <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-start">
           <h2 className="text-2xl font-bold text-secondary sm:text-3xl text-center my-10">
             How to find us- From the Skye Bridge
@@ -39,15 +48,7 @@ export default function Shop() {
             <br />
           </p>
         </div>
-        <div className="w-full lg:w-1/2 mt-15 mb-10 sm:mb-5 lg:mb-0 mx-auto flex flex-col items-center justify-center ">
-          <Image
-            src="/map.gif"
-            alt="Directions on map of Skye"
-            className="w-4/5 max-w-[400px] h-auto rounded-lg"
-            width={360}
-            height={450}
-          />
-        </div>
+
       </div>
     </div>
   );
