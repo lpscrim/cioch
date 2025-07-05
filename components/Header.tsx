@@ -270,12 +270,15 @@ export default function Header() {
                   Gallery
                 </Link>
               </div>
-              <div className="absolute bottom-5">
+              <Link 
+                className="absolute bottom-5"
+                href="#"
+                >
                 <ContactButton>
                   <EnvelopeIcon className="size-6 pb-1 -mb-2.5" />
-                  <span className="ml-2 text-sm font-bold ">Contact us</span>
+                  <span className="ml-2 text-sm font-bold">Contact us</span>
                 </ContactButton>
-              </div>
+              </Link>
             </div>
           </div>
         </DialogPanel>

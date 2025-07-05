@@ -12,14 +12,14 @@ export default function ContactButton({
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="z-9999">
+    <div className="z-999">
       <button
         onClick={() => setOpen(true)}
         className="inline-flex  text-text cursor-pointer hover:text-secondary transition-all"
       >
         {children}
       </button>
-      
+
       <Contact open={open} setOpen={setOpen} />
     </div>
   );
