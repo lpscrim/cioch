@@ -42,7 +42,7 @@ const images: { src: StaticImageData; alt: string }[] = [
   };
 
   return (
-    <div className="min-h-screen flex flex-col ">
+    <div className="min-h-[100vh] flex flex-col">
          <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center mt-6 mb-6">
          Gallery
          </h2>
