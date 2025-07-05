@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 
 
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -61,6 +62,7 @@ export default function RootLayout({
         className={`${anekDevanagari.variable} ${geistSans.variable} ${geistMono.variable} ${notoSans.variable} ${oswald.variable} ${roboto.variable} ${karla.variable} antialiased  overflow-x-hidden`}
       >
         <Header />
+        
         {children}
       </body>
     </html>
