@@ -45,7 +45,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             <TabGroup className="flex flex-col-reverse">
               {/* Image selector */}
               <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
-                <TabList className="grid grid-cols-4 gap-6">
+                {/*<TabList className="grid grid-cols-4 gap-6">
                   {product.images.map((image) => (
                     <Tab
                       key={image.id}
@@ -67,7 +67,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       />
                     </Tab>
                   ))}
-                </TabList>
+                </TabList>*/}
               </div>
 
               <TabPanels>
@@ -86,7 +86,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             </TabGroup>
 
             {/* Product info */}
-            <div className="relative mt-10 px-4 sm:mt-16 sm:px-0 lg:mt-0">
+            <div className="relative mt-4 px-4 sm:px-0 lg:mt-0">
               <h1 className="text-3xl font-bold tracking-tight text-secondary">
                 {product.name}
               </h1>
