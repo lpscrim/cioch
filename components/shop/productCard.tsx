@@ -27,8 +27,8 @@ export default function ProductCard({
           className="px-4 mx-auto w-[90%] bg-text object-cover group-hover:opacity-75 sm:aspect-[3/2] sm:h-96 transition-all"
         />
         <div className="flex flex-1 flex-col space-y-2 p-4">
-          <h3 className="text-base font-medium text-text-secondary">{name}</h3>
-          <p className="text-sm text-text-secondary">{brief}</p>
+          <h3 className="text-lg font-medium text-text-secondary">{name}</h3>
+          <p className="text-base text-text-secondary">{brief}</p>
           <div className="flex flex-1 flex-col justify-end">
             <p className="text-base font-medium text-text-secondary">{price}</p>
           </div>

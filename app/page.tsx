@@ -4,6 +4,7 @@ import Intro from "../components/home/Intro";
 import PerfectFit from "../components/home/PerfectFit";
 import Footer from "../components/home/FooterHome";
 import Promo from "../components/home/Promo";
+import "../styles/home.css";
 
 
 export default function Home() {

@@ -40,6 +40,18 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           >
             See all {product.category}s
           </Link>
+          <div className="relative block lg:hidden">
+            <h1 className="text-3xl font-bold tracking-tight text-secondary">
+              {product.name}
+            </h1>
+            <Image
+              src="/perfectfitsm.gif"
+              alt="Cioch Outdoor Clothing"
+              className="absolute right-0 top-0 w-1/4 max-w-[100px] h-auto rounded-lg"
+              width={450}
+              height={300}
+            />
+          </div>
           <div className="lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 pt-2">
             {/* Image gallery */}
             <TabGroup className="flex flex-col-reverse">
@@ -86,25 +98,25 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             </TabGroup>
 
             {/* Product info */}
-            <div className="relative mt-4 px-4 sm:px-0 lg:mt-0">
-              <h1 className="text-3xl font-bold tracking-tight text-secondary">
-                {product.name}
-              </h1>
-              <Image
-                src="/perfectfitsm.gif"
-                alt="Cioch Outdoor Clothing"
-                className="absolute right-0 top-0 w-1/4 max-w-[100px] h-auto rounded-lg"
-                width={450}
-                height={300}
-              />
-
+            <div className="relative px-4 sm:px-0 ">
+              <div className="hidden lg:block">
+                <h1 className="text-3xl font-bold tracking-tight text-secondary">
+                  {product.name}
+                </h1>
+                <Image
+                  src="/perfectfitsm.gif"
+                  alt="Cioch Outdoor Clothing"
+                  className="absolute right-0 top-0 w-1/4 max-w-[100px] h-auto rounded-lg"
+                  width={450}
+                  height={300}
+                />
+              </div>
               <div className="mt-6">
                 <h3 className="sr-only">Description</h3>
 
-                <div
-                  dangerouslySetInnerHTML={{ __html: product.description }}
-                  className="space-y-6 text-base text-text-secondary"
-                />
+                <p className="space-y-6 text-lg sm:text-xl text-text-secondary">
+                  {product.description}
+                </p>
               </div>
 
               <form className="mt-6 group">
@@ -128,7 +140,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                             aria-label={color.name}
                             className={classNames(
                               color.classes,
-                              "size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-text-secondary/70 checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
+                              "size-7 sm:size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-text-secondary/70 checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
                             )}
                             onChange={() => setSelectedColor(color)}
                           />
@@ -177,8 +189,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                             name="color"
                             type="radio"
                             aria-label={"green"}
-                            className=
-                              "bg-emerald-700 checked:bg-emerald-700 text-text-secondary/70 size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3" 
+                            className="bg-emerald-700 checked:bg-emerald-700 text-text-secondary/70 size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
                           />
                         </div>
                       </div>
@@ -187,12 +198,12 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                           Single Sided Velour: Green
                         </span>
                       </div>
-                      
                     </fieldset>
                   )}
-                  
                 </div>
-                <p className="mt-6 text-text-secondary/70 font-medium group-[onclick]:bg-yellow-300">Other colours may be available, please ask when ordering</p>
+                <p className="text-lg mt-6 text-text-secondary/70 font-medium group-[onclick]:bg-yellow-300">
+                  Other colours may be available, please ask when ordering
+                </p>
               </form>
 
               <section aria-labelledby="details-heading" className="mt-8">
@@ -203,11 +214,11 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 <div className="divide-y divide-text border-t border-text">
                   {product.details.map((detail, idx) => (
                     <Disclosure key={idx} as="div">
-                      <h3>
+                      <div>
                         <DisclosureButton className="group relative flex w-full items-center justify-between py-6 text-left">
-                          <span className="text-base sm:text-lg font-semibold text-secondary">
+                          <h3 className="text-lg font-medium text-secondary">
                             {detail.name}
-                          </span>
+                          </h3>
                           <span className="ml-6 flex items-center">
                             <PlusIcon
                               aria-hidden="true"
@@ -219,15 +230,15 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                             />
                           </span>
                         </DisclosureButton>
-                      </h3>
+                      </div>
                       <DisclosurePanel className="pb-6">
                         <ul
                           role="list"
-                          className="list-disc space-y-1 pl-5 text-sm/6 sm:text-base/6 text-text-secondary marker:text-text"
+                          className="list-disc space-y-1 pl-5 text-base/6 sm:text-lg/6 text-text-secondary marker:text-text"
                         >
                           {detail.items.map((item, idx) => (
                             <li key={idx} className="pl-2">
-                              {item}
+                              <p>{item}</p>
                             </li>
                           ))}
                         </ul>

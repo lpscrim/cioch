@@ -1,0 +1,17 @@
+/* Fonts */
+
+#shop h1 {
+    font-family: var(--font-roboto);
+}
+#shop p, span {
+  font-family: var(--font-karla);
+
+}
+
+#shop h2 {
+    font-family: var(--font-roboto);
+}
+
+#shop h3 {
+    font-family: var(--font-roboto);
+}

@@ -1,0 +1,37 @@
+
+/* Fonts */
+
+#heroText {
+  font-family: var(--font-noto-sans);
+}
+
+#scrollButton {
+  font-family: var(--font-oswald);
+}
+
+#intro h2 {
+  font-family: var(--font-roboto);
+}
+
+#intro {
+  font-family: var(--font-anek-devanagari);
+}
+
+#intro #cioch {
+  font-family: var(--font-noto-sans);
+}
+
+#perfectFit h2 {
+  font-family: var(--font-roboto);
+}
+
+#perfectFit {
+  font-family: var(--font-anek-devanagari);
+}
+
+#recommendations h2 {
+  font-family: var(--font-roboto);
+}
+#recommendations {
+  font-family: var(--font-anek-devanagari);
+}
