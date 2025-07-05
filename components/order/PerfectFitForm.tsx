@@ -1,6 +1,10 @@
-'use client'
+"use client";
 
 import Image from "next/image";
+
+  const countryOptions = [
+    "Afghanistan","Albania","Algeria","American Samoa","Andorra","Angola","Anguilla","Antarctica","Antigua and Barbuda","Argentina","Armenia","Aruba","Australia","Austria","Azerbaijan","Bahamas","Bahrain","Bangladesh","Barbados","Belarus","Belgium","Belize","Benin","Bermuda","Bhutan","Bolivia","Bosnia/Herzegovina","Botswana","Bouvet Island","Brazil","Brunei Darussalam","Bulgaria","Burkina Faso","Burundi","Cambodia","Cameroon","Canada","Cape Verde","Cayman Islands","Central African Republic","Chad","Chile","China","Christmas Island","Cocos Islands","Colombia","Comoros","Congo","Cook Islands","Costa Rica","Ivory Coast","Croatia (Hrvatska)","Cuba","Cyprus","Czech Republic","Denmark","Djibouti","Dominica","Dominican Republic","East Timor","Ecuador","Egypt","El Salvador","Equatorial Guinea","Eritrea","Estonia","Ethiopia","Faroe Islands","Fiji","Finland","France","French Guiana","French Polynesia","Gabon","Gambia","Georgia","Germany","Ghana","Gibraltar","Greece","Greenland","Grenada","Guadeloupe","Guam","Guatemala","Guinea","Guinea-Bissau","Guyana","Haiti","Honduras","Hong Kong","Hungary","Iceland","India","Indonesia","Iran","Iraq","Ireland","Israel","Italy","Jamaica","Japan","Jordan","Kazakhstan","Kenya","Kiribati","Korea (North)","Korea (South)","Kuwait","Kyrgyzstan","Laos","Latvia","Lebanon","Lesotho","Liberia","Libya","Liechtenstein","Lithuania","Luxembourg","Macau","Macedonia","Madagascar","Malawi","Malaysia","Maldives","Mali","Malta","Marshall Islands","Martinique","Mauritania","Mauritius","Mayotte","Mexico","Micronesia","Moldova","Monaco","Mongolia","Montserrat","Morocco","Mozambique","Myanmar","Namibia","Nauru","Nepal","Netherlands","Neutral Zone","New Caledonia","New Zealand","Nicaragua","Niger","Nigeria","Niue","Norfolk Island","Norway","Oman","Pakistan","Palau","Panama","Papua New Guinea","Paraguay","Peru","Philippines","Pitcairn","Poland","Portugal","Puerto Rico","Qatar","Reunion","Romania","Russian Federation","Rwanda","Saint Kitts and Nevis","Saint Lucia","Saint Vincent","Samoa","San Marino","Saudi Arabia","Serbia & Montenegro","Senegal","Seychelles","Sierra Leone","Singapore","Slovak Republic","Slovenia","Solomon Islands","Somalia","South Africa","Spain","Sri Lanka","St. Helena","Sudan","Suriname","Swaziland","Sweden","Switzerland","Syria","Taiwan","Tajikistan","Tanzania","Thailand","Togo","Tokelau","Tonga","Trinidad and Tobago","Tunisia","Turkey","Turkmenistan","Tuvalu","USSR (former)","Uganda","Ukraine","United Arab Emirates","United Kingdom","United States","Uruguay","Uzbekistan","Vanuatu","Vatican City State","Venezuela","Vietnam","Virgin Islands (UK)","Virgin Islands (US)","Western Sahara","Yemen","Zaire","Zambia","Zimbabwe","Other"
+  ];
 
 export default function PerfectFitForm() {
   return (
@@ -10,26 +14,40 @@ export default function PerfectFitForm() {
       className="max-w-4xl mx-auto space-y-12 bg-text rounded-xl shadow-lg p-8"
     >
       <div className="border-b border-text pb-12">
-        <h1 className="text-2xl font-bold text-secondary">Perfect Fit Order Form</h1>
+        <h1 className="text-2xl font-bold text-secondary">
+          Perfect Fit Order Form
+        </h1>
         <p className="mt-4 text-base text-text-secondary/80">
-          To place an order please fill out the form below, or contact us by phone on{' '}
-          <a href="tel:01470572707" className="text-secondary underline hover:text-accent">01470 572707</a>.
+          To place an order please fill out the form below, or contact us by
+          phone on{" "}
+          <a
+            href="tel:01470572707"
+            className="text-secondary underline hover:text-accent"
+          >
+            01470 572707
+          </a>
+          .
         </p>
         <p className="mt-1 text-sm text-text-secondary/80">
-          Once your order is ready, we will send you an email from our store email address order.cioch@gmail.com
+          Once your order is ready, we will send you an email from our store
+          email address order.cioch@gmail.com
         </p>
         <p className="mt-1 text-sm text-text-secondary/80">
-          If you have not heard from us within 5 days, please check your spam folder or otherwise contact us directly.
+          If you have not heard from us within 5 days, please check your spam
+          folder or otherwise contact us directly.
         </p>
         <p className="mt-1 text-sm text-text-secondary/80">
-          Boxes marked (<span className="text-red-600">*</span>) must be completed. Please only submit 1 form per person.
+          Boxes marked (<span className="text-red-600">*</span>) must be
+          completed. Please only submit 1 form per person.
         </p>
       </div>
 
       <div className="grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-2">
         {/* Measurements */}
         <div>
-          <h2 className="text-lg font-semibold text-text-secondary mb-4">Your Measurements</h2>
+          <h2 className="text-lg font-semibold text-text-secondary mb-4">
+            Your Measurements
+          </h2>
           <div className="space-y-4">
             {[
               ["A - Height", "Height"],
@@ -44,8 +62,13 @@ export default function PerfectFitForm() {
               ["J - Collar", "Collar"],
             ].map(([name, label], idx) => (
               <div key={name} className="flex items-center gap-x-3">
-                <span className="w-6 text-text-secondary/50 font-semibold">{String.fromCharCode(65 + idx)}</span>
-                <label htmlFor={name} className="flex-1 text-sm font-medium text-text-secondary">
+                <span className="w-6 text-text-secondary/50 font-semibold">
+                  {String.fromCharCode(65 + idx)}
+                </span>
+                <label
+                  htmlFor={name}
+                  className="flex-1 text-sm font-medium text-text-secondary"
+                >
                   {label}
                 </label>
                 <input
@@ -68,11 +91,17 @@ export default function PerfectFitForm() {
 
         {/* Order & Details */}
         <div>
-          <h2 className="text-lg font-semibold text-text-secondary mb-4">Your Order</h2>
+          <h2 className="text-lg font-semibold text-text-secondary mb-4">
+            Your Order
+          </h2>
           <div className="space-y-2">
             <div className="grid grid-cols-2 gap-2">
-              <span className="font-medium text-sm text-text-secondary/80">Products/Colours</span>
-              <span className="font-medium text-sm text-text-secondary/80">No.</span>
+              <span className="font-medium text-sm text-text-secondary/80">
+                Products/Colours
+              </span>
+              <span className="font-medium text-sm text-text-secondary/80">
+                No.
+              </span>
             </div>
             {[1, 2, 3, 4, 5].map((n) => (
               <div key={n} className="grid grid-cols-2 gap-2">
@@ -94,10 +123,15 @@ export default function PerfectFitForm() {
             ))}
           </div>
 
-          <h2 className="text-lg font-semibold text-text-secondary mt-8 mb-4">Your Details</h2>
+          <h2 className="text-lg font-semibold text-text-secondary mt-8 mb-4">
+            Your Details
+          </h2>
           <div className="space-y-4">
             <div className="flex items-center gap-x-3">
-              <label htmlFor="Title" className="w-32 text-sm font-medium text-text-secondary">
+              <label
+                htmlFor="Title"
+                className="w-32 text-sm font-medium text-text-secondary"
+              >
                 Title
               </label>
               <select
@@ -113,7 +147,10 @@ export default function PerfectFitForm() {
               </select>
             </div>
             <div className="flex items-center gap-x-3">
-              <label htmlFor="realname" className="w-32 text-sm font-medium text-text-secondary">
+              <label
+                htmlFor="realname"
+                className="w-32 text-sm font-medium text-text-secondary"
+              >
                 Name<span className="text-red-600">*</span>
               </label>
               <input
@@ -125,7 +162,10 @@ export default function PerfectFitForm() {
               />
             </div>
             <div className="flex items-center gap-x-3">
-              <label htmlFor="Address1" className="w-32 text-sm font-medium text-text-secondary">
+              <label
+                htmlFor="Address1"
+                className="w-32 text-sm font-medium text-text-secondary"
+              >
                 Address 1<span className="text-red-600">*</span>
               </label>
               <input
@@ -137,7 +177,10 @@ export default function PerfectFitForm() {
               />
             </div>
             <div className="flex items-center gap-x-3">
-              <label htmlFor="Address2" className="w-32 text-sm font-medium text-text-secondary">
+              <label
+                htmlFor="Address2"
+                className="w-32 text-sm font-medium text-text-secondary"
+              >
                 Address 2
               </label>
               <input
@@ -148,7 +191,10 @@ export default function PerfectFitForm() {
               />
             </div>
             <div className="flex items-center gap-x-3">
-              <label htmlFor="Town/City" className="w-32 text-sm font-medium text-text-secondary">
+              <label
+                htmlFor="Town/City"
+                className="w-32 text-sm font-medium text-text-secondary"
+              >
                 Town/City<span className="text-red-600">*</span>
               </label>
               <input
@@ -160,7 +206,10 @@ export default function PerfectFitForm() {
               />
             </div>
             <div className="flex items-center gap-x-3">
-              <label htmlFor="Area/State" className="w-32 text-sm font-medium text-text-secondary">
+              <label
+                htmlFor="Area/State"
+                className="w-32 text-sm font-medium text-text-secondary"
+              >
                 Area/State
               </label>
               <input
@@ -171,7 +220,10 @@ export default function PerfectFitForm() {
               />
             </div>
             <div className="flex items-center gap-x-3">
-              <label htmlFor="Postcode" className="w-32 text-sm font-medium text-text-secondary">
+              <label
+                htmlFor="Postcode"
+                className="w-32 text-sm font-medium text-text-secondary"
+              >
                 Postcode/Zip<span className="text-red-600">*</span>
               </label>
               <input
@@ -183,7 +235,10 @@ export default function PerfectFitForm() {
               />
             </div>
             <div className="flex items-center gap-x-3">
-              <label htmlFor="Country" className="w-32 text-sm font-medium text-text-secondary">
+              <label
+                htmlFor="Country"
+                className="w-32 text-sm font-medium text-text-secondary"
+              >
                 Country<span className="text-red-600">*</span>
               </label>
               <select
@@ -193,15 +248,16 @@ export default function PerfectFitForm() {
                 className="flex-1 rounded-md bg-foreground/80 px-3 py-1.5 text-base text-text-secondary border border-text focus:border-secondary focus:ring-2 focus:ring-accent"
                 defaultValue="United Kingdom"
               >
-                <option>United Kingdom</option>
-                <option>United States</option>
-                <option>Canada</option>
-                <option>Australia</option>
-                <option>Other</option>
+                {countryOptions.map((country) => (
+                  <option key={country}>{country}</option>
+                ))}
               </select>
             </div>
             <div className="flex items-center gap-x-3">
-              <label htmlFor="email" className="w-32 text-sm font-medium text-text-secondary">
+              <label
+                htmlFor="email"
+                className="w-32 text-sm font-medium text-text-secondary"
+              >
                 E-mail<span className="text-red-600">*</span>
               </label>
               <input
@@ -213,7 +269,10 @@ export default function PerfectFitForm() {
               />
             </div>
             <div className="flex items-center gap-x-3">
-              <label htmlFor="Telephone" className="w-32 text-sm font-medium text-text-secondary">
+              <label
+                htmlFor="Telephone"
+                className="w-32 text-sm font-medium text-text-secondary"
+              >
                 Telephone
               </label>
               <input
@@ -228,7 +287,10 @@ export default function PerfectFitForm() {
       </div>
 
       <div className="mt-8 flex items-center justify-end gap-x-6">
-        <button type="reset" className="text-sm font-semibold text-text-secondary/80 hover:text-accent">
+        <button
+          type="reset"
+          className="text-sm font-semibold text-text-secondary/80 hover:text-accent"
+        >
           Reset
         </button>
         <button
