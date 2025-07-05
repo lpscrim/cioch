@@ -1,6 +1,7 @@
 import AboutNav from "@/components/about/aboutNav";
 import FooterAlt from "@/components/FooterAlt";
 import Link from "next/link";
+import "@/styles/about.css";
 
 export default function AboutLayout({
   children,

@@ -1,5 +1,6 @@
 import ShopNav from "@/components/shop/shopNav";
 import FooterAlt from "@/components/FooterAlt";
+import "@/styles/shop.css";
 
 export default function ShopLayout({
   children,

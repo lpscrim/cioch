@@ -1,0 +1,25 @@
+/* Fonts */
+
+#about h1 {
+    font-family: var(--font-roboto);
+}
+#about p, span {
+  font-family: var(--font-karla);
+
+}
+
+#about h2 {
+    font-family: var(--font-roboto);
+}
+
+#about h3 {
+    font-family: var(--font-roboto);
+}
+
+#about nav span {
+    font-family: var(--font-roboto)
+}
+
+#about select {
+    font-family: var(--font-roboto)
+}
