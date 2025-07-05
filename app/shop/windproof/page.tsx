@@ -12,7 +12,7 @@ export default function Windproof() {
             <h1 className="text-4xl font-bold tracking-tight text-text">
               Windproof Clothing
             </h1>
-            <p className="mx-auto mt-6 max-w-3xl text-base text-text/90 font-bold">
+            <p className="mx-auto mt-6 max-w-3xl text-base sm:text-lg text-text/90 font-bold">
               See our windproof clothing items below.
             </p>
           </div>

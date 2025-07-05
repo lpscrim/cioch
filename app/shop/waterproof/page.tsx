@@ -14,7 +14,7 @@ export default function Waterproof() {
               <h1 className="text-4xl font-bold tracking-tight text-text">
                 Waterproofs
               </h1>
-              <p className="mx-auto mt-6 max-w-3xl text-base text-text/90 font-bold px-2">
+              <p className="mx-auto mt-6 max-w-3xl text-base sm:text-lg text-text/90 font-bold px-2">
                 Explore our range of waterproof <Link href='/about/nikwax'><span className="text-accent font-bold"> Nikwax </span> </Link>clothing designed to keep you dry and comfortable in any weather. We have everything you need for your outdoor adventures.
               </p>
             </div>  

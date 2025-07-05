@@ -41,7 +41,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             See all {product.category}s
           </Link>
           <div className="relative block lg:hidden">
-            <h1 className="text-3xl font-bold tracking-tight text-secondary">
+            <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-secondary">
               {product.name}
             </h1>
             <Image
@@ -100,7 +100,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             {/* Product info */}
             <div className="relative px-4 sm:px-0 ">
               <div className="hidden lg:block">
-                <h1 className="text-3xl font-bold tracking-tight text-secondary">
+                <h1 className="text-4xl font-bold tracking-tight text-secondary">
                   {product.name}
                 </h1>
                 <Image

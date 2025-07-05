@@ -19,3 +19,7 @@
 #shop nav span {
     font-family: var(--font-roboto)
 }
+
+#shop select {
+    font-family: var(--font-roboto)
+}
