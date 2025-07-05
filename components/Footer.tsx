@@ -8,7 +8,7 @@ import {
   PopoverPanel,
 } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/20/solid";
-
+import ContactButton from "./contact/ContactButton";
 import Image from "next/image";
 
 const categories = [
@@ -88,6 +88,9 @@ export default function Footer() {
           >
             Gallery
           </Link>
+          <ContactButton >
+           <span className="sm:text-lg/6 font-semibold">Contact</span> 
+          </ContactButton>
         </PopoverGroup>
       </nav>
 

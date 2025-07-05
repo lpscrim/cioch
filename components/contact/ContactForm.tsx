@@ -236,13 +236,19 @@ const countryOptions = [
   "XX",
 ];
 
+
 export default function Contact({
   open,
   setOpen,
 }: {
   open: boolean;
-  setOpen: () => null;
+  setOpen: (value: boolean) => void;
 }) {
+
+  const handleClick = () => {
+  setOpen(false);
+};
+
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-10">
       <DialogBackdrop
@@ -261,7 +267,7 @@ export default function Contact({
               className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             ></div>
             <div className="absolute right-10">
-              <button className="rounded-md py-1 px-2 bg-foreground/80 text-text-secondary hover:text-secondary cursor-pointer hover:brightness-110 transition-all">
+              <button onClick={handleClick} className="rounded-md py-1 px-2 bg-foreground/80 text-text-secondary hover:text-secondary cursor-pointer hover:brightness-110 transition-all">
                 X
               </button>
             </div>
@@ -269,14 +275,16 @@ export default function Contact({
               <DialogTitle className="text-4xl font-semibold tracking-tight text-balance text-text-secondary sm:text-5xl">
                 Contact us
               </DialogTitle>
-              <p className="mt-4 text-lg/8 text-text-secondary">
+              <p className="mt-6 text-lg/8 text-text-secondary">
                 Please send us an email with any questions you have!
+                <br/>
+                Or call us on 01470 572707
               </p>
             </div>
             <form
               action="#"
               method="POST"
-              className="mx-auto mt-16 max-w-6xl sm:mt-20"
+              className="mx-auto mt-14 max-w-6xl sm:mt-16"
             >
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>

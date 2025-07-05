@@ -5,7 +5,6 @@ import PerfectFit from "@/components/home/PerfectFit";
 import Footer from "@/components/home/FooterHome";
 import Promo from "@/components/home/Promo";
 import "@/styles/home.css";
-import ContactButton from "@/components/contact/ContactButton";
 
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
     <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-white/5 to-transparent z-2 bg-fixed"></div>
     <div className="relative bg-[url(/storr.jpg)] bg-center bg-cover bg-no-repeat w-[100lvw] overflow-hidden bg-fixed">
       <Hero />
-      <ContactButton />
     </div>
     <main>
         <Intro />

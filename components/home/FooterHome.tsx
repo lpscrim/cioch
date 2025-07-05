@@ -1,3 +1,4 @@
+import ContactButton from '../contact/ContactButton';
 import Footer from '../Footer';
 
 export default function FooterHome() {
@@ -9,12 +10,13 @@ export default function FooterHome() {
             Give us a message or put your order in today!
           </p>
           <div className="mt-12 flex justify-center">
-            <a id="button"
-              href="#"
+            <ContactButton>
+            <p
               className="rounded-md bg-secondary px-4 py-3 text-base font-bold text-primary shadow-xs hover:brightness-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               Contact us
-            </a>
+            </p>
+            </ContactButton>
           </div>
         </div>
         <Footer />

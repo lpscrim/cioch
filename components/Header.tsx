@@ -4,6 +4,9 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import ContactButton from "./contact/ContactButton";
+import { EnvelopeIcon } from "@heroicons/react/24/outline";
+
 import {
   Dialog,
   DialogPanel,
@@ -81,56 +84,56 @@ export default function Header() {
         <PopoverGroup className="hidden lg:flex lg:gap-x-12">
           <Popover className="relative">
             {({ close }) => (
-            <>
-            <PopoverButton
-              className={`flex items-center gap-x-1 text-lg/6 transition-colors font-semibold cursor-pointer  hover:text-secondary ${
-                pathname?.startsWith("/shop") ? "text-accent" : "text-text"
-              }`}
-            >
-              Shop
-              <ChevronDownIcon
-                aria-hidden="true"
-                className="size-5 flex-none "
-              />
-            </PopoverButton>
-            <PopoverPanel
-              transition
-              className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-md bg-background/97 ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
-            >
-              <div className="p-4">
-                {categories.map((category) => (
-                  <div
-                    key={category.name}
-                    className="relative flex items-center gap-x-6 rounded-lg p-2 text-base/6 "
-                  >
-                    <div className="flex-auto">
-                      <Link
-                        href={category.href}
-                        aria-label={category.description}
-                        className="block font-semibold hover:backdrop-brightness-150 p-1 pb-2"
-                        onClick={() => close()}
+              <>
+                <PopoverButton
+                  className={`flex -mr-2 items-center gap-x-1 text-lg/6 transition-colors font-semibold cursor-pointer  hover:text-secondary ${
+                    pathname?.startsWith("/shop") ? "text-accent" : "text-text"
+                  }`}
+                >
+                  Shop
+                  <ChevronDownIcon
+                    aria-hidden="true"
+                    className="size-5 flex-none "
+                  />
+                </PopoverButton>
+                <PopoverPanel
+                  transition
+                  className="absolute top-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-md bg-background/97 ring-1 shadow-lg ring-gray-900/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+                >
+                  <div className="p-4">
+                    {categories.map((category) => (
+                      <div
+                        key={category.name}
+                        className="relative flex items-center gap-x-6 rounded-lg p-2 text-base/6 "
                       >
-                        {category.name}
-                        <span className="absolute inset-0" />
-                      </Link>
-                      {category.products?.map((product) => ( 
-                        <div key={product.id}>
+                        <div className="flex-auto">
                           <Link
-                            href={`/shop/${product.category}/${product.id}`}
-                            aria-label={product.description}
-                            className=" pl-5 block font-light hover:backdrop-brightness-150 pt-1 text-text/70"
+                            href={category.href}
+                            aria-label={category.description}
+                            className="block font-semibold hover:backdrop-brightness-150 p-1 pb-2"
                             onClick={() => close()}
                           >
-                            {product.name}
+                            {category.name}
+                            <span className="absolute inset-0" />
                           </Link>
+                          {category.products?.map((product) => (
+                            <div key={product.id}>
+                              <Link
+                                href={`/shop/${product.category}/${product.id}`}
+                                aria-label={product.description}
+                                className=" pl-5 block font-light hover:backdrop-brightness-150 pt-1 text-text/70"
+                                onClick={() => close()}
+                              >
+                                {product.name}
+                              </Link>
+                            </div>
+                          ))}
                         </div>
-                      ))}
-                    </div>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            </PopoverPanel>
-            </>
+                </PopoverPanel>
+              </>
             )}
           </Popover>
 
@@ -161,14 +164,9 @@ export default function Header() {
             Gallery
           </Link>
 
-         {/* <Link
-            href="#"
-            className={`text-lg/6 font-semibold ${
-              pathname === "/contact" ? "text-accent" : ""
-            }`}
-          >
-            Contact
-          </Link>*/}
+          <ContactButton>
+            <EnvelopeIcon className="size-6 pb-1 mt-0.5 " />
+          </ContactButton>
         </PopoverGroup>
       </nav>
       {/* Mobile */}
@@ -221,15 +219,15 @@ export default function Header() {
                   <DisclosurePanel className="mt-2 space-y-2">
                     {[...categories].map((category) => (
                       <div key={category.name}>
-                      <DisclosureButton
-                        as="a"
-                        href={category.href}
-                        className="block rounded-lg py-2 pr-3 pl-5 text-sm/7 font-semibold  hover:backdrop-brightness-150"
-                        onClick={() => setMobileMenuOpen(false)}
-                      >
-                        {category.name}
-                      </DisclosureButton>
-                        {category.products?.map((product) => ( 
+                        <DisclosureButton
+                          as="a"
+                          href={category.href}
+                          className="block rounded-lg py-2 pr-3 pl-5 text-sm/7 font-semibold  hover:backdrop-brightness-150"
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          {category.name}
+                        </DisclosureButton>
+                        {category.products?.map((product) => (
                           <Link
                             key={product.id}
                             href={`/shop/${product.category}/${product.id}`}
@@ -239,7 +237,7 @@ export default function Header() {
                           >
                             {product.name}
                           </Link>
-                      ))}
+                        ))}
                       </div>
                     ))}
                   </DisclosurePanel>
@@ -271,14 +269,12 @@ export default function Header() {
                 >
                   Gallery
                 </Link>
-                {/*<Link
-                  href="#"
-                  className={`-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold  hover:backdrop-brightness-150 ${
-                    pathname === "/contact" ? "text-accent" : ""
-                  }`}
-                >
-                  Contact
-                </Link>*/}
+              </div>
+              <div className="absolute bottom-5">
+                <ContactButton>
+                  <EnvelopeIcon className="size-6 pb-1 -mb-2.5" />
+                  <span className="ml-2 text-sm font-bold ">Contact us</span>
+                </ContactButton>
               </div>
             </div>
           </div>

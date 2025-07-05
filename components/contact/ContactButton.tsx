@@ -1,20 +1,26 @@
 "use client";
 
+import React from "react";
 import { useState } from "react";
 import Contact from "@/components/contact/ContactForm";
 
-export default function ContactButton() {
+export default function ContactButton({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   const [open, setOpen] = useState(false);
 
   return (
     <div className="z-9999">
       <button
         onClick={() => setOpen(true)}
-        className=" flex mx-auto rounded-md bg-gray-950/5 px-2.5 py-1.5 text-xl text-text font-bold  hover:bg-gray-950/10"
+        className="inline-flex  text-text cursor-pointer hover:text-secondary transition-all"
       >
-        Open dialog
+        {children}
       </button>
-      <Contact open={open} setOpen={setOpen}/>
+      
+      <Contact open={open} setOpen={setOpen} />
     </div>
   );
 }
