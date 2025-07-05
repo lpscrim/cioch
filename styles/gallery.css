@@ -1,0 +1,25 @@
+/* Fonts */
+
+#gallery h1 {
+    font-family: var(--font-roboto);
+}
+#gallery p, span {
+  font-family: var(--font-karla);
+
+}
+
+#gallery h2 {
+    font-family: var(--font-roboto);
+}
+
+#gallery h3 {
+    font-family: var(--font-roboto);
+}
+
+#gallery nav span {
+    font-family: var(--font-roboto)
+}
+
+#gallery select {
+    font-family: var(--font-roboto)
+}

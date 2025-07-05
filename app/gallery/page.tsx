@@ -3,30 +3,23 @@
 import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import ImageViewer from "@/components/gallery/ImageViewer";
-import img1Path from "@/public/carbost.jpeg";
-import img2Path from "@/public/Storr.jpg";
-import img3Path from "@/public/brittle.jpg";
-import img4Path from "@/public/lagan.jpg";
-import img5Path from "@/public/quirang1.jpg";
-import img6Path from "@/public/quirang2.jpg";
+
+import img7Path from "@/public/pic.jpg"
+import img8Path from "@/public/picb.jpg"
+import img9Path from "@/public/picc.jpg"
+import img10Path from "@/public/picd.jpg"
 
 
 export default function IndexPage(){
-  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(img1Path);
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(img7Path);
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
 const images: { src: StaticImageData; alt: string }[] = [
-    { src: img1Path, alt: "Image 1" },
-    { src: img2Path, alt: "Image 2" },
-    { src: img3Path, alt: "Image 3" },
-    { src: img4Path, alt: "Image 4" },
-    { src: img5Path, alt: "Image 5" },
-    { src: img6Path, alt: "Image 6" },
-    { src: img1Path, alt: "Image 1" },
-    { src: img2Path, alt: "Image 2" },
-    { src: img3Path, alt: "Image 3" },
-    { src: img4Path, alt: "Image 4" },
-    { src: img5Path, alt: "Image 5" },
+
+    { src: img7Path, alt: "Image 7" },
+    { src: img8Path, alt: "Image 8" },
+    { src: img9Path, alt: "Image 9" },
+    { src: img10Path, alt: "Image 10" },
   ];
 
   const handleOnClicked = (src: StaticImageData, index: number) => {
@@ -49,8 +42,9 @@ const images: { src: StaticImageData; alt: string }[] = [
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-         <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center my-2">
+    <div className="min-h-screen flex flex-col ">
+         <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center mt-6 mb-6">
+         Gallery
          </h2>
       {selectedImage && (
         <ImageViewer
@@ -59,13 +53,13 @@ const images: { src: StaticImageData; alt: string }[] = [
           onPrev={handlePreviousImage}
         />
       )}
-      <div className="flex flex-row flex-wrap gap-3 justify-center px-3 md:px-0">
+      <div className="flex flex-row flex-wrap gap-3 justify-center px-2 md:px-0">
         {images.map((image, index) => (
           <Image
             key={index}
             {...image}
             alt="Scenic images of Skye"
-            className="border-4 border-solid border-secondary  w-40 cursor-pointer hover:border-accent transition-colors rounded-md"
+            className="border-1 border-solid border-secondary  w-40 cursor-pointer hover:border-accent transition-colors rounded-md"
             onClick={() => handleOnClicked(image.src, index)}
           />
         ))}

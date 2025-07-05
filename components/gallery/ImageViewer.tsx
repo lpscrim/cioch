@@ -14,13 +14,15 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
   onPrev,
 }) => {
   return (
-    <div className="flex justify-center items-center min-h-[80vh]">
-      <div className="relative flex items-center ">
-        <Image
-          src={selectedImage}
-          alt={'Image of Isle of Skye'}
-          className="py-2 rounded-md"
-        />
+    <div className="flex justify-center items-start min-h-[80vh]">
+      <div className="relative flex items-center pb-4">
+        <div className="rounded-md overflow-hidden"> 
+          <Image
+            src={selectedImage}
+            alt={'Image of Isle of Skye'}
+            className=""
+          />
+        </div>
 
         <button
           className="absolute top-1/2 transform -translate-y-1/2 left-0 text-text py-14 px-4 md:py-28 md:px-5 text-3xl md:text-5xl z-100"
