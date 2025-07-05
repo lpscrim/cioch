@@ -15,3 +15,7 @@
 #shop h3 {
     font-family: var(--font-roboto);
 }
+
+#shop nav span {
+    font-family: var(--font-roboto)
+}

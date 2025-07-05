@@ -71,7 +71,7 @@ export default function ShopNav() {
                     : "bg-accent/70 hover:backdrop-brightness-130 transition-all",
                   tabIdx === 0 ? "rounded-l-lg" : "",
                   tabIdx === tabs.length - 1 ? "rounded-r-lg" : "",
-                  "group relative text-text-secondary min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-sm font-medium hover:backdrop-brightness-110 focus:z-10"
+                  "group relative text-text-secondary min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-base font-semibold hover:backdrop-brightness-110 focus:z-10"
                 )}
               >
               <span>{tab.name}</span>
