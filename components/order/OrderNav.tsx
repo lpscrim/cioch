@@ -30,7 +30,7 @@ export default function OrderNav() {
             tabs.find((tab) => pathname === tab.href)?.name ?? tabs[0].name
           }
           aria-label="Select a tab"
-          className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-foreground/70 py-2 pr-8 pl-3 text-base text-text-secondary outline-1 -outline-offset-1 outline-text focus:outline-2 focus:-outline-offset-2 focus:outline-secondary"
+          className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-foreground/70 py-2 pr-8 pl-3 text-lg font-semibold  text-text-secondary outline-1 -outline-offset-1 outline-text focus:outline-2 focus:-outline-offset-2 focus:outline-secondary"
           onChange={(e) => {
             const selectedTab = tabs.find((tab) => tab.name === e.target.value);
             if (selectedTab) {
@@ -66,7 +66,7 @@ export default function OrderNav() {
                     : "bg-accent/70 hover:backdrop-brightness-130",
                   tabIdx === 0 ? "rounded-l-lg" : "",
                   tabIdx === tabs.length - 1 ? "rounded-r-lg" : "",
-                  "group relative text-text-secondary min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-sm font-medium hover:backdrop-brightness-110 focus:z-10"
+                  "group relative text-text-secondary min-w-0 flex-1 overflow-hidden px-4 py-4 text-center text-base font-extrabold hover:backdrop-brightness-110 focus:z-10"
                 )}
               >
                 <span>{tab.name}</span>

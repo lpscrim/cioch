@@ -1,5 +1,6 @@
 import FooterAlt from "@/components/FooterAlt";
 import OrderNav from "@/components/order/OrderNav";
+import "@/styles/order.css";
 
 export default function OrderLayout({
   children,

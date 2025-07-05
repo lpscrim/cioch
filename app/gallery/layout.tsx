@@ -1,4 +1,5 @@
 import FooterAlt from "@/components/FooterAlt";
+import "@/styles/gallery.css"
 
 export default function AboutLayout({
   children,
