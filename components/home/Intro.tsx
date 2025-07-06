@@ -15,7 +15,7 @@ export default function Intro() {
             <Image
               src="/neilhelen.jpg"
               alt="Cioch Outdoor Clothing"
-              className="w-full max-w-[500px] h-auto rounded-lg"
+              className="w-full max-w-[400px] xl:max-w-[450px] h-auto rounded-lg"
               width={360}
               height={450}
             />

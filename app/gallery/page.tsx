@@ -4,22 +4,47 @@ import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import ImageViewer from "@/components/gallery/ImageViewer";
 
-import img7Path from "@/public/pic.jpg"
-import img8Path from "@/public/picb.jpg"
-import img9Path from "@/public/picc.jpg"
-import img10Path from "@/public/picd.jpg"
+import img7Path from "@/public/pic.jpg";
+import img8Path from "@/public/picb.jpg";
+import img9Path from "@/public/picc.jpg";
+import img10Path from "@/public/picd.jpg";
 
-
-export default function IndexPage(){
-  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(img7Path);
+export default function IndexPage() {
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(
+    img7Path
+  );
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
 
-const images: { src: StaticImageData; alt: string }[] = [
-
-    { src: img7Path, alt: "Image 7" },
-    { src: img8Path, alt: "Image 8" },
-    { src: img9Path, alt: "Image 9" },
-    { src: img10Path, alt: "Image 10" },
+  const images: {
+    src: StaticImageData;
+    alt: string;
+    heading: string;
+    blog: string;
+  }[] = [
+    {
+      src: img7Path,
+      alt: "Image 7",
+      heading: "test",
+      blog: "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test ",
+    },
+    {
+      src: img8Path,
+      alt: "Image 8",
+      heading: "test2",
+      blog: "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
+    },
+    {
+      src: img9Path,
+      alt: "Image 9",
+      heading: "test3",
+      blog: "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
+    },
+    {
+      src: img10Path,
+      alt: "Image 10",
+      heading: "test4",
+      blog: "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
+    },
   ];
 
   const handleOnClicked = (src: StaticImageData, index: number) => {
@@ -43,16 +68,19 @@ const images: { src: StaticImageData; alt: string }[] = [
 
   return (
     <div className="min-h-[100vh] flex flex-col">
-         <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center mt-6 mb-6">
-         Gallery
-         </h2>
+      <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center mt-6 mb-6">
+        Gallery
+      </h2>
       {selectedImage && (
         <ImageViewer
           selectedImage={selectedImage}
           onNext={handleNextImage}
           onPrev={handlePreviousImage}
+          heading={images[currentImageIndex].heading}
+          blog={images[currentImageIndex].blog}
         />
       )}
+      
       <div className="flex flex-row flex-wrap gap-3 justify-center px-2 md:px-0">
         {images.map((image, index) => (
           <Image
@@ -66,4 +94,4 @@ const images: { src: StaticImageData; alt: string }[] = [
       </div>
     </div>
   );
-};
+}

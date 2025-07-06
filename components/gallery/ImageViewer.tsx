@@ -6,16 +6,20 @@ interface ImageViewerProps {
   selectedImage: StaticImageData;
   onNext: () => void;
   onPrev: () => void;
+  heading: string;
+  blog: string;
 }
 
 const ImageViewer: React.FC<ImageViewerProps> = ({
   selectedImage,
+  heading,
+  blog,
   onNext,
   onPrev,
 }) => {
   return (
-    <div className="flex justify-center items-start min-h-[80vh]">
-      <div className="relative flex items-center pb-4">
+    <div className="flex flex-col  justify-center items-start min-h-[80vh]">
+      <div className="relative flex  items-center pb-4">
         <div className="rounded-md overflow-hidden"> 
           <Image
             src={selectedImage}
@@ -37,7 +41,12 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
         >
           <ArrowRightIcon className="w-10 h-10 text-text hover:text-secondary transition-colors cursor-pointer"  />
         </button>
+        
       </div>
+      <div className="text-text-secondary justify-center pt-4">
+              <h2 className="font-semibold text-xl text-center">{heading}</h2>
+              <p>{blog}</p>
+        </div>
     </div>
   );
 };
