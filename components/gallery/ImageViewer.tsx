@@ -19,8 +19,8 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
 }) => {
   return (
     <div className="flex flex-col">
-    <div className="flex justify-center items-start">
-        <div className="relative flex items-center pb-4">
+    <div className="flex relative justify-center items-start">
+        <div className=" flex items-center pb-4">
           <div className="rounded-md overflow-hidden">
             <Image
               src={selectedImage}
@@ -29,7 +29,9 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
             />
           </div>
 
-          <button
+         
+        </div>
+         <button
             className="absolute top-1/2 transform -translate-y-1/2 left-0 text-text py-14 px-4 md:py-28 md:px-5 text-3xl md:text-5xl z-100"
             onClick={onPrev}
           >
@@ -41,7 +43,6 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
           >
             <ArrowRightIcon className="w-10 h-10 text-text hover:text-secondary transition-colors cursor-pointer" />
           </button>
-        </div>
     </div>
     <div className="text-text-secondary justify-center pt-8 pb-12 px-4 sm:px-10 lg:px-16 xl:px-30">
               <h2 className="font-semibold text-xl text-center pb-4">{heading}</h2>
