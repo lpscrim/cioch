@@ -21,11 +21,11 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
     <div className="flex flex-col">
     <div className="flex relative justify-center items-start">
         <div className=" flex items-center pb-4">
-          <div className="rounded-md overflow-hidden">
+          <div className="rounded-md overflow-hidden max-w-5xl">
             <Image
               src={selectedImage}
               alt={"Image of Isle of Skye"}
-              className="w-full"
+              className="w-full "
             />
           </div>
 

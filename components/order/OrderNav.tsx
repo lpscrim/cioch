@@ -30,7 +30,7 @@ export default function OrderNav() {
             tabs.find((tab) => pathname === tab.href)?.name ?? tabs[0].name
           }
           aria-label="Select a tab"
-          className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-foreground/70 py-2 pr-8 pl-3 text-lg font-semibold  text-text-secondary outline-1 -outline-offset-1 outline-text focus:outline-2 focus:-outline-offset-2 focus:outline-secondary"
+          className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-accent/80 py-2 pr-8 pl-3 text-lg font-semibold  text-text-secondary outline-1 -outline-offset-1 outline-text focus:outline-2 focus:-outline-offset-2 focus:outline-secondary"
           onChange={(e) => {
             const selectedTab = tabs.find((tab) => tab.name === e.target.value);
             if (selectedTab) {
