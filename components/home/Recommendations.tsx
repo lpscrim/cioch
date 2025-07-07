@@ -29,7 +29,7 @@ export default function Recommendations() {
     <section id="recommendations" className="pb-20">
       <div className="mx-auto max-w-[48rem] px-6 pt-30 pb-20 sm:px-12 lg:max-w-7xl lg:px-8 ">
         <div className="flex mx-auto text-center justify-center ">
-          <h2 className="px-10 text-4xl font-bold tracking-tight text-secondary sm:text-5xl bg-foreground/30 bg-[url(/mocha-grunge.png)] rounded-lg py-6">
+          <h2 className="px-10 text-4xl font-bold tracking-tight text-secondary sm:text-5xl bg-foreground/30 bg-[url(/mocha-grunge.webp)] rounded-lg py-6">
             Recommendations
           </h2>
         </div>
@@ -41,7 +41,7 @@ export default function Recommendations() {
                 recommendationIdx % 2 === 0
                   ? "slide-fade-left"
                   : "slide-fade-right",
-                "flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-lg px-12 lg:px-8 py-12 lg:py-6 bg-foreground/85  bg-[url(/mocha-grunge.png)]"
+                "flex flex-col-reverse lg:grid lg:grid-cols-12 lg:items-center lg:gap-x-8 rounded-lg px-12 lg:px-8 py-12 lg:py-6 bg-foreground/85  bg-[url(/mocha-grunge.webp)]"
               )}
             >
               <div
