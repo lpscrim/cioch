@@ -13,7 +13,7 @@ const recommendations = [
     name: "Cairngorm Mountain Rescue Team",
     description:
       "“The material used on the Cioch kit is second to none! Immediately after trying the trousers of our supplied team kit, I ordered a pair of salopettes for skiing use. They are superb!” \n\n “The Cioch equipment has shown itself to be warm, comfortable and well able to withstand the rigours of winter nights in the Cairngorms.”",
-    imageSrc: "/cmt.jpeg",
+    imageSrc: "/cmt.jpg",
     imageAlt:
       "Cairngorms mountain rescure team, wearing Cioch jackets, in the mountains.",
     webSite: "",
