@@ -295,7 +295,7 @@ export default function PerfectFitForm() {
         </button>
         <button
           type="submit"
-          className="rounded-md bg-secondary px-4 py-2 text-sm font-semibold text-text shadow-xs hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+          className="cursor-pointer  rounded-md bg-secondary px-4 py-2 text-sm font-semibold text-text shadow-xs hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           Send
         </button>
