@@ -1,5 +1,4 @@
 
-
 export default function Hero() {
   return (
     <div id="hero" className="h-[100vh] w-[100vw] overflow-hidden">
