@@ -13,7 +13,7 @@ export default function Intro() {
         <div className="flex flex-col lg:flex-row mx-auto pt-20">
           <div className="w-full lg:w-1/2 mb-10 sm:mb-15 lg:mb-0 mx-auto flex flex-col items-center justify-start px-5">
             <Image
-              src="/neilhelen.jpg"
+              src="/neilhelen.webp"
               alt="Cioch Outdoor Clothing"
               className="w-full max-w-[400px] xl:max-w-[450px] h-auto rounded-lg"
               width={360}
