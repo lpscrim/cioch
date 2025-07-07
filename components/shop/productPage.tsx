@@ -215,7 +215,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                   {product.details.map((detail, idx) => (
                     <Disclosure key={idx} as="div">
                       <div>
-                        <DisclosureButton className="group relative flex w-full items-center justify-between py-6 text-left">
+                        <DisclosureButton className="group relative flex w-full  cursor-pointer items-center justify-between py-6 text-left">
                           <h3 className="text-lg font-medium text-secondary">
                             {detail.name}
                           </h3>
