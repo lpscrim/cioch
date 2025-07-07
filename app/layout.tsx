@@ -6,16 +6,6 @@ import Header from "@/components/Header";
 
 
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 const notoSans = Noto_Sans_Gothic({
   variable: "--font-noto-sans",
   subsets: ["latin"],
