@@ -54,7 +54,7 @@
 
 @keyframes fade-in {
   from {
-    opacity: 0n;
+    opacity: 0;
   }
 
   to {
