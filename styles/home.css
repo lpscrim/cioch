@@ -35,3 +35,29 @@
 #recommendations {
   font-family: var(--font-anek-devanagari);
 }
+
+
+/* Animation styles */
+
+
+
+.fade-in {
+  animation: fade-in 3s ease-in-out;
+}
+.fade-in-slow {
+  animation: fade-in 5s ease-in-out;
+}
+.fade-in-slower {
+  animation: fade-in 6s ease-in-out;
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0n;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
