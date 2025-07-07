@@ -12,6 +12,7 @@ export default function Home() {
   <div>
     <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-white/5 to-transparent z-2 bg-fixed"></div>
     <div className="relative bg-[url(/storr.webp)] bg-center bg-cover bg-no-repeat w-[100lvw] overflow-hidden bg-fixed">
+    
       <Hero />
     </div>
     <main>
