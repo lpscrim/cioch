@@ -5,7 +5,7 @@ const recommendations = [
     name: "George Yeomans- Skye Mountain Guide",
     description:
       "“During last season, the Marsco pullover proved invaluable to my work. Whether it was bivi-ing in the Swiss Alps, crossing the Pyrenees in a thunder storm or standing up to the daily demands of Munro guiding in Scotland, the jacket kept me warm, dry and comfortable. Very good kit from a very good company.”",
-    imageSrc: "/georgeyeomans.jpg",
+    imageSrc: "/georgeyeomans.webp",
     imageAlt: "Mountain guide wearing Cioch jacket, in the mountains.",
     webSite: "www.guidingonskye.co.uk",
   },
@@ -13,7 +13,7 @@ const recommendations = [
     name: "Cairngorm Mountain Rescue Team",
     description:
       "“The material used on the Cioch kit is second to none! Immediately after trying the trousers of our supplied team kit, I ordered a pair of salopettes for skiing use. They are superb!” \n\n “The Cioch equipment has shown itself to be warm, comfortable and well able to withstand the rigours of winter nights in the Cairngorms.”",
-    imageSrc: "/cmt.jpg",
+    imageSrc: "/cmt.webp",
     imageAlt:
       "Cairngorms mountain rescure team, wearing Cioch jackets, in the mountains.",
     webSite: "",

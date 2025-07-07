@@ -20,7 +20,7 @@ export default function Shop() {
         </div>
         <div className="w-full lg:w-1/2 mt-15 mb-10 sm:mb-5 lg:mb-0 mx-auto flex flex-col items-center justify-center ">
           <Image
-            src="/shop.jpg"
+            src="/shop.webp"
             alt="Cioch Shop and Factory"
             className="w-4/5 max-w-[400px] h-auto rounded-lg"
             width={360}

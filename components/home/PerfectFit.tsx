@@ -49,7 +49,7 @@ export default function perfectFit() {
           <div className="w-full lg:w-1/2 mb-10 sm:mb-15 lg:mb-0 mx-auto flex flex-col items-center justify-center ">
             <div className="relative w-3/4 max-w-[400px] xl:max-w-[450px] xl:mt-20">  
               <Image
-                src="/production.jpg"
+                src="/production.webp"
                 alt="Cioch Outdoor Clothing"
                 className="w-full h-auto rounded-lg"
                 width={360}

@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import Image, { StaticImageData } from "next/image";
 import ImageViewer from "@/components/gallery/ImageViewer";
 
-import img7Path from "@/public/pic.jpg";
-import img8Path from "@/public/picb.jpg";
-import img9Path from "@/public/picc.jpg";
-import img10Path from "@/public/picd.jpg";
+import img7Path from "@/public/pic.webp";
+import img8Path from "@/public/picb.webp";
+import img9Path from "@/public/picc.webp";
+import img10Path from "@/public/picd.webp";
 
 export default function IndexPage() {
   const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(

@@ -6,7 +6,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/jacket1.jpg",
+        src: "/jacket1.webp",
         alt: "Main view of Harta jacket in Stone.",
       },
     ],
@@ -114,7 +114,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/jacket2.jpg",
+        src: "/jacket2.webp",
         alt: "Waterproof Lota jacket in Claret.",
       },
     ],
@@ -219,7 +219,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/jacket5.jpg",
+        src: "/jacket5.webp",
         alt: "Main view of Fionn jacket in Blue.",
       },
     ],
@@ -327,7 +327,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/jacket4.jpg",
+        src: "/jacket4.webp",
         alt: "Main view of Glamaig Jacket in Orange.",
       },
     ],
@@ -424,7 +424,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/jacket3.jpg",
+        src: "/jacket3.webp",
         alt: "Main view of Sligachan jacket in green.",
       },
     ],
@@ -519,7 +519,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/trousers.jpg",
+        src: "/trousers.webp",
         alt: "Main view of Trousers.",
       },
     ],
@@ -619,7 +619,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/salopettes.jpg",
+        src: "/salopettes.webp",
         alt: "Main view of Salopettes.",
       },
     ],
@@ -717,7 +717,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/fleece.jpg",
+        src: "/fleece.webp",
         alt: "Main view of Fleece reversible.",
       },
     ],
@@ -807,7 +807,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/windshirt.jpg",
+        src: "/windshirt.webp",
         alt: "Main view of windshirt in yellow.",
       },
     ],
@@ -897,7 +897,7 @@ export const products = [
       {
         id: 1,
         name: "Main view",
-        src: "/kidswater.jpg",
+        src: "/kidswater.webp",
         alt: "Main view of a child wearing a red jacket.",
       },
     ],

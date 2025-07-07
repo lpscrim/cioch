@@ -7,21 +7,21 @@ const collections = [
     name: "Waterproof",
     href: "/shop/waterproof",
     imageSrc:
-      "/jacket1.jpg",
+      "/jacket1.webp",
     imageAlt: "Image of a person wearing a waterproof jacket.",
   },
   {
     name: "Windproof",
     href: "/shop/windproof",
     imageSrc:
-      "/fleece.jpg",
+      "/fleece.webp",
     imageAlt: "Image of fleece.",
   },
   {
     name: "Kids",
     href: "/shop/kids/kids",
     imageSrc:
-      "/jacket4.jpg",
+      "/jacket4.webp",
     imageAlt:
       "Image of a child wearing outdoor clothing.",
   },
@@ -40,7 +40,7 @@ export default function Promo() {
           <div className="absolute inset-0 overflow-hidden">
             <Image
               alt=""
-              src="/quirang2.jpg"
+              src="/quirang2.webp"
               width={1000}
               height={500}
               quality={100}
@@ -61,7 +61,7 @@ export default function Promo() {
             <div className="absolute inset-0 overflow-hidden">
               <Image
                 alt=""
-                src="/quirang2.jpg"
+                src="/quirang2.webp"
                 width={500}
                 height={500}
                 quality={100}
