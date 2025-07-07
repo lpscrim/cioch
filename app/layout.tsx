@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Karla, Noto_Sans_Gothic, Oswald, Roboto, Anek_Devanagari } from "next/font/google";
+import { Karla, Noto_Sans_Gothic, Oswald, Roboto, Anek_Devanagari } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 
