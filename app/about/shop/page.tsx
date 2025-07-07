@@ -31,7 +31,7 @@ export default function Shop() {
       <div className="flex flex-col lg:flex-row">
                 <div className="w-full lg:w-1/2 mt-15 mb-10 sm:mb-5 lg:mb-0 mx-auto flex flex-col items-center justify-center ">
           <Image
-            src="/map.gif"
+            src="/map.webp"
             alt="Directions on map of Skye"
             className="w-4/5 max-w-[400px] h-auto rounded-lg"
             width={360}
