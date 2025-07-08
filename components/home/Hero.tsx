@@ -36,7 +36,7 @@ export default function Hero() {
         alt="Storr landscape"
         layout="fill"
         objectFit="cover"
-        className="absolute inset-0 -z-10 h-[100lvh]"
+        className="absolute inset-0 -z-10  h-[100vh] w-full object-cover"
       />
     </div>
   );
