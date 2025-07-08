@@ -19,8 +19,8 @@ export default function Home() {
         <Intro />
         <Promo />
         <PerfectFit /> 
-        <div className="bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat w-full h-[100svh]">
-          <div className="w-full h-[100svh] backdrop-blur-[0px] backdrop-brightness-75">
+        <div className="bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat w-full h-[105%]">
+          <div className="w-full h-[105%] backdrop-blur-[0px] backdrop-brightness-75">
             <Recommendations />
             <Footer />
           </div>  
