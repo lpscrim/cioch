@@ -10,7 +10,7 @@ export default function OrderLayout({
   return (
     <section
       id="order"
-      className="flex items-start w-[100vw] min-h-[105vh] bg-foreground  bg-cover bg-no-repeat bg-fixed relative"
+      className="flex items-start w-[100vw] min-h-[105%] bg-foreground  bg-cover bg-no-repeat bg-fixed relative"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-transparent bg-fixed pointer-events-none z-0"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/25 bg-fixed pointer-events-none z-0"></div>
