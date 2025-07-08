@@ -249,13 +249,13 @@ export default function ProductPage({ params }: { params: { id: string } }) {
           </div>
         </div>
         <Link href="/#perfectFit">
-          <h2 className="text-xl bg-accent font-semibold text-text-secondary sm:text-2xl text-center mt-6 py-4 px-2">
+          <h4 className="text-xl bg-accent font-semibold text-text-secondary sm:text-2xl text-center mt-6 py-4 px-2">
             <span className="text-secondary hover:text-text-secondary">
               Perfect Fit™
             </span>{" "}
             garments can be made in any combination of available colours from
             our swatch
-          </h2>
+          </h4>
         </Link>
       </div>
     </div>

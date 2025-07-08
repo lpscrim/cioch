@@ -30,10 +30,10 @@ export default function AboutLayout({
           <AboutNav />
           {children}
           <Link href="/#perfectFit">
-            <h2 className="text-xl font-semibold text-text-secondary sm:text-2xl text-center mt-20 mx-auto">
-              <span className="text-primary">Perfect Fit™</span> garments can be
+            <h4 className="text-xl font-semibold text-text-secondary sm:text-2xl text-center mt-20 mx-auto">
+              <span className="drop-shadow-sm text-primary hover:text-secondary">Perfect Fit™</span> garments can be
               made in any combination of available colours from our swatch
-            </h2>
+            </h4>
           </Link>
         </div>
       </div>
