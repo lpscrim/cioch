@@ -1,10 +1,6 @@
-import Image from "next/image";
-
 export default function Hero() {
   return (
     <div id="hero" className="h-[100lvh] w-[100vw] overflow-x-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-white/5 to-transparent z-2 bg-fixed  h-[100lvh]"></div>
-
       <div
         id="heroText"
         className="absolute top-1/2 left-1/2 z-10 w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 text-center font-bold"
@@ -31,13 +27,9 @@ export default function Hero() {
           <p className="rotate-90">➔</p>
         </div>
       </button>
-      <Image
-        src="/storr.webp"
-        alt="Storr landscape"
-        layout="fill"
-        objectFit="cover"
-        className="absolute inset-0 -z-10  h-[100vh] w-full object-cover"
-      />
+      <div className="absolute inset-0 h-full w-full bg-[url('/storr.webp')] bg-fixed bg-cover bg-center">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-white/5 to-transparent z-2 bg-fixed  h-[100lvh]"></div>
+      </div>
     </div>
   );
 }

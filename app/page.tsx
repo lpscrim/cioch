@@ -10,8 +10,9 @@ import "@/styles/home.css";
 export default function Home() {
   return (
   <div>
-      <Hero />
+      
     <main>
+      <Hero />
         <Intro />
         <Promo />
         <PerfectFit /> 
