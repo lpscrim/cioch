@@ -59,8 +59,8 @@ export default function Header() {
               alt=""
               src="/main.jpg"
               className="h-8 w-auto mr-4 rounded-sm "
-              height="300"
-              width="300"
+              height="170"
+              width="460"
               quality={100}
             />
           </Link>

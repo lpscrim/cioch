@@ -14,11 +14,12 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-white/5 to-transparent z-2 bg-fixed h-[100lvh]"></div>
 
         <Image
-          alt="123"
+          alt="background"
           src="/storr.webp"
           layout="fill"
-          className="w-auto h-full object-cover"
+          objectFit="cover"
           quality={100}
+          
         />
       </div>
       <div className="relative z-10 h-[100svh] overflow-hidden">
