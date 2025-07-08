@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <div id="hero" className="h-[100svh] w-[100vw] overflow-hidden">
             <div id="heroText" className="absolute top-1/2 left-1/2 z-10 w-full max-w-[800px] -translate-x-1/2 -translate-y-1/2 text-center font-bold">
-            <h1 id="heroName" className="mt-20 mb-2 text-7xl md:text-8xl text-accent fade-in tracking-wide">Cíoch</h1>
+            <h1 id="heroName" className="mt-20 mb-2 text-7xl xl:text-8xl text-accent fade-in tracking-wide">Cíoch</h1>
             <h3 className="text-2xl text-text mb-2 fade-in-slow ">Outdoor Clothing</h3>
             <h4 className="text-xl text-text brightness-80 fade-in-slower">Handmade on the isle of Skye</h4>
             </div>
