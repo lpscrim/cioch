@@ -53,19 +53,19 @@ export default function Header() {
         className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-6 lg:px-8"
       >
         <div className="flex lg:flex-1 items-center ">
-          <Link href="/" className="-m-1.5 p-1.5 ">
+          <Link href="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Cioch Clothing</span>
             <Image
               alt=""
               src="/main.jpg"
-              className="h-8 w-auto mr-3 rounded-sm "
+              className="h-8 w-auto mr-4 rounded-sm "
               height="300"
               width="300"
               quality={100}
             />
           </Link>
-          <Link href="/" className="-m-1.5 p-1.5">
-            <h2 className="mr-3 text-xl/6 font-semibold text-text hover:text-secondary transition-colors ">
+          <Link href="/" className="-m-1.5 p-2">
+            <h2 className="mr-3 text-xl/6 font-semibold text-text hover:text-secondary transition-colors">
               Outdoor Clothing
             </h2>
           </Link>
