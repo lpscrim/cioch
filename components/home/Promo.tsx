@@ -57,13 +57,13 @@ export default function Promo() {
           aria-hidden="true"
           className="absolute inset-0 flex flex-col sm:hidden"
         >
-          <div className="relative w-full flex-1 bg-background">
+          <div className="relative w-full flex-1 bg-background ">
             <div className="absolute inset-0 overflow-hidden">
               <Image
                 alt=""
-                src="/quirang2.webp"
+                src="/pin.webp"
                 width={500}
-                height={500}
+                height={1000}
                 quality={100}
                 className="size-full object-cover"
               />
@@ -72,18 +72,10 @@ export default function Promo() {
           </div>
           <div className="h-15 w-full bg-foreground" />
         </div>
-        <div className="relative py-32">
+        <div className="relative py-38">
           <h2 className="text-4xl font-bold tracking-tight text-text sm:text-5xl">
             Explore Our Collection
           </h2>
-          <div className="mt-12">
-          {/*<a id="shopButton"
-              href="#"
-              className="rounded-md bg-secondary px-4 py-3 text-lg font-bold text-primary shadow-xs hover:brightness-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
-            >
-              Shop All
-            </a>*/}
-          </div>
         </div>
       </div>
 
@@ -94,15 +86,15 @@ export default function Promo() {
         <h2 id="collection-heading" className="sr-only">
           Collections
         </h2>
-        <div className="mx-auto grid max-w-md grid-cols-1 gap-y-6 px-4 sm:max-w-7xl sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 sm:px-6 lg:gap-x-8 lg:px-8">
+        <div className="mx-auto grid max-w-md grid-cols-1 gap-y-6 px-8 sm:max-w-7xl sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 sm:px-6 lg:gap-x-8 lg:px-8">
           {collections.map((collection) => (
             <div
               key={collection.name}
-              className="group relative h-96 rounded-lg bg-text shadow-xl sm:aspect-4/5 sm:h-auto"
+              className="group relative h-96 rounded-lg bg-text shadow-xl sm:aspect-4/5 sm:h-auto "
             >
               <div
                 aria-hidden="true"
-                className="absolute inset-0 overflow-hidden rounded-lg"
+                className="absolute inset-0 overflow-hidden rounded-lg "
               >
                 <div className="absolute inset-0 overflow-hidden group-hover:opacity-75">
                   <Image
@@ -110,7 +102,7 @@ export default function Promo() {
                     src={collection.imageSrc}
                     width={500}
                     height={500}
-                    className="size-full object-cover"
+                    className="size-full object-cover px-8"
                   />
                 </div>
                 <div className="absolute inset-0 bg-linear-to-b from-transparent to-black opacity-50" />
