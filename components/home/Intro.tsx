@@ -18,7 +18,6 @@ export default function Intro() {
               className="w-full max-w-[400px] xl:max-w-[450px] h-auto rounded-lg"
               width={360}
               height={450}
-              priority
             />
           </div>
           <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-center px-6">
