@@ -47,7 +47,7 @@ export default function Promo() {
               className="size-full object-cover"
             />
           </div>
-          <div className="absolute inset-0 bg-background opacity-50" />
+          <div className="absolute inset-0 bg-background opacity-50 " />
         </div>
         <div className="h-32 w-full bg-foreground md:h-40 lg:h-45" />
       </div>
@@ -72,7 +72,7 @@ export default function Promo() {
           </div>
           <div className="h-15 w-full bg-foreground" />
         </div>
-        <div className="relative py-38">
+        <div className="relative py-26 sm:py-38">
           <h2 className="text-4xl font-bold tracking-tight text-text sm:text-5xl">
             Explore Our Collection
           </h2>
@@ -90,7 +90,7 @@ export default function Promo() {
           {collections.map((collection) => (
             <div
               key={collection.name}
-              className="group relative h-96 rounded-lg bg-text shadow-xl sm:aspect-4/5 sm:h-auto "
+              className="group relative h-65 rounded-lg bg-text shadow-xl sm:aspect-4/5 sm:h-auto "
             >
               <div
                 aria-hidden="true"
@@ -102,7 +102,7 @@ export default function Promo() {
                     src={collection.imageSrc}
                     width={500}
                     height={500}
-                    className="size-full object-cover px-8"
+                    className="size-full object-cover px-20 sm:px-8"
                   />
                 </div>
                 <div className="absolute inset-0 bg-linear-to-b from-transparent to-black opacity-50" />
