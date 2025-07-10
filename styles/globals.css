@@ -1,18 +1,24 @@
 @import "tailwindcss";
 
+/* Safari fallback - explicit CSS custom properties */
 :root {
-  :root {
-    --background: #161615;
-    --foreground: #e4e3e3;
-    --color-text: #ffffff;
-    --color-text-secondary: #181818;
-    --color-primary: #FFCC00;
-    --color-secondary: #b93737;
-    --color-tertiary: #464545;
-    --color-accent: #FFCC00;
-    --color-button: #0070f3;
-    --color-border: #eaeaea;
-  }
+  --background: #161615;
+  --foreground: #e4e3e3;
+  --color-text: #ffffff;
+  --color-text-secondary: #181818;
+  --color-primary: #FFCC00;
+  --color-secondary: #b93737;
+  --color-tertiary: #464545;
+  --color-accent: #FFCC00;
+  --color-button: #0070f3;
+  --color-border: #eaeaea;
+  --color-background: #161615;
+  --color-foreground: #e4e3e3;
+  --font-geist-sans: system-ui, -apple-system, sans-serif;
+  --font-geist-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
+  --font-karla: 'Karla', sans-serif;
+  --font-roboto: 'Roboto', sans-serif;
+  --font-noto-sans: 'Noto Sans', sans-serif;
 }
 
 @theme inline {
@@ -30,20 +36,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #161615;
-    --foreground: #e4e3e3;
-    --color-text: #ffffff;
-    --color-text-secondary: #181818;
-    --color-primary: #FFCC00;
-    --color-secondary: #b93737;
-    --color-tertiary: #464545;
-    --color-accent: #FFCC00;
-    --color-button: #0070f3;
-    --color-border: #eaeaea;
-  }
-}
 
 
 
