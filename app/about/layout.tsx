@@ -19,7 +19,7 @@ export default function AboutLayout({
 
         <Image
           alt="123"
-          src="/lagan.webp"
+          src="/quirang2.webp"
           fill
           className="h-full object-cover"
           quality={100}
