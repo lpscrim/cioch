@@ -46,6 +46,10 @@ export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+    if (pathname?.startsWith('/studio')) {
+    return null;
+  }
+  
   return (
     <header className="absolute  top-0 left-0 w-[100lvw] z-100 bg-background/0 text-text brightness-120">
       <nav

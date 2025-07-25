@@ -1,9 +1,8 @@
-'use client'
+
 import type { Metadata } from "next";
 import { Karla, Noto_Sans_Gothic, Oswald, Roboto, Anek_Devanagari } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
-import { usePathname } from "next/navigation";
 
 const notoSans = Noto_Sans_Gothic({
   variable: "--font-noto-sans",
@@ -45,15 +44,14 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-  const isStudioPage = pathname?.startsWith('/studio');
+
 
   return (
     <html lang="en">
       <body
         className={`${anekDevanagari.variable} ${notoSans.variable} ${oswald.variable} ${roboto.variable} ${karla.variable} antialiased  overflow-x-hidden`}
       >
-        {!isStudioPage && <Header />}
+          <Header />
         {children}
       </body>
     </html>
