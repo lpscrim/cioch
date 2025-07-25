@@ -31,13 +31,13 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
         <div className="flex justify-between mt-4">
           <button
             onClick={onPrev}
-            className="px-4 py-2 bg-secondary text-text rounded hover:bg-accent transition-colors"
+            className="cursor-pointer px-4 py-2 bg-secondary text-text rounded hover:bg-accent transition-colors"
           >
             Previous
           </button>
           <button
             onClick={onNext}
-            className="px-4 py-2 bg-secondary text-text rounded hover:bg-accent transition-colors"
+            className="cursor-pointer px-4 py-2 bg-secondary text-text rounded hover:bg-accent transition-colors"
           >
             Next
           </button>
