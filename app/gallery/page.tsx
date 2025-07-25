@@ -6,12 +6,19 @@ import ImageViewer from "@/components/gallery/ImageViewer";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
+interface SanityImage {
+  _type: 'image';
+  asset: {
+    _ref: string;
+    _type: 'reference';
+  };
+}
 interface GalleryImage {
   _id: string;
   title: string;
   heading: string;
   description: string;
-  image: any;
+  image: SanityImage;
   alt: string;
   order: number;
   featured: boolean;
