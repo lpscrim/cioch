@@ -44,7 +44,7 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
         </div>
       </div>
 
-      <div className="lg:w-1/3 bg-foreground/90 rounded-lg p-6">
+      <div className="lg:w-1/3 bg-foreground/40 rounded-lg p-6">
         <h3 className="text-2xl font-bold text-secondary mb-4">{heading}</h3>
         <p className="text-text-secondary leading-relaxed">{blog}</p>
       </div>
