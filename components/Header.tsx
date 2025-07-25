@@ -47,7 +47,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="absolute  top-0 left-0 w-[100lvw] z-9900 bg-background/0 text-text brightness-120">
+    <header className="absolute  top-0 left-0 w-[100lvw] z-100 bg-background/0 text-text brightness-120">
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-6 lg:px-8"
@@ -175,8 +175,8 @@ export default function Header() {
         onClose={setMobileMenuOpen}
         className="lg:hidden"
       >
-        <div className="fixed inset-0 z-200" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-9999 w-full overflow-y-auto bg-background text-text px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-0 z-100" />
+        <DialogPanel className="fixed inset-y-0 right-0 z-200 w-full overflow-y-auto bg-background text-text px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className=" p-1.5" onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">Cioch CLothing</span>

@@ -1,9 +1,8 @@
 import React from "react";
-import Image, { StaticImageData } from "next/image";
-import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/20/solid";
+import Image from "next/image";
 
 interface ImageViewerProps {
-  selectedImage: StaticImageData;
+  selectedImage: string;
   onNext: () => void;
   onPrev: () => void;
   heading: string;
@@ -18,36 +17,37 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
   onPrev,
 }) => {
   return (
-    <div className="flex flex-col">
-    <div className="flex relative justify-center items-start">
-        <div className=" flex items-center pb-4">
-          <div className="rounded-md overflow-hidden max-w-5xl">
-            <Image
-              src={selectedImage}
-              alt={"Image of Isle of Skye"}
-              className="w-full "
-            />
-          </div>
-
-         
+    <div className="flex flex-col lg:flex-row gap-6 mb-8 px-4">
+      <div className="lg:w-2/3 relative">
+        <div className="relative aspect-video">
+          <Image
+            src={selectedImage}
+            alt={heading}
+            fill
+            className="object-cover rounded-lg shadow-lg"
+            priority
+          />
         </div>
-         <button
-            className="absolute top-1/2 transform -translate-y-1/2 left-0 text-text py-14 px-4 md:py-28 md:px-5 text-3xl md:text-5xl z-100"
+        <div className="flex justify-between mt-4">
+          <button
             onClick={onPrev}
+            className="px-4 py-2 bg-secondary text-text rounded hover:bg-accent transition-colors"
           >
-            <ArrowLeftIcon className="w-10 h-10 text-text hover:text-secondary transition-colors cursor-pointer" />
+            Previous
           </button>
           <button
-            className="absolute top-1/2 transform -translate-y-1/2 right-0 text-text py-14 px-4 md:py-28 md:px-5 text-3xl md:text-5xl"
             onClick={onNext}
+            className="px-4 py-2 bg-secondary text-text rounded hover:bg-accent transition-colors"
           >
-            <ArrowRightIcon className="w-10 h-10 text-text hover:text-secondary transition-colors cursor-pointer" />
+            Next
           </button>
-    </div>
-    <div className="text-text-secondary justify-center pt-8 pb-12 px-4 sm:px-10 lg:px-16 xl:px-30">
-              <h2 className="font-semibold text-xl text-center pb-4">{heading}</h2>
-              <p>{blog}</p>
         </div>
+      </div>
+
+      <div className="lg:w-1/3 bg-foreground/90 rounded-lg p-6">
+        <h3 className="text-2xl font-bold text-secondary mb-4">{heading}</h3>
+        <p className="text-text-secondary leading-relaxed">{blog}</p>
+      </div>
     </div>
   );
 };

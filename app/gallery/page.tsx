@@ -1,70 +1,95 @@
 "use client";
 
-import React, { useState } from "react";
-import Image, { StaticImageData } from "next/image";
+import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import ImageViewer from "@/components/gallery/ImageViewer";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 
-import img7Path from "@/public/pic.webp";
-import img8Path from "@/public/picb.webp";
-import img9Path from "@/public/picc.webp";
-import img10Path from "@/public/picd.webp";
+interface GalleryImage {
+  _id: string;
+  title: string;
+  heading: string;
+  description: string;
+  image: any;
+  alt: string;
+  order: number;
+  featured: boolean;
+}
 
-export default function IndexPage() {
-  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(
-    img7Path
-  );
+const galleryQuery = `
+  *[_type == "gallery"] | order(order asc) {
+    _id,
+    title,
+    heading,
+    description,
+    image,
+    alt,
+    order,
+    featured
+  }
+`;
+
+export default function GalleryPage() {
+  const [images, setImages] = useState<GalleryImage[]>([]);
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+  const [loading, setLoading] = useState(true);
 
-  const images: {
-    src: StaticImageData;
-    alt: string;
-    heading: string;
-    blog: string;
-  }[] = [
-    {
-      src: img7Path,
-      alt: "Image 7",
-      heading: "test",
-      blog: "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test ",
-    },
-    {
-      src: img8Path,
-      alt: "Image 8",
-      heading: "test2",
-      blog: "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
-    },
-    {
-      src: img9Path,
-      alt: "Image 9",
-      heading: "test3",
-      blog: "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
-    },
-    {
-      src: img10Path,
-      alt: "Image 10",
-      heading: "test4",
-      blog: "test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test",
-    },
-  ];
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const galleryImages = await client.fetch(galleryQuery);
+        setImages(galleryImages);
+        if (galleryImages.length > 0) {
+          setSelectedImage(galleryImages[0]);
+        }
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching gallery images:', error);
+        setLoading(false);
+      }
+    };
 
-  const handleOnClicked = (src: StaticImageData, index: number) => {
-    setSelectedImage(src);
+    fetchImages();
+  }, []);
+
+  const handleOnClicked = (image: GalleryImage, index: number) => {
+    setSelectedImage(image);
     setCurrentImageIndex(index);
   };
 
   const handleNextImage = () => {
-    const nextIndex =
-      currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1;
-    setSelectedImage(images[nextIndex].src);
+    const nextIndex = currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1;
+    setSelectedImage(images[nextIndex]);
     setCurrentImageIndex(nextIndex);
   };
 
   const handlePreviousImage = () => {
-    const prevIndex =
-      currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
-    setSelectedImage(images[prevIndex].src);
+    const prevIndex = currentImageIndex === 0 ? images.length - 1 : currentImageIndex - 1;
+    setSelectedImage(images[prevIndex]);
     setCurrentImageIndex(prevIndex);
   };
+
+  if (loading) {
+    return (
+      <div className="min-h-[100vh] flex flex-col items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-secondary"></div>
+        <p className="mt-4 text-secondary">Loading gallery...</p>
+      </div>
+    );
+  }
+
+  if (images.length === 0) {
+    return (
+      <div className="min-h-[100vh] flex flex-col items-center justify-center">
+        <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center mt-6 mb-6">
+          Gallery
+        </h2>
+        <p className="text-text-secondary">No images found in gallery.</p>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-[100vh] flex flex-col">
@@ -73,22 +98,24 @@ export default function IndexPage() {
       </h2>
       {selectedImage && (
         <ImageViewer
-          selectedImage={selectedImage}
+          selectedImage={urlFor(selectedImage.image).width(1200).height(800).url()}
           onNext={handleNextImage}
           onPrev={handlePreviousImage}
-          heading={images[currentImageIndex].heading}
-          blog={images[currentImageIndex].blog}
+          heading={selectedImage.heading}
+          blog={selectedImage.description}
         />
       )}
       
       <div className="flex flex-row flex-wrap gap-3 justify-center px-2 md:px-0">
         {images.map((image, index) => (
           <Image
-            key={index}
-            {...image}
-            alt="Scenic images of Skye"
-            className="border-1 border-solid border-secondary  w-40 cursor-pointer hover:border-accent transition-colors rounded-md"
-            onClick={() => handleOnClicked(image.src, index)}
+            key={image._id}
+            src={urlFor(image.image).width(320).height(240).url()}
+            alt={image.alt}
+            width={160}
+            height={120}
+            className="border-1 border-solid border-secondary w-40 cursor-pointer hover:border-accent transition-colors rounded-md object-cover"
+            onClick={() => handleOnClicked(image, index)}
           />
         ))}
       </div>
