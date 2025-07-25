@@ -1,0 +1,137 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "image",
+        "type": "image"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "alt",
+        "type": "string",
+        "title": "Alt Text"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "heading",
+        "type": "string"
+      },
+      {
+        "rows": 4,
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              },
+              {
+                "flag": "min",
+                "constraint": 0
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "order",
+        "type": "number",
+        "title": "Display Order"
+      },
+      {
+        "initialValue": false,
+        "name": "featured",
+        "type": "boolean",
+        "title": "Featured Image"
+      }
+    ],
+    "name": "gallery",
+    "type": "document",
+    "title": "Gallery Images"
+  }
+]
