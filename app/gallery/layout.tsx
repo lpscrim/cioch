@@ -13,7 +13,7 @@ export default function AboutLayout({
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-transparent bg-fixed pointer-events-none z-0"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/25 bg-fixed pointer-events-none z-0"></div>
-      <div className="min-h-[80vh] pb-15 mt-25 flex flex-col w-[90vw] md:w-[85vw] lg:w-[80vw] xl:w-[70vw] px-6 pt-2 sm:px-12 mx-auto bg-foreground/90 rounded-md overflow-y-auto z-5">
+      <div className="min-h-[80vh] pb-15 mt-25 flex flex-col w-[98vw] md:w-[95vw] lg:w-[90vw] xl:w-[80vw] px-0 pt-2 lg:px-6 mx-auto bg-foreground/90 rounded-md overflow-y-auto z-5">
         <div className="z-10">  
           {children}
         </div>

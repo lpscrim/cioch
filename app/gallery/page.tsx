@@ -105,7 +105,7 @@ export default function GalleryPage() {
       </h2>
       {selectedImage && (
         <ImageViewer
-          selectedImage={urlFor(selectedImage.image).width(1200).height(800).url()}
+          selectedImage={urlFor(selectedImage.image).width(1400).height(800).url()}
           onNext={handleNextImage}
           onPrev={handlePreviousImage}
           heading={selectedImage.heading}
