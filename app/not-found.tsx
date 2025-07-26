@@ -8,12 +8,12 @@ export default function NotFound() {
         <Image
           fill
           alt=""
-          src="/pin.jpg"
+          src="/pin.webp"
           className="absolute inset-0 -z-10 size-full object-cover object-top"
         />
         <div className="mx-auto max-w-7xl px-4  text-center py-10 lg:px-12 bg-background/80 rounded-md">
           <p className="text-lg/8 font-semibold text-text">404</p>
-          <h1 className="mt-4 text-5xl font-semibold tracking-tight text-balance text-text sm:text-7xl">
+          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-balance text-text sm:text-7xl">
             Page not found!
           </h1>
           <p className="mt-6 text-lg font-medium text-pretty text-text/70 sm:text-xl/8">
