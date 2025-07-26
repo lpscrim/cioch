@@ -25,7 +25,7 @@ export default function AboutNav() {
   return (
     <div>
       {/* Mobile */}
-      <div className="grid grid-cols-1 sm:hidden ">
+      <div className="grid grid-cols-1 sm:hidden pb-1">
         <select
           value={tabs.find(tab => pathname === tab.href)?.name ?? tabs[0].name}
           aria-label="Select a tab"

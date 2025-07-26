@@ -25,9 +25,10 @@ export default function AboutLayout({
           quality={100}
         />
       </div>
-      <div className="min-h-[80vh] pb-15 mt-25 flex flex-col w-[90vw] md:w-[85vw] lg:w-[80vw] xl:w-[70vw] px-6 pt-2 sm:px-12 mx-auto bg-text/90 rounded-md overflow-y-auto">
+      <div className="min-h-[80vh] mt-25 flex flex-col w-[90vw] md:w-[85vw] lg:w-[80vw] xl:w-[70vw]  mx-auto overflow-y-auto">
         <div className="z-10">
           <AboutNav />
+          <div className="bg-text/90 rounded-xl pt-2 pb-10 px-6 sm:px-12">
           {children}
           <Link href="/#perfectFit">
             <h4 className="text-xl font-semibold text-text-secondary sm:text-2xl text-center mt-20 mx-auto">
@@ -38,6 +39,7 @@ export default function AboutLayout({
               our swatch
             </h4>
           </Link>
+          </div>
         </div>
       </div>
       <FooterAlt />
