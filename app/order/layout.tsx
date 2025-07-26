@@ -1,6 +1,7 @@
 import FooterAlt from "@/components/FooterAlt";
 import OrderNav from "@/components/order/OrderNav";
 import "@/styles/order.css";
+import Image from "next/image";
 
 export default function OrderLayout({
   children,
@@ -10,12 +11,21 @@ export default function OrderLayout({
   return (
     <section
       id="order"
-      className="flex items-start w-[100vw] min-h-[105%] bg-foreground  bg-cover bg-no-repeat bg-fixed relative"
+      className="flex items-start w-[100vw] min-h-[105%] relative"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-transparent bg-fixed pointer-events-none z-0"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/25 bg-fixed pointer-events-none z-0"></div>
+      <div className=" inset-0  -z-10 fixed h-[100lvh]">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-white/5 to-transparent z-2 bg-fixed h-[100lvh]"></div>
 
-      <div className="min-h-[80vh] mb-5 pb-10 mt-25 flex flex-col w-[100vw] px-6 pt-0 sm:px-12 mx-auto bg-foreground/80 rounded-md overflow-y-auto ">
+        <Image
+          alt="123"
+          src="/brittle.webp"
+          fill
+          className="h-full object-cover"
+          quality={100}
+        />
+      </div>
+
+      <div className="min-h-[80vh] mb-5 pb-10 mt-25 flex flex-col w-[100vw] px-6 pt-0 sm:px-12 mx-auto overflow-y-auto ">
         <div className="z-10">
           <OrderNav />
           {children}
