@@ -17,8 +17,8 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
   onPrev,
 }) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-6 mb-8 px-4">
-      <div className="lg:w-2/3 relative">
+    <div className="flex flex-col xl:flex-row gap-6 mb-8 px-4">
+      <div className="xl:w-3/4 relative">
         <div className="relative aspect-video">
           <Image
             src={selectedImage}
@@ -44,8 +44,8 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
         </div>
       </div>
 
-      <div className="lg:w-1/3 bg-background/20 rounded-lg p-6">
-        <h3 className="text-2xl font-bold text-secondary mb-4">{heading}</h3>
+      <div className="xl:w-1/4 bg-background/20 rounded-lg p-6">
+        <h3 className="text-xl font-bold text-secondary mb-4">{heading}</h3>
         <p className="text-text-secondary leading-relaxed">{blog}</p>
       </div>
     </div>
