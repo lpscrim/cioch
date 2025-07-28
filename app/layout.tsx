@@ -1,6 +1,11 @@
-
 import type { Metadata } from "next";
-import { Karla, Noto_Sans_Gothic, Oswald, Roboto, Anek_Devanagari } from "next/font/google";
+import {
+  Karla,
+  Noto_Sans_Gothic,
+  Oswald,
+  Roboto,
+  Anek_Devanagari,
+} from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 
@@ -44,14 +49,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-
   return (
     <html lang="en">
+      <head>
+        {/* Preload critical images */}
+        <link rel="preload" href="/storr.webp" as="image" />
+        <link rel="preload" href="/pin.webp" as="image" />
+        <link rel="preload" href="/neilhelen.webp" as="image" />
+        <link rel="preload" href="/mocha-grunge.webp" as="image" />
+
+        {/* DNS prefetch for external domains */}
+        <link rel="dns-prefetch" href="//cdn.sanity.io" />
+      </head>
       <body
         className={`${anekDevanagari.variable} ${notoSans.variable} ${oswald.variable} ${roboto.variable} ${karla.variable} antialiased  overflow-x-hidden`}
       >
-          <Header />
+        <Header />
         {children}
       </body>
     </html>
