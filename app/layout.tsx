@@ -52,12 +52,24 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Preload critical images */}
-        <link rel="preload" href="/storr.webp" as="image" />
-        <link rel="preload" href="/pin.webp" as="image" />
-        <link rel="preload" href="/neilhelen.webp" as="image" />
-        <link rel="preload" href="/mocha-grunge.webp" as="image" />
+        <link
+          rel="preload"
+          href="/_next/static/css/88cf756b00de20f8.css"
+          as="style"
+        />
+        <link
+          rel="preload"
+          href="/_next/static/css/5b93419f7e78b9ee.css"
+          as="style"
+        />
+        <link
+          rel="preload"
+          href="/_next/static/css/c127d0b99c32c8d2.css"
+          as="style"
+        />
 
+        <link rel="preload" href="/storr.webp" as="image" />
+        <link rel="preload" href="/neilhelen.webp" as="image" />
         {/* DNS prefetch for external domains */}
         <link rel="dns-prefetch" href="//cdn.sanity.io" />
       </head>
