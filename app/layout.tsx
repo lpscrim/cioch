@@ -51,12 +51,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <link rel="preload" href="/storr.webp" as="image" />
-        <link rel="preload" href="/neilhelen.webp" as="image" />
-        {/* DNS prefetch for external domains */}
-        <link rel="dns-prefetch" href="//cdn.sanity.io" />
-      </head>
       <body
         className={`${anekDevanagari.variable} ${notoSans.variable} ${oswald.variable} ${roboto.variable} ${karla.variable} antialiased  overflow-x-hidden`}
       >
