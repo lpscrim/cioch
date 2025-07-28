@@ -23,9 +23,10 @@ const nextConfig: NextConfig = {
         pathname: "/images/**",
       },
     ],
-
+    formats: ["image/webp", "image/avif"],
+    minimumCacheTTL: 60,
   },
-
+  compress: true,
   typescript: {
     ignoreBuildErrors: true,
   },
