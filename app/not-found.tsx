@@ -20,7 +20,7 @@ export default function NotFound() {
             Sorry, we couldn’t find the page you’re looking for.
           </p>
           <div className="mt-10 flex justify-center">
-            <Link href="#" className="text-lg/7 font-semibold text-text hover:text-secondary">
+            <Link href="/" className="text-lg/7 font-semibold text-text hover:text-secondary">
               <span aria-hidden="true">&larr;</span> Back to home
             </Link>
           </div>
