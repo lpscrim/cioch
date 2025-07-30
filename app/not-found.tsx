@@ -13,8 +13,8 @@ export default function NotFound() {
         />
         <div className="mx-auto max-w-7xl px-4  text-center py-10 lg:px-12 bg-background/80 rounded-md">
           <p className="text-lg/8 font-semibold text-text">404</p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-balance text-text sm:text-7xl">
-            Page not found!
+          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-balance text-text sm:text-5xl">
+            Page not found
           </h1>
           <p className="mt-6 text-lg font-medium text-pretty text-text/70 sm:text-xl/8">
             Sorry, we couldn’t find the page you’re looking for.
