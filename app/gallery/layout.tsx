@@ -23,7 +23,7 @@ export default function AboutLayout({
                 quality={50}
               />
             </div>
-      <div className="min-h-[80vh] pb-15 mt-25 flex flex-col w-[98vw] md:w-[95vw] lg:w-[90vw] xl:w-[80vw] px-0 pt-2 lg:px-6 mx-auto bg-foreground/90 rounded-md overflow-y-auto z-5">
+      <div className="min-h-[80vh] pb-15 mt-25 flex flex-col w-[98vw] md:w-[90vw] lg:w-[80vw] xl:w-[80vw] max-w-[1350px] px-0 lg:px-6 mx-auto bg-foreground/90 rounded-md overflow-y-auto z-5">
         <div className="z-10">  
           {children}
         </div>

@@ -100,7 +100,7 @@ export default function GalleryPage() {
 
   return (
     <div className="min-h-[100vh] flex flex-col">
-      <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center mt-6 mb-10">
+      <h2 className="text-3xl font-bold text-secondary sm:text-4xl text-center mt-6 mb-8">
         Gallery
       </h2>
       {selectedImage && (

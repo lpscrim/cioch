@@ -28,7 +28,7 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
             priority
           />
         </div>
-        <div className="flex justify-between mt-4">
+        <div className="flex justify-between mt-4 xl:hidden">
           <button
             onClick={onPrev}
             className="cursor-pointer px-4 py-2 bg-secondary text-text rounded hover:bg-accent transition-colors"
@@ -44,9 +44,23 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
         </div>
       </div>
 
-      <div className="xl:w-1/4 bg-background/20 rounded-lg p-6">
+      <div className="xl:w-1/4 bg-background/20 rounded-lg p-6 flex flex-col">
         <h3 className="text-xl font-bold text-secondary mb-4">{heading}</h3>
-        <p className="text-text-secondary leading-relaxed">{blog}</p>
+        <p className="text-text-secondary leading-relaxed flex-1">{blog}</p>
+        <div className=" justify-between mt-auto pt-4 hidden xl:flex">
+          <button
+            onClick={onPrev}
+            className="cursor-pointer px-4 py-2 bg-secondary text-text rounded hover:bg-accent transition-colors"
+          >
+            Previous
+          </button>
+          <button
+            onClick={onNext}
+            className="cursor-pointer px-4 py-2 bg-secondary text-text rounded hover:bg-accent transition-colors"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   );
