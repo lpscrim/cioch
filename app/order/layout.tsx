@@ -20,8 +20,8 @@ export default function OrderLayout({
           alt="123"
           src="/brittle.webp"
           fill
-          className="h-full object-cover"
-          quality={100}
+          className="h-full object-cover blur-[2px]"
+          quality={50}
         />
       </div>
 

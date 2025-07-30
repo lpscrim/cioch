@@ -21,8 +21,8 @@ export default function AboutLayout({
           alt="123"
           src="/brittle.webp"
           fill
-          className="h-full object-cover"
-          quality={100}
+          className="h-full object-cover blur-[2px]"
+          quality={50}
         />
       </div>
       <div className="min-h-[80vh] mt-25 flex flex-col w-[90vw] md:w-[85vw] lg:w-[80vw] xl:w-[70vw]  mx-auto overflow-y-auto">

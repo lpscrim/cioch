@@ -1,5 +1,6 @@
 import FooterAlt from "@/components/FooterAlt";
 import "@/styles/gallery.css"
+import Image from "next/image";
 
 export default function AboutLayout({
   children,
@@ -9,10 +10,19 @@ export default function AboutLayout({
   return (
     <section
       id="gallery"
-      className="flex flex-col items-start w-[100vw] min-h-[105%] bg-foreground bg-cover bg-no-repeat bg-fixed relative pb-10"
+      className="flex flex-col items-start w-[100vw] min-h-[105%] relative pb-10"
     >
-      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-transparent bg-fixed pointer-events-none z-0"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/25 bg-fixed pointer-events-none z-0"></div>
+      <div className=" inset-0  -z-10 fixed h-[100lvh]">
+              <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-white/5 to-transparent z-2 bg-fixed h-[100lvh]"></div>
+      
+              <Image
+                alt="123"
+                src="/brittle.webp"
+                fill
+                className="h-full object-cover blur-[2px]"
+                quality={50}
+              />
+            </div>
       <div className="min-h-[80vh] pb-15 mt-25 flex flex-col w-[98vw] md:w-[95vw] lg:w-[90vw] xl:w-[80vw] px-0 pt-2 lg:px-6 mx-auto bg-foreground/90 rounded-md overflow-y-auto z-5">
         <div className="z-10">  
           {children}
