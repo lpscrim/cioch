@@ -105,7 +105,7 @@ export default function GalleryPage() {
       </h2>
       {selectedImage && (
         <ImageViewer
-          selectedImage={urlFor(selectedImage.image).width(1400).height(800).url()}
+          selectedImage={urlFor(selectedImage.image).width(1600).height(900).url()}
           onNext={handleNextImage}
           onPrev={handlePreviousImage}
           heading={selectedImage.heading}
@@ -117,10 +117,10 @@ export default function GalleryPage() {
         {images.map((image, index) => (
           <Image
             key={image._id}
-            src={urlFor(image.image).width(320).height(240).url()}
+            src={urlFor(image.image).width(400).height(300).url()}
             alt={image.alt}
-            width={160}
-            height={120}
+            width={200}
+            height={150}
             className="border-1 border-solid border-secondary w-40 cursor-pointer hover:border-accent transition-colors rounded-md object-cover"
             onClick={() => handleOnClicked(image, index)}
           />

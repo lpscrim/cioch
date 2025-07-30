@@ -19,7 +19,7 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
   return (
     <div className="flex flex-col xl:flex-row gap-6 mb-8 px-4">
       <div className="xl:w-3/4 relative">
-        <div className="relative aspect-video">
+        <div className="relative aspect-4/3">
           <Image
             src={selectedImage}
             alt={heading}
