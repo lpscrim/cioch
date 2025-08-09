@@ -903,7 +903,7 @@ export const products = [
     ],
     brief: "The best Children's waterproofs available.",
     description:
-      "We think that these are the best children’s waterproofs around. Not cheap, but made with exactly the same fabrics as the adults’ gear - they will keep your child warm and dry in the worst weather! Ours have passed down four children over ten years and still going strong. And they are machine washable too!. <br/><br/> Optional reinforced shoulders and sleeves extra - please enquire before ordering.",
+      "We think that these are the best children’s waterproofs around. Not cheap, but made with exactly the same fabrics as the adults’ gear - they will keep your child warm and dry in the worst weather! Ours have passed down four children over ten years and still going strong. And they are machine washable too!. </br></br> Optional reinforced shoulders and sleeves extra - please enquire before ordering.",
     colors: [
      {
         id: "forest-green",
