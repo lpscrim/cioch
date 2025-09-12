@@ -16,10 +16,10 @@ export default function Home() {
         <Image
           alt="background"
           src="/storr.webp"
-          layout="fill"
-          objectFit="cover"
+          fill
           quality={100}
           priority
+          className="object-cover"
         />
       </div>
       <div className="relative z-10 h-[100svh] overflow-hidden">
