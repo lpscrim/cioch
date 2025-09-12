@@ -35,7 +35,7 @@ export default function ShopNav() {
         <select
           value={tabs.find(tab => pathname === tab.href)?.name ?? tabs[0].name}
           aria-label="Select a tab"
-          className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-accent/80 py-2 pr-8 pl-3 text-lg font-semibold text-text-secondary"
+          className="col-start-1 row-start-1 w-full appearance-none outline-none rounded-md bg-accent/80 py-2 pr-8 pl-3 text-lg font-semibold text-text-secondary"
           onChange={e => {
             const selectedTab = tabs.find(tab => tab.name === e.target.value);
             if (selectedTab) {
