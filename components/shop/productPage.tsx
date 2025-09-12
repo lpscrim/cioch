@@ -110,7 +110,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                 />
               </div>
               <div className="mt-6">
-                <h3 className="sr-only">Description</h3>
+                <h3 className="text-lg font-medium text-secondary pb-2">Description</h3>
 
                 <p className="space-y-6 text-lg sm:text-xl text-text-secondary">
                   {product.description}
@@ -138,7 +138,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                             aria-label={color.name}
                             className={classNames(
                               color.classes,
-                              "size-7 sm:size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-text-secondary/70 checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
+                              "size-6 sm:size-7 appearance-none rounded-full forced-color-adjust-none checked:outline-text-secondary/70 checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
                             )}
                             onChange={() => setSelectedColor(color)}
                           />
@@ -166,7 +166,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                             name="color"
                             type="radio"
                             aria-label={"black"}
-                            className="bg-black checked:bg-black text-text-secondary/70 size-8 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
+                            className="bg-black checked:bg-black text-text-secondary/70 size-6 sm:size-7 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
                           />
                         </div>
                       </div>

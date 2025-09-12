@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function FooterAlt() {
   return (
-    <footer className=" mx-auto max-w-7xl overflow-hidden px-6 pt-20 lg:px-8 z-9999">
+    <footer className=" mx-auto max-w-7xl overflow-hidden px-6 pb-5 lg:px-8 z-9999">
       <div className="mt-16 border-t border-text-secondary pt-8">
         <p className="text-center text-sm leading-6 text-text">
           &copy; 2003 Cioch Outdoor Clothing, All rights reserved.
