@@ -18,7 +18,7 @@ export default function Home() {
           src="/storr.webp"
           layout="fill"
           objectFit="cover"
-          quality={85}
+          quality={100}
           priority
         />
       </div>

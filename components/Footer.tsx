@@ -44,7 +44,7 @@ export default function Footer() {
             </PopoverButton>
             <PopoverPanel
               transition
-              className="absolute bottom-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-md bg-background/95 ring-1 shadow-lg ring-text-secondary/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
+              className="absolute bottom-full -left-8 z-10 mt-3 w-screen max-w-[20rem] overflow-hidden rounded-md bg-transparent ring-1 shadow-lg ring-text-secondary/5 transition data-closed:translate-y-1 data-closed:opacity-0 data-enter:duration-200 data-enter:ease-out data-leave:duration-150 data-leave:ease-in"
             >
               <div className="p-4">
                 {categories.map((category) => (
