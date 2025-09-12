@@ -138,7 +138,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                             aria-label={color.name}
                             className={classNames(
                               color.classes,
-                              "size-5 sm:size-7 appearance-none rounded-full forced-color-adjust-none checked:outline-text-secondary/70 checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
+                              "size-5.5 sm:size-7 appearance-none rounded-full forced-color-adjust-none checked:outline-text-secondary/70 checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
                             )}
                             onChange={() => setSelectedColor(color)}
                           />
