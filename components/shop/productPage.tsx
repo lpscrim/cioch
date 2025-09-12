@@ -166,7 +166,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                             name="color"
                             type="radio"
                             aria-label={"black"}
-                            className="bg-black checked:bg-black text-text-secondary/70 size-5 sm:size-7 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
+                            className="bg-black checked:bg-black text-text-secondary/70 size-5.5 sm:size-7 appearance-none rounded-full forced-color-adjust-none checked:outline-2 checked:outline-offset-2 focus-visible:outline-3 focus-visible:outline-offset-3"
                           />
                         </div>
                       </div>
