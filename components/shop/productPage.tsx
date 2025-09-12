@@ -220,11 +220,11 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                           <span className="ml-6 flex items-center">
                             <PlusIcon
                               aria-hidden="true"
-                              className="block size-6 text-text-secondary group-hover:text-text-secondary group-data-open:hidden"
+                              className="block size-5 text-text-secondary group-hover:text-text-secondary group-data-open:hidden"
                             />
                             <MinusIcon
                               aria-hidden="true"
-                              className="hidden size-6 text-secondary group-hover:text-secondary group-data-open:block"
+                              className="hidden size-5 text-secondary group-hover:text-secondary group-data-open:block"
                             />
                           </span>
                         </DisclosureButton>
@@ -232,7 +232,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                       <DisclosurePanel className="pb-6">
                         <ul
                           role="list"
-                          className="list-disc space-y-1 pl-5 text-base/6 sm:text-lg/6 text-text-secondary marker:text-text"
+                          className="list-disc space-y-1 pl-5 text-base font-medium sm:text-lg/6 text-text-secondary/80 marker:text-text"
                         >
                           {detail.items.map((item, idx) => (
                             <li key={idx} className="pl-2">
