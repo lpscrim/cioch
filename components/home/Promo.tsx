@@ -61,7 +61,7 @@ export default function Promo() {
             <div className="absolute inset-0 overflow-hidden">
               <Image
                 alt=""
-                src="/pin.webp"
+                src="/quirang2.webp"
                 width={500}
                 height={1000}
                 quality={100}
