@@ -13,7 +13,7 @@ export default function OrderLayout({
       id="order"
       className="flex items-start w-[100vw] min-h-[105%] relative"
     >
-      <div className=" inset-0  -z-10 fixed h-[100lvh]">
+      <div className=" inset-0 -z-10 fixed h-[100lvh]">
         <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-white/5 to-transparent z-2 bg-fixed h-[100lvh]"></div>
 
         <Image
@@ -25,7 +25,7 @@ export default function OrderLayout({
         />
       </div>
 
-      <div className="min-h-[80vh] mb-5 pb-10 mt-25 flex flex-col w-[100vw] px-6 pt-0 sm:px-12 mx-auto overflow-y-auto ">
+      <div className="min-h-[80vh] mt-20 sm:mt-25 flex flex-col w-[95vw] md:w-[85vw] lg:w-[80vw] xl:w-[70vw]  mx-auto overflow-y-auto">
         <div className="z-10">
           <OrderNav />
           {children}

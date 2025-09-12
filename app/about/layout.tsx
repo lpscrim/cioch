@@ -25,7 +25,7 @@ export default function AboutLayout({
           quality={50}
         />
       </div>
-      <div className="min-h-[80vh] mt-25 flex flex-col w-[90vw] md:w-[85vw] lg:w-[80vw] xl:w-[70vw]  mx-auto overflow-y-auto">
+      <div className="min-h-[80vh] mt-20 sm:mt-25 flex flex-col w-[95vw] md:w-[85vw] lg:w-[80vw] xl:w-[70vw]  mx-auto overflow-y-auto">
         <div className="z-10">
           <AboutNav />
           <div className="bg-text/90 rounded-xl pt-2 pb-10 px-6 sm:px-12">

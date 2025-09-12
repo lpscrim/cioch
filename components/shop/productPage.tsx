@@ -28,7 +28,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     <div className="mx-auto  lg:max-w-7xl z-999">
       <ProductNav />
       <div className="bg-text rounded-md overflow-hidden shadow-lg">
-        <div className="mx-auto max-w-2xl px-4 sm:px-6 pb-12 pt-6 lg:max-w-7xl lg:px-12">
+        <div className="mx-auto max-w-2xl px-4 sm:px-6 pb-12 pt-4 sm:pt-6 lg:max-w-7xl lg:px-12">
           <Link
             className={classNames(
               product.category === "kids" ? "invisible" : "",
