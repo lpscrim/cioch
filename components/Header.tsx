@@ -174,7 +174,7 @@ export default function Header() {
           </Link>
 
           <ContactButton>
-            <EnvelopeIcon className="size-6 pb-1 mt-0.5 " />
+            <EnvelopeIcon className="size-6 mt-0.5  " />
           </ContactButton>
         </PopoverGroup>
       </nav>
