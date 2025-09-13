@@ -9,7 +9,7 @@ export default function Waterproof() {
     <div className="rounded-md z-999">
       <div className="mx-auto lg:max-w-7xl">
         <div className="relative py-10 text-center bg-[url('/pic.webp')] bg-cover bg-center bg-no-repeat rounded-lg min-h-[22vh]">
-          <div className="absolute inset-0 bg-black/45 rounded-lg"></div>
+          <div className="absolute inset-0 bg-black/50 rounded-lg"></div>
             <div className="relative z-10">  
               <h1 className="text-4xl font-bold tracking-tight text-text">
                 Waterproofs
