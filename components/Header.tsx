@@ -18,9 +18,9 @@ import {
   PopoverGroup,
   PopoverPanel,
 } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 import { products } from "@/products/productList";
+import NavIcon from "./Nav/NavIcon";
 
 const categories = [
   {
@@ -49,9 +49,14 @@ export default function Header() {
     if (pathname?.startsWith('/studio')) {
     return null;
   }
+
+  const mobileMenuToggle = () => {
+    setMobileMenuOpen(!mobileMenuOpen);
+  }
   
   return (
-    <header className="absolute  top-0 left-0 w-[100lvw] z-100 bg-background/0 text-text brightness-120">
+    <header className="absolute top-0 left-0 z-200 w-[100lvw] bg-background/0 text-text brightness-120">
+      
       <nav
         aria-label="Global"
         className="mx-auto flex max-w-[90rem] items-center justify-between px-6 py-6 lg:px-8"
@@ -74,14 +79,14 @@ export default function Header() {
             </h2>
           </Link>
         </div>
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden z-[9999]">
           <button
             type="button"
-            onClick={() => setMobileMenuOpen(true)}
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 "
+            onClick={() => mobileMenuToggle()}
+            className="inline-flex items-center justify-center rounded-md cursor-pointer -mr-5"
           >
-            <span className="sr-only">Open main menu</span>
-            <Bars3Icon aria-hidden="true" className="size-6 cursor-pointer" />
+            <NavIcon open={mobileMenuOpen} color="text" hoverColor="secondary" />
+            <span className="sr-only">toggle display menu</span>
           </button>
         </div>
         {/* Desktop */}
@@ -179,8 +184,8 @@ export default function Header() {
         onClose={setMobileMenuOpen}
         className="lg:hidden"
       >
-        <div className="fixed inset-0 z-100" />
-        <DialogPanel className="fixed inset-y-0 right-0 z-200 w-full overflow-y-auto bg-background text-text px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
+        <div className="fixed inset-0 z-50 pointer-events-none" />
+        <DialogPanel className="fixed inset-y-0 right-0 z-150 w-full overflow-y-auto bg-background text-text px-6 py-6 sm:max-w-[20rem] sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <Link href="/" className=" p-1.5" onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">Cioch CLothing</span>
@@ -196,13 +201,9 @@ export default function Header() {
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
-              className="-m-2.5 rounded-md p-2.5 "
+              className=" rounded-md px-5.5 py-5 -mr-3 z-9999 cursor-pointer"
             >
               <span className="sr-only">Close menu</span>
-              <XMarkIcon
-                aria-hidden="true"
-                className="size-6 mt-1 cursor-pointer"
-              />
             </button>
           </div>
           <div className="mt-6 flow-root">
