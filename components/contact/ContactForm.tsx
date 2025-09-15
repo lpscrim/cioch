@@ -267,7 +267,7 @@ export default function Contact({
               className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             ></div>
             <div className="absolute right-10">
-              <button onClick={handleClick} className="rounded-md py-1 px-2 bg-foreground/80 text-text-secondary hover:text-secondary cursor-pointer hover:brightness-110 transition-all">
+              <button onClick={handleClick} className="rounded-md py-1 px-3 bg-foreground/80 hover:bg-foreground text-text-secondary hover:text-secondary cursor-pointer  transition-all">
                 X
               </button>
             </div>
