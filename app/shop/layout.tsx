@@ -10,7 +10,7 @@ export default function ShopLayout({
   return (
     <section
       id="shop"
-      className="flex items-start w-[100vw] min-h-[105%] bg-foreground relative"
+      className="flex items-start w-[100lvw] min-h-[105%] bg-foreground relative"
     >
       <div className="absolute inset-0 bg-gradient-to-b from-black/35 via-transparent to-transparent bg-fixed pointer-events-none z-0"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30 bg-fixed pointer-events-none z-0"></div>
