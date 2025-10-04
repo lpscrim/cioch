@@ -30,48 +30,24 @@ const collections = [
 export default function Promo() {
   return (
     <section
-       id="promo"
-       className="relative bg-foreground pb-5 xl:min-h-[105vh]">
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 hidden sm:flex sm:flex-col"
-      >
-        <div className="relative w-full flex-1 bg-background">
-          <div className="absolute inset-0 overflow-hidden">
-            <Image
-              alt=""
-              src="/quirang2.webp"
-              width={1000}
-              height={500}
-              quality={100}
-              className="size-full object-cover"
-            />
-          </div>
-          <div className="absolute inset-0 bg-background opacity-50 " />
-        </div>
-        <div className="h-32 w-full bg-foreground md:h-40 lg:h-45" />
+      id="promo"
+      className="relative bg-foreground pb-5 xl:min-h-[105vh] overflow-hidden"
+    >
+      {/* Background image for the whole section */}
+      <div className="absolute inset-0 w-full h-full z-0">
+        <Image
+          alt=""
+          src="/quirang2.webp"
+          fill
+          quality={100}
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-background opacity-45" />
       </div>
 
-      <div className="relative mx-auto max-w-3xl px-4 pb-94 text-center sm:px-6 sm:pb-0 lg:px-8">
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 flex flex-col sm:hidden"
-        >
-          <div className="relative w-full flex-1 bg-background">
-            <div className="absolute inset-0 overflow-hidden">
-              <Image
-                alt=""
-                src="/quirang2.webp"
-                width={500}
-                height={1000}
-                quality={100}
-                className="size-full object-cover"
-              />
-            </div>
-            <div className="absolute inset-0 bg-background opacity-45" />
-          </div>
-   
-        </div>
+      {/* Content above the background */}
+      <div className="relative z-10 mx-auto max-w-3xl px-4 pb-0 xl:pb-10 text-center sm:px-6 lg:px-8">
         <div className="relative py-26 sm:py-38">
           <h2 className="text-4xl font-bold tracking-tight text-text sm:text-5xl">
             Explore Our Collection
@@ -81,20 +57,20 @@ export default function Promo() {
 
       <div
         aria-labelledby="collection-heading"
-        className="relative -mt-96 sm:mt-0"
+        className="relative z-10 -mt-24 sm:mt-0"
       >
         <h2 id="collection-heading" className="sr-only">
           Collections
         </h2>
-        <div className="mx-auto grid max-w-md grid-cols-1 gap-y-6 px-8 sm:max-w-7xl sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 sm:px-6 lg:gap-x-8 lg:px-8">
+        <div className="mx-auto grid max-w-md grid-cols-1 gap-y-6 px-8 sm:max-w-7xl sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 sm:px-6 lg:gap-x-8">
           {collections.map((collection) => (
             <div
               key={collection.name}
-              className="group relative h-65 rounded-lg bg-text shadow-xl sm:aspect-4/5 sm:h-auto "
+              className="group relative h-65 rounded-lg bg-text shadow-xl sm:aspect-4/5 sm:h-auto"
             >
               <div
                 aria-hidden="true"
-                className="absolute inset-0 overflow-hidden rounded-lg "
+                className="absolute inset-0 overflow-hidden rounded-lg"
               >
                 <div className="absolute inset-0 overflow-hidden group-hover:opacity-75">
                   <Image
@@ -105,7 +81,7 @@ export default function Promo() {
                     className="size-full object-cover px-20 sm:px-8"
                   />
                 </div>
-                <div className="absolute inset-0 bg-linear-to-b from-transparent to-black opacity-50" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-50" />
               </div>
               <div className="absolute inset-0 flex items-end rounded-lg p-6">
                 <div>
