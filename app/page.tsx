@@ -31,7 +31,7 @@ export default function Home() {
         <Promo />
         <PerfectFit />
         <div className="bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat w-full h-[105%]">
-          <div className="w-full h-[105%] backdrop-blur-[0px] backdrop-brightness-75">
+          <div className="w-full h-[105%] backdrop-blur-[0px] backdrop-brightness-80">
             <Recommendations />
             <Footer />
           </div>
