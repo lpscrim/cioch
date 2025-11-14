@@ -19,7 +19,7 @@ export default function AboutLayout({
                 alt="123"
                 src="/brittle.webp"
                 fill
-                className="h-full object-cover blur-[2px]"
+                className="h-full object-cover blur-[3px]"
                 quality={80}
               />
             </div>
