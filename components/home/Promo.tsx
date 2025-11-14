@@ -66,13 +66,13 @@ export default function Promo() {
           {collections.map((collection) => (
             <div
               key={collection.name}
-              className="group relative h-65 rounded-lg bg-text shadow-xl sm:aspect-4/5 sm:h-auto"
+              className="group relative h-65 rounded-lg bg-text shadow hover:brightness-115 hover:shadow-xl active:translate-y-1 active:shadow-md active:scale-99 duration-300 transition-all sm:aspect-4/5 sm:h-auto"
             >
               <div
                 aria-hidden="true"
                 className="absolute inset-0 overflow-hidden rounded-lg"
               >
-                <div className="absolute inset-0 overflow-hidden group-hover:opacity-75">
+                <div className="absolute inset-0 overflow-hidden ">
                   <Image
                     alt={collection.imageAlt}
                     src={collection.imageSrc}
@@ -85,10 +85,10 @@ export default function Promo() {
               </div>
               <div className="absolute inset-0 flex items-end rounded-lg p-6">
                 <div>
-                  <p aria-hidden="true" className="text-sm text-text">
+                  <p aria-hidden="true" className="text-md lg:text-lg text-text">
                     See all
                   </p>
-                  <h3 className="mt-1 font-semibold text-text">
+                  <h3 className="mt-1 font-semibold text-lg lg:text-xl text-text">
                     <a href={collection.href}>
                       <span className="absolute inset-0" />
                       {collection.name} clothing

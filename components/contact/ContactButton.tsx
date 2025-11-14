@@ -3,6 +3,7 @@
 import React from "react";
 import { useState } from "react";
 import Contact from "@/components/contact/ContactForm";
+import Button from "@/components/Button";
 
 export default function ContactButton({
   children,
@@ -13,12 +14,11 @@ export default function ContactButton({
 
   return (
     <div className="z-999">
-      <button
+      <Button
         onClick={() => setOpen(true)}
-        className="inline-flex  text-text cursor-pointer hover:text-secondary transition-all"
       >
         {children}
-      </button>
+      </Button>
 
       <Contact open={open} setOpen={setOpen} />
     </div>
