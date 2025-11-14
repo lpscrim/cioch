@@ -30,20 +30,8 @@ export default function Home() {
         <Intro />
         <Promo />
         <PerfectFit />
-        <div className="relative">
-          <div className="inset-0 -z-10 fixed h-[100svh] w-[100lvw] overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-black/14 via-transparent to-black/20 z-2"></div>
-            <Image
-              alt="Lagan background"
-              src="/lagan.webp"
-              fill
-              quality={100}
-              className="object-cover"
-            />
-          </div>
-          
-          {/* Content overlay */}
-          <div className="relative z-10">
+        <div className="bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat w-full h-[105%]">
+          <div className="w-full h-[105%] backdrop-blur-[0px] backdrop-brightness-82">
             <Recommendations />
             <Footer />
           </div>

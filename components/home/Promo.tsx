@@ -33,7 +33,6 @@ export default function Promo() {
       id="promo"
       className="relative bg-foreground pb-20 xl:min-h-[105vh] overflow-hidden"
     >
-      {/* Background image for the whole section */}
       <div className="absolute inset-0 w-full h-full z-0">
         <Image
           alt=""
@@ -43,10 +42,9 @@ export default function Promo() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-background opacity-45" />
+        <div className="absolute inset-0 bg-background opacity-38" />
       </div>
 
-      {/* Content above the background */}
       <div className="relative z-10 mx-auto max-w-3xl px-4 pb-24 sm:pb-0 xl:pb-10 text-center sm:px-6 lg:px-8">
         <div className="relative py-26 sm:py-38">
           <h2 className="text-4xl font-bold tracking-tight text-text sm:text-5xl">
