@@ -16,7 +16,7 @@ export default function ProductCard({
   return (
     <div
       key={id}
-      className="group pt-4 relative flex flex-col overflow-hidden rounded-lg border border-text bg-text z-999 max-w-[450px] w-full"
+      className="group pt-4 relative flex flex-col overflow-hidden rounded-lg border hadow hover:brightness-115 hover:shadow-xl active:translate-y-1 active:shadow-md active:scale-99 duration-200 transition-all border-text bg-text z-999 max-w-[450px] w-full"
     >
       <Link href={`/shop/${category}/${id}`}>
         <Image
@@ -24,7 +24,7 @@ export default function ProductCard({
           src={images[0]?.src || "/placeholder.jpg"}
           width={500}
           height={700}
-          className="px-4 mx-auto w-[90%] bg-text object-cover group-hover:opacity-75 sm:aspect-[3/2] sm:h-96 transition-all"
+          className="px-4 mx-auto w-[90%] bg-text object-cover sm:aspect-[3/2] sm:h-96 transition-all"
         />
         <div className="flex flex-1 flex-col space-y-2 p-4">
           <h3 className="text-lg font-medium text-text-secondary">{name}</h3>

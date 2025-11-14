@@ -66,7 +66,7 @@ export default function Promo() {
           {collections.map((collection) => (
             <div
               key={collection.name}
-              className="group relative h-65 rounded-lg bg-text shadow hover:brightness-115 hover:shadow-xl active:translate-y-1 active:shadow-md active:scale-99 duration-300 transition-all sm:aspect-4/5 sm:h-auto"
+              className="group relative h-65 rounded-lg bg-text shadow hover:brightness-115 hover:shadow-xl active:translate-y-1 active:shadow-md active:scale-99 duration-200 transition-all sm:aspect-4/5 sm:h-auto"
             >
               <div
                 aria-hidden="true"
