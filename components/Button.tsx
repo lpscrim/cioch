@@ -1,6 +1,7 @@
 export default function Button({
   children,
   onClick,
+  type,
 }: {
   children: React.ReactNode;
   onClick?: () => void;
@@ -8,8 +9,9 @@ export default function Button({
 }) {
   return (
     <button
-      className={`rounded  text-text  hover:text-secondary font-semibold cursor-pointer shadow hover:brightness-115 hover:shadow-xl active:translate-y-1 active:shadow-md active:scale-98 duration-150 transition-all`}
+      className={`mx-auto flex font-semibold cursor-pointer shadow hover:brightness-115 hover:shadow-xl active:translate-y-1 active:shadow-md active:scale-98 duration-150 transition-all`}
       onClick={onClick}
+      type={type}
     >
       {children}
     </button>

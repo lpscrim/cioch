@@ -1,4 +1,5 @@
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
+import Button from "../Button";
 
 import {
   Dialog,
@@ -256,7 +257,7 @@ export default function Contact({
         className="fixed inset-0 bg-text-secondary/65 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"
       />
 
-      <div className="fixed inset-0 z-10 w-[100dvw] overflow-y-auto">
+      <div className="fixed inset-0 z-10 w-[100lvw] overflow-y-auto">
         <div className="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
           <DialogPanel
             transition
@@ -267,9 +268,11 @@ export default function Contact({
               className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
             ></div>
             <div className="absolute right-10">
-              <button onClick={handleClick} className="rounded-md py-1 px-3 bg-foreground/80 hover:bg-foreground text-text-secondary hover:text-secondary cursor-pointer  transition-all">
+              <Button onClick={handleClick} >
+                <p className="rounded-md py-1 px-3 bg-text-secondary/30 hover:bg-text-secondary/30 text-text-secondary hover:text-secondary cursor-pointer  transition-all">
                 X
-              </button>
+                </p>
+              </Button>
             </div>
             <div className="mx-auto max-w-2xl text-center">
               <DialogTitle className="text-4xl font-semibold tracking-tight text-balance text-text-secondary sm:text-5xl">
@@ -403,20 +406,21 @@ export default function Contact({
                     <textarea
                       id="message"
                       name="message"
-                      rows={4}
+                      rows={3}
                       className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent"
                       defaultValue={""}
                     />
                   </div>
                 </div>
               </div>
-              <div className="mt-10">
-                <button
+              <div className="mt-10 items-center">
+                <Button
                   type="submit"
-                  className="block w-full rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs hover:bg-accent focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all"
                 >
+                  <p className="w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all">
                   Let &#39; s talk
-                </button>
+                  </p>
+                </Button>
               </div>
             </form>
           </DialogPanel>
