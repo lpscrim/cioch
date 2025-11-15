@@ -262,10 +262,19 @@ export default function Contact({
     const formData = new FormData(form);
     
     try {
+      const formParams = new URLSearchParams();
+      formData.forEach((value, key) => {
+        if (typeof value === 'string') {
+          formParams.append(key, value);
+        } else if (value instanceof File) {
+          formParams.append(key, value.name);
+        }
+      });
+
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData as any).toString(),
+        body: formParams.toString(),
       });
 
       if (response.ok) {
