@@ -38,7 +38,7 @@ const categories = [
   {
     name: "Kids",
     description: "See selection of kids clothing",
-    href: "/shop/kids/kids",
+    href: "/shop/kids",
   },
 ];
 

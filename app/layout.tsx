@@ -35,8 +35,31 @@ const anekDevanagari = Anek_Devanagari({
 });
 
 export const metadata: Metadata = {
-  title: "Cioch Outdoor Clothing",
-  description: "Handmade outdoor clothing for the Scottish Highlands",
+  title: 'Cioch Outdoor Clothing - Handmade Waterproof & Windproof Clothing',
+  description: 'Premium handmade outdoor clothing from the Isle of Skye. Waterproof jackets, windproof fleece, and custom-fit outdoor gear for all adventures.',
+  keywords: 'outdoor clothing, waterproof jackets, windproof fleece, Isle of Skye, handmade clothing, custom fit, Scottish outdoor gear',
+  authors: [
+    { name: 'Cioch Outdoor Clothing' },
+    { name: 'Lewis Scrimgeour', url: 'https://lewisscrimgeour.com' }
+  ],
+  creator: 'Lewis Scrimgeour',
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
+  openGraph: {
+    title: 'Cioch Outdoor Clothing - Handmade Waterproof & Windproof Clothing',
+    description: 'Premium handmade outdoor clothing from the Isle of Skye',
+    url: 'https://cioch-direct.co.uk',
+    siteName: 'Cioch Outdoor Clothing',
+    locale: 'en_GB',
+    type: 'website',
+  },
+
 };
 
 export default function RootLayout({
