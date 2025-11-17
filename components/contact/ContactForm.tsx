@@ -245,7 +245,6 @@ export default function Contact({
   open: boolean;
   setOpen: (value: boolean) => void;
 }) {
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
 
   const handleClose = () => {
@@ -253,7 +252,8 @@ export default function Contact({
     setSubmitMessage("");
   };
 
-  {/*const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  {
+    /*const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -292,7 +292,8 @@ export default function Contact({
     } finally {
       setIsSubmitting(false);
     }
-  }; */}
+  }; */
+  }
 
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-9999">
@@ -362,7 +363,6 @@ export default function Contact({
                       type="text"
                       required
                       autoComplete="given-name"
-                      disabled={isSubmitting}
                       className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
@@ -382,7 +382,6 @@ export default function Contact({
                       type="text"
                       required
                       autoComplete="family-name"
-                      disabled={isSubmitting}
                       className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
@@ -401,7 +400,6 @@ export default function Contact({
                       name="company"
                       type="text"
                       autoComplete="organization"
-                      disabled={isSubmitting}
                       className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
@@ -421,7 +419,6 @@ export default function Contact({
                       type="email"
                       required
                       autoComplete="email"
-                      disabled={isSubmitting}
                       className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
@@ -442,7 +439,6 @@ export default function Contact({
                           name="country"
                           autoComplete="country"
                           aria-label="Country"
-                          disabled={isSubmitting}
                           className="col-start-1 row-start-1 w-full appearance-none rounded-md py-2 pr-7 pl-3.5 text-base text-gray-500 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent sm:text-sm/6 disabled:opacity-50"
                           defaultValue="UK"
                         >
@@ -460,7 +456,6 @@ export default function Contact({
                         name="phone-number"
                         type="text"
                         placeholder="07123456789"
-                        disabled={isSubmitting}
                         className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-text-secondary placeholder:text-text-secondary/50 focus:outline-none sm:text-sm/6 disabled:opacity-50"
                       />
                     </div>
@@ -480,7 +475,6 @@ export default function Contact({
                       name="message"
                       rows={3}
                       required
-                      disabled={isSubmitting}
                       className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
@@ -490,15 +484,10 @@ export default function Contact({
               <div className="mt-10 items-center">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
-                  className={`w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all ${
-                    isSubmitting
-                      ? "opacity-50 cursor-not-allowed"
-                      : "hover:brightness-110"
-                  }`}
-                >
-                  {isSubmitting ? "Sending..." : "Send"}
-                </button>
+                  className={`w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all
+                  
+                `}
+                ></button>
               </div>
             </form>
           </DialogPanel>
