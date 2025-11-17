@@ -253,7 +253,7 @@ export default function Contact({
     setSubmitMessage("");
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  {/*const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
 
@@ -292,7 +292,7 @@ export default function Contact({
     } finally {
       setIsSubmitting(false);
     }
-  };
+  }; */}
 
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-9999">
@@ -342,7 +342,7 @@ export default function Contact({
               name="contact"
               method="POST"
               data-netlify="true"
-              onSubmit={handleSubmit}
+              /*onSubmit={handleSubmit}*/
               className="mx-auto mt-14 max-w-6xl sm:mt-16"
             >
               <input type="hidden" name="form-name" value="contact" />
