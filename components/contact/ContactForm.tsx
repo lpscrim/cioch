@@ -321,7 +321,7 @@ export default function Contact({
             </div>
 
             {submitMessage && (
-              <div className={`mx-auto mt-4 max-w-2xl text-center p-4 rounded-md ${
+              <div className={`mx-auto mt-2 max-w-2xl text-center p-2 rounded-md ${
                 submitMessage.includes('Thank you') 
                   ? 'bg-green-100 text-green-800' 
                   : 'bg-red-100 text-red-800'
