@@ -21,7 +21,7 @@ export default function OrderLayout({
           src="/brittle.webp"
           fill
           className="object-cover blur-[1px]"
-          quality={80}
+          quality={75}
         />
       </div>
 
