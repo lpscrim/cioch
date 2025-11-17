@@ -1,11 +1,13 @@
-import Recommendations from "@/components/home/Recommendations";
+import { lazy, Suspense } from "react";
 import Hero from "@/components/home/Hero";
-import Intro from "@/components/home/Intro";
-import PerfectFit from "@/components/home/PerfectFit";
-import Footer from "@/components/home/FooterHome";
-import Promo from "@/components/home/Promo";
 import "@/styles/home.css";
 import Image from "next/image";
+
+const Intro = lazy(() => import("@/components/home/Intro"));
+const Promo = lazy(() => import("@/components/home/Promo"));
+const PerfectFit = lazy(() => import("@/components/home/PerfectFit"));
+const Recommendations = lazy(() => import("@/components/home/Recommendations"));
+const Footer = lazy(() => import("@/components/home/FooterHome"));
 
 export default function Home() {
   return (
@@ -28,13 +30,23 @@ export default function Home() {
       </div>
 
       <main>
-        <Intro />
-        <Promo />
-        <PerfectFit />
+        <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
+          <Intro />
+        </Suspense>
+        <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
+          <Promo />
+        </Suspense>
+        <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
+          <PerfectFit />
+        </Suspense>
         <div className="bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat w-full h-[100%]">
           <div className="w-full h-[100%] backdrop-blur-[0px] backdrop-brightness-82">
-            <Recommendations />
-            <Footer />
+            <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
+              <Recommendations />
+            </Suspense>
+            <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
+              <Footer />
+            </Suspense>
           </div>
         </div>
       </main>
