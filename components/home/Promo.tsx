@@ -38,7 +38,7 @@ export default function Promo() {
           alt=""
           src="/quirang2.webp"
           fill
-          quality={100}
+          quality={90}
           className="object-cover"
           priority
         />
