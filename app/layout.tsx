@@ -15,18 +15,21 @@ const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
   weight: ["400", "600"],
+  display: 'swap',
 });
 
 const karla = Karla({
   variable: "--font-karla",
   subsets: ["latin"],
   weight: ["400", "600"],
+  display: 'swap',
 });
 
 const anekDevanagari = Anek_Devanagari({
   variable: "--font-anek-devanagari",
   subsets: ["latin"],
   weight: ["400", "600"],
+  display: 'block',
 });
 
 export const metadata: Metadata = {
