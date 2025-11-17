@@ -300,6 +300,7 @@ export default function Contact({
               name="contact"
               method="POST"
               data-netlify="true"
+              action="/?submitted=true" 
               className="mx-auto mt-14 max-w-6xl sm:mt-16"
             >
               <input type="hidden" name="form-name" value="contact" />
