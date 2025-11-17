@@ -255,38 +255,43 @@ export default function Contact({
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-  setIsSubmitting(true);
-  
-  const form = e.currentTarget;
-  const formData = new FormData(form);
-  
-  const formObject = Object.fromEntries(
-  Array.from(formData.entries()).map(([key, value]) => [
-    key, 
-    typeof value === 'string' ? value : value.name
-  ])
-);
-  
-  try {
-    const response = await fetch('/', {
-  method: 'POST',
-  body: new URLSearchParams(formObject),
-});
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    
+    try {
+      const formParams = new URLSearchParams();
+      formData.forEach((value, key) => {
+        if (typeof value === 'string') {
+          formParams.append(key, value);
+        } else if (value instanceof File) {
+          formParams.append(key, value.name);
+        }
+      });
 
-    if (response.ok) {
-      setSubmitMessage('Thank you! Your message has been sent.');
-      form.reset();
-      setTimeout(() => handleClose(), 2000);
-    } else {
-      throw new Error('Form submission failed');
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: formParams.toString(),
+      });
+
+      if (response.ok) {
+        setSubmitMessage('Thank you! Your message has been sent.');
+        form.reset();
+        setTimeout(() => {
+          handleClose();
+        }, 2000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      setSubmitMessage('Sorry, there was an error sending your message. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
-  } catch (error) {
-    setSubmitMessage('Sorry, there was an error sending your message. Please try again.');
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+  };
 
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-9999">
@@ -321,7 +326,7 @@ export default function Contact({
             </div>
 
             {submitMessage && (
-              <div className={`mx-auto mt-2 max-w-2xl text-center p-2 rounded-md ${
+              <div className={`mx-auto mt-4 max-w-2xl text-center p-4 rounded-md ${
                 submitMessage.includes('Thank you') 
                   ? 'bg-green-100 text-green-800' 
                   : 'bg-red-100 text-red-800'
