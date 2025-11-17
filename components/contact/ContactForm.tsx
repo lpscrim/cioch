@@ -261,18 +261,18 @@ export default function Contact({
   const form = e.currentTarget;
   const formData = new FormData(form);
   
-  const params = new URLSearchParams();
-  for (const [key, value] of formData.entries()) {
-    if (typeof value === 'string') {
-      params.append(key, value);
-    }
-  }
+  const formObject = Object.fromEntries(
+  Array.from(formData.entries()).map(([key, value]) => [
+    key, 
+    typeof value === 'string' ? value : value.name
+  ])
+);
   
   try {
     const response = await fetch('/', {
-      method: 'POST',
-      body: params, 
-    });
+  method: 'POST',
+  body: new URLSearchParams(formObject),
+});
 
     if (response.ok) {
       setSubmitMessage('Thank you! Your message has been sent.');
