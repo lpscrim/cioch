@@ -252,49 +252,6 @@ export default function Contact({
     setSubmitMessage("");
   };
 
-  {
-    /*const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-
-    try {
-      const formParams = new URLSearchParams();
-      formData.forEach((value, key) => {
-        if (typeof value === "string") {
-          formParams.append(key, value);
-        } else if (value instanceof File) {
-          formParams.append(key, value.name);
-        }
-      });
-
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: formParams.toString(),
-      });
-
-      if (response.ok) {
-        setSubmitMessage("Thank you! Your message has been sent.");
-        form.reset();
-        setTimeout(() => {
-          handleClose();
-        }, 2000);
-      } else {
-        throw new Error("Form submission failed");
-      }
-    } catch (error) {
-      setSubmitMessage(
-        "Sorry, there was an error sending your message. Please try again."
-      );
-    } finally {
-      setIsSubmitting(false);
-    }
-  }; */
-  }
-
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-9999">
       <DialogBackdrop
@@ -343,7 +300,6 @@ export default function Contact({
               name="contact"
               method="POST"
               data-netlify="true"
-              /*onSubmit={handleSubmit}*/
               className="mx-auto mt-14 max-w-6xl sm:mt-16"
             >
               <input type="hidden" name="form-name" value="contact" />
@@ -363,7 +319,7 @@ export default function Contact({
                       type="text"
                       required
                       autoComplete="given-name"
-                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
+                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent"
                     />
                   </div>
                 </div>
@@ -382,7 +338,7 @@ export default function Contact({
                       type="text"
                       required
                       autoComplete="family-name"
-                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
+                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent"
                     />
                   </div>
                 </div>
@@ -400,7 +356,7 @@ export default function Contact({
                       name="company"
                       type="text"
                       autoComplete="organization"
-                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
+                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent"
                     />
                   </div>
                 </div>
@@ -419,7 +375,7 @@ export default function Contact({
                       type="email"
                       required
                       autoComplete="email"
-                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
+                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent"
                     />
                   </div>
                 </div>
@@ -439,7 +395,7 @@ export default function Contact({
                           name="country"
                           autoComplete="country"
                           aria-label="Country"
-                          className="col-start-1 row-start-1 w-full appearance-none rounded-md py-2 pr-7 pl-3.5 text-base text-gray-500 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent sm:text-sm/6 disabled:opacity-50"
+                          className="col-start-1 row-start-1 w-full appearance-none rounded-md py-2 pr-7 pl-3.5 text-base text-gray-500 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent sm:text-sm/6"
                           defaultValue="UK"
                         >
                           {countryOptions.map((country) => (
@@ -456,7 +412,7 @@ export default function Contact({
                         name="phone-number"
                         type="text"
                         placeholder="07123456789"
-                        className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-text-secondary placeholder:text-text-secondary/50 focus:outline-none sm:text-sm/6 disabled:opacity-50"
+                        className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-text-secondary placeholder:text-text-secondary/50 focus:outline-none sm:text-sm/6"
                       />
                     </div>
                   </div>
@@ -475,7 +431,7 @@ export default function Contact({
                       name="message"
                       rows={3}
                       required
-                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
+                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent"
                     />
                   </div>
                 </div>
