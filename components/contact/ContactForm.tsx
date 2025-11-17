@@ -270,7 +270,7 @@ export default function Contact({
         }
       });
 
-      const response = await fetch("/", {
+      const response = await fetch("/contact.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formParams.toString(),
@@ -342,10 +342,13 @@ export default function Contact({
               name="contact-2"
               method="POST"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
               className="mx-auto mt-14 max-w-6xl sm:mt-16"
             >
               <input type="hidden" name="form-name" value="contact-2" />
+
+              <input type="hidden" name="bot-field" />
 
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
