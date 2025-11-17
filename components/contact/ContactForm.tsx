@@ -1,5 +1,5 @@
-'use client';
-import { useState } from 'react';
+"use client";
+import { useState } from "react";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import Button from "../Button";
 import {
@@ -238,7 +238,6 @@ const countryOptions = [
   "XX",
 ];
 
-
 export default function Contact({
   open,
   setOpen,
@@ -247,47 +246,49 @@ export default function Contact({
   setOpen: (value: boolean) => void;
 }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitMessage, setSubmitMessage] = useState('');
+  const [submitMessage, setSubmitMessage] = useState("");
 
   const handleClose = () => {
     setOpen(false);
-    setSubmitMessage('');
+    setSubmitMessage("");
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     const form = e.currentTarget;
     const formData = new FormData(form);
-    
+
     try {
       const formParams = new URLSearchParams();
       formData.forEach((value, key) => {
-        if (typeof value === 'string') {
+        if (typeof value === "string") {
           formParams.append(key, value);
         } else if (value instanceof File) {
           formParams.append(key, value.name);
         }
       });
 
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: formParams.toString(),
       });
 
       if (response.ok) {
-        setSubmitMessage('Thank you! Your message has been sent.');
+        setSubmitMessage("Thank you! Your message has been sent.");
         form.reset();
         setTimeout(() => {
           handleClose();
         }, 2000);
       } else {
-        throw new Error('Form submission failed');
+        throw new Error("Form submission failed");
       }
     } catch (error) {
-      setSubmitMessage('Sorry, there was an error sending your message. Please try again.');
+      setSubmitMessage(
+        "Sorry, there was an error sending your message. Please try again."
+      );
     } finally {
       setIsSubmitting(false);
     }
@@ -313,24 +314,26 @@ export default function Contact({
                 </p>
               </Button>
             </div>
-            
+
             <div className="mx-auto max-w-2xl text-center">
               <DialogTitle className="text-4xl font-semibold tracking-tight text-balance text-text-secondary sm:text-5xl">
                 Contact us
               </DialogTitle>
               <p className="mt-6 text-lg/8 text-text-secondary">
                 Please send us an email with any questions you have!
-                <br/>
+                <br />
                 Or call us on 01470 572707
               </p>
             </div>
 
             {submitMessage && (
-              <div className={`mx-auto mt-4 max-w-2xl text-center p-4 rounded-md ${
-                submitMessage.includes('Thank you') 
-                  ? 'bg-green-100 text-green-800' 
-                  : 'bg-red-100 text-red-800'
-              }`}>
+              <div
+                className={`mx-auto mt-4 max-w-2xl text-center p-4 rounded-md ${
+                  submitMessage.includes("Thank you")
+                    ? "bg-green-100 text-green-800"
+                    : "bg-red-100 text-red-800"
+                }`}
+              >
                 {submitMessage}
               </div>
             )}
@@ -343,10 +346,13 @@ export default function Contact({
               className="mx-auto mt-14 max-w-6xl sm:mt-16"
             >
               <input type="hidden" name="form-name" value="contact" />
-              
+
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="first-name" className="block text-sm/6 font-semibold text-text-secondary">
+                  <label
+                    htmlFor="first-name"
+                    className="block text-sm/6 font-semibold text-text-secondary"
+                  >
                     First name
                   </label>
                   <div className="mt-2.5">
@@ -361,9 +367,12 @@ export default function Contact({
                     />
                   </div>
                 </div>
-                
+
                 <div>
-                  <label htmlFor="last-name" className="block text-sm/6 font-semibold text-text-secondary">
+                  <label
+                    htmlFor="last-name"
+                    className="block text-sm/6 font-semibold text-text-secondary"
+                  >
                     Last name
                   </label>
                   <div className="mt-2.5">
@@ -380,7 +389,10 @@ export default function Contact({
                 </div>
 
                 <div className="sm:col-span-2">
-                  <label htmlFor="company" className="block text-sm/6 font-semibold text-text-secondary">
+                  <label
+                    htmlFor="company"
+                    className="block text-sm/6 font-semibold text-text-secondary"
+                  >
                     Company
                   </label>
                   <div className="mt-2.5">
@@ -396,7 +408,10 @@ export default function Contact({
                 </div>
 
                 <div className="sm:col-span-2">
-                  <label htmlFor="email" className="block text-sm/6 font-semibold text-text-secondary">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm/6 font-semibold text-text-secondary"
+                  >
                     Email
                   </label>
                   <div className="mt-2.5">
@@ -413,7 +428,10 @@ export default function Contact({
                 </div>
 
                 <div className="sm:col-span-2">
-                  <label htmlFor="phone-number" className="block text-sm/6 font-semibold text-text-secondary">
+                  <label
+                    htmlFor="phone-number"
+                    className="block text-sm/6 font-semibold text-text-secondary"
+                  >
                     Phone number
                   </label>
                   <div className="mt-2.5">
@@ -450,7 +468,10 @@ export default function Contact({
                 </div>
 
                 <div className="sm:col-span-2">
-                  <label htmlFor="message" className="block text-sm/6 font-semibold text-text-secondary">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm/6 font-semibold text-text-secondary"
+                  >
                     Message
                   </label>
                   <div className="mt-2.5">
@@ -466,11 +487,12 @@ export default function Contact({
                 </div>
               </div>
 
-              <div className="mt-10 items-center">
-                <button type="submit">
-                  <p className="w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all">
-                    {isSubmitting ? 'Sending...' : "Send"}
-                  </p>
+              <div className="mt-10 items-center ">
+                <button
+                  type="submit"
+                  className="w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all"
+                >
+                  {isSubmitting ? "Sending..." : "Send"}
                 </button>
               </div>
             </form>
