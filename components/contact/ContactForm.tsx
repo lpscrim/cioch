@@ -487,10 +487,15 @@ export default function Contact({
                 </div>
               </div>
 
-              <div className="mt-10 items-center ">
+              <div className="mt-10 items-center">
                 <button
                   type="submit"
-                  className="w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all"
+                  disabled={isSubmitting}
+                  className={`w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all ${
+                    isSubmitting
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:brightness-110"
+                  }`}
                 >
                   {isSubmitting ? "Sending..." : "Send"}
                 </button>
