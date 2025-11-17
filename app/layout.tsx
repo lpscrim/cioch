@@ -1,6 +1,6 @@
 
 import type { Metadata } from "next";
-import { Karla, Noto_Sans_Gothic, Oswald, Roboto, Anek_Devanagari } from "next/font/google";
+import { Karla, Noto_Sans_Gothic, Roboto, Anek_Devanagari } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
 
@@ -8,30 +8,25 @@ const notoSans = Noto_Sans_Gothic({
   variable: "--font-noto-sans",
   subsets: ["latin"],
   weight: ["400"],
-});
-
-const oswald = Oswald({
-  variable: "--font-oswald",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  display: 'swap',
 });
 
 const roboto = Roboto({
   variable: "--font-roboto",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"],
 });
 
 const karla = Karla({
   variable: "--font-karla",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"],
 });
 
 const anekDevanagari = Anek_Devanagari({
   variable: "--font-anek-devanagari",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"],
 });
 
 export const metadata: Metadata = {
@@ -72,7 +67,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${anekDevanagari.variable} ${notoSans.variable} ${oswald.variable} ${roboto.variable} ${karla.variable} antialiased  overflow-x-hidden`}
+        className={`${anekDevanagari.variable} ${notoSans.variable} ${roboto.variable} ${karla.variable} antialiased  overflow-x-hidden`}
       >
           <Header />
         {children}
