@@ -484,10 +484,10 @@ export default function Contact({
               <div className="mt-10 items-center">
                 <button
                   type="submit"
-                  className={`w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all
-                  
-                `}
-                ></button>
+                  className="w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all hover:brightness-110"
+                >
+                  Send
+                </button>
               </div>
             </form>
           </DialogPanel>
