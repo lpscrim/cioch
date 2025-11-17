@@ -255,43 +255,38 @@ export default function Contact({
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    
-    try {
-      const formParams = new URLSearchParams();
-      formData.forEach((value, key) => {
-        if (typeof value === 'string') {
-          formParams.append(key, value);
-        } else if (value instanceof File) {
-          formParams.append(key, value.name);
-        }
-      });
-
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: formParams.toString(),
-      });
-
-      if (response.ok) {
-        setSubmitMessage('Thank you! Your message has been sent.');
-        form.reset();
-        setTimeout(() => {
-          handleClose();
-        }, 2000);
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
-      setSubmitMessage('Sorry, there was an error sending your message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
+  e.preventDefault();
+  setIsSubmitting(true);
+  
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+  
+  const params = new URLSearchParams();
+  for (const [key, value] of formData.entries()) {
+    if (typeof value === 'string') {
+      params.append(key, value);
     }
-  };
+  }
+  
+  try {
+    const response = await fetch('/', {
+      method: 'POST',
+      body: params, 
+    });
+
+    if (response.ok) {
+      setSubmitMessage('Thank you! Your message has been sent.');
+      form.reset();
+      setTimeout(() => handleClose(), 2000);
+    } else {
+      throw new Error('Form submission failed');
+    }
+  } catch (error) {
+    setSubmitMessage('Sorry, there was an error sending your message. Please try again.');
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-9999">
