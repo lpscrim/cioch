@@ -308,7 +308,7 @@ export default function Contact({
 
               <p className="sr-only">
                 <label>
-                  Don't fill this out if you're human: 
+                  dont if human
                   <input name="bot-field" tabIndex={-1} autoComplete="off" />
                 </label>
               </p>
