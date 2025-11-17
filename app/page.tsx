@@ -17,8 +17,9 @@ export default function Home() {
           alt="background"
           src="/storr.webp"
           fill
-          quality={100}
+          quality={90}
           priority
+          sizes="100vw"
           className="object-cover"
         />
       </div>
