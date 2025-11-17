@@ -38,7 +38,9 @@
 
 
 
-
+html {
+  scrollbar-gutter: stable;
+}
 
 body {
   background: var(--background);
