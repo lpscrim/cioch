@@ -245,11 +245,53 @@ export default function Contact({
   open: boolean;
   setOpen: (value: boolean) => void;
 }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
 
   const handleClose = () => {
     setOpen(false);
     setSubmitMessage("");
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const formParams = new URLSearchParams();
+      formData.forEach((value, key) => {
+        if (typeof value === "string") {
+          formParams.append(key, value);
+        } else if (value instanceof File) {
+          formParams.append(key, value.name);
+        }
+      });
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: formParams.toString(),
+      });
+
+      if (response.ok) {
+        setSubmitMessage("Thank you! Your message has been sent.");
+        form.reset();
+        setTimeout(() => {
+          handleClose();
+        }, 2000);
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      setSubmitMessage(
+        "Sorry, there was an error sending your message. Please try again."
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -297,21 +339,13 @@ export default function Contact({
             )}
 
             <form
-              name="contact-form-25"
+              name="contact-2"
               method="POST"
               data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              action="/?submitted=true" 
+              onSubmit={handleSubmit}
               className="mx-auto mt-14 max-w-6xl sm:mt-16"
             >
-              <input type="hidden" name="form-name" value="contact-form-25" />
-
-              <p className="sr-only">
-                <label>
-                  dont if human
-                  <input name="bot-field" tabIndex={-1} autoComplete="off" />
-                </label>
-              </p>
+              <input type="hidden" name="form-name" value="contact-2" />
 
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
@@ -328,7 +362,8 @@ export default function Contact({
                       type="text"
                       required
                       autoComplete="given-name"
-                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent"
+                      disabled={isSubmitting}
+                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
                 </div>
@@ -347,7 +382,8 @@ export default function Contact({
                       type="text"
                       required
                       autoComplete="family-name"
-                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent"
+                      disabled={isSubmitting}
+                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
                 </div>
@@ -365,7 +401,8 @@ export default function Contact({
                       name="company"
                       type="text"
                       autoComplete="organization"
-                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent"
+                      disabled={isSubmitting}
+                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
                 </div>
@@ -384,7 +421,8 @@ export default function Contact({
                       type="email"
                       required
                       autoComplete="email"
-                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent"
+                      disabled={isSubmitting}
+                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
                 </div>
@@ -404,7 +442,8 @@ export default function Contact({
                           name="country"
                           autoComplete="country"
                           aria-label="Country"
-                          className="col-start-1 row-start-1 w-full appearance-none rounded-md py-2 pr-7 pl-3.5 text-base text-gray-500 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent sm:text-sm/6"
+                          disabled={isSubmitting}
+                          className="col-start-1 row-start-1 w-full appearance-none rounded-md py-2 pr-7 pl-3.5 text-base text-gray-500 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent sm:text-sm/6 disabled:opacity-50"
                           defaultValue="UK"
                         >
                           {countryOptions.map((country) => (
@@ -421,7 +460,8 @@ export default function Contact({
                         name="phone-number"
                         type="text"
                         placeholder="07123456789"
-                        className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-text-secondary placeholder:text-text-secondary/50 focus:outline-none sm:text-sm/6"
+                        disabled={isSubmitting}
+                        className="block min-w-0 grow py-1.5 pr-3 pl-1 text-base text-text-secondary placeholder:text-text-secondary/50 focus:outline-none sm:text-sm/6 disabled:opacity-50"
                       />
                     </div>
                   </div>
@@ -440,7 +480,8 @@ export default function Contact({
                       name="message"
                       rows={3}
                       required
-                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent"
+                      disabled={isSubmitting}
+                      className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
                 </div>
@@ -449,9 +490,14 @@ export default function Contact({
               <div className="mt-10 items-center">
                 <button
                   type="submit"
-                  className="w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all hover:brightness-110"
+                  disabled={isSubmitting}
+                  className={`w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all ${
+                    isSubmitting
+                      ? "opacity-50 cursor-not-allowed"
+                      : "hover:brightness-110"
+                  }`}
                 >
-                  Send
+                  {isSubmitting ? "Sending..." : "Send"}
                 </button>
               </div>
             </form>
