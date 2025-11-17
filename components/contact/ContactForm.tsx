@@ -255,43 +255,36 @@ export default function Contact({
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    const form = e.currentTarget;
-    const formData = new FormData(form);
-    
-    try {
-      const formParams = new URLSearchParams();
-      formData.forEach((value, key) => {
-        if (typeof value === 'string') {
-          formParams.append(key, value);
-        } else if (value instanceof File) {
-          formParams.append(key, value.name);
-        }
-      });
+  e.preventDefault();
+  setIsSubmitting(true);
+  
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+  
+  try {
+    // For Netlify forms, submit to the same page
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData as any).toString(),
+    });
 
-      const response = await fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: formParams.toString(),
-      });
-
-      if (response.ok) {
-        setSubmitMessage('Thank you! Your message has been sent.');
-        form.reset();
-        setTimeout(() => {
-          handleClose();
-        }, 2000);
-      } else {
-        throw new Error('Form submission failed');
-      }
-    } catch (error) {
-      setSubmitMessage('Sorry, there was an error sending your message. Please try again.');
-    } finally {
-      setIsSubmitting(false);
+    if (response.ok) {
+      setSubmitMessage('Thank you! Your message has been sent.');
+      form.reset();
+      setTimeout(() => {
+        handleClose();
+      }, 2000);
+    } else {
+      throw new Error('Form submission failed');
     }
-  };
+  } catch (error) {
+    console.error('Form submission error:', error);
+    setSubmitMessage('Sorry, there was an error sending your message. Please try again.');
+  } finally {
+    setIsSubmitting(false);
+  }
+};
 
   return (
     <Dialog open={open} onClose={setOpen} className="relative z-9999">
