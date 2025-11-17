@@ -300,10 +300,18 @@ export default function Contact({
               name="contact-form-25"
               method="POST"
               data-netlify="true"
+              data-netlify-honeypot="bot-field"
               action="/?submitted=true" 
               className="mx-auto mt-14 max-w-6xl sm:mt-16"
             >
               <input type="hidden" name="form-name" value="contact-form-25" />
+
+              <p className="sr-only">
+                <label>
+                  Don't fill this out if you're human: 
+                  <input name="bot-field" tabIndex={-1} autoComplete="off" />
+                </label>
+              </p>
 
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                 <div>
