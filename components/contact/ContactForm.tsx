@@ -467,8 +467,8 @@ export default function Contact({
               </div>
 
               <div className="mt-10 items-center">
-                <Button type="submit" disabled={isSubmitting}>
-                  <p className="w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all disabled:opacity-50">
+                <Button type="submit">
+                  <p className="w-50 rounded-md bg-secondary px-3.5 py-2.5 text-center text-sm font-semibold text-text shadow-xs focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent cursor-pointer transition-all">
                     {isSubmitting ? 'Sending...' : "Let's talk"}
                   </p>
                 </Button>
