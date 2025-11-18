@@ -99,7 +99,7 @@ export default function Footer() {
           &copy; 2003 Cioch Outdoor Clothing, All rights reserved.
         </p>
         <AnimateMe />
-        <div className="py-6 flex justify-center ">
+        <div className="pt-6 pb-18 flex justify-center ">
           <Link href="/">
             <Image
               src="/main.jpg"
