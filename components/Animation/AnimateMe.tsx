@@ -8,6 +8,7 @@ import {
   text,
   createSpring,
 } from "animejs";
+import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 export default function TextAnimation() {
@@ -122,9 +123,11 @@ export default function TextAnimation() {
         ref={animationRef}
         className="flex flex-row justify-center items-center p-2 text-gray-300 transition-colors duration-300 ease-out"
       > <h3 className="text-xs px-2">website by:</h3>
+      <Link href="https://lewisscrimgeour.com" target="_blank" rel="noopener noreferrer">
         <h2 className="text-center text-sm will-change-transform cursor-pointer">
           Lewis Scrimgeour
         </h2>
+      </Link>
       </article>
     </>
   );
