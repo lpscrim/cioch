@@ -1,5 +1,5 @@
 "use client";
-
+import AnimateMe from "./Animation/AnimateMe";
 import Link from "next/link";
 import {
   Popover,
@@ -88,8 +88,8 @@ export default function Footer() {
           >
             Gallery
           </Link>
-          <ContactButton >
-           <span className="sm:text-lg/6 font-semibold">Contact</span> 
+          <ContactButton>
+            <span className="sm:text-lg/6 font-semibold">Contact</span>
           </ContactButton>
         </PopoverGroup>
       </nav>
@@ -98,7 +98,8 @@ export default function Footer() {
         <p className="text-center text-sm leading-6 text-text">
           &copy; 2003 Cioch Outdoor Clothing, All rights reserved.
         </p>
-        <div className="mt-6 flex justify-center gap-x-12">
+        <AnimateMe />
+        <div className="py-6 flex justify-center ">
           <Link href="/">
             <Image
               src="/main.jpg"
