@@ -6,17 +6,18 @@ import {
   createTimeline,
   stagger,
   text,
+  createSpring,
 } from "animejs";
 import { useEffect, useRef } from "react";
 
 export default function TextAnimation() {
   const animationRef = useRef<HTMLElement>(null);
   const scopeRef = useRef<ReturnType<typeof createScope> | null>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     if (!animationRef.current) return;
 
-    // Create scope after component mounts
     scopeRef.current = createScope({
       root: '#horizontal-split',
   defaults: {
@@ -36,6 +37,8 @@ export default function TextAnimation() {
     },
   });
 
+  const ease = createSpring({ stiffness: 90, damping: 11 });
+
   const rotateAnim = createTimeline({
     autoplay: false,
     defaults: { ease: 'inOutQuad', duration: 400, }
@@ -48,9 +51,31 @@ export default function TextAnimation() {
   scope.add('onLeave', () => {
     animate(rotateAnim, { progress: 0 });
   });
+  scope.add('onClick', () => {
+    createTimeline().add('.char > span', {
+      y: '100%',
+      composition: 'blend',
+      ease,
+    }, stagger(10, { use: 'data-char', from: 'random' }));
+  ;
+  timeoutRef.current = setTimeout(() => {
+          methods.onRevert();
+        }, 1000);
+  });
+  scope.add('onRevert', () => {
+    createTimeline().add('.char > span', {
+      y: '0%',
+      composition: 'blend',
+      ease,
+    }, stagger(10, { use: 'data-char', from: 'random' }));
+  });
+
+  
+
 
   root.addEventListener('pointerenter', /** @type {EventListener} */(methods.onEnter));
   root.addEventListener('pointerleave', /** @type {EventListener} */(methods.onLeave));
+  root.addEventListener('click', /** @type {EventListener} */(methods.onClick));
 
 });
 
@@ -62,6 +87,7 @@ export default function TextAnimation() {
         if (root) {
           root.removeEventListener('pointerenter', scopeRef.current.methods?.onEnter);
           root.removeEventListener('pointerleave', scopeRef.current.methods?.onLeave);
+          root.removeEventListener('click', scopeRef.current.methods?.onClick);
         }
       }
     };
