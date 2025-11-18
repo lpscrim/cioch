@@ -17,14 +17,11 @@ export default function TextAnimation() {
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   
   const handleClick = (e: React.MouseEvent) => {
-    e.preventDefault(); // Prevent immediate navigation
-    
-    // Trigger the animation first
+    e.preventDefault(); 
     if (scopeRef.current?.methods?.onClick) {
       scopeRef.current.methods.onClick();
     }
     
-    // Navigate after delay with target="_blank"
     setTimeout(() => {
       window.open('https://lewisscrimgeour.com', '_blank', 'noopener,noreferrer');
     }, 500);
