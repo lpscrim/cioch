@@ -29,24 +29,21 @@ export default function Home() {
         <Hero />
       </div>
 
-      <main className="relative z-10 bg-white">
-        <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
-          <Intro />
-        </Suspense>
-        <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
-          <Promo />
-        </Suspense>
-        <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
-          <PerfectFit />
-        </Suspense>
-        
-        
-        <div className="relative min-h-[100lvh] overflow-hidden">
-          <div className="absolute inset-0 bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat bg-center">
-            <div className="absolute inset-0 backdrop-blur-[0px] backdrop-brightness-82"></div>
+      <main className="relative z-10 bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat bg-center">
+        <div className="relative backdrop-blur-[0px] backdrop-brightness-82">
+          <div className="bg-white">
+            <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
+              <Intro />
+            </Suspense>
+            <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
+              <Promo />
+            </Suspense>
+            <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
+              <PerfectFit />
+            </Suspense>
           </div>
           
-          <div className="relative z-10">
+          <div className="min-h-[100lvh]">
             <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
               <Recommendations />
             </Suspense>
