@@ -40,12 +40,14 @@ export default function Home() {
           <PerfectFit />
         </Suspense>
         
-        <div className="relative min-h-[100dvh] overflow-hidden">
-          <div className="absolute inset-0 bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat bg-center min-h-[100dvh]">
-            <div className="absolute inset-0 backdrop-blur-[0px] backdrop-brightness-82"></div>
+        <div className="relative overflow-hidden" style={{ minHeight: '100lvh' }}>
+          <div className="absolute inset-0 bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat bg-center" 
+               style={{ minHeight: '100lvh' }}>
+            <div className="absolute inset-0 backdrop-blur-[0px] backdrop-brightness-82" 
+                 style={{ minHeight: '100lvh' }}></div>
           </div>
           
-          <div className="relative z-10 min-h-[100dvh]">
+          <div className="relative z-10 pb-safe-bottom" style={{ minHeight: '100lvh' }}>
             <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
               <Recommendations />
             </Suspense>
