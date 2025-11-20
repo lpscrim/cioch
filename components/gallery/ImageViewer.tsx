@@ -16,10 +16,14 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
   onNext,
   onPrev,
 }) => {
+
+  const handleImageClick = () => {
+    window.open(selectedImage, "_blank");
+  }
   return (
     <div className="flex flex-col xl:flex-row gap-6 mb-8 px-4">
       <div className="xl:w-3/4 relative">
-        <div className="relative aspect-4/3">
+        <div className="relative aspect-4/3 cursor-pointer" onClick={handleImageClick}>
           <Image
             src={selectedImage}
             alt={heading}
