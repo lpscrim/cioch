@@ -41,7 +41,7 @@ export default function Home() {
         </Suspense>
         
         
-        <div className="relative min-h-[100lvh] overflow-hidden">
+        <div className="relative min-h-[100lvh] h-full overflow-hidden">
           <div className="absolute inset-0 bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat bg-center">
             <div className="absolute inset-0 backdrop-blur-[0px] backdrop-brightness-82"></div>
           </div>
