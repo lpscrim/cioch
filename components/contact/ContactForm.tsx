@@ -322,7 +322,9 @@ export default function Contact({
               <p className="mt-6 text-lg/8 text-text-secondary">
                 Please send us an email with any questions you have!
                 <br />
-                Or call us on 01470 572707
+                Or call us on <u>01470 572707</u>
+                <br />
+                All forms sent to <u>info@cioch.co.uk</u>
               </p>
             </div>
 
