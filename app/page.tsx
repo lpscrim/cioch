@@ -30,7 +30,7 @@ export default function Home() {
       </div>
 
       <main className="relative z-10 bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat bg-center">
-        <div className="relative backdrop-blur-[0px] backdrop-brightness-82">
+        <div className="relative backdrop-brightness-82">
           <div className="bg-white">
             <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
               <Intro />
