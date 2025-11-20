@@ -29,7 +29,7 @@ export default function Home() {
         <Hero />
       </div>
 
-      <main>
+      <main className="relative z-10 bg-white">
         <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
           <Intro />
         </Suspense>
@@ -39,8 +39,15 @@ export default function Home() {
         <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
           <PerfectFit />
         </Suspense>
-        <div className="bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat w-full h-[100%]">
-          <div className="w-full h-[100%] backdrop-blur-[0px] backdrop-brightness-82">
+        
+        {/* Bottom section with constrained fixed background */}
+        <div className="relative min-h-[100svh] overflow-hidden">
+          {/* Background that only covers this section */}
+          <div className="absolute inset-0 bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat bg-center">
+            <div className="absolute inset-0 backdrop-blur-[0px] backdrop-brightness-82"></div>
+          </div>
+          
+          <div className="relative z-10">
             <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
               <Recommendations />
             </Suspense>
