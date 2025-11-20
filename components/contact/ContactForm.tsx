@@ -324,7 +324,7 @@ export default function Contact({
                 <br />
                 Or call us on <u>01470 572707</u>
                 <br />
-                All forms sent to <u>info@cioch.co.uk</u>
+                All forms sent to <u>info.cioch@gmail.com</u>
               </p>
             </div>
 
