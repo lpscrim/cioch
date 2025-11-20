@@ -40,9 +40,8 @@ export default function Home() {
           <PerfectFit />
         </Suspense>
         
-        {/* Bottom section with constrained fixed background */}
+        
         <div className="relative min-h-[100svh] overflow-hidden">
-          {/* Background that only covers this section */}
           <div className="absolute inset-0 bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat bg-center">
             <div className="absolute inset-0 backdrop-blur-[0px] backdrop-brightness-82"></div>
           </div>
