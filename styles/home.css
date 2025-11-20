@@ -1,4 +1,3 @@
-
 /* Fonts */
 
 #heroText {
@@ -59,5 +58,40 @@
 
   to {
     opacity: 1;
+  }
+}
+
+/* Mobile-friendly fixed background workaround */
+@supports (-webkit-clip-path: polygon(0 0, 0 10%, 10% 10%)) or (clip-path: polygon(0 0, 0 10%, 10% 10%)) {
+  .mobile-fixed-bg {
+    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0);
+    overflow: hidden;
+  }
+  
+  .mobile-fixed-bg::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/lagan.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: -1;
+  }
+}
+
+/* Fallback for browsers that don't support the workaround */
+@supports not ((-webkit-clip-path: polygon(0 0, 0 10%, 10% 10%)) or (clip-path: polygon(0 0, 0 10%, 10% 10%))) {
+  .mobile-fixed-bg {
+    background-image: url('/lagan.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }

@@ -29,7 +29,7 @@ export default function Home() {
         <Hero />
       </div>
 
-      <main className="relative z-10 bg-[url(/lagan.webp)] bg-fixed bg-cover bg-no-repeat bg-center">
+      <main className="relative z-10 mobile-fixed-bg">
         <div className="relative backdrop-brightness-82">
           <div className="bg-white">
             <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
