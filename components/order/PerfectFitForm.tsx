@@ -289,6 +289,7 @@ export default function PerfectFitForm() {
       className="max-w-4xl mx-auto space-y-12 bg-text rounded-xl shadow-lg p-8"
     >
       <input type="hidden" name="form-name" value="perfectfit" />
+      <input type="hidden" name="form-type" value="Perfect Fit" />
       <input type="hidden" name="bot-field" />
 
       <div className="border-b border-text pb-12">
