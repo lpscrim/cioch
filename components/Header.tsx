@@ -55,7 +55,11 @@ export default function Header() {
   }
   
   return (
-    <header className="absolute top-0 left-0 z-200 w-[100lvw] bg-background/0 text-text brightness-120">
+     <header
+      className={`top-0 left-0 z-200 w-[100lvw] bg-background/0 text-text brightness-120 ${
+        mobileMenuOpen ? "fixed" : "absolute"
+      }`}
+    >
       
       <nav
         aria-label="Global"
