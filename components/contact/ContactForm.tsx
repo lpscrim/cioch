@@ -349,7 +349,7 @@ export default function Contact({
               className="mx-auto mt-14 max-w-6xl sm:mt-16"
             >
               <input type="hidden" name="form-name" value="contact-2" />
-
+              <input type="hidden" name="form-type" value="Contact" />
               <input type="hidden" name="bot-field" />
 
               <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
