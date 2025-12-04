@@ -16,10 +16,15 @@ export default function OffThePegForm() {
 
   return (
     <form
-      action="https://formspree.io/xyynjjpy"
+      name="offthepeg"
       method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
       className="max-w-4xl mx-auto space-y-12 bg-text rounded-xl shadow-lg p-8"
     >
+      <input type="hidden" name="form-name" value="offthepeg" />
+      <input type="hidden" name="bot-field" />
+
       <div className="border-b border-text pb-12">
         <h1 className="text-2xl font-bold text-secondary">Off the Peg Order Form</h1>
         <p className="mt-4 text-base text-text-secondary/80">
