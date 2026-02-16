@@ -23,6 +23,7 @@ const nextConfig: NextConfig = {
         pathname: "/images/**",
       },
     ],
+    qualities: [75, 80, 90, 100],
     formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 60,
   },

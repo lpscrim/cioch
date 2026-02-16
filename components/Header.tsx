@@ -77,8 +77,8 @@ export default function Header() {
               quality={100}
             />
           </Link>
-          <Link href="/" className="-m-1.5 p-2">
-            <h2 className="mr-3 text-xl/6 font-semibold text-text hover:text-secondary transition-colors">
+          <Link href="/" className="-m-1.5 p-2  font-semibold text-text hover:text-secondary transition-colors duration-400">
+            <h2 className="mr-3 text-xl/6">
               Outdoor Clothing
             </h2>
           </Link>
