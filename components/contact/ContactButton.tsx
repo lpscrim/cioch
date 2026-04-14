@@ -7,8 +7,10 @@ import Button from "@/components/Button";
 
 export default function ContactButton({
   children,
+  head,
 }: Readonly<{
   children: React.ReactNode;
+  head: boolean
 }>) {
   const [open, setOpen] = useState(false);
 
@@ -16,6 +18,7 @@ export default function ContactButton({
     <div className="z-999">
       <Button
         onClick={() => setOpen(true)}
+        head={head}
       >
         {children}
       </Button>

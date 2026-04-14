@@ -177,7 +177,7 @@ export default function Header() {
             Gallery
           </Link>
 
-          <ContactButton>
+          <ContactButton head={true}>
             <EnvelopeIcon className="size-6 mt-0.5  " />
           </ContactButton>
         </PopoverGroup>
@@ -283,7 +283,7 @@ export default function Header() {
                 className="absolute bottom-5"
                 href="#"
                 >
-                <ContactButton>
+                <ContactButton head={false}>
                   <EnvelopeIcon className="size-6 pb-1 -mb-2.5" />
                   <span className="ml-2 text-sm font-bold">Contact us</span>
                 </ContactButton>
