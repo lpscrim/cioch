@@ -7,12 +7,32 @@ import { countryOptions } from "@/lib/countryOptions";
 export default function PerfectFitForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const validate = (form: HTMLFormElement): Record<string, string> => {
+    const errs: Record<string, string> = {};
+    const data = new FormData(form);
+    if (!data.get("realname")?.toString().trim()) errs.realname = "Name is required.";
+    if (!data.get("Address1")?.toString().trim()) errs.Address1 = "Address is required.";
+    if (!data.get("Town/City")?.toString().trim()) errs["Town/City"] = "Town/City is required.";
+    if (!data.get("Postcode")?.toString().trim()) errs.Postcode = "Postcode/Zip is required.";
+    const email = data.get("email")?.toString().trim() || "";
+    if (!email) errs.email = "Email is required.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.email = "Please enter a valid email address.";
+    return errs;
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const validationErrors = validate(form);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+    setErrors({});
     setIsSubmitting(true);
 
-    const form = e.currentTarget;
     const formData = new FormData(form);
 
     try {
@@ -56,6 +76,7 @@ export default function PerfectFitForm() {
       data-netlify="true"
       data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit}
+      noValidate
       className="max-w-4xl mx-auto space-y-12 bg-text rounded-xl shadow-lg p-8"
     >
       <input type="hidden" name="form-name" value="perfectfit" />
@@ -212,6 +233,7 @@ export default function PerfectFitForm() {
                 className="flex-1 rounded-md bg-foreground/80 px-3 py-1.5 text-base text-text-secondary border border-text focus:border-secondary focus:ring-2 focus:ring-accent"
               />
             </div>
+            {errors.realname && <p className="text-sm text-red-600">{errors.realname}</p>}
             <div className="flex items-center gap-x-3">
               <label
                 htmlFor="Address1"
@@ -227,6 +249,7 @@ export default function PerfectFitForm() {
                 className="flex-1 rounded-md bg-foreground/80 px-3 py-1.5 text-base text-text-secondary border border-text focus:border-secondary focus:ring-2 focus:ring-accent"
               />
             </div>
+            {errors.Address1 && <p className="text-sm text-red-600">{errors.Address1}</p>}
             <div className="flex items-center gap-x-3">
               <label
                 htmlFor="Address2"
@@ -256,6 +279,7 @@ export default function PerfectFitForm() {
                 className="flex-1 rounded-md bg-foreground/80 px-3 py-1.5 text-base text-text-secondary border border-text focus:border-secondary focus:ring-2 focus:ring-accent"
               />
             </div>
+            {errors["Town/City"] && <p className="text-sm text-red-600">{errors["Town/City"]}</p>}
             <div className="flex items-center gap-x-3">
               <label
                 htmlFor="Area/State"
@@ -285,6 +309,7 @@ export default function PerfectFitForm() {
                 className="flex-1 rounded-md bg-foreground/80 px-3 py-1.5 text-base text-text-secondary border border-text focus:border-secondary focus:ring-2 focus:ring-accent"
               />
             </div>
+            {errors.Postcode && <p className="text-sm text-red-600">{errors.Postcode}</p>}
             <div className="flex items-center gap-x-3">
               <label
                 htmlFor="Country"
@@ -319,6 +344,7 @@ export default function PerfectFitForm() {
                 className="flex-1 rounded-md bg-foreground/80 px-3 py-1.5 text-base text-text-secondary border border-text focus:border-secondary focus:ring-2 focus:ring-accent"
               />
             </div>
+            {errors.email && <p className="text-sm text-red-600">{errors.email}</p>}
             <div className="flex items-center gap-x-3">
               <label
                 htmlFor="Telephone"

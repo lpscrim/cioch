@@ -19,17 +19,36 @@ export default function Contact({
 }) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitMessage, setSubmitMessage] = useState("");
+  const [errors, setErrors] = useState<Record<string, string>>({});
 
   const handleClose = () => {
     setOpen(false);
     setSubmitMessage("");
   };
 
+  const validate = (form: HTMLFormElement): Record<string, string> => {
+    const errs: Record<string, string> = {};
+    const data = new FormData(form);
+    if (!data.get("first-name")?.toString().trim()) errs["first-name"] = "First name is required.";
+    if (!data.get("last-name")?.toString().trim()) errs["last-name"] = "Last name is required.";
+    const email = data.get("email")?.toString().trim() || "";
+    if (!email) errs.email = "Email is required.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.email = "Please enter a valid email address.";
+    if (!data.get("message")?.toString().trim()) errs.message = "Message is required.";
+    return errs;
+  };
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const validationErrors = validate(form);
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+    setErrors({});
     setIsSubmitting(true);
 
-    const form = e.currentTarget;
     const formData = new FormData(form);
 
     try {
@@ -118,6 +137,7 @@ export default function Contact({
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
+              noValidate
               className="mx-auto mt-14 max-w-6xl sm:mt-16"
             >
               <input type="hidden" name="form-name" value="contact-2" />
@@ -143,6 +163,7 @@ export default function Contact({
                       className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
+                  {errors["first-name"] && <p className="mt-1 text-sm text-red-600">{errors["first-name"]}</p>}
                 </div>
 
                 <div>
@@ -163,6 +184,7 @@ export default function Contact({
                       className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
+                  {errors["last-name"] && <p className="mt-1 text-sm text-red-600">{errors["last-name"]}</p>}
                 </div>
 
                 <div className="sm:col-span-2">
@@ -202,6 +224,7 @@ export default function Contact({
                       className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
+                  {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
                 </div>
 
                 <div className="sm:col-span-2">
@@ -261,6 +284,7 @@ export default function Contact({
                       className="block w-full rounded-md bg-text px-3.5 py-2 text-base text-text-secondary outline-1 -outline-offset-1 outline-text-secondary/60 placeholder:text-text-secondary/50 focus:outline-2 focus:-outline-offset-2 focus:outline-accent disabled:opacity-50"
                     />
                   </div>
+                  {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
                 </div>
               </div>
 
