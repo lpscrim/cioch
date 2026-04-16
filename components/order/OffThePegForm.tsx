@@ -257,7 +257,7 @@ export default function OffThePegForm() {
               <input
                 id="Telephone"
                 name="Telephone"
-                type="text"
+                type="tel"
                 className="flex-1 rounded-md bg-foreground/80 px-3 py-1.5 text-base text-text-secondary border border-text focus:border-secondary focus:ring-2 focus:ring-accent"
               />
             </div>

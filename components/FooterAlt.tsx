@@ -7,7 +7,7 @@ export default function FooterAlt() {
     <footer className=" mx-auto max-w-7xl overflow-hidden px-6 pb-5 lg:px-8 z-9999">
       <div className="mt-16 border-t border-text-secondary pt-8">
               <p className="text-center text-sm leading-6 text-text">
-                &copy; 2003 Cioch Outdoor Clothing, All rights reserved.
+                &copy; 2003-{new Date().getFullYear()} Cioch Outdoor Clothing, All rights reserved.
               </p>
               <AnimateMe />
               <div className="pt-6 pb-6 flex justify-center ">

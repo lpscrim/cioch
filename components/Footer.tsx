@@ -38,7 +38,7 @@ export default function Footer() {
       >
         <PopoverGroup className="flex gap-x-6 lg:gap-x-12">
           <Popover className="relative">
-            <PopoverButton className="flex items-center gap-x-1 sm:text-lg/6 font-semibold text-text hover:text-secondary ransition-all">
+            <PopoverButton className="flex items-center gap-x-1 sm:text-lg/6 font-semibold text-text hover:text-secondary transition-all">
               Shop
               <ChevronUpIcon aria-hidden="true" className="size-5 flex-none " />
             </PopoverButton>
@@ -96,7 +96,7 @@ export default function Footer() {
 
       <div className="mt-16 border-t border-text-secondary pt-8">
         <p className="text-center text-sm leading-6 text-text">
-          &copy; 2003 Cioch Outdoor Clothing, All rights reserved.
+          &copy; 2003-{new Date().getFullYear()} Cioch Outdoor Clothing, All rights reserved.
         </p>
         <AnimateMe />
         <div className="pt-6 pb-18 flex justify-center ">

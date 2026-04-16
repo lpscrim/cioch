@@ -8,7 +8,7 @@ import { classNames } from "@/lib/classNames";
 
 const tabs = [
   { name: "Nikwax", href: "/about/nikwax" },
-  { name: "Atercare", href: "/about/aftercare" },
+  { name: "Aftercare", href: "/about/aftercare" },
   { name: "Our Shop", href: "/about/shop" },
   { name: "Materials", href: "/about/materials" },
   { name: "Peg sizes", href: "/about/sizes" },
