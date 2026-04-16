@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import { client } from "@/sanity/lib/client";
 import GalleryClient from "@/components/gallery/GalleryClient";
 import type { GalleryImage } from "@/components/gallery/GalleryClient";
+
+export const metadata: Metadata = {
+  title: "Gallery | Cioch Outdoor Clothing",
+  description: "Browse photos of Cioch handmade outdoor clothing in action across the Scottish Highlands and beyond.",
+};
 
 const galleryQuery = `
   *[_type == "gallery"] | order(order asc) {

@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Useful Links | Cioch Outdoor Clothing",
+  description: "Links to mountain guides, rescue teams, accommodation, and outdoor activities on the Isle of Skye and beyond.",
+};
 
 export default function Links() {
   return (

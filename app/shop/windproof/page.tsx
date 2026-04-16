@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import ProductCard from "@/components/shop/productCard";
 import { products } from "@/products/productList";
 
+export const metadata: Metadata = {
+  title: "Windproof Clothing | Cioch Outdoor Clothing",
+  description: "Browse our windproof fleece and smock range, handmade on the Isle of Skye.",
+};
 
 export default function Windproof() {
   return (

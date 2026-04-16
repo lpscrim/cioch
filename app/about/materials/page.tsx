@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Materials & Fabrics | Cioch Outdoor Clothing",
+  description: "Technical specifications of the fabrics and materials used in Cioch outdoor clothing products.",
+};
+
 export default function Materials() {
   const data = [
     {

@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import ShopNav from "@/components/shop/shopNav";
 import FooterAlt from "@/components/FooterAlt";
 import "@/styles/shop.css";
+
+export const metadata: Metadata = {
+  title: "Shop | Cioch Outdoor Clothing",
+  description: "Shop handmade waterproof jackets, windproof fleece, and kids outdoor clothing from the Isle of Skye.",
+};
 
 export default function ShopLayout({
   children,

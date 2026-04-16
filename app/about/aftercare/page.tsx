@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Aftercare & Repairs | Cioch Outdoor Clothing",
+  description: "How to wash, reproof, and maintain your Cioch Nikwax Analogy waterproof garments for lasting performance.",
+};
+
 export default function Aftercare() {
   return (
     <div className="px-6">

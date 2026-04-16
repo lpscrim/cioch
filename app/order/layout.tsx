@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import FooterAlt from "@/components/FooterAlt";
 import OrderNav from "@/components/order/OrderNav";
 import "@/styles/order.css";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Order | Cioch Outdoor Clothing",
+  description: "Order your Perfect Fit or Off the Peg handmade outdoor clothing from Cioch. Measuring guide & order forms.",
+};
 
 export default function OrderLayout({
   children,

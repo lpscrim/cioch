@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import AboutNav from "@/components/about/aboutNav";
 import FooterAlt from "@/components/FooterAlt";
 import Link from "next/link";
 import "@/styles/about.css";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About | Cioch Outdoor Clothing",
+  description: "Learn about Cioch Outdoor Clothing — Nikwax Analogy waterproofs, materials, garment aftercare, sizing, and our shop on the Isle of Skye.",
+};
 
 export default function AboutLayout({
   children,

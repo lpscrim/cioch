@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Nikwax Analogy Waterproof System | Cioch Outdoor Clothing",
+  description: "Learn how the Nikwax Analogy waterproof system works — the most breathable, comfortable waterproof technology used in Cioch garments.",
+};
+
 export default function Nikwax() {
   return (
     <div className="px-6">

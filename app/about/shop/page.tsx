@@ -1,4 +1,11 @@
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Our Shop & Factory | Cioch Outdoor Clothing",
+  description: "Visit the Cioch shop and factory in Struan on the Isle of Skye. Directions and opening information.",
+};
+
 export default function Shop() {
   return (
     <div className="px-6 flex flex-col mx-auto">

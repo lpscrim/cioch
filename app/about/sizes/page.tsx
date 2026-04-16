@@ -1,3 +1,10 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Size Guide | Cioch Outdoor Clothing",
+  description: "Off the peg sizing charts for men, ladies, and children — Cioch Outdoor Clothing.",
+};
+
 const mensHeaders = ["", "", "S", "M", "L", "XL", "XXL"];
 const mensRows = [
   { label: "B", desc: "Arm length", values: ["75", "77.5", "80", "82.5", "85"] },

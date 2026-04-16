@@ -1,8 +1,12 @@
+import type { Metadata } from "next";
 import ProductCard from "@/components/shop/productCard";
 import Link from "next/link";
 import { products } from "@/products/productList";
 
-
+export const metadata: Metadata = {
+  title: "Waterproof Clothing | Cioch Outdoor Clothing",
+  description: "Explore our range of Nikwax Analogy waterproof jackets and trousers, handmade on the Isle of Skye.",
+};
 
 export default function Waterproof() {
   return (
