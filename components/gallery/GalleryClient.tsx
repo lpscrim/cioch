@@ -59,15 +59,20 @@ export default function GalleryClient({ images }: { images: GalleryImage[] }) {
 
       <div className="flex flex-row flex-wrap gap-3 justify-center px-2 md:px-0">
         {images.map((image, index) => (
-          <Image
+          <button
             key={image._id}
-            src={urlFor(image.image).width(400).height(300).url()}
-            alt={image.alt}
-            width={200}
-            height={150}
-            className="border-1 border-solid border-secondary w-40 cursor-pointer hover:border-accent transition-colors rounded-md object-cover"
             onClick={() => handleOnClicked(image, index)}
-          />
+            className="border-1 border-solid border-secondary w-40 cursor-pointer hover:border-accent transition-colors rounded-md overflow-hidden p-0 bg-transparent"
+            aria-label={image.alt}
+          >
+            <Image
+              src={urlFor(image.image).width(400).height(300).url()}
+              alt={image.alt}
+              width={200}
+              height={150}
+              className="w-full h-full object-cover"
+            />
+          </button>
         ))}
       </div>
     </>

@@ -8,14 +8,14 @@ export default function perfectFit() {
     >
       <Image
         src="/contourP.webp"
-        alt="background"
+        alt=""
         className="flex lg:hidden absolute top-0 left-0 h-full w-full object-cover opacity-5 -z-10"
         width={1000}
         height={2000}
       />
       <Image
         src="/contour.webp"
-        alt="background"
+        alt=""
         className="hidden lg:flex absolute top-0 left-0 h-full w-full object-cover opacity-5 -z-10"
         width={2000}
         height={1000}

@@ -69,7 +69,7 @@ export default function Header() {
           <Link href="/" className="-m-1.5 p-1.5 ">
             <span className="sr-only">Cioch Clothing</span>
             <Image
-              alt=""
+              alt="Cioch Clothing logo"
               src="/main.webp"
               className="h-8 w-auto mr-4 rounded-sm shadow hover:brightness-120 hover:shadow-xl active:translate-y-1 active:shadow-md active:scale-98 duration-150 transition-all"
               height="170"
@@ -178,6 +178,7 @@ export default function Header() {
           </Link>
 
           <ContactButton head={true}>
+            <span className="sr-only">Contact us</span>
             <EnvelopeIcon className="size-6 mt-0.5  " />
           </ContactButton>
         </PopoverGroup>

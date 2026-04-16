@@ -159,6 +159,7 @@ export default function PerfectFitForm() {
                   name={`Product${n}`}
                   type="text"
                   placeholder="Product/Colour"
+                  aria-label={`Product or colour ${n}`}
                   className="rounded-md bg-foreground/80 px-3 py-1.5 text-base text-text-secondary border border-text focus:border-secondary focus:ring-2 focus:ring-accent"
                 />
                 <input
@@ -166,6 +167,7 @@ export default function PerfectFitForm() {
                   name={`Quantity${n}`}
                   type="text"
                   placeholder="Qty"
+                  aria-label={`Quantity ${n}`}
                   className="rounded-md bg-foreground/80 px-3 py-1.5 text-base text-text-secondary border border-text focus:border-secondary focus:ring-2 focus:ring-accent"
                 />
               </div>

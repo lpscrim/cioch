@@ -23,7 +23,11 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
   return (
     <div className="flex flex-col xl:flex-row gap-6 mb-8 px-4">
       <div className="xl:w-3/4 relative">
-        <div className="relative aspect-4/3 cursor-pointer" onClick={handleImageClick}>
+        <button
+          className="relative aspect-4/3 cursor-pointer w-full"
+          onClick={handleImageClick}
+          aria-label="Open full size image"
+        >
           <Image
             src={selectedImage}
             alt={heading}
@@ -31,7 +35,7 @@ const ImageViewer: React.FC<ImageViewerProps> = ({
             className="object-cover rounded-lg shadow-lg"
             priority
           />
-        </div>
+        </button>
         <div className="flex justify-between mt-4 xl:hidden">
           <button
             onClick={onPrev}

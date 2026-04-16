@@ -14,7 +14,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/28 via-white/2 to-transparent z-2 bg-fixed h-[100lvh]"></div>
 
         <Image
-          alt="background"
+          alt=""
           src="/storr.webp"
           fill
           quality={90}

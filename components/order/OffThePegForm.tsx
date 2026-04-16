@@ -104,6 +104,7 @@ export default function OffThePegForm() {
                   name={`Product${n}`}
                   type="text"
                   placeholder="Product/Colour"
+                  aria-label={`Product or colour ${n}`}
                   className="rounded-md bg-foreground/80 px-3 py-1.5 text-base text-text-secondary border border-text focus:border-secondary focus:ring-2 focus:ring-accent"
                 />
                 <input
@@ -111,11 +112,13 @@ export default function OffThePegForm() {
                   name={`Quantity${n}`}
                   type="text"
                   placeholder="Qty"
+                  aria-label={`Quantity ${n}`}
                   className="rounded-md bg-foreground/80 px-3 py-1.5 text-base text-text-secondary border border-text focus:border-secondary focus:ring-2 focus:ring-accent"
                 />
                 <select
                   id={`Size${n}`}
                   name={`Size${n}`}
+                  aria-label={`Size ${n}`}
                   className="rounded-md bg-foreground/80 px-3 py-1.5 text-base text-text-secondary border border-text focus:border-secondary focus:ring-2 focus:ring-accent"
                   defaultValue={sizeOptions[0]}
                 >
