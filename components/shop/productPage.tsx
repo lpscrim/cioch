@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { notFound } from "next/navigation";
 import { products } from "@/products/productList";
