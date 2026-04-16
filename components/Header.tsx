@@ -70,7 +70,7 @@ export default function Header() {
             <span className="sr-only">Cioch Clothing</span>
             <Image
               alt=""
-              src="/main.jpg"
+              src="/main.webp"
               className="h-8 w-auto mr-4 rounded-sm shadow hover:brightness-120 hover:shadow-xl active:translate-y-1 active:shadow-md active:scale-98 duration-150 transition-all"
               height="170"
               width="460"
@@ -195,7 +195,7 @@ export default function Header() {
               <span className="sr-only">Cioch CLothing</span>
               <Image
                 alt="Cioch logo"
-                src="/main.jpg"
+                src="/main.webp"
                 className="h-8 w-auto -ml-2 rounded-sm"
                 height="300"
                 width="300"
