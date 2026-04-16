@@ -28,9 +28,6 @@ const nextConfig: NextConfig = {
     minimumCacheTTL: 60,
   },
   compress: true,
-  typescript: {
-    ignoreBuildErrors: true,
-  },
 };
 
 export default nextConfig;

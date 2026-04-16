@@ -1,13 +1,11 @@
-import { lazy, Suspense } from "react";
 import Hero from "@/components/home/Hero";
+import Intro from "@/components/home/Intro";
+import Promo from "@/components/home/Promo";
+import PerfectFit from "@/components/home/PerfectFit";
+import Recommendations from "@/components/home/Recommendations";
+import Footer from "@/components/home/FooterHome";
 import "@/styles/home.css";
 import Image from "next/image";
-
-const Intro = lazy(() => import("@/components/home/Intro"));
-const Promo = lazy(() => import("@/components/home/Promo"));
-const PerfectFit = lazy(() => import("@/components/home/PerfectFit"));
-const Recommendations = lazy(() => import("@/components/home/Recommendations"));
-const Footer = lazy(() => import("@/components/home/FooterHome"));
 
 export default function Home() {
   return (
@@ -32,24 +30,14 @@ export default function Home() {
       <main className="relative z-10 mobile-fixed-bg">
         <div className="relative backdrop-brightness-82">
           <div className="bg-white">
-            <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
-              <Intro />
-            </Suspense>
-            <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
-              <Promo />
-            </Suspense>
-            <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
-              <PerfectFit />
-            </Suspense>
+            <Intro />
+            <Promo />
+            <PerfectFit />
           </div>
           
           <div className="min-h-[100lvh]">
-            <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
-              <Recommendations />
-            </Suspense>
-            <Suspense fallback={<div className="h-20 bg-foreground animate-pulse" />}>
-              <Footer />
-            </Suspense>
+            <Recommendations />
+            <Footer />
           </div>
         </div>
       </main>
