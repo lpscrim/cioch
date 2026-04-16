@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { classNames } from "@/lib/classNames";
 
 const recommendations = [
   {
@@ -19,10 +20,6 @@ const recommendations = [
     webSite: "",
   },
 ];
-
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Recommendations() {
   return (

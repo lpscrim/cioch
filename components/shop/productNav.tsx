@@ -4,16 +4,13 @@ import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { usePathname, useRouter } from "next/navigation";
 import { products } from "@/products/productList";
+import { classNames } from "@/lib/classNames";
 
 
 const tabs = products.map(product => ({
   name: product.name,
   href: `/shop/${product.category}/${product.id}`,
 }));
-
-function classNames(...classes: (string | false | null | undefined)[]): string {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function ProductNav() {
   const pathname = usePathname();

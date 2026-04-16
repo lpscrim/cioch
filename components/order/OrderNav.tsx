@@ -3,16 +3,13 @@
 import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { usePathname, useRouter } from "next/navigation";
+import { classNames } from "@/lib/classNames";
 
 const tabs = [
   { name: "About", href: "/order/about" },
   { name: "Off the Peg", href: "/order/offthepeg" },
   { name: "Perfect Fit", href: "/order/perfectfit" },
 ];
-
-function classNames(...classes: (string | false | null | undefined)[]): string {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function OrderNav() {
   const pathname = usePathname();

@@ -16,10 +16,7 @@ import {
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
 import ProductNav from "./productNav";
 import Link from "next/link";
-
-function classNames(...classes: (string | undefined | null | false)[]) {
-  return classes.filter(Boolean).join(" ");
-}
+import { classNames } from "@/lib/classNames";
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const product = products.find((p) => p.id === params.id);

@@ -10,7 +10,7 @@ export default function FooterHome() {
             Give us a message or put your order in today!
           </p>
           <div className="mt-12 flex justify-center">
-            <ContactButton>
+            <ContactButton head={false}>
             <p
               className="rounded-md bg-secondary px-4 py-3 text-base font-bold text-text shadow-xs hover:brightness-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >

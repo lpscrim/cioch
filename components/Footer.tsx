@@ -88,7 +88,7 @@ export default function Footer() {
           >
             Gallery
           </Link>
-          <ContactButton>
+          <ContactButton head={false}>
             <span className="sm:text-lg/6 font-semibold">Contact</span>
           </ContactButton>
         </PopoverGroup>

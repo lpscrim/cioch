@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { ChevronDownIcon } from "@heroicons/react/16/solid";
 import { usePathname, useRouter } from "next/navigation";
+import { classNames } from "@/lib/classNames";
 
 
 const tabs = [
@@ -10,10 +11,6 @@ const tabs = [
   { name: "Windproof", href: "/shop/windproof" },
   { name: "Kids", href: "/shop/kids" },
 ];
-
-function classNames(...classes: (string | false | null | undefined)[]): string {
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function ShopNav() {
   const pathname = usePathname();
