@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import AnimateMe from "./Animation/AnimateMe";
+import dynamic from "next/dynamic";
+const AnimateMe = dynamic(() => import("./Animation/AnimateMe"), { ssr: false });
 
 export default function FooterAlt() {
   return (

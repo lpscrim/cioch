@@ -1,5 +1,6 @@
 "use client";
-import AnimateMe from "./Animation/AnimateMe";
+import dynamic from "next/dynamic";
+const AnimateMe = dynamic(() => import("./Animation/AnimateMe"), { ssr: false });
 import Link from "next/link";
 import {
   Popover,

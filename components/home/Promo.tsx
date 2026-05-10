@@ -1,5 +1,5 @@
-'use client';
 import Image from "next/image";
+import Link from "next/link";
 
 
 const collections = [
@@ -90,10 +90,10 @@ export default function Promo() {
                     See all
                   </p>
                   <h3 className="mt-1 font-semibold text-lg lg:text-xl text-text">
-                    <a href={collection.href}>
+                    <Link href={collection.href}>
                       <span className="absolute inset-0" />
                       {collection.name} clothing
-                    </a>
+                    </Link>
                   </h3>
                 </div>
               </div>

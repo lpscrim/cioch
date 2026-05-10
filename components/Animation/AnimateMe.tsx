@@ -5,8 +5,8 @@ import {
   animate,
   createTimeline,
   stagger,
-  text,
-  createSpring,
+  splitText,
+  spring,
 } from "animejs";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
@@ -40,7 +40,7 @@ export default function TextAnimation() {
       if (!scope) return;
       const { root, methods } = scope;
 
-      text.split('h2', {
+      splitText('h2', {
         chars: {
           class: 'char',
           clone: 'left',
@@ -48,7 +48,7 @@ export default function TextAnimation() {
         },
       });
 
-      const ease = createSpring({ stiffness: 90, damping: 11 });
+      const ease = spring({ stiffness: 90, damping: 11 });
 
       const rotateAnim = createTimeline({
         autoplay: false,

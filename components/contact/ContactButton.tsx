@@ -2,8 +2,9 @@
 
 import React from "react";
 import { useState } from "react";
-import Contact from "@/components/contact/ContactForm";
+import dynamic from "next/dynamic";
 import Button from "@/components/Button";
+const Contact = dynamic(() => import("@/components/contact/ContactForm"));
 
 export default function ContactButton({
   children,
