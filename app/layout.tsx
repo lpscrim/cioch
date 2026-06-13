@@ -29,7 +29,7 @@ const anekDevanagari = Anek_Devanagari({
   variable: "--font-anek-devanagari",
   subsets: ["latin"],
   weight: ["400", "600"],
-  display: 'block',
+  display: 'swap',
 });
 
 export const metadata: Metadata = {

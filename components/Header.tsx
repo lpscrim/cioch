@@ -77,8 +77,8 @@ export default function Header() {
               quality={100}
             />
           </Link>
-          <Link href="/" className="-m-1.5 p-2  font-semibold text-text hover:text-secondary transition-colors duration-400">
-            <h2 className="mr-3 text-xl/6">
+          <Link href="/" className="-m-1.5 p-2  font-semibold  text-text hover:brightness-80 transition-brightness duration-400">
+            <h2 className="mr-3 text-xl/6 drop-shadow-sm drop-shadow-text-secondary font-semibold tracking-wide">
               Outdoor Clothing
             </h2>
           </Link>
@@ -89,7 +89,7 @@ export default function Header() {
             onClick={() => mobileMenuToggle()}
             className="inline-flex items-center justify-center rounded-md cursor-pointer -mr-5"
           >
-            <NavIcon open={mobileMenuOpen} color="text" hoverColor="secondary" />
+            <NavIcon open={mobileMenuOpen} color="text" hoverColor="text" />
             <span className="sr-only">toggle display menu</span>
           </button>
         </div>
@@ -99,7 +99,7 @@ export default function Header() {
             {({ close }) => (
               <>
                 <PopoverButton
-                  className={`flex -mr-2 items-center gap-x-1 text-lg/6 transition-colors font-semibold cursor-pointer  hover:text-secondary ${
+                  className={`flex drop-shadow-sm drop-shadow-text-secondary tracking-wide -mr-2 items-center gap-x-1 text-lg/6 transition-brightness font-semibold cursor-pointer  hover:brightness-80 ${
                     pathname?.startsWith("/shop") ? "text-accent" : "text-text"
                   }`}
                 >
@@ -117,13 +117,12 @@ export default function Header() {
                     {categories.map((category) => (
                       <div
                         key={category.name}
-                        className="relative flex items-center gap-x-6 rounded-lg p-2 text-base/6 "
                       >
                         <div className="flex-auto">
                           <Link
                             href={category.href}
                             aria-label={category.description}
-                            className="block font-semibold hover:backdrop-brightness-150 p-1 pb-2"
+                            className="block font-semibold hover:backdrop-brightness-150 p-1 pb-2 "
                             onClick={() => close()}
                           >
                             {category.name}
@@ -152,8 +151,8 @@ export default function Header() {
 
           <Link
             href="/about/nikwax"
-            className={`text-lg/6 font-semibold hover:text-secondary transition-colors ${
-              pathname?.startsWith("/about") ? "text-accent" : ""
+            className={`text-lg/6 font-semibold hover:brightness-80 drop-shadow-sm drop-shadow-text-secondary tracking-wide ${
+              pathname?.startsWith("/about") ? "text-accent" : "text-text"
             }`}
           >
             About
@@ -161,8 +160,8 @@ export default function Header() {
 
           <Link
             href="/order/about"
-            className={`text-lg/6 font-semibold hover:text-secondary transition-colors ${
-              pathname?.startsWith("/order") ? "text-accent" : ""
+            className={`text-lg/6 font-semibold hover:brightness-80 drop-shadow-sm drop-shadow-text-secondary tracking-wide ${
+              pathname?.startsWith("/order") ? "text-accent" : "text-text"
             }`}
           >
             Order
@@ -170,8 +169,8 @@ export default function Header() {
 
           <Link
             href="/gallery"
-            className={`text-lg/6 font-semibold hover:text-secondary transition-colors${
-              pathname === "/gallery" ? "text-accent" : ""
+            className={`text-lg/6 font-semibold hover:brightness-80 drop-shadow-sm drop-shadow-text-secondary tracking-wide ${
+              pathname === "/gallery" ? "text-accent" : "text-text"
             }`}
           >
             Gallery
@@ -179,7 +178,7 @@ export default function Header() {
 
           <ContactButton head={true}>
             <span className="sr-only">Contact us</span>
-            <EnvelopeIcon className="size-6 mt-0.5  " />
+            <EnvelopeIcon className="size-6  drop-shadow-sm drop-shadow-text-secondary" />
           </ContactButton>
         </PopoverGroup>
       </nav>
