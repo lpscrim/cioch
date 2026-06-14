@@ -20,6 +20,7 @@ export default function Intro() {
               height={450}
               sizes="(max-width: 1024px) 400px, 450px"
               priority
+              unoptimized
             />
           </div>
           <div className="w-full lg:w-1/2 mx-auto flex flex-col items-center justify-center px-6">
