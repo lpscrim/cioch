@@ -12,6 +12,8 @@ export default function perfectFit() {
         className="flex lg:hidden absolute top-0 left-0 h-full w-full object-cover opacity-5 -z-10"
         width={1000}
         height={2000}
+        quality={40}
+        sizes="100vw"
       />
       <Image
         src="/contour.webp"
@@ -19,6 +21,8 @@ export default function perfectFit() {
         className="hidden lg:flex absolute top-0 left-0 h-full w-full object-cover opacity-5 -z-10"
         width={2000}
         height={1000}
+        quality={40}
+        sizes="100vw"
       />
       <div className="flex flex-col max-w-[90rem] px-6 sm:px-12 mx-auto py-25">
         <div className="flex flex-col lg:flex-row mx-auto">
