@@ -42,12 +42,15 @@
 
 .fade-in {
   animation: fade-in 3s ease-in-out;
+  animation-fill-mode: backwards;
 }
 .fade-in-slow {
   animation: fade-in 5s ease-in-out;
+  animation-fill-mode: backwards;
 }
 .fade-in-slower {
   animation: fade-in 6s ease-in-out;
+  animation-fill-mode: backwards;
 }
 
 
