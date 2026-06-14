@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import PromoBackground from "./PromoBackground";
 
 
 const collections = [
@@ -33,20 +34,7 @@ export default function Promo() {
       id="promo"
       className="relative bg-foreground pb-20 xl:min-h-[105vh] overflow-hidden"
     >
-      <div className="absolute inset-0 w-full h-full z-0">
-        <Image
-          alt="image of the quirang"
-          src="/quirang2.webp"
-          fill
-          quality={80}
-          sizes="100vw"
-          priority={false}
-          className="object-cover "
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
-        />
-        <div className="absolute inset-0 bg-background opacity-38" />
-      </div>
+      <PromoBackground />
 
       <div className="relative z-10 mx-auto max-w-3xl px-4 pb-24 sm:pb-0 xl:pb-10 text-center sm:px-6 lg:px-8">
         <div className="relative py-26 sm:py-38">

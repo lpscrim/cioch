@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Karla, Noto_Sans_Gothic, Roboto, Anek_Devanagari } from "next/font/google";
 import "@/styles/globals.css";
 import Header from "@/components/Header";
-import LenisScroll from '@/components/Animation/LenisScroll';
 
 const notoSans = Noto_Sans_Gothic({
   variable: "--font-noto-sans",
@@ -71,7 +70,6 @@ export default function RootLayout({
       <body
         className={`${anekDevanagari.variable} ${notoSans.variable} ${roboto.variable} ${karla.variable} antialiased  overflow-x-hidden`}
       >
-        <LenisScroll />
         <Header />
         {children}
       </body>
