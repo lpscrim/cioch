@@ -17,7 +17,7 @@ export default function Home() {
           alt=""
           src="/storr.webp"
           fill
-          unoptimized
+          quality={90}
           priority
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 2000px"
           className="object-cover"
