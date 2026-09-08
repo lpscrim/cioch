@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <div className="relative min-h-[100lvh]">
       <div className="inset-0 -z-10 fixed h-[100svh] w-full overflow-hidden bg-zinc-800">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/28 via-white/2 to-transparent z-2 bg-fixed h-[100lvh]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/65 from-0% via-black/15 via-25% to-transparent to-55% z-2 bg-fixed h-[100lvh]"></div>
 
         <Image
           alt="The Storr, Isle of Skye"

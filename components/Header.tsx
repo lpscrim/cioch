@@ -78,7 +78,7 @@ export default function Header() {
             />
           </Link>
           <Link href="/" className="-m-1.5 p-2  font-semibold  text-text hover:brightness-80 transition-brightness duration-400">
-            <h2 className="mr-3 text-xl/6 drop-shadow-sm drop-shadow-text-secondary font-semibold tracking-wide">
+            <h2 className="mr-3 text-xl/6 font-semibold tracking-wide">
               Outdoor Clothing
             </h2>
           </Link>
@@ -99,7 +99,7 @@ export default function Header() {
             {({ close }) => (
               <>
                 <PopoverButton
-                  className={`flex drop-shadow-sm drop-shadow-text-secondary tracking-wide -mr-2 items-center gap-x-1 text-lg/6 transition-brightness font-semibold cursor-pointer  hover:brightness-80 ${
+                  className={`flex tracking-wide -mr-2 items-center gap-x-1 text-lg/6 transition-brightness font-semibold cursor-pointer  hover:brightness-80 ${
                     pathname?.startsWith("/shop") ? "text-accent" : "text-text"
                   }`}
                 >
@@ -150,7 +150,7 @@ export default function Header() {
 
           <Link
             href="/about/nikwax"
-            className={`text-lg/6 font-semibold hover:brightness-80 drop-shadow-sm drop-shadow-text-secondary tracking-wide ${
+            className={`text-lg/6 font-semibold hover:brightness-80 tracking-wide ${
               pathname?.startsWith("/about") ? "text-accent" : "text-text"
             }`}
           >
@@ -159,7 +159,7 @@ export default function Header() {
 
           <Link
             href="/order/about"
-            className={`text-lg/6 font-semibold hover:brightness-80 drop-shadow-sm drop-shadow-text-secondary tracking-wide ${
+            className={`text-lg/6 font-semibold hover:brightness-80 tracking-wide ${
               pathname?.startsWith("/order") ? "text-accent" : "text-text"
             }`}
           >
@@ -168,7 +168,7 @@ export default function Header() {
 
           <Link
             href="/gallery"
-            className={`text-lg/6 font-semibold hover:brightness-80 drop-shadow-sm drop-shadow-text-secondary tracking-wide ${
+            className={`text-lg/6 font-semibold hover:brightness-80 tracking-wide ${
               pathname === "/gallery" ? "text-accent" : "text-text"
             }`}
           >
@@ -177,7 +177,7 @@ export default function Header() {
 
           <ContactButton head={true}>
             <span className="sr-only">Contact us</span>
-            <EnvelopeIcon className="size-6  drop-shadow-sm drop-shadow-text-secondary" />
+            <EnvelopeIcon className="size-6" />
           </ContactButton>
         </PopoverGroup>
       </nav>
