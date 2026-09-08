@@ -10,7 +10,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="relative min-h-[100lvh]">
-      <div className="inset-0 -z-10 fixed h-[100svh] w-[100lvw] overflow-hidden bg-zinc-800">
+      <div className="inset-0 -z-10 fixed h-[100svh] w-full overflow-hidden bg-zinc-800">
         <div className="absolute inset-0 bg-gradient-to-b from-black/28 via-white/2 to-transparent z-2 bg-fixed h-[100lvh]"></div>
 
         <Image
