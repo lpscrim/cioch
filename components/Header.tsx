@@ -126,7 +126,6 @@ export default function Header() {
                             onClick={() => close()}
                           >
                             {category.name}
-                            <span className="absolute inset-0" />
                           </Link>
                           {category.products?.map((product) => (
                             <div key={product.id}>
